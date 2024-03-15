@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { FaCaretDown } from "react-icons/fa";
 
 const ContenidoSaludDental = () => {
 
@@ -15,11 +15,12 @@ const ContenidoSaludDental = () => {
     return (
         <>
             <article className="contenido-salud-dental container">
-                <section className=""> 
+
+                <section className="contenido-salud-dental-h2"> 
                     <h2> ¿Por qué es importante la salud dental? </h2>
                     <p> Nuestros dientes tienen un papel tan importante que desempeñar en nuestras vidas. Nos ayudan a masticar y digerir los alimentos, nos ayudan a hablar y hablar con claridad y también le dan forma a nuestra cara. </p>
                 </section>
-                <section>
+                <section className="contenido-salud-dental-divs">
                     <div className="div-salud-dental"> 
                         <h3 onClick={() => cambiarEstado(0)}> Conservar los dientes de por vida </h3> 
                         { mostrar[0] 

@@ -44,3 +44,12 @@ ul, ol {
   display: flex;
   flex-direction: column;
 }
+
+.mb-10 {
+  margin-bottom: 10px
+}
+
+.mb-5 {
+  margin-bottom: 5px
+}
+

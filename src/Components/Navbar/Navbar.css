@@ -10,3 +10,10 @@ li {
 .lista-navbar {
     gap: 10px;
 }
+
+.nav-horario {
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    font-size: 0.85vw;
+}

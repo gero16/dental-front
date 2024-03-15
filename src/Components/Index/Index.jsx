@@ -28,10 +28,10 @@ const Index = () => {
 
             </article>
 
-            <article className="article-info-consulta2 container">
+            <article className="article-info-consulta2">
                 <section> 
                     <h2> LLámenos </h2> 
-                    <h2> (598)94484397 </h2>
+                    <h2 className="h2-numero"> (598)94484397 </h2>
                     <p> ¡Estamos listos para ayudarlo a lograr una salud bucal increíble! </p>
                 </section>
                 <section> 

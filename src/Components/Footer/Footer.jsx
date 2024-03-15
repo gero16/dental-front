@@ -10,7 +10,10 @@ const Footer = () => {
             <footer>
 
                 <section className="section-footer container flex-column">
-                    <img src={logo}  className="logo" alt="" />
+                    {
+                        /*  <img src={logo}  className="logo" alt="" /> */
+                    }
+                   
 
 
                     <div className="flex div-footer">
@@ -74,7 +77,7 @@ const Footer = () => {
 
             
                <section className="footer-footer flex container">
-                    <span> © 2022 Solusoft </span>
+                    <span> © 2024 Gerónimo Nicola </span>
 
                     <span> Politica de Privacidad </span>
 

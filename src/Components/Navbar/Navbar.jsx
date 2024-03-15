@@ -4,6 +4,10 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
         <> 
+            <nav className="nav-horario">
+                <p className="container">Abierto Martes - Jueves y Sábados (las piedras)  de 13.00- 20.00 pm </p>
+                <p className="container"> Miércoles 13.00 - 20.00 (Montevideo) </p>
+            </nav>
             <nav className="flex container"> 
                 <img src={logo} alt="" />
                 <ul className="flex-center-center lista-navbar">

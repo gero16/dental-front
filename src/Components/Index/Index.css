@@ -43,20 +43,44 @@ article {
 }
 
 .article-info-consulta2 {
-    padding: 30px 0px;
+    padding: 50px;
+    background-color: #F3F8FE;
+    justify-content: space-evenly;
+
+}
+
+.article-info-consulta2  p {
+    font-size: 1.3vw;
 }
 
 .contenido-servicios {
     margin-bottom: 20px;
+    align-items: center;
 
 }
 .contenido-servicio {
     align-items: center;
+    box-shadow: rgba(199, 201, 201, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.contenido-servicio h2 {
+    font-weight: 500;
 }
 
 .icono-servicio {
     width: 150px;
     height: 150px;
+}
+
+.div-salud-dental{
+    margin-bottom: 15px;
+}
+
+.contenido-salud-dental{
+    gap: 25px;
 }
 
 @media (min-width: 800px) {
@@ -79,8 +103,13 @@ article {
     }
     .contenido-servicio {
         width: 40vw;
-       
         
+    }
+    .contenido-salud-dental {
+        display: flex;
+    }
+    .article-info-consulta2 {
+       display: flex;
     }
   }
   

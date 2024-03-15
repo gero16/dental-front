@@ -3,6 +3,9 @@ nav {
     gap: 150px;
 }
 
+li {
+    color: #595959;
+}
 
 .lista-navbar {
     gap: 10px;

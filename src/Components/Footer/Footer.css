@@ -1,0 +1,73 @@
+.mb-10 {
+    margin-bottom: 10px
+  }
+
+  .mb-5 {
+    margin-bottom: 5px
+  }
+
+footer {
+    background-color: #171717;
+    font-size: 0.83em;
+  
+}
+
+footer h5 {
+    color: #FFFFFF;
+}
+
+.footer-horarios {
+    gap: 10px;
+}
+
+.footer-horarios li {
+    font-weight: 300;
+}
+
+.section-footer {
+    padding: 30px 0px;
+}
+
+.section-footer > {
+    color: #FFFFFF;
+    font-size: 0.83em;
+} 
+
+.logo {
+    filter: invert(100%);
+    width: 20%;
+}
+
+.lista-redes-sociales {
+    gap: 15px;
+}
+
+.icono-instagram {
+    color: red;
+    width: 100px;
+  }
+
+  .section-footer-abajo {
+    gap: 40px;
+  }
+
+  .div-footer {
+    gap: 100px;
+    margin: 20px 0px;
+   
+    justify-content: space-between;
+  }
+
+
+  .footer-footer {
+    padding: 20px;
+    justify-content: space-between;
+    color: white !important;
+  }
+
+@media (min-width: 800px) {
+    .section-footer {}
+  }
+
+ 
+ 

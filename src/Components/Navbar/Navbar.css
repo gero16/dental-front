@@ -1,0 +1,9 @@
+nav {
+    justify-content:space-evenly;
+    gap: 150px;
+}
+
+
+.lista-navbar {
+    gap: 10px;
+}

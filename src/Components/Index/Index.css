@@ -1,0 +1,38 @@
+.portada {
+ 
+    width: 100%;
+    background-image: url("../../../public/portada.png");
+    background-size: contain;
+    
+}
+
+.contenido-servicios section {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.contenido-info-consulta {
+    width: 50%;
+}
+
+.imagen-info-consulta {
+    background-image: url("../../../public/imagen-info-consulta.png");
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+}
+
+
+@media (min-width: 800px) {
+    .portada {
+        height: 60vw;
+    }
+    .article-info-consulta {
+        display: flex;
+    }
+    .imagen-info-consulta {
+        height: 60vw;
+        width: 50%;
+    }
+  }
+  

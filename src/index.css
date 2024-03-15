@@ -1,0 +1,36 @@
+* {
+  margin : 0px;
+  padding : 0px;
+}
+
+
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*
+img {
+  filter: invert(100%);
+}
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

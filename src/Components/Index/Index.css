@@ -7,38 +7,75 @@
 article {
     margin: 20px 0px;
 }
+
+.portada-border{
+    width: 18%;
+    background-image: url("../../../public/borde.jpg");
+    transform: rotate(180deg);
+    background-size: cover;
+}
 .portada {
-    width: 100%;
+    width: 112%;
     background-image: url("../../../public/portada.png");
     background-size: contain;
+    background: linear-gradient(to right, transparent);
 }
 
+/*
 .portada::after {
     content: "";
     position: absolute;
     top: 10;
     left: 0;
-    width: 100%;
-    height: 135%;
-    background: linear-gradient(to left, rgba(43, 89, 76, 0.8), transparent);
-    filter: blur(-10px);
+    width: 65%;
+    height: 112%;
 }
 
 .portada::after {
-    filter: blur(-10px);
+    filter: blur(0px);
 }
 
 .portada::after {
-    background: linear-gradient(to left, rgba(28, 59, 51, 1.3), transparent);
+    background: linear-gradient(to left, #215F38, transparent);
+}
+
+.portada-texto::after {
+    filter: blur(0px);
+}
+*/
+
+.portada-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.portada-texto p, h2 {
+    
+    width: 65%;
+}
+.white {
+    color: white;
+}
+
+.lista-portada {
+    font-size: x-small;
 }
 
 .article-info-consulta {
-    background-color: #2B5A4C;
-    color: #ffffff;
+ 
 }
+
 .contenido-info-consulta {
+
     width: 50%;
     padding: 50px;
+    background: linear-gradient(to top, #009173, 20%, #007855);
+    border-right: 10px solid white;
+
 }
 
 .lista-info-consulta {
@@ -62,12 +99,11 @@ article {
     color: #ffffff;
     width: 80%;
 }
+
 .consulta-gratis {
     color: #ffffff;
     font-size:small;
 }
-
-
 
 .contenido-servicios {
     margin-bottom: 20px;
@@ -137,9 +173,20 @@ article {
     .container {
         width: 75%;
     }
-    .portada {
-        height: 60vw;
+    .article-portada {
+        display: flex;
     }
+    .portada {
+        height: 50vw;
+    }
+    .portada-texto {
+    
+        background: linear-gradient(to top, #009173, 20%, #007855);
+        width: 61%;
+        height: 50vw;
+
+    }
+
     .article-info-consulta {
         display: flex;
     }

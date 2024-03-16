@@ -11,7 +11,19 @@ const Index = () => {
 
     return (
         <> 
-            <article className="portada"> </article>
+            <article className="article-portada"> 
+                <section className="portada"></section>
+                <section className="portada-border"></section>
+                <section className="portada-texto">
+                    <h2> Un dentista llega a la raiz del problema </h2>
+                    <p> Atención personalizada para cada sonrisa hermosas </p>
+                    <ul className="lista-portada" >
+                        <li className="white"> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
+                        <li className="white"> Sabados 09:00 - 14:00 (Las Piedras) </li>
+                        <li className="white"> Miercoles 13:00 - 20:00 (Montevideo) </li>
+                    </ul>
+                </section>
+            </article>
 
             <ContenidoServicios> </ContenidoServicios>
 

@@ -4,8 +4,6 @@
     margin: 0 auto;
 }
 
-
-
 .white {
     color: white;
 }
@@ -67,20 +65,21 @@
     margin-right: 20px;
 }
 
+.contenido-servicio h2 {
+    font-weight: 500;
+}
+
+
 .contenido-salud-dental{
     margin-top: 50px;
     margin-bottom: 50px;
     gap: 50px;
 }
 
+
 .h2-salud-dental {
 
 }
-
-.contenido-servicio h2 {
-    font-weight: 500;
-}
-
 
 .contenido-salud-dental-h2 {
   width: 70%;

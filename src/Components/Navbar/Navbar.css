@@ -5,9 +5,14 @@ nav {
     
 }
 
-
-li {
+a {
+    text-decoration: none;
+}
+.span-link {
     color: #595959;
+    font-size: 1.1vw;
+    font-weight: 500;
+
 }
 
 .nav-principal {

@@ -5,7 +5,7 @@ const ContenidoPortada = () => {
         <> 
          <article className="article-portada"> 
 
-                <img src={Imagen} className="portada" alt="" />
+                <img src={Imagen} className="portada-img" alt="" />
                 <section className="portada-border"></section>
                 <section className="portada-texto">
                     <h2> Un dentista llega a la raiz del problema </h2>

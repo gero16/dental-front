@@ -5,7 +5,7 @@
     transform: rotate(180deg);
     background-size: cover;
 }
-.portada {
+.portada-img {
 
     /*
     background-image: url("../../../public/portada.png");
@@ -33,7 +33,7 @@
     .article-portada {
         display: flex;
     }
-    .portada {
+    .portada-img {
         height: 80vh;
     }
     .portada-border {

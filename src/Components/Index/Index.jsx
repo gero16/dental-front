@@ -3,9 +3,8 @@ import "./Index.css"
 import Footer from "../Footer/Footer.jsx"
 import ContenidoSaludDental from "./Contenidos/ContenidoSaludDental.jsx"
 import ContenidoServicios from "./Contenidos/ContenidoServicios.jsx"
-import ContenidoConsulta from "./Contenidos/ContenidoConsulta.jsx"
 import ContenidoPortada from "./ContenidoPortada/ContenidoPortada.jsx"
-
+import ContenidoInfoConsulta from "./ContenidoInfoConsulta/ContenidoInfoConsulta.jsx"
 
 
 const Index = () => {
@@ -18,7 +17,7 @@ const Index = () => {
 
             <ContenidoSaludDental> </ContenidoSaludDental>
 
-            <ContenidoConsulta> </ContenidoConsulta>
+            <ContenidoInfoConsulta> </ContenidoInfoConsulta>
 
             <article className="contenido-clientes container">
                 <h3> ¡Esto es lo que los pacientes tienen que decir sobre la Clínica! </h3>

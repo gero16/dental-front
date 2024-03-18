@@ -1,0 +1,55 @@
+
+.portada-border2{
+    width: 10%;
+    background-image: url("../../../public/borde.jpg");
+    background-size: cover;
+}
+
+.contenido-info-consulta {
+    width: 50%;
+    background: linear-gradient(to top, #009173, 20%, #007957);
+    border-right: 7px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.lista-info-consulta {
+    margin-top: 20px;
+    gap: 20px;
+    
+}
+
+.lista-info-consulta li {
+    color: #ffffff;
+}
+
+.imagen-info-consulta {
+    background-image: url("../../../public/imagen-info-consulta.png");
+    background-size: cover;
+}
+
+
+.consulta-gratis {
+    font-size:small;
+    padding: 5px;
+    margin: 10px;
+    filter: blur(0);
+}
+
+
+@media (min-width: 800px) {
+    .article-info-consulta {
+        display: flex;
+    }
+    .imagen-info-consulta {
+        height: 85vh;
+        width: 50%;
+    }
+    .contenido-info-consulta {
+        height: 85vh;
+    }
+
+  }
+   

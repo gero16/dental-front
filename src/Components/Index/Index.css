@@ -15,49 +15,16 @@ h2 {
 .width-70 {
     width: 70%;
 }
+
+.width-80 {
+    width: 80%;
+}
+
 .lista-portada {
     font-size: x-small;
 }
 
-.article-info-consulta {
- 
-}
 
-.contenido-info-consulta {
-
-    width: 50%;
-    padding: 50px;
-    background: linear-gradient(to top, #009173, 20%, #007957);
-    border-right: 10px solid white;
-
-}
-
-.lista-info-consulta {
-    margin-top: 20px;
-    gap: 20px;
-   
-}
-
-.lista-info-consulta li {
-    color: #ffffff;
-}
-
-.imagen-info-consulta {
-    background-image: url("../../../public/imagen-info-consulta.png");
-    background-size: cover;
-    height: 300px;
-    width: 100%;
-}
-
-.contenido-info-consulta > h2{
-    color: #ffffff;
-    width: 80%;
-}
-
-.consulta-gratis {
-    color: #ffffff;
-    font-size:small;
-}
 
 .contenido-servicios {
     margin-bottom: 20px;
@@ -136,14 +103,6 @@ h2 {
         width: 75%;
     }
  
-
-    .article-info-consulta {
-        display: flex;
-    }
-    .imagen-info-consulta {
-        height: 50vw;
-        width: 50%;
-    }
     .contenido-servicios {
         display: flex;
         flex-wrap: wrap;

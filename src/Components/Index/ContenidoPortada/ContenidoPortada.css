@@ -1,0 +1,48 @@
+
+.portada-border{
+    width: 21%;
+    background-image: url("../../../public/borde.jpg");
+    transform: rotate(180deg);
+    background-size: cover;
+}
+.portada {
+
+    /*
+    background-image: url("../../../public/portada.png");
+    background-size: contain;
+    */
+
+}
+
+
+
+.portada-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.portada-texto > p, h2 {
+    width: 65%;
+}
+
+@media (min-width: 800px) {
+    .article-portada {
+        display: flex;
+    }
+    .portada {
+        height: 80vh;
+    }
+    .portada-border {
+        height: 80vh;
+    }
+    .portada-texto {
+        background: linear-gradient(to top, #009173, 20%, #007855);
+        width: 80%;
+        height: 80vh;
+    }
+   }
+  

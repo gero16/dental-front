@@ -11,7 +11,7 @@ const Navbar = () => {
                     <p className="container"> Miércoles 13.00 - 20.00 (Montevideo) </p>
                 </nav>
 
-                <nav className="flex container"> 
+                <nav className="flex container nav-principal"> 
                     <img src={logo} alt="" />
                     <ul className="flex-center-center lista-navbar">
                         <li> Inicio </li>

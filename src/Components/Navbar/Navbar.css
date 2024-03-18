@@ -5,8 +5,13 @@ nav {
     
 }
 
+
 li {
     color: #595959;
+}
+
+.nav-principal {
+    padding: 10px 0px;
 }
 
 .lista-navbar {
@@ -21,7 +26,5 @@ li {
 }
 
 @media (min-width: 800px) {
-    .nav-principal {
-        padding: 20px 0px;
-    }
+ 
 }

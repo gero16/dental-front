@@ -4,59 +4,8 @@
     margin: 0 auto;
 }
 
-article {
-    margin: 20px 0px;
-}
 
-.portada-border{
-    width: 18%;
-    background-image: url("../../../public/borde.jpg");
-    transform: rotate(180deg);
-    background-size: cover;
-}
-.portada {
-    width: 112%;
-    background-image: url("../../../public/portada.png");
-    background-size: contain;
-    background: linear-gradient(to right, transparent);
-}
 
-/*
-.portada::after {
-    content: "";
-    position: absolute;
-    top: 10;
-    left: 0;
-    width: 65%;
-    height: 112%;
-}
-
-.portada::after {
-    filter: blur(0px);
-}
-
-.portada::after {
-    background: linear-gradient(to left, #215F38, transparent);
-}
-
-.portada-texto::after {
-    filter: blur(0px);
-}
-*/
-
-.portada-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    color: white;
-}
-
-.portada-texto p, h2 {
-    
-    width: 65%;
-}
 .white {
     color: white;
 }
@@ -73,7 +22,7 @@ article {
 
     width: 50%;
     padding: 50px;
-    background: linear-gradient(to top, #009173, 20%, #007855);
+    background: linear-gradient(to top, #009173, 20%, #007957);
     border-right: 10px solid white;
 
 }
@@ -124,13 +73,17 @@ article {
     gap: 50px;
 }
 
+.h2-salud-dental {
+
+}
+
 .contenido-servicio h2 {
     font-weight: 500;
 }
 
 
 .contenido-salud-dental-h2 {
-    width: 50%;
+  width: 70%;
 }
 
 .contenido-salud-dental-divs {
@@ -173,19 +126,7 @@ article {
     .container {
         width: 75%;
     }
-    .article-portada {
-        display: flex;
-    }
-    .portada {
-        height: 50vw;
-    }
-    .portada-texto {
-    
-        background: linear-gradient(to top, #009173, 20%, #007855);
-        width: 61%;
-        height: 50vw;
-
-    }
+ 
 
     .article-info-consulta {
         display: flex;

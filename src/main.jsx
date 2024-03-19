@@ -8,11 +8,13 @@ import imagen from "../public/global.fw.png"
 
 import Navbar from "./Components/Navbar/Navbar.jsx"
 import Index from "./Components/Index/Index.jsx"
+import Contacto from './Components/Contacto/Contacto';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div> 
+    element: 
+      <div> 
 
       <Navbar> </Navbar>
       <Index> </Index>
@@ -37,7 +39,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/contacto",
-    element: <div>Hello world!</div>,
+    element:  <Contacto> </Contacto>
+
   },
   {
     path: "/servicios/:servicio",
@@ -51,15 +54,12 @@ const router = createBrowserRouter([
     path: "/reservar-hora",
     element: <div>Hello world!</div>,
   },
-  {
-    path: "/contacto",
-    element: <div>Hello world!</div>,
-  },
+ 
 
 ]);
 
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
      <RouterProvider router={router} />
   </React.StrictMode>,

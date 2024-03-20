@@ -17,7 +17,7 @@ const Navbar = () => {
                     <img src={logo} alt="" />
                     <ul className="flex-center-center lista-navbar">
                         <li> 
-                            <NavLink to={`/`} > 
+                            <NavLink to={`/home`} > 
                                 <span className="span-link "> Inicio </span>
                             </NavLink>
                         </li>

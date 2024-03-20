@@ -95,6 +95,10 @@ h2 {
     color:#2B5A4C;
 }
 
+
+.section-ubicacion {
+    margin : 20px;
+}
 @media (min-width: 800px) {
     h2 {
         font-size: 2vw;

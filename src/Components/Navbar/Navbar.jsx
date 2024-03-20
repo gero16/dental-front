@@ -9,8 +9,10 @@ const Navbar = () => {
 
             <header>
                 <nav className="nav-horario">
-                    <p className="container">Abierto Martes - Jueves y Sábados (las piedras)  de 13.00- 20.00 pm </p>
-                    <p className="container"> Miércoles 13.00 - 20.00 (Montevideo) </p>
+                    <p className="container"> Martes y Jueves (Las Piedras) de 13.00- 20.00 pm </p>
+                    <p className="container"> Miércoles (Montevideo) de 13.00 - 20.00 </p>
+                    <p className="container"> Sabado (Las Piedras) de 09:00 - 14.00  </p>
+                    
                 </nav>
 
                 <nav className="flex container nav-principal"> 

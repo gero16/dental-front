@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import ImagenLocal from "../../../public/local.jpg"
 import Navbar from "../Navbar/Navbar";
+
 const Contacto = () => {
 
     const ubiTresCruces = [-34.89578868112877, -56.16680986705166]
@@ -49,6 +50,7 @@ const Contacto = () => {
 
                 </section>
             
+
                 <MapContainer 
                     center={ubiLasPiedras} 
                     zoom={16} 

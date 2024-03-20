@@ -5,9 +5,12 @@ import ContenidoSaludDental from "./Contenidos/ContenidoSaludDental.jsx"
 import ContenidoServicios from "./Contenidos/ContenidoServicios.jsx"
 import ContenidoPortada from "./ContenidoPortada/ContenidoPortada.jsx"
 import ContenidoInfoConsulta from "./ContenidoInfoConsulta/ContenidoInfoConsulta.jsx"
+import Mapa from "../Mapa/Mapa.jsx"
 
 
 const Index = () => {
+    const ubiTresCruces = [-34.89578868112877, -56.16680986705166]
+    const ubiLasPiedras = [-34.7277481203798, -56.21380023171297]
 
     return (
         <> 
@@ -39,6 +42,22 @@ const Index = () => {
                     <p> Por dudas o consultas </p>
                 </section>
             </article>
+
+
+           <section className="section-ubicacion flex-center">
+             <article>
+                <h2> Clinica - Las Piedras </h2>
+                <Mapa ubicacion={ubiLasPiedras} style={[350, 550, 20]}> </Mapa>
+             </article>
+
+            <article>
+                <h2> Clinica - Tres Cruces </h2>
+                <Mapa ubicacion={ubiTresCruces} style={[350, 550, 20]} > </Mapa>
+
+            </article>
+
+            </section>
+
 
             <Footer> </Footer>
         </>

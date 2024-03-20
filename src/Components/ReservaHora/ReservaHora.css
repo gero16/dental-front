@@ -1,5 +1,12 @@
+.section-calendario  {
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+
+}
+
 .calendario {
-  width: 50vw;
+  margin: 20px;
 }
 
 ol {
@@ -7,8 +14,57 @@ ol {
     grid-template-columns: repeat(7, 1fr);
     list-style: none;
     padding: 0;
+}
 
-    
-  }
+.li-formulario-contacto {
+  display: flex;
+}
   
-  
+.ul-formulario-contacto label {
+  display: block;
+  width: 100px;
+}
+
+.section-horas-disponibles {
+  gap : 20px;
+  justify-content: center;
+ 
+}
+
+.hora-disponible {
+  background-color: rgb(165, 2, 2);
+}
+
+.hora-no-disponible {
+  background-color: rgb(16, 141, 43);
+}
+
+.div-horas {
+  gap: 10px;
+}
+
+.div-horas li {
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: rgb(232, 234, 236);
+  border-radius: 10px;
+}
+
+.section-formulario-contacto {
+  margin: 30px 0px;
+}
+
+.react-calendar {
+  width: 400px!important;
+  max-width: 100%;
+  line-height: 2em!important;
+  padding: 20px;
+}
+
+.react-calendar__tile {
+  font-size: 1.1em!important;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-size: 1.5em;
+}

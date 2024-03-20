@@ -77,44 +77,10 @@ h2 {
     margin-bottom: 15px;
 }
 
-
-.contenido-clientes {
-    padding: 40px;
-}
-
 .article-info-consulta2 {
     padding: 80px;
     background-color: #F3F8FE;
     justify-content: space-evenly;
-
-}
-
-.menu {
-    text-align: center;
-    margin: 20px;
-}
-  
-.menu li{
-    display: inline-block;
-    text-align: center;
-}
-
-.menu li a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: var(--primario);
-    padding: 8px;
-    width: 2px;
-    height: 2px;
-    margin-left: 10px;
-    border-radius: 100%;
-    transition: 0.3s ease-in-out;
-}
-
-.menu li a:hover{
-    transition: 0.3s ease-in-out;
-    transform: scale(1.4);
 }
 
 .article-info-consulta2  p {
@@ -145,7 +111,6 @@ h2 {
 }
 
 
-
 @media (min-width: 800px) {
     h2 {
         font-size: 2vw;
@@ -163,9 +128,7 @@ h2 {
         width: 32vw;
         
     }
-    .contenido-clientes {
-        width: 40%;
-    }
+ 
     .contenido-salud-dental {
         display: flex;
        

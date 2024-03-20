@@ -9,6 +9,18 @@ import { useState } from "react";
 import Imagen from "../../../public/vista.jpg"
 const ReservaHora = () => {
     const [value, onChange] = useState(new Date());
+
+
+    function diasDeshabilitados(date) {
+        const dia = date.getDay(); // Intentamos usar getDay primero
+        if (typeof dia !== 'number') { // Si falla, usamos una lógica alternativa
+          const options = { weekday: 'long' };
+          const diaString = new Intl.DateTimeFormat('es-UY', options).format(date);
+          return diaString === 'domingo' || diaString === 'lunes' || diaString === 'viernes';
+        }
+        return dia === 0 || dia === 1 || dia === 5; // Deshabilita si getDay funciona
+      }
+
     
     return (
         <> 
@@ -26,6 +38,10 @@ const ReservaHora = () => {
                     onChange={onChange} 
                     value={value} 
                     locale={"es-uy"} 
+                    tileDisabled={({ date, view }) =>
+                    (view === "month" && date.getDay() === 0) || date.getDay() === 1 || date.getDay() === 5
+                     }
+                    
                 />
                 
             </div>

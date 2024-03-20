@@ -79,7 +79,7 @@ h2 {
 
 
 .contenido-clientes {
-    padding: 20px;
+    padding: 40px;
 }
 
 
@@ -101,6 +101,7 @@ h2 {
 
 .section-ubicacion {
     margin : 20px;
+    gap: 30px;
 }
 
 .btn-consultar {
@@ -109,6 +110,14 @@ h2 {
     color: rgb(148, 148, 148);
     text-align: center;
 }
+
+.h2-clinica {
+    padding: 5px;
+    font-size: 1.8vw;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+
 @media (min-width: 800px) {
     h2 {
         font-size: 2vw;

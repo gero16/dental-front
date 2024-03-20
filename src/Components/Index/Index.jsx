@@ -46,14 +46,14 @@ const Index = () => {
 
 
            <section className="section-ubicacion flex-center">
-             <article>
-                <h2> Clinica - Las Piedras </h2>
-                <Mapa ubicacion={ubiLasPiedras} style={[350, 550, 20]}> </Mapa>
+             <article className="flex-column-center">
+                <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
+                <Mapa ubicacion={ubiLasPiedras} style={[350, 550, 0]}> </Mapa>
              </article>
 
-            <article>
-                <h2> Clinica - Tres Cruces </h2>
-                <Mapa ubicacion={ubiTresCruces} style={[350, 550, 20]} > </Mapa>
+            <article className="flex-column-center">
+                <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
+                <Mapa ubicacion={ubiTresCruces} style={[350, 550, 0]} > </Mapa>
 
             </article>
 

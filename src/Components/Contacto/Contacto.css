@@ -1,0 +1,38 @@
+.section-contacto-formulario {
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+}
+
+.formulario-contacto {
+    padding: 30px
+}
+
+.formulario-contacto li {
+    margin-top : 10px;
+    display: flex
+}
+
+.formulario-contacto label {
+    display: block;
+    width: 100px;
+}
+
+.ul-formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.img-contacto {
+    width: 22vw;
+}
+
+.section-img-contacto {
+    padding: 30px
+}
+
+.section-img-contacto h1 {
+    margin-bottom : 20px
+}

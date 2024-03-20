@@ -2,6 +2,9 @@
   margin : 0px;
   padding : 0px;
   font-family: "Noto Sans", sans-serif;
+
+  --primario: #009173;
+  --white: #ffffff;
 }
 
 body {

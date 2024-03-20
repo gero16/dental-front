@@ -9,6 +9,11 @@
   margin: 20px;
 }
 
+.div-calendario {
+  gap: 20px;
+  align-items: center;
+}
+
 ol {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -27,7 +32,7 @@ ol {
 
 .section-horas-disponibles {
   gap : 20px;
-  justify-content: center;
+ align-items: center;
  
 }
 
@@ -52,7 +57,23 @@ ol {
 
 .section-formulario-contacto {
   margin: 30px 0px;
+  gap: 50px;
+  align-items: center;
+  
 }
+
+
+.imagen-reservar-hora {
+  width: 60vw;
+}
+
+
+.div-reservar-hora {
+  
+  width: 100%;
+}
+
+
 
 .react-calendar {
   width: 400px!important;

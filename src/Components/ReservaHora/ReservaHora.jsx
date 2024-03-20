@@ -6,7 +6,7 @@ import 'react-calendar/dist/Calendar.css';
 import Navbar from "../Navbar/Navbar";
 import Calendar from 'react-calendar';
 import { useState } from "react";
-
+import Imagen from "../../../public/vista.jpg"
 const ReservaHora = () => {
     const [value, onChange] = useState(new Date());
     
@@ -20,8 +20,8 @@ const ReservaHora = () => {
 
             <section className="flex section-calendario">
 
-            <div className="div-calendario">
-
+            <div className="div-calendario flex-column">
+            <h2> Fechas Disponibles </h2> 
                 <Calendar 
                     onChange={onChange} 
                     value={value} 
@@ -60,35 +60,42 @@ const ReservaHora = () => {
             </section>
 
             <section className="flex-center section-formulario-contacto">
-              
-                <ul className="ul-formulario-contacto">
-                        <li className="li-formulario-contacto">
-                            <label htmlFor="">Nombre </label>
-                            <input type="text" />
-                        </li>
-                        <li  className="li-formulario-contacto">
-                            <label htmlFor=""> Apellido  </label>
-                            <input type="text" />
-                        </li>
-                        <li  className="li-formulario-contacto">
-                            <label htmlFor=""> Correo Electronico </label>
-                            <input type="text" />
-                        </li>
-                        <li  className="li-formulario-contacto">
-                            <label htmlFor=""> Telefono </label>
-                            <input type="text" />
-                        </li>
-                        <li  className="li-formulario-contacto">
-                            <label htmlFor=""> Titulo </label>
-                            <input type="text" />
-                        </li>
-                        <li  className="li-formulario-contacto">
-                            <label htmlFor=""> Mensaje </label>
-                            <textarea type="text" />
-                        </li>
 
-                        <button> Enviar </button>
-                </ul>
+                <div className="portada-reservar-hora">
+                    <img src={Imagen} className="imagen-reservar-hora" alt="" />
+                </div>
+              
+                <div className="div-reservar-hora">
+
+                    <ul className="ul-formulario-contacto flex-column-center">
+                            <li className="li-formulario-contacto">
+                                <label htmlFor="">Nombre </label>
+                                <input type="text" />
+                            </li>
+                            <li  className="li-formulario-contacto">
+                                <label htmlFor=""> Apellido  </label>
+                                <input type="text" />
+                            </li>
+                            <li  className="li-formulario-contacto">
+                                <label htmlFor=""> Correo Electronico </label>
+                                <input type="text" />
+                            </li>
+                            <li  className="li-formulario-contacto">
+                                <label htmlFor=""> Telefono </label>
+                                <input type="text" />
+                            </li>
+                            <li  className="li-formulario-contacto">
+                                <label htmlFor=""> Titulo </label>
+                                <input type="text" />
+                            </li>
+                            <li  className="li-formulario-contacto">
+                                <label htmlFor=""> Mensaje </label>
+                                <textarea type="text" />
+                            </li>
+
+                            <button> Enviar </button>
+                    </ul>
+                </div>
             </section>
 
          

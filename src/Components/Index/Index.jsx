@@ -34,12 +34,13 @@ const Index = () => {
             <article className="article-info-consulta2">
                 <section> 
                     <h2> LLámenos </h2> 
-                    <h2 className="h2-numero"> (598)94484397 </h2>
+                    <h2 className="h2-numero"> (598) 94 484 397 </h2>
                     <p> ¡Estamos listos para ayudarlo a lograr una salud bucal increíble! </p>
                 </section>
                 <section> 
                     <h2> Solicite su cita hoy </h2>
                     <p> Por dudas o consultas </p>
+                    <p className="btn-consultar"> <a href="/contacto"> Consultar </a> </p>
                 </section>
             </article>
 

@@ -99,6 +99,13 @@ h2 {
 .section-ubicacion {
     margin : 20px;
 }
+
+.btn-consultar {
+    padding: 10px;
+    background-color: rgb(223, 225, 226);
+    color: rgb(148, 148, 148);
+    text-align: center;
+}
 @media (min-width: 800px) {
     h2 {
         font-size: 2vw;

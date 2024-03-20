@@ -31,14 +31,13 @@ const Footer = () => {
                             <section>
                                 <h5 className="mb-5"> Quienes somos </h5>
                                 <p> Contacto </p>
-                                <p>Acerca de : </p>
+                                <p> Acerca de Nosotros </p>
                             </section>
 
                         
                             <section>
                                 <h5 className="mb-5"> Servicios </h5>
                                 <ul >
-                                    <li> <span> Nosotros  </span>  </li>
                                     <li> <span> Servicios </span>  </li>
                                     <li> <span> Galeria </span>  </li>
                                     <li> <span> Blog </span>  </li>
@@ -71,7 +70,10 @@ const Footer = () => {
                         <h5> Victor Haedo 2322 Apto 109 </h5> 
                         <h5> Tres Cruces - Montevideo </h5>
                     </section>
-
+                        
+                    <section className="mb-10"> 
+                        <h5> Telefono - (598) 94 484 397 </h5> 
+                    </section>
 
                 </section>
 

@@ -9,6 +9,7 @@ import imagen from "../public/global.fw.png"
 import Navbar from "./Components/Navbar/Navbar.jsx"
 import Index from "./Components/Index/Index.jsx"
 import Contacto from './Components/Contacto/Contacto';
+import ReservaHora from './Components/ReservaHora/ReservaHora';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/reservar-hora",
-    element: <div>Hello world!</div>,
+    element: <ReservaHora> </ReservaHora>,
   },
  
 

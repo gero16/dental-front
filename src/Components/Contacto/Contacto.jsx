@@ -19,23 +19,24 @@ const Contacto = () => {
 
             <main className="container">
                 
-                <section className="flex-column section-contacto-header">
-                    <h1 className="titulo-contacto"> Pongase en  Contacto </h1>
-                    <p className="p-header-contacto"> Envíenos un correo electrónico aquí: info@globalsystemdental.com o complete este formulario 
-                        y nos pondremos en contacto con usted en las próximas 24 horas.
-                    </p>
-                    <ul className="lista-redes-sociales flex">
-                        <li> <FaInstagram  style={{ fontSize: '25px'}} />  </li>
-                        <li> <FaFacebook  style={{ fontSize: '25px'}} />  </li>
-                        <li> <FaTwitter  style={{ fontSize: '25px'}} /> </li>
-                    </ul>
+                <section className="flex section-contacto-header">
+                    <section className="flex-column width-70">
+                        <h1 className="titulo-contacto"> Pongase en  Contacto </h1>
+                        <p className="p-header-contacto"> Envíenos un correo electrónico aquí: info@globalsystemdental.com o complete este formulario 
+                            y nos pondremos en contacto con usted en las próximas 24 horas.
+                        </p>
+                    </section>
+
+                    <section className="m-10">
+                        <h3> Llame para una cita </h3>
+                        <h2 className="h2-numero"> + (598) 94 484 397 </h2>
+                    </section>
+
                     
                 </section>
-            
           
                 <section className="flex section-contacto-formulario">
 
-              
                     <form action="#" className="formulario-contacto">
                         <ul className="ul-formulario-contacto">
                             <li className="li-formulario-contacto">
@@ -63,14 +64,13 @@ const Contacto = () => {
                         </ul>
                     </form>
 
-                    <section className="section-img-contacto">
-                     
-                        <img src={ImagenLocal} className="img-contacto" alt="" />
+                    <section className="img-contacto">      
+          
                     </section>
 
                 </section>
             
-
+               
 
                 <Ubicacion> </Ubicacion>
 

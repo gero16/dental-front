@@ -9,11 +9,14 @@
   --oscuro: #333333;
   --claro: #edf4fd;
   --texto: #595959;
+  box-sizing: border-box;
+  
 }
 
 body {
   color: #595959;
   width: 100%;
+
 }
 
 h2{

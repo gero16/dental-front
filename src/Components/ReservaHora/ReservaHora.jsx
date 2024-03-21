@@ -33,7 +33,7 @@ const ReservaHora = () => {
              
             </section>
 
-            <ul className="flex-column-center m-10" >
+            <ul className="flex-column-center m-10 lista-reservar" >
                 <li> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
                 <li> Miercoles 13:00 - 20:00 (Montevideo) </li>
                 <li> Sabados 09:00 - 14:00 (Las Piedras) </li>
@@ -118,7 +118,7 @@ const ReservaHora = () => {
                                 <textarea type="text" />
                             </li>
 
-                            <button> Enviar </button>
+                            <span className="btn-enviar-reserva"> Enviar </span>
                     </ul>
                 </div>
             </section>

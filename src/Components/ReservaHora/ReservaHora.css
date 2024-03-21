@@ -6,7 +6,7 @@
 }
 
 .h1-reservar {
-  font-weight: 600;
+  font-weight: 00;
   font-size: 4.5vw;
   font-family: "Raleway", sans-serif;
   text-shadow: 0 1px 0 rgba(8, 8, 8, 0.658);
@@ -61,7 +61,8 @@ ol {
   gap: 20px;
   background-color: var(--primario);
   color: var(--white);
-  padding: 28px;
+  padding: 18px;
+ 
 }
 
 .ul-formulario-reserva label {
@@ -84,13 +85,6 @@ ol {
  
 }
 
-.hora-disponible {
-  background-color: rgb(165, 2, 2);
-}
-
-.hora-no-disponible {
-  background-color: rgb(16, 141, 43);
-}
 
 .div-horas {
   gap: 10px;
@@ -104,6 +98,19 @@ ol {
 }
 
 
+.lista-reservar {
+  background-color: var(--claro);
+  padding: 30px;
+
+}
+
+.btn-enviar-reserva {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #F3F8FE;
+  color: rgb(90, 91, 92);
+  cursor: pointer;
+}
 
 .react-calendar {
   width: 400px!important;
@@ -119,3 +126,4 @@ ol {
 .react-calendar__navigation__label__labelText {
   font-size: 1.5em;
 }
+

@@ -5,6 +5,9 @@
   --primario: #008362;
   --white: #ffffff;
   --footer-grey: #979595;
+  --oscuro: #333333;
+  --claro: #edf4fd;
+  --texto: #595959;
 }
 
 body {
@@ -71,5 +74,13 @@ ul, ol {
 
 .mb-5 {
   margin-bottom: 5px
+}
+
+.hora-disponible {
+  background-color: rgb(165, 2, 2);
+}
+
+.hora-no-disponible {
+  background-color: rgb(16, 141, 43);
 }
 

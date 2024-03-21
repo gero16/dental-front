@@ -48,3 +48,11 @@
     }
    }
   
+   @media (min-width: 1500px) {
+    .p-portada-texto {
+        font-size: 1.1vw;;
+    }
+    .li-portada-texto {
+        font-size: 0.7vw;
+    }
+   }

@@ -17,11 +17,11 @@ const ContenidoPortada = () => {
               
                 <section className="portada-texto">
                     <h2 className="h2-portada-texto width-70"> Un dentista llega a la raiz del problema </h2>
-                    <p className="width-70"> Atención personalizada para cada sonrisa </p>
+                    <p className="width-70 p-portada-texto"> Atención personalizada para cada sonrisa </p>
                     <ul className="lista-portada width-70" >
-                        <li className="white"> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
-                        <li className="white"> Miercoles 13:00 - 20:00 (Montevideo) </li>
-                        <li className="white"> Sabados 09:00 - 14:00 (Las Piedras) </li>
+                        <li className="white li-portada-texto"> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
+                        <li className="white  li-portada-texto"> Miercoles 13:00 - 20:00 (Montevideo) </li>
+                        <li className="white  li-portada-texto"> Sabados 09:00 - 14:00 (Las Piedras) </li>
                     </ul>
                 </section>
             </article>

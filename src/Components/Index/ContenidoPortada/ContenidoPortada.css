@@ -15,7 +15,6 @@
 }
 
 
-
 .portada-texto {
     display: flex;
     flex-direction: column;
@@ -33,15 +32,17 @@
         display: flex;
     }
     .portada-img {
-        height: 80vh;
+        height: 90vh;
     }
     .portada-border {
-        height: 80vh;
+        height: 90vh;
     }
     .portada-texto {
-        background: linear-gradient(to top, #009173, 20%, #007855);
+        
+        /* background: linear-gradient(to top, #009173, 20%, #007855); */
+        background: linear-gradient(to top, var(--secundario), 20%, #0c8992);
         width: 80%;
-        height: 80vh;
+        height: 90vh;
     }
    }
   

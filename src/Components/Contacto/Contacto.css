@@ -46,3 +46,10 @@
 textarea {
     height: 12vh;
 }
+
+.portada-contacto {
+    background-image: url("../../../public/contactar-2.jpg");
+    background-size: 100%;
+    background-position: 0 37%;
+    height: 65vh;
+}

@@ -7,7 +7,9 @@
 
 .contenido-info-consulta {
     width: 50%;
-    background: linear-gradient(to top, #009173, 20%, #007957);
+    
+   /* background: linear-gradient(to top, #009173, 20%, #007957);*/
+   background: linear-gradient(to top, var(--secundario), 20%, #0c8992);
     border-right: 7px solid white;
     display: flex;
     flex-direction: column;

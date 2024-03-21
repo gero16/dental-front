@@ -15,8 +15,12 @@ const Contacto = () => {
     return (
         <> 
             <Navbar /> 
+            <section className="portada-contacto"> </section>
+
             <main className="container">
                 <h1> Contacto </h1>
+
+              
                 <section className="flex section-contacto-formulario">
  
                     <form action="#" className="formulario-contacto">

@@ -26,7 +26,13 @@ a {
     color: white;
     padding: 10px;
     font-size: 0.86vw;
+    
 }
+
+.p-horario {
+    padding: 1px;
+}
+
 
 @media (min-width: 800px) {
  

@@ -61,6 +61,10 @@ ul, ol {
   display : none;
 }
 
+.m-10 {
+  margin: 10px;
+}
+
 .mb-10 {
   margin-bottom: 10px
 }

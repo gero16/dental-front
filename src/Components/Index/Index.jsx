@@ -17,7 +17,10 @@ const Index = () => {
         <> 
            <ContenidoPortada> </ContenidoPortada>
 
-            <ContenidoServicios> </ContenidoServicios>
+            {
+                /**   <ContenidoServicios> </ContenidoServicios>  **/
+            }
+           
 
             <ContenidoSaludDental> </ContenidoSaludDental>
 

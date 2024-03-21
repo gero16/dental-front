@@ -11,14 +11,14 @@ const Ubicacion = () => {
             <section className="section-ubicacion flex-column-center">
                 <article className="flex-column-center">
                     <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
-                    <span> Torre García 536 </span>
-                    <Mapa ubicacion={ubiLasPiedras} style={[350, 550, 0]}> </Mapa>
+                    <span className="mb-5"> Torre García 536 </span>
+                    <Mapa ubicacion={ubiLasPiedras} style={[300, 500, 0]}> </Mapa>
                 </article>
 
                 <article className="flex-column-center">
                     <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
-                    <span> Victor Haedo 2322 Apto 109 </span>
-                    <Mapa ubicacion={ubiTresCruces} style={[350, 550, 0]} > </Mapa>
+                    <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
+                    <Mapa ubicacion={ubiTresCruces} style={[300, 500, 0]} > </Mapa>
 
                 </article>
 

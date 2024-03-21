@@ -27,9 +27,17 @@ const ReservaHora = () => {
         <> 
             <Navbar /> 
 
-            <section className="container">
-                <h1> Reservar Hora </h1>
+            <section className="portada-reservar flex-center-center">
+                
+                <h1 className="h1-reservar text-center"> Reservar Hora </h1>
+             
             </section>
+
+            <ul className="flex-column-center m-10" >
+                <li> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
+                <li> Miercoles 13:00 - 20:00 (Montevideo) </li>
+                <li> Sabados 09:00 - 14:00 (Las Piedras) </li>
+            </ul>
 
             <section className="flex section-calendario">
 

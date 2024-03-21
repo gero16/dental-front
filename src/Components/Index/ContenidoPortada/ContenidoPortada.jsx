@@ -12,8 +12,8 @@ const ContenidoPortada = () => {
                     <p className="width-70"> Atención personalizada para cada sonrisa </p>
                     <ul className="lista-portada width-70" >
                         <li className="white"> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
-                        <li className="white"> Sabados 09:00 - 14:00 (Las Piedras) </li>
                         <li className="white"> Miercoles 13:00 - 20:00 (Montevideo) </li>
+                        <li className="white"> Sabados 09:00 - 14:00 (Las Piedras) </li>
                     </ul>
                 </section>
             </article>

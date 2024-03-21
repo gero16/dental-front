@@ -1,7 +1,7 @@
 .portada-reservar {
-  height: 45vh;
+  height: 65vh;
   background-image: url("../../../public/agendar-3.jpg");
-  background-position: 20% 42%;
+  background-position: 20% 37%;
   background-size: 100%;
 }
 
@@ -59,7 +59,7 @@ ol {
 
 .ul-formulario-reserva{
   gap: 20px;
-  background-color: var(--primario);
+  background-color: var(--secundario);
   color: var(--white);
   padding: 18px;
  

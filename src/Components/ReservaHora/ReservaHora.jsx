@@ -11,17 +11,6 @@ import Footer from "../Footer/Footer";
 const ReservaHora = () => {
     const [value, onChange] = useState(new Date());
 
-
-    function diasDeshabilitados(date) {
-        const dia = date.getDay(); // Intentamos usar getDay primero
-        if (typeof dia !== 'number') { // Si falla, usamos una lógica alternativa
-          const options = { weekday: 'long' };
-          const diaString = new Intl.DateTimeFormat('es-UY', options).format(date);
-          return diaString === 'domingo' || diaString === 'lunes' || diaString === 'viernes';
-        }
-        return dia === 0 || dia === 1 || dia === 5; // Deshabilita si getDay funciona
-      }
-
     
     return (
         <> 
@@ -29,7 +18,7 @@ const ReservaHora = () => {
 
             <section className="portada-reservar flex-center-center">
                 
-                <h1 className="h1-reservar text-center"> Reservar Hora </h1>
+                { /* <h1 className="h1-reservar text-center"> Reservar Hora </h1> */}
              
             </section>
 

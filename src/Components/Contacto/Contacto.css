@@ -69,6 +69,10 @@ textarea {
     width: 12%;
 }
 
+.li-formulario-contacto textarea {
+    width: 100%;
+}
+
 @media (min-width: 1500px) {
     .section-contacto-formulario {
         height: 60vh;

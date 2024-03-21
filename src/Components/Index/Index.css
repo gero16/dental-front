@@ -91,10 +91,6 @@ h2 {
     color:#2B5A4C;
 }
 
-.section-ubicacion {
-    margin : 20px;
-    gap: 30px;
-}
 
 .btn-consultar {
     padding: 10px;
@@ -103,11 +99,9 @@ h2 {
     text-align: center;
 }
 
-.h2-clinica {
-    padding: 5px;
-    font-size: 1.8vw;
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
+
+input, textarea {
+    padding :5px;
 }
 
 
@@ -135,6 +129,9 @@ h2 {
     }
     .article-info-consulta2 {
        display: flex;
+    }
+    .section-ubicacion {
+        flex-direction: row;
     }
   }
   

@@ -5,13 +5,13 @@ import ContenidoSaludDental from "./Contenidos/ContenidoSaludDental.jsx"
 import ContenidoServicios from "./Contenidos/ContenidoServicios.jsx"
 import ContenidoPortada from "./ContenidoPortada/ContenidoPortada.jsx"
 import ContenidoInfoConsulta from "./ContenidoInfoConsulta/ContenidoInfoConsulta.jsx"
-import Mapa from "../Mapa/Mapa.jsx"
+
 import ContenidoCliente from "./ContenidoCliente/ContenidoCliente.jsx"
+import Ubicacion from "../Ubicacion/Ubicacion.jsx"
 
 
 const Index = () => {
-    const ubiTresCruces = [-34.89578868112877, -56.16680986705166]
-    const ubiLasPiedras = [-34.7277481203798, -56.21380023171297]
+
 
     return (
         <> 
@@ -38,20 +38,7 @@ const Index = () => {
                 </section>
             </article>
 
-
-           <section className="section-ubicacion flex-center">
-             <article className="flex-column-center">
-                <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
-                <Mapa ubicacion={ubiLasPiedras} style={[350, 550, 0]}> </Mapa>
-             </article>
-
-            <article className="flex-column-center">
-                <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
-                <Mapa ubicacion={ubiTresCruces} style={[350, 550, 0]} > </Mapa>
-
-            </article>
-
-            </section>
+            <Ubicacion> </Ubicacion>
 
             <Footer> </Footer>
         </>

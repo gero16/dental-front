@@ -77,34 +77,34 @@ const ReservaHora = () => {
 
             <section className="flex-center section-formulario-contacto">
 
-                <div className="portada-reservar-hora">
-                    <img src={Imagen} className="imagen-reservar-hora" alt="" />
-                </div>
-              
+            
+                <img src={Imagen} className="imagen-reservar-hora" alt="" />
+                
+            
                 <div className="div-reservar-hora">
 
-                    <ul className="ul-formulario-contacto flex-column-center">
-                            <li className="li-formulario-contacto">
+                    <ul className="ul-formulario-reserva flex-column-center">
+                            <li className="li-formulario">
                                 <label htmlFor="">Nombre </label>
                                 <input type="text" />
                             </li>
-                            <li  className="li-formulario-contacto">
+                            <li  className="li-formulario">
                                 <label htmlFor=""> Apellido  </label>
                                 <input type="text" />
                             </li>
-                            <li  className="li-formulario-contacto">
+                            <li  className="li-formulario">
                                 <label htmlFor=""> Correo Electronico </label>
                                 <input type="text" />
                             </li>
-                            <li  className="li-formulario-contacto">
+                            <li  className="li-formulario">
                                 <label htmlFor=""> Telefono </label>
                                 <input type="text" />
                             </li>
-                            <li  className="li-formulario-contacto">
+                            <li  className="li-formulario">
                                 <label htmlFor=""> Titulo </label>
                                 <input type="text" />
                             </li>
-                            <li  className="li-formulario-contacto">
+                            <li  className="li-formulario">
                                 <label htmlFor=""> Mensaje </label>
                                 <textarea type="text" />
                             </li>

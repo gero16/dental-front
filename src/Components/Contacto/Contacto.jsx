@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import ImagenLocal from "../../../public/local.jpg"
 import Navbar from "../Navbar/Navbar";
+import Ubicacion from "../Ubicacion/Ubicacion";
 
 const Contacto = () => {
 
@@ -13,9 +14,10 @@ const Contacto = () => {
     return (
         <> 
             <Navbar /> 
-            <main>
+            <main className="container">
+                <h1> Contacto </h1>
                 <section className="flex section-contacto-formulario">
-
+ 
                     <form action="#" className="formulario-contacto">
                         <ul className="ul-formulario-contacto">
                             <li className="li-formulario-contacto">
@@ -44,37 +46,15 @@ const Contacto = () => {
                     </form>
 
                     <section className="section-img-contacto">
-                        <h1> Contacto </h1>
+                     
                         <img src={ImagenLocal} className="img-contacto" alt="" />
                     </section>
 
                 </section>
             
 
-                <MapContainer 
-                    center={ubiLasPiedras} 
-                    zoom={16} 
-                    scrollWheelZoom={true}
-                    style={{ height: 400, width: 600, margin: 100 }}
-                    >
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={ubiLasPiedras}>
-                    <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
-                <Marker position={ubiTresCruces}>
-                    <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
 
-
-                
-                </MapContainer>,
+                <Ubicacion> </Ubicacion>
 
                
             </main>

@@ -20,8 +20,8 @@ const Contacto = () => {
             <main className="container">
                 
                 <h1 className="m-10 titulo-contacto"> Ponerse en  Contacto </h1>
-
-              
+            
+          
                 <section className="flex section-contacto-formulario">
 
               
@@ -48,7 +48,7 @@ const Contacto = () => {
                                 <textarea type="text" />
                             </li>
 
-                            <button> Enviar </button>
+                            <span className="btn-enviar-contacto text-center"> Enviar </span>
                         </ul>
                     </form>
 

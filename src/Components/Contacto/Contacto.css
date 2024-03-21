@@ -1,5 +1,6 @@
 .titulo-contacto {
     font-family: "Raleway", sans-serif;
+
 }
 
 .section-contacto-formulario {
@@ -10,8 +11,11 @@
 }
 
 .formulario-contacto {
-    padding: 30px;
+    padding: 40px;
     width: 40%;
+    background-color: var(--claro);
+    border-radius: 10px;
+
 }
 
 .formulario-contacto li {
@@ -57,3 +61,22 @@ textarea {
     background-position: 0 37%;
     height: 65vh;
 }
+
+.btn-enviar-contacto {
+    padding: 10px;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 10px;
+    width: 12%;
+}
+
+@media (min-width: 1500px) {
+    .section-contacto-formulario {
+        height: 60vh;
+    }
+    .titulo-contacto {
+        font-size: 3vw;
+    }
+    .img-contacto {
+        width: 21vw;
+    }
+   }

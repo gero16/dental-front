@@ -18,7 +18,7 @@ a {
 }
 
 .lista-navbar {
-    gap: 10px;
+    gap: 15px;
 }
 
 .nav-horario {
@@ -34,6 +34,11 @@ a {
 }
 
 
-@media (min-width: 800px) {
- 
+@media (min-width: 1500px) {
+ .span-link {
+    font-size: 1vw;
+ }
+ .nav-horario {
+    font-size: 0.7vw;
+ }
 }

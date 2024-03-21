@@ -42,7 +42,7 @@ ol {
 .section-formulario-contacto {
   margin: 50px 0px 100px 0px;
   align-items: center;
-  height: 75vh;
+  height: 90vh;
 }
 
 
@@ -61,7 +61,7 @@ ol {
   gap: 20px;
   background-color: var(--secundario);
   color: var(--white);
-  padding: 18px;
+  height: 100%;
  
 }
 
@@ -127,3 +127,21 @@ ol {
   font-size: 1.5em;
 }
 
+
+@media (min-width: 1200px) {
+  
+ }
+
+@media (min-width: 1500px) {
+
+  .section-formulario-contacto {
+    height: 83vh;
+  }
+  .span-link {
+     font-size: 1vw;
+  }
+  .nav-horario {
+     font-size: 0.7vw;
+  }
+
+ }

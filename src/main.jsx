@@ -13,6 +13,7 @@ import ReservaHora from './Components/ReservaHora/ReservaHora';
 import Nosotros from './Components/Nosotros/Nosotros.jsx';
 import Galeria from './Components/Galeria/Galeria.jsx';
 import Servicios from './Components/Servicios/Servicios.jsx';
+import IniciarSesion from './Components/IniciarSesion/IniciarSesion.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,14 +34,7 @@ const router = createBrowserRouter([
     path: "/galeria",
     element: <Galeria> </Galeria>,
   },
-  {
-    path: "/iniciar-sesion",
-    element: <div>Hello world!</div>,
-  },
-  {
-    path: "/registrarse",
-    element: <div>Hello world!</div>,
-  },
+
   {
     path: "/contacto",
     element:  <Contacto> </Contacto>
@@ -58,7 +52,14 @@ const router = createBrowserRouter([
     path: "/reservar-hora",
     element: <ReservaHora> </ReservaHora>,
   },
- 
+  {
+    path: "/iniciar-sesion",
+    element: <IniciarSesion> </IniciarSesion>,
+  },
+  {
+    path: "/registrarse",
+    element: <div>Hello world!</div>,
+  },
 
 ]);
 

@@ -37,6 +37,9 @@
     .portada-border {
         height: 90vh;
     }
+    .h2-portada-texto {
+        font-size: 2.5vw;
+    }
     .portada-texto {
         
         /* background: linear-gradient(to top, #009173, 20%, #007855); */

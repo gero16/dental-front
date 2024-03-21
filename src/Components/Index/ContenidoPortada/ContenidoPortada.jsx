@@ -16,7 +16,7 @@ const ContenidoPortada = () => {
                 }
               
                 <section className="portada-texto">
-                    <h2 className="width-70"> Un dentista llega a la raiz del problema </h2>
+                    <h2 className="h2-portada-texto width-70"> Un dentista llega a la raiz del problema </h2>
                     <p className="width-70"> Atención personalizada para cada sonrisa </p>
                     <ul className="lista-portada width-70" >
                         <li className="white"> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>

@@ -18,11 +18,13 @@ const Contacto = () => {
             <section className="portada-contacto"> </section>
 
             <main className="container">
-                <h1> Contacto </h1>
+                
+                <h1 className="m-10 titulo-contacto"> Ponerse en  Contacto </h1>
 
               
                 <section className="flex section-contacto-formulario">
- 
+
+              
                     <form action="#" className="formulario-contacto">
                         <ul className="ul-formulario-contacto">
                             <li className="li-formulario-contacto">

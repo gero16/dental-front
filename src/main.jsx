@@ -10,6 +10,7 @@ import Navbar from "./Components/Navbar/Navbar.jsx"
 import Index from "./Components/Index/Index.jsx"
 import Contacto from './Components/Contacto/Contacto';
 import ReservaHora from './Components/ReservaHora/ReservaHora';
+import Nosotros from './Components/Nosotros/Nosotros.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/nosotros",
-    element: <div>Hello world!</div>,
+    element: <Nosotros> </Nosotros>
   },
   {
     path: "/galeria",

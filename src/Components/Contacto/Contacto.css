@@ -5,6 +5,10 @@
     height: 56vh;
 }
 
+.section-contacto-header {
+    padding: 40px;
+    gap: 10px;
+}
 
 .titulo-contacto {
     font-family: "Raleway", sans-serif;
@@ -15,7 +19,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 70vh;
-    margin: 50px 0px 50px 0px;
+    margin: 10px 0px 50px 0px;
 }
 
 .formulario-contacto {
@@ -78,10 +82,13 @@ textarea {
 @media (min-width: 1500px) {
     .section-contacto-formulario {
         height: 60vh;
-        margin: 30px 0px;
+        margin: 0px 0px 30px 0px;
     }
     .titulo-contacto {
-        font-size: 2.7vw;
+        font-size: 2.5vw;
+    }
+    .p-header-contacto {
+        font-size: large;
     }
     .img-contacto {
         width: 21vw;

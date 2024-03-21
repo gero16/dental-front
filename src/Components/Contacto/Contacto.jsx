@@ -1,11 +1,11 @@
 
 import "./Contacto.css"
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import ImagenLocal from "../../../public/local.jpg"
 import Navbar from "../Navbar/Navbar";
 import Ubicacion from "../Ubicacion/Ubicacion";
 import Footer from "../Footer/Footer";
+import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const Contacto = () => {
 
@@ -19,7 +19,18 @@ const Contacto = () => {
 
             <main className="container">
                 
-                <h1 className="m-10 titulo-contacto"> Ponerse en  Contacto </h1>
+                <section className="flex-column section-contacto-header">
+                    <h1 className="titulo-contacto"> Pongase en  Contacto </h1>
+                    <p className="p-header-contacto"> Envíenos un correo electrónico aquí: info@globalsystemdental.com o complete este formulario 
+                        y nos pondremos en contacto con usted en las próximas 24 horas.
+                    </p>
+                    <ul className="lista-redes-sociales flex">
+                        <li> <FaInstagram  style={{ fontSize: '25px'}} />  </li>
+                        <li> <FaFacebook  style={{ fontSize: '25px'}} />  </li>
+                        <li> <FaTwitter  style={{ fontSize: '25px'}} /> </li>
+                    </ul>
+                    
+                </section>
             
           
                 <section className="flex section-contacto-formulario">

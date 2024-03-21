@@ -10,6 +10,11 @@
     font-weight: 700;
 }
 
+
+.ver-mapa {
+
+}
+
 @media (min-width: 800px) {
     .section-ubicacion {
         flex-direction: row;

@@ -36,7 +36,7 @@ a {
 
 @media (min-width: 1500px) {
  .span-link {
-    font-size: 1vw;
+    font-size: 0.85vw!important;
  }
  .nav-horario {
     font-size: 0.7vw;

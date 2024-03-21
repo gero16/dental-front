@@ -14,33 +14,31 @@ const Footer = () => {
                         /*  <img src={logo}  className="logo" alt="" /> */
                     }
                    
-
-
                     <div className="flex div-footer">
                         <section className="footer-horarios flex">
                             <h5> Horarios de atención </h5>
-                            <ul>
-                                <li> Lunes 13.00 - 19.00 (las Piedras) </li>
-                                <li> Martes y Jueves 13.00 - 20.00 (Las Piedras) </li>
-                                <li> Sábados 9.00 - 14.00 (Las Piedras) </li>
-                                <li> Miércoles 13.00 - 20.00 (Montevideo) </li>
+                            <ul className="ul-footer">
+                                <li className="footer-grey"> Lunes 13.00 - 19.00 (las Piedras) </li>
+                                <li className="footer-grey"> Martes y Jueves 13.00 - 20.00 (Las Piedras) </li>
+                                <li className="footer-grey"> Sábados 9.00 - 14.00 (Las Piedras) </li>
+                                <li className="footer-grey"> Miércoles 13.00 - 20.00 (Montevideo) </li>
                             </ul>
                         </section>
 
                         <section className="section-footer-abajo container flex">
-                            <section>
+                            <section className="footer-quienes-somos">
                                 <h5 className="mb-5"> Quienes somos </h5>
-                                <p> Contacto </p>
-                                <p> Acerca de Nosotros </p>
+                                <p className="footer-grey"> Contacto </p>
+                                <p className="footer-grey"> Acerca de Nosotros </p>
                             </section>
 
                         
                             <section>
                                 <h5 className="mb-5"> Servicios </h5>
                                 <ul >
-                                    <li> <span> Servicios </span>  </li>
-                                    <li> <span> Galeria </span>  </li>
-                                    <li> <span> Blog </span>  </li>
+                                    <li className="footer-grey"> <span> Servicios </span>  </li>
+                                    <li className="footer-grey"> <span> Galeria </span>  </li>
+                                    <li className="footer-grey"> <span> Blog </span>  </li>
                                 </ul>
                             </section>
 

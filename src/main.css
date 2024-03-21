@@ -4,6 +4,7 @@
   font-family: "Noto Sans", sans-serif;
   --primario: #008362;
   --white: #ffffff;
+  --footer-grey: #979595;
 }
 
 body {
@@ -25,7 +26,10 @@ ul, ol {
   margin: 0 auto;
 }
 
+.footer-grey {
 
+  color: var(--footer-grey);
+}
 .flex {
   display: flex;
 }

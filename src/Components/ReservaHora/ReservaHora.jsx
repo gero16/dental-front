@@ -7,6 +7,7 @@ import Navbar from "../Navbar/Navbar";
 import Calendar from 'react-calendar';
 import { useState } from "react";
 import Imagen from "../../../public/vista.jpg"
+import Footer from "../Footer/Footer";
 const ReservaHora = () => {
     const [value, onChange] = useState(new Date());
 
@@ -115,7 +116,7 @@ const ReservaHora = () => {
             </section>
 
          
-            
+            <Footer> </Footer>
             
         </>
     )

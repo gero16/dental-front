@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import ImagenLocal from "../../../public/local.jpg"
 import Navbar from "../Navbar/Navbar";
 import Ubicacion from "../Ubicacion/Ubicacion";
+import Footer from "../Footer/Footer";
 
 const Contacto = () => {
 
@@ -59,6 +60,7 @@ const Contacto = () => {
                
             </main>
         
+        <Footer> </Footer>
         </>
     )
 }

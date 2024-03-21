@@ -1,16 +1,16 @@
 import Navbar from "../Navbar/Navbar"
 
-const Nosotros = () => {
+const Galeria = () => {
     return (
         <> 
             <Navbar> </Navbar>
 
             <main className="container">
 
-                <h1> Nosotros </h1>
+                <h1> Galeria de sonrisas </h1>
             </main>
         </>
     )
 }
 
-export default Nosotros
+export default Galeria

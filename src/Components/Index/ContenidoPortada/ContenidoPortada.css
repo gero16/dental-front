@@ -5,6 +5,17 @@
     transform: rotate(180deg);
     background-size: cover;
 }
+
+.logo-2-portada {
+    width: 5vw;
+    position: relative;
+    bottom: -17%;
+    right:  -35%;
+    border-radius: 100%;
+    box-sizing: content-box;
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .portada-img {
 
     /*
@@ -42,7 +53,7 @@
     .portada-texto {
         
         /* background: linear-gradient(to top, #009173, 20%, #007855); */
-        background: linear-gradient(to top, var(--primario), 20%, #215F38);
+        background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
         width: 80%;
         height: 90vh;
     }

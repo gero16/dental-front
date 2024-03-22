@@ -1,16 +1,18 @@
 import "./ContenidoPortada.css"
 import Portada1 from "../../../../public/portada.png"
 import Portada2 from "../../../../public/portada-2.jpg"
+import logo2 from "../../../../public/logo-2.png"
 
 const ContenidoPortada = () => {
     return (
         <> 
+
          <article className="article-portada"> 
 
                 <img src={Portada2} className="portada-img" alt="" />
                 {
                     /*  
-                     Portada1 Usa este imagen con un borde
+                    Portada1 Usa este imagen con un borde
                     <section className="portada-border"></section> 
                     */ 
                 }
@@ -23,6 +25,7 @@ const ContenidoPortada = () => {
                         <li className="white  li-portada-texto"> Miercoles 13:00 - 20:00 (Montevideo) </li>
                         <li className="white  li-portada-texto"> Sabados 09:00 - 14:00 (Las Piedras) </li>
                     </ul>
+                <img src={logo2} className="logo-2-portada" alt="" />
                 </section>
             </article>
         </>

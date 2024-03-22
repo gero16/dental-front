@@ -131,9 +131,9 @@ ol {
   cursor: pointer;
 }
 
-.hora-seleccionada {
-  background-color: rgb(2, 2, 112);
-  color: white;
+.seleccionado {
+  background-color:var(--primario)!important;
+  color: white!important;
 }
 
 .btn-deshabilitar {

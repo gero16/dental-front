@@ -8,19 +8,48 @@ import Calendar from 'react-calendar';
 import { useState } from "react";
 import Imagen from "../../../public/vista.jpg"
 import Footer from "../Footer/Footer";
+import Hora from "./Hora";
 const ReservaHora = () => {
 
     const [value, onChange] = useState(new Date());
 
-    const [hora, setHora] = useState()
+    // Tendre que tener un objeto con todas las horas y su true o false 
+
+    const horaSeleccionada = {
+        "09:00-09:30" : false,
+        "09:30-10:00": false
+    }
+
+    console.log(horaSeleccionada["09:00-09:30"])
+
+    const [hora, setHora] = useState(false)
+    const [horaAnterior, setHoraAnterior] = useState("")
     const [dia, setDia] = useState()
     const [sabado, setSabado] = useState(false)
+    const [habilitado, setHabilitado] = useState(false)
     
 
     const seleccionarHora = (hora) => {
-        console.log(hora.target.dataset.id)
-        // const hola = document.querySelectorAll(`[data-id='${ hora.target.dataset.id }']`)
-        //console.log(hola)
+        
+        const horaSeleccionada = hora.target.dataset.id
+        console.log(horaSeleccionada)
+
+        console.log(horaAnterior.length === 0)
+        if(horaAnterior.length === 0) {
+            setHora(hora[`${horaSeleccionada}`] = true)
+            // Para posteriori
+            setHoraAnterior(horaSeleccionada)
+        }
+
+        if (horaAnterior > 0) {
+            setHora(hora[`${horaSeleccionada}`] = true)
+            setHora(hora[horaAnterior] = false)
+            // Para posteriori
+            setHoraAnterior(horaSeleccionada)
+        }
+        
+        console.log(hora)
+        //return hora
     }
     
     const seleccionarDia = (e) => {
@@ -67,8 +96,11 @@ const ReservaHora = () => {
                     <h2> Horarios Disponibles </h2> 
                     <div className="flex-center div-horas">   
 
-                        <ul className="lista-horas-disponibles-1" onClick={(hora) => seleccionarHora(hora)}>
-                            <li data-id="09:00-09:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 09:00 - 09:30 </li>
+                        <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e)}>
+                        
+                            <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:00-09:30"} > </Hora>  
+                            <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:30-10:00"} > </Hora>  
+                            <li data-id="09:00-09:30" className={ `${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora' ) } ` } > 09:00 - 09:30 </li>
                             <li data-id="09:30-10:00" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 09:30 - 10:00 </li>
                             <li data-id="10:00-10:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 10:00 - 10:30 </li>
                             <li data-id="10:30-11:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 10:30 - 11:30 </li>
@@ -94,6 +126,7 @@ const ReservaHora = () => {
                             <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 18:30 - 19:00 </li>
                             <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 19:00 - 19:30 </li>
                             <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 19:30 - 20:00 </li>
+                            
                         </ul>
                     </div>
                   

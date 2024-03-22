@@ -1,12 +1,16 @@
 import Navbar from "../Navbar/Navbar"
+import "./Galeria.css"
 
 const Galeria = () => {
     return (
         <> 
             <Navbar> </Navbar>
 
-            <main className="container">
+            <section className="portada-galeria">
 
+            </section>
+            <main className="container">
+             
                 <h1> Galeria de sonrisas </h1>
             </main>
         </>

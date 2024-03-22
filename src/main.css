@@ -2,7 +2,8 @@
   margin : 0px;
   padding : 0px;
   font-family: "Noto Sans", sans-serif;
-  --primario: #0a9c78;
+  /*  --primario: #0a9c78; */
+  --primario:#215F38;
   --secundario: #0F9EA8;
   --white: #ffffff;
   --footer-grey: #979595;

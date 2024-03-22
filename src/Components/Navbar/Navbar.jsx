@@ -1,4 +1,4 @@
-import logo from "../../../public/global.fw.png"
+import logo from "../../../public/logo-3.jpg"
 import "./Navbar.css"
 
 import { Link as Navigate, NavLink,} from "react-router-dom";
@@ -23,7 +23,7 @@ const Navbar = () => {
                
 
                 <nav className="flex container nav-principal"> 
-                    <img src={logo} alt="" />
+                    <img src={logo} className="img-logo" alt="" />
                     <ul className="flex-center-center lista-navbar">
                         <li> 
                             <NavLink to={`/`} > 

@@ -97,9 +97,11 @@ const ReservaHora = () => {
                     <div className="flex-center div-horas">   
 
                         <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e)}>
-                        
-                            <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:00-09:30"} > </Hora>  
-                            <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:30-10:00"} > </Hora>  
+                             {
+                                /*             <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:00-09:30"} > </Hora>  
+                            <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:30-10:00"} > </Hora>      */
+                             }
+                    
                             <li data-id="09:00-09:30" className={ `${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora' ) } ` } > 09:00 - 09:30 </li>
                             <li data-id="09:30-10:00" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 09:30 - 10:00 </li>
                             <li data-id="10:00-10:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 10:00 - 10:30 </li>

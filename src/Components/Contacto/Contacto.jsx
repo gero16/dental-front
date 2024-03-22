@@ -39,6 +39,7 @@ const Contacto = () => {
 
                     <form action="#" className="formulario-contacto">
                         <ul className="ul-formulario-contacto">
+                       
                             <li className="li-formulario-contacto">
                                 <label htmlFor="">Nombre </label>
                                 <input type="text" />

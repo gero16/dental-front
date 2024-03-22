@@ -127,6 +127,19 @@ ol {
   font-size: 1.5em;
 }
 
+.li-hora {
+  cursor: pointer;
+}
+
+.hora-seleccionada {
+  background-color: rgb(2, 2, 112);
+  color: white;
+}
+
+.btn-deshabilitar {
+  background-color: rgb(116, 112, 112);
+  color: white;
+}
 
 @media (min-width: 1200px) {
   

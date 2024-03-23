@@ -2,6 +2,10 @@ import { useState } from "react"
 
 import Imagen from "../../../../public/borde.jpg"
 import "./ContenidoInfoConsulta.css"
+import logo2 from "../../../../public/logo-2.png"
+
+import Icono from "../../../../public/diente-t.webp"
+
 const ContenidoInfoConsulta = () => {
 
     return (
@@ -19,7 +23,15 @@ const ContenidoInfoConsulta = () => {
                         <li> Blanqueamientos </li> 
                         <li> Limpieza </li> 
                         <li> Implantes </li> 
-                    </ul>   
+                    </ul>  
+
+
+
+                    <img src={logo2} className="logo-2 logo-der" alt="" /> 
+                    {
+                        /*         <img src={logo2} className="logo-2 logo-izq" alt="" />     */
+                    }
+              
                 </div>
             </section>
         

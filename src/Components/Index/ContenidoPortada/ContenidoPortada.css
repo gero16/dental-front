@@ -20,6 +20,7 @@
     padding: 10px;
     box-shadow: rgba(99, 99, 99, 0.062) 0px 2px 8px 0px;
 }
+
 .portada-img {
 
     /*
@@ -37,6 +38,8 @@
     gap: 20px;
     color: white;
     text-align: start;
+    background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
+  
 
 }
 
@@ -77,7 +80,7 @@
     .portada-texto {
         
         /* background: linear-gradient(to top, #009173, 20%, #007855); */
-        background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
+
         width: 80%;
         height: 90vh;
     }

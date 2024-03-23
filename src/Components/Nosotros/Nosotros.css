@@ -1,0 +1,61 @@
+
+.main-nosotros {
+    position: relative;
+    /* background: var(--primario); */
+    overflow: hidden;
+    color: var(--footer-grey);
+   
+}
+
+.main-nosotros h2, ul {
+    position: relative;
+    z-index: 2;
+}
+
+.main-nosotros::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+    background-image: url('../../../public/portada-2.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    background-size: cover;
+   
+}
+
+
+.section-nosotros-texto {
+    padding: 10px 50px;
+    
+}
+
+.tecnologias-nosotros {
+    margin : 20px 0px;
+    gap: 20px;
+    padding: 50px;
+    background-color: rgba(9, 31, 78, 0.685);
+    color: white;
+
+}
+
+.h1-nosotros {
+    font-size: xxx-large;
+}
+
+.h2-tecnologias-utilizadas {
+    font-size: xx-large;
+}
+
+.ul-nosotros {
+    gap: 20px
+}
+
+.li-nosotros {
+    gap: 10px;
+}

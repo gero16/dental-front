@@ -85,6 +85,18 @@ ul, ol {
   margin-bottom: 5px
 }
 
+.m-auto {
+  margin:0 auto;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
 .hora-disponible {
   background-color: rgb(165, 2, 2);
 }

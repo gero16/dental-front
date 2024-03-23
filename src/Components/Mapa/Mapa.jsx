@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 const Mapa = ({ubicacion, style}) => {
 
     const ubiTresCruces = [-34.89578868112877, -56.16680986705166]
-    const ubiLasPiedras = [-34.7277481203798, -56.21380023171297]
+    const ubiLasPiedras = [-34.728089, -56.213810]
 
     const iconoRojo = new L.Icon({
         iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",

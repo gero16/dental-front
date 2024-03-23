@@ -3,7 +3,7 @@ import Mapa from "../Mapa/Mapa.jsx"
 
 const Ubicacion = () => {
     const ubiTresCruces = [-34.89578868112877, -56.16680986705166]
-    const ubiLasPiedras = [-34.7277481203798, -56.21380023171297]
+    const ubiLasPiedras = [-34.728071363547315, -56.21382609708981]
     
     return (
         <> 

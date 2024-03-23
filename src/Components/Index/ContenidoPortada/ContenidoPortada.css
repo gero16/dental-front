@@ -5,16 +5,20 @@
     transform: rotate(180deg);
     background-size: cover;
 }
-
+.h2-portada-texto {
+  
+    padding: 15px;
+    box-sizing: content-box;
+}
 .logo-2-portada {
     width: 5vw;
     position: relative;
-    bottom: -17%;
+    bottom: -10%;
     right:  -35%;
     border-radius: 100%;
     box-sizing: content-box;
     padding: 10px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.062) 0px 2px 8px 0px;
 }
 .portada-img {
 
@@ -22,7 +26,6 @@
     background-image: url("../../../public/portada.png");
     background-size: contain;
     */
-
 }
 
 
@@ -34,8 +37,29 @@
     gap: 20px;
     color: white;
     text-align: start;
+
 }
 
+.li-portada-texto {
+    font-size: 1.1vw;
+}
+
+.lista-numero {
+    padding: 10px;
+    gap: 10px;
+    background-color: rgba(39, 38, 38, 0.562);
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.span-portada-numero {
+    font-size: 1.1vw;
+}
+
+.lista-portada-2 {
+  
+
+}
 
 @media (min-width: 800px) {
     .article-portada {
@@ -56,6 +80,9 @@
         background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
         width: 80%;
         height: 90vh;
+    }
+    .p-portada-texto {
+        font-size: 1.3vw;;
     }
    }
   

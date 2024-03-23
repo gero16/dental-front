@@ -65,6 +65,10 @@ ul, ol {
   justify-content: center;
 }
 
+.flex-center-v {
+  display: flex;
+  align-items: center;
+}
 .none {
   display : none;
 }

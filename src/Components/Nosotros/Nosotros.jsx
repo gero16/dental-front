@@ -1,6 +1,7 @@
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
 import "./Nosotros.css"
+import FondoBlanco from "/fondo-blanco.jpg"
 
 const Nosotros = () => {
     return (
@@ -9,12 +10,12 @@ const Nosotros = () => {
 
             <main className="main-nosotros">
 
-
-                <section>
+                <section className="flex-center section-portada-nosotros">
                     <img src="https://res.cloudinary.com/geronicola/image/upload/v1711304193/general-it/o2bkoy9n2g2uvt1xcnc2.png" className="portada-nosotros" alt="" />
                 </section>
 
                 <section className="section-nosotros-texto m-auto flex-column">
+              
                     <h1 className="h1-nosotros width-70 m-auto"> Nosotros </h1> 
                      <p className="width-70 m-auto"> En Global System Dental brindamos`una atención odontológica integral, priorizando la salud y el bienestar de nuestros pacientes, desde niños hasta adultos mayores.
                     Con 40 años de experiencia profesional, el Dr Rafael Pérez ofrece una atención personalizada desde el inicio hasta el final de tratamiento, abarcando todas las áreas que comprende un tratamiento odontológico. Además, contamos con tecnología de última generación

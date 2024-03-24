@@ -31,12 +31,22 @@
     
 }
 
+.section-portada-nosotros {}
+
 .portada-nosotros {
     width: 100%;
 }
+.fondo-blanco  {
+    z-index: -1;
+    position: relative;
 
+    width: 100%;
+}
 .section-nosotros-texto {
+
     padding: 20px 50px;
+    color: var(--primario);
+    background-color: #F2F2F1;
 }
 
 .tecnologias-nosotros {
@@ -45,6 +55,7 @@
     padding: 50px;
     background-color: var(--primario);
     color: white;
+   
 
 
 }

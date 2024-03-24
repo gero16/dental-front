@@ -10,6 +10,10 @@ const Nosotros = () => {
             <main className="main-nosotros">
 
 
+                <section>
+                    <img src="https://res.cloudinary.com/geronicola/image/upload/v1711304193/general-it/o2bkoy9n2g2uvt1xcnc2.png" className="portada-nosotros" alt="" />
+                </section>
+
                 <section className="section-nosotros-texto m-auto flex-column">
                     <h1 className="h1-nosotros width-70 m-auto"> Nosotros </h1> 
                      <p className="width-70 m-auto"> En Global System Dental brindamos`una atención odontológica integral, priorizando la salud y el bienestar de nuestros pacientes, desde niños hasta adultos mayores.

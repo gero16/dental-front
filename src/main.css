@@ -98,6 +98,10 @@ ul, ol {
   gap: 20px;
 }
 
+.gap-30 {
+  gap: 30px;
+}
+
 .hora-disponible {
   background-color: rgb(165, 2, 2);
 }

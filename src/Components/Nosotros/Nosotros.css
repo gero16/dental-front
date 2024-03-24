@@ -4,7 +4,7 @@
     /* background: var(--primario); */
     overflow: hidden;
     color: rgb(63, 62, 62);
-    background-color: rgb(238, 230, 230);
+    background-color: #F5F5F3;
    
 }
 
@@ -31,6 +31,9 @@
     
 }
 
+.portada-nosotros {
+    width: 100%;
+}
 
 .section-nosotros-texto {
     padding: 20px 50px;

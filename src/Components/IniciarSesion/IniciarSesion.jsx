@@ -11,6 +11,7 @@ const IniciarSesion = () => {
     })
  
     const fetchIniciarSesion = async () => {
+        console.log(sesion)
         const response = await fetch(`${ urlBackend_Desarrollo }/usuario/iniciar-sesion`,  
             {
                 method: 'POST',
@@ -23,6 +24,7 @@ const IniciarSesion = () => {
             })
         console.log(response)
         const resp = await response.json()
+        console.log(resp)
             // geronicola1696@gmail.com
 
             /*
@@ -42,27 +44,25 @@ const IniciarSesion = () => {
         <> 
             <Navbar> </Navbar>
 
-            <section className="img-portada-sesion"> 
-              
-            </section>
+            
             <section className="flex-column-center section-sesion">
                 <h1> Iniciar Sesión </h1>
                     <ul className="ul-iniciar-sesion flex-column">
-                        <li>
-                            <label htmlFor=""> Correo </label>
+                        <li className="flex-around">
+                            <label htmlFor="" className="label-sesion"> Correo </label>
                             <input type="text" onChange={(evento) => setSesion({
                                 ...sesion, 
-                                correo : evento.value
+                                correo : evento.target.value
                             })} />
                         </li>
-                        <li>
-                            <label htmlFor="">Contraseña </label>
+                        <li className="flex-around">
+                            <label htmlFor=""className="label-sesion">Contraseña </label>
                             <input type="text" onChange={(evento) => setSesion({
                                 ...sesion, 
-                                password : evento.value
+                                password : evento.target.value
                             })} />
                         </li>
-                        <li>
+                        <li className="flex-column text-center">
                             <span className="btn-iniciar-sesion" onClick={() => fetchIniciarSesion()}> Iniciar Sesión </span>
                         </li>
                     </ul>

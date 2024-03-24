@@ -70,6 +70,11 @@ ul, ol {
   display: flex;
   align-items: center;
 }
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
 .none {
   display : none;
 }

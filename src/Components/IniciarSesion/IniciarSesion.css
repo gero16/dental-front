@@ -6,14 +6,32 @@
 }
 
 .section-sesion {
-    margin: 15px;
+    padding: 15px;
+    height: 87vh;
+    width: 100%;
+    background-image: url('../../../public/fondo-blanco.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 45%;
+    background-size: cover;
 }
 .ul-iniciar-sesion {
     gap: 20px;
     margin: 15px;
+    padding: 30px;
+    background-color :#F0F8FF;
+    width: 25vw;
+    border-radius: 10px;
 }
 
 .btn-iniciar-sesion {
     padding: 10px;
-    background-color: aliceblue;
+    background-color: #F0F8FF;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.label-sesion {
+    width: 5.5vw;
 }

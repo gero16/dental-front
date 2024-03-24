@@ -48,16 +48,22 @@ const IniciarSesion = () => {
             <section className="flex-column-center section-sesion">
                 <h1> Iniciar Sesión </h1>
                     <ul className="ul-iniciar-sesion flex-column">
-                        <li className="flex-around">
+                        <li className="flex-around gap-20">
                             <label htmlFor="" className="label-sesion"> Correo </label>
-                            <input type="text" onChange={(evento) => setSesion({
+                            <input 
+                                type="text" 
+                                className="input-sesion"
+                                onChange={(evento) => setSesion({
                                 ...sesion, 
                                 correo : evento.target.value
                             })} />
                         </li>
-                        <li className="flex-around">
+                        <li className="flex-around gap-20">
                             <label htmlFor=""className="label-sesion">Contraseña </label>
-                            <input type="text" onChange={(evento) => setSesion({
+                            <input 
+                                type="text" 
+                                className="input-sesion"
+                                onChange={(evento) => setSesion({
                                 ...sesion, 
                                 password : evento.target.value
                             })} />

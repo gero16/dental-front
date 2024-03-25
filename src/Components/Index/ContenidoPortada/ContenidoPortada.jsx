@@ -38,7 +38,10 @@ const ContenidoPortada = () => {
                         <li className="white  li-portada-texto"> Miercoles 13:00 - 20:00 (Montevideo) </li>
                         <li className="white  li-portada-texto"> Sabados 09:00 - 14:00 (Las Piedras) </li>
                     </ul>
-                    <img src={logo2} className="logo-2-portada" alt="" />
+                    {
+                        /* <img src={logo2} className="logo-2-portada" alt="" /> */ 
+                    }
+                    
 
                 </section>
             </article>

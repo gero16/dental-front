@@ -27,9 +27,9 @@ const ContenidoInfoConsulta = () => {
 
 
 
-                    <img src={logo2} className="logo-2 logo-der" alt="" /> 
+                   
                     {
-                        /*         <img src={logo2} className="logo-2 logo-izq" alt="" />     */
+                       /*  <img src={logo2} className="logo-2 logo-der" alt="" />  */
                     }
               
                 </div>

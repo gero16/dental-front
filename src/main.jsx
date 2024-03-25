@@ -19,12 +19,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: 
-      <div> 
-
+    <>
       <Navbar> </Navbar>
       <Index> </Index>
-
-    </div>,
+    </>
+    
   },
   {
     path: "/nosotros",

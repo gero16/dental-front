@@ -30,16 +30,31 @@ h2 {
 
 
 .contenido-servicios {
-    margin-bottom: 20px;
+    padding : 20px;
+    margin: 30px auto;
     align-items: center;
+    background-color: rgb(245, 240, 240);
 
 }
+
 .contenido-servicio {
     align-items: center;
     box-shadow: rgba(199, 201, 201, 0.2) 0px 2px 8px 0px;
     padding: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    margin: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+
+}
+
+.titulo-servicio {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    
+    color: var(--primario);
 }
 
 .contenido-servicio h2 {
@@ -79,7 +94,8 @@ h2 {
 
 .article-info-consulta2 {
     padding: 80px;
-    background-color: #F3F8FE;
+    background-color: var(--oscuro);
+    color: white;
     justify-content: space-evenly;
 }
 
@@ -94,8 +110,7 @@ h2 {
 
 .btn-consultar {
     padding: 10px;
-    background-color: rgb(223, 225, 226);
-    color: rgb(148, 148, 148);
+    background-color: rgb(235, 231, 231);
     text-align: center;
 }
 
@@ -119,7 +134,7 @@ input, textarea {
     }
 
     .contenido-servicio {
-        width: 32vw;
+        width: 45%;
         
     }
  

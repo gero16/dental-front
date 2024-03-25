@@ -15,16 +15,13 @@ const Index = () => {
 
     return (
         <> 
-           <ContenidoPortada> </ContenidoPortada>
 
-            {
-                   <ContenidoServicios> </ContenidoServicios> 
-            }
-           
+        <section className="fondo-blanco">
+            <ContenidoPortada> </ContenidoPortada>
 
-           
-      
-
+        
+            <ContenidoServicios> </ContenidoServicios> 
+        
             <ContenidoSaludDental> </ContenidoSaludDental>
 
             <ContenidoInfoConsulta> </ContenidoInfoConsulta>
@@ -47,6 +44,8 @@ const Index = () => {
             <Ubicacion> </Ubicacion>
 
             <Footer> </Footer>
+        </section>
+      
         </>
     )
 }

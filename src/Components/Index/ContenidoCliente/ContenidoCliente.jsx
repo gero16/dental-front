@@ -38,7 +38,10 @@ const ContenidoCliente = () => {
                     <a href="#slide3"> </a>
                     </li>
                 </ul>
+
+                <section className="portada-color"> </section>
             </article>
+
 
         </>
     )

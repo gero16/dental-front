@@ -11,13 +11,19 @@
   --claro: #edf4fd;
   --texto: #595959;
   --gris-oscuro: #5a5858;
+  --oscuro-tr: #484848;
   box-sizing: border-box;
   
 }
-
+#root{
+  user-select: all;
+  pointer-events: auto;
+  z-index: -1;
+}
 body {
   color: #595959;
   width: 100%;
+
 
 }
 

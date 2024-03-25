@@ -1,8 +1,10 @@
+import Navbar from "../../Navbar/Navbar"
+
 const HorasDisponibles = () => {
     return (
 
         <> 
-
+            <Navbar> </Navbar>
             <h1> Horas Disponibles </h1>
         </>
     )

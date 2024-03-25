@@ -1,9 +1,11 @@
 import { Link as Navigate, NavLink,} from "react-router-dom";
 import "./Panel.css"
+import Navbar from "../../Navbar/Navbar";
 
 const Panel = () => {
     return (
         <> 
+        <Navbar> </Navbar>
          <section className="section-panel flex-center-center fondo-blanco-img">
 
             <NavLink to={`/admin/panel/administrar-publicaciones`} className="div-panel text-center" > 

@@ -1,5 +1,7 @@
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup   } from 'react-leaflet'
+
+import { useGeolocated } from "react-geolocated";
 
 const Mapa = ({ubicacion, style}) => {
 
@@ -20,21 +22,23 @@ const Mapa = ({ubicacion, style}) => {
                     zoom={16} 
                     scrollWheelZoom={true}
                     style={{ height: style[0], width: style[1], margin: style[2] }}
-                    >
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={ubiLasPiedras} icon={iconoRojo}>
-                    <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
-                <Marker position={ubiTresCruces} icon={iconoRojo}>
-                    <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={ubiLasPiedras} icon={iconoRojo}>
+                        <Popup>
+                        A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                    <Marker position={ubiTresCruces} icon={iconoRojo}>
+                        <Popup>
+                        A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+
+                    
 
 
                 

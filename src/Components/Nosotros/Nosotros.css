@@ -61,6 +61,7 @@
 
 .texto-nosotros {
     font-weight: 600;
+    color: var(--gris-oscuro);
 }
 .tecnologias-nosotros {
     margin : 20px 0px 70px 0px;

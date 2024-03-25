@@ -15,7 +15,7 @@ const ContenidoInfoConsulta = () => {
             <section className="contenido-info-consulta">  
                 <div className="container">
                     <span className="white consulta-gratis">CONSULTA GRATUITA DE 15 MINUTOS </span> 
-                    <h2 className="white"> Cada nueva paciente recibe chequeo y limpieza </h2>
+                    <h2 className="white h2-contenido-consulta"> Cada nueva paciente recibe chequeo y limpieza </h2>
                     <ul className="lista-info-consulta flex-column">
                         <li> Evaluación de la enfermedad de las encías </li>
                         <li> Evaluación del riesgo de caries dental </li>

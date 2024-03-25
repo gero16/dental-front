@@ -6,6 +6,7 @@ import Icono4 from "../../../../public/icono1.jpg"
 import Icono5 from "../../../../public/icono2.jpg"
 import Icono6 from "../../../../public/icono3.jpg"
 
+import "./ContenidoServicio.css"
 
 
 const ContenidoServicios = () => {
@@ -19,7 +20,7 @@ const ContenidoServicios = () => {
                     <h2>  En un ambiente cómodo y relajante, puede aprovechar una gran cantidad de servicios </h2> 
                 </section>
 
-                <section  className="contenido-servicio flex"> 
+                <section  className="contenido-servicio flex arcoiris"> 
                     <img src={Icono4} className="icono-servicio" alt="" />  
                     <section className="texto-servicio"> 
                         <h3> General </h3>
@@ -27,7 +28,7 @@ const ContenidoServicios = () => {
                     </section> 
                 </section>
 
-                <section  className="contenido-servicio flex"> 
+                <section  className="contenido-servicio flex arcoiris"> 
                     <img src={Icono5} className="icono-servicio" alt="" />  
                     <section className="texto-servicio"> 
                         <h3> Cosmético </h3>
@@ -35,7 +36,7 @@ const ContenidoServicios = () => {
                     </section> 
                 </section>
 
-                <section  className="contenido-servicio flex"> 
+                <section  className="contenido-servicio flex arcoiris"> 
                     <img src={Icono6} className="icono-servicio" alt="" />  
                     <section className="texto-servicio"> 
                         <h3> Periodontal </h3>

@@ -29,43 +29,10 @@ h2 {
 }
 
 
-.contenido-servicios {
-    padding : 20px;
-    margin: 30px auto;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-}
-
-.contenido-servicio {
-    align-items: center;
-    box-shadow: rgba(199, 201, 201, 0.2) 0px 2px 8px 0px;
-    padding: 20px;
-    margin: 20px;
-    background-color: var(--white);
-    border-radius: 10px;
-
-}
-
-.titulo-servicio {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    margin: 20px;
-    
-    color: var(--primario);
-}
-
-.contenido-servicio h2 {
-    font-weight: 500;
- 
-}
 
 
 .contenido-salud-dental{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-   color: var(--primario);
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 40px;

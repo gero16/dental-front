@@ -3,6 +3,7 @@
     width: 10%;
     background-image: url("../../../public/borde.jpg");
     background-size: cover;
+
 }
 
 .logo-2 {
@@ -54,6 +55,7 @@
 .imagen-info-consulta {
     background-image: url("https://res.cloudinary.com/geronicola/image/upload/v1711298570/general-it/yl4wu31uggkttujg2jml.png");
     background-size: cover;
+    filter: brightness(0.85)
 }
 
 

@@ -25,9 +25,6 @@ const ContenidoInfoConsulta = () => {
                         <li> Implantes </li> 
                     </ul>  
 
-
-
-                   
                     {
                        /*  <img src={logo2} className="logo-2 logo-der" alt="" />  */
                     }

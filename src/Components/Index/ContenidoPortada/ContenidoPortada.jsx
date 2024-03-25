@@ -8,7 +8,7 @@ const ContenidoPortada = () => {
     return (
         <> 
 
-         <article className="article-portada"> 
+         <article className="article-portada "> 
 
                 <img src={Portada2} className="portada-img" alt="" />
                 {

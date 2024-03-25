@@ -33,7 +33,7 @@ h2 {
     padding : 20px;
     margin: 30px auto;
     align-items: center;
-    background-color: rgb(245, 240, 240);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 }
 
@@ -59,18 +59,22 @@ h2 {
 
 .contenido-servicio h2 {
     font-weight: 500;
+ 
 }
 
 
 .contenido-salud-dental{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+   color: var(--primario);
     margin-top: 50px;
     margin-bottom: 50px;
+    padding: 40px;
     gap: 50px;
 }
 
 
 .h2-salud-dental {
-
+    color: var(--primario);
 }
 
 .contenido-salud-dental-h2 {

@@ -16,6 +16,7 @@ import Servicios from './Components/Servicios/Servicios.jsx';
 import IniciarSesion from './Components/IniciarSesion/IniciarSesion.jsx';
 import Registro from './Components/Registro/Registro.jsx';
 import Blog from './Components/Contacto/Blog/Blog.jsx';
+import Publicacion from './Components/Publicacion/Publicacion.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog> </Blog>
+  },
+  {
+    path: "/blog/publicaciones/:publicacion",
+    element: <Publicacion> </Publicacion>
   },
   {
     path: "/reservar-hora",

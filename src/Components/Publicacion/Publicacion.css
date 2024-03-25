@@ -1,0 +1,23 @@
+.publicacion {
+    padding-bottom: 50px;
+
+}
+
+.img-publicacion {
+    height: 25vw;
+}
+
+.section-titulo-contenido {
+    background-color: #0FA89D;
+    width: 100%;
+}
+
+.h1-publicacion {
+    color: white;
+    font-size: 2.2vw;
+}
+
+.contenido-publicacion {
+    width: 70%;
+    margin: 20px auto;
+}

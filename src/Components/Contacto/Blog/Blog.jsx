@@ -17,7 +17,7 @@ const Blog = () => {
            
            <section className="fondo-blanco-img">
                 <main className="publicaciones flex">
-                    <article className="publicacion arcoiris">
+                    <article className="flex-colum publicacion arcoiris">
                         <img 
                             src="https://clinicajuliansaiz.com/wp-content/uploads/2021/05/protesis-dental-clinica-dental-julian-saiz-01.jpg" 
                             className="img-publicacion"
@@ -64,9 +64,12 @@ const Blog = () => {
                             alt="" />
                         <section className="contenido-publicacion"> 
                             <h2 className="h2-publicacion">  Principales alimentos que tiñen los dientes </h2>
-                            <p> El vino tinto y blanco es uno de los grandes enemigos de la estética de los dientes.
+                            <p> 
+                
+                            El vino tinto y blanco es uno de los grandes enemigos de la estética de los dientes.
 
-                                El tinto es sin duda el que más daño ocasiona a la apariencia de la dentadura debido a su composición de pigmentos naturales, especialmente las antocianinas. Estas sustancias son compuestos orgánicos 
+                            El tinto es sin duda el que más daño ocasiona a la apariencia de la dentadura debido a su composición de pigmentos naturales, especialmente las antocianinas. Estas sustancias son compuestos orgánicos responsables del color rojo, azul o morado que se encuentran en muchas frutas, verduras y plantas, incluyendo las uvas utilizadas para hacer vino tinto. Cuando consumes vino tinto, se adhieren al esmalte dental, que es la capa externa protectora de los dientes. 
+
                             </p>
                         </section>
 
@@ -80,13 +83,8 @@ const Blog = () => {
                         <section className="contenido-publicacion"> 
                             <h2 className="h2-publicacion"> Salud Bucal Niños </h2>
                             <p> 
-                                Dentición e higiene dental de los niños pequeños
+                            La mejor manera de proteger los dientes de su hijo es enseñarle buenos hábitos dentales. Con la orientación adecuada, adoptará rápidamente buena higiene oral como parte de su rutina diaria. Sin embargo, aunque es posible que sea un participante entusiasta, no tendrá el control ni la concentración para lavar sus dientes por sí mismo. Será necesario que lo supervise y le ayude a que el cepillo retire toda la placa, las bacterias suaves y pegajosas, que contienen depósitos que se acumulan
 
-                                Uno de cada 10 niños de 2 años de edad ya tiene una o más caries dentales.
-
-                                A los 3 años de edad, 28 % de los niños tienen una o más caries dentales.
-
-                                A los 5 años de edad, 50 % de los niños tienen una o más caries dentales.
                                                             </p>
                         </section>
 

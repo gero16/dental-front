@@ -15,11 +15,7 @@
   box-sizing: border-box;
   
 }
-#root{
-  user-select: all;
-  pointer-events: auto;
-  z-index: -1;
-}
+
 body {
   color: #595959;
   width: 100%;

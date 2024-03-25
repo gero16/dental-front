@@ -122,7 +122,7 @@ ul, ol {
 }
 
 .fondo-blanco-img {
-    background-image: url('../../../public/fondo-blanco.jpg');
+    background-image: url('/fondo-blanco.jpg');
     background-repeat: no-repeat;
     background-position: 50% 45%;
     background-size: cover;

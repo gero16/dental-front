@@ -14,6 +14,7 @@ import Nosotros from './Components/Nosotros/Nosotros.jsx';
 import Galeria from './Components/Galeria/Galeria.jsx';
 import Servicios from './Components/Servicios/Servicios.jsx';
 import IniciarSesion from './Components/IniciarSesion/IniciarSesion.jsx';
+import Registro from './Components/Registro/Registro.jsx';
 
 const router = createBrowserRouter([
   {
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/registrarse",
-    element: <div>Hello world!</div>,
+    element: <Registro> </Registro>,
   },
 
 ]);

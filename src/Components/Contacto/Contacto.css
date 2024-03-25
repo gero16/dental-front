@@ -1,11 +1,6 @@
-.portada-contacto {
-    background-image: url("https://res.cloudinary.com/geronicola/image/upload/v1711060597/general-it/nfjudifbamx59oltekpr.webp");
-    background-size: 100%;
-    background-position: center 32%;
-    height: 56vh;
-}
 
 .section-contacto-header {
+    padding: 40px 0px 0px 0px;
     margin: 40px 0px;
     gap: 10px;
     align-items: center;
@@ -22,14 +17,13 @@
     align-items: center;
     height: 80vh;
     margin: 10px 0px 50px 0px;
-    background-color: var(--claro);
+    background-color: white;
     padding: 30px;
     border-radius: 10px;
 }
 
 .formulario-contacto {
     width: 45%;
-    background-color: var(--claro);
     border-radius: 10px;
     height: 100%;
 }

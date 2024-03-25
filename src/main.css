@@ -107,6 +107,10 @@ ul, ol {
   gap: 30px;
 }
 
+.p-20 {
+  padding : 20px;
+}
+
 .hora-disponible {
   background-color: rgb(165, 2, 2);
 }
@@ -115,3 +119,10 @@ ul, ol {
   background-color: rgb(16, 141, 43);
 }
 
+.fondo-blanco {
+    background-image: url('../../../public/fondo-blanco.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 45%;
+    background-size: cover;
+    
+}

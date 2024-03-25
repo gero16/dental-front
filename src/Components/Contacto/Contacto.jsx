@@ -17,66 +17,70 @@ const Contacto = () => {
             <Navbar /> 
             <section className="portada-contacto"> </section>
 
-            <main className="container">
-                
-                <section className="flex section-contacto-header">
-                    <section className="flex-column width-70">
-                        <h1 className="titulo-contacto"> Pongase en  Contacto </h1>
-                        <p className="p-header-contacto"> Envíenos un correo electrónico aquí: info@globalsystemdental.com o complete este formulario 
-                            y nos pondremos en contacto con usted en las próximas 24 horas.
-                        </p>
-                    </section>
-
-                    <section className="m-10">
-                        <h3> Llame para una cita </h3>
-                        <h2 className="h2-numero"> + (598) 94 484 397 </h2>
-                    </section>
-
+            <section className="fondo-blanco">
+                <section className="container ">
                     
-                </section>
-          
-                <section className="flex section-contacto-formulario">
+                    <section className="flex section-contacto-header">
+                        <section className="flex-column width-70">
+                            <h1 className="titulo-contacto"> Pongase en  Contacto </h1>
+                            <p className="p-header-contacto"> Envíenos un correo electrónico aquí: info@globalsystemdental.com o complete este formulario 
+                                y nos pondremos en contacto con usted en las próximas 24 horas.
+                            </p>
+                        </section>
 
-                    <form action="#" className="formulario-contacto">
-                        <ul className="ul-formulario-contacto">
-                       
-                            <li className="li-formulario-contacto">
-                                <label htmlFor="">Nombre </label>
-                                <input type="text" />
-                            </li>
-                            <li  className="li-formulario-contacto">
-                                <label htmlFor=""> Apellido  </label>
-                                <input type="text" />
-                            </li>
-                            <li  className="li-formulario-contacto">
-                                <label htmlFor=""> Correo Electronico </label>
-                                <input type="text" />
-                            </li>
-                            <li  className="li-formulario-contacto">
-                                <label htmlFor=""> Titulo </label>
-                                <input type="text" />
-                            </li>
-                            <li  className="li-formulario-contacto">
-                                <label htmlFor=""> Mensaje </label>
-                                <textarea type="text" />
-                            </li>
+                        <section className="m-10">
+                            <h3> Llame para una cita </h3>
+                            <h2 className="h2-numero"> + (598) 94 484 397 </h2>
+                        </section>
 
-                            <span className="btn-enviar-contacto text-center"> Enviar </span>
-                        </ul>
-                    </form>
-
-                    <section className="img-contacto">      
-          
+                        
                     </section>
-
-                </section>
             
-               
+                    <section className="flex section-contacto-formulario">
 
-                <Ubicacion> </Ubicacion>
+                        <form action="#" className="formulario-contacto">
+                            <ul className="ul-formulario-contacto">
+                        
+                                <li className="li-formulario-contacto">
+                                    <label htmlFor="">Nombre </label>
+                                    <input type="text" />
+                                </li>
+                                <li  className="li-formulario-contacto">
+                                    <label htmlFor=""> Apellido  </label>
+                                    <input type="text" />
+                                </li>
+                                <li  className="li-formulario-contacto">
+                                    <label htmlFor=""> Correo Electronico </label>
+                                    <input type="text" />
+                                </li>
+                                <li  className="li-formulario-contacto">
+                                    <label htmlFor=""> Titulo </label>
+                                    <input type="text" />
+                                </li>
+                                <li  className="li-formulario-contacto">
+                                    <label htmlFor=""> Mensaje </label>
+                                    <textarea type="text" />
+                                </li>
 
-               
-            </main>
+                                <span className="btn-enviar-contacto text-center"> Enviar </span>
+                            </ul>
+                        </form>
+
+                        <section className="img-contacto">      
+            
+                        </section>
+                        
+
+                    </section>
+                
+                
+
+                    <Ubicacion> </Ubicacion>
+
+                
+                </section>
+            </section>
+         
         
         <Footer> </Footer>
         </>

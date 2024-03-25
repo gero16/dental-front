@@ -17,7 +17,7 @@ const Nosotros = () => {
                 <section className="section-nosotros-texto m-auto flex-column">
               
                     <h1 className="h1-nosotros width-70 m-auto"> Nosotros </h1> 
-                     <p className="width-70 m-auto"> En Global System Dental brindamos`una atención odontológica integral, priorizando la salud y el bienestar de nuestros pacientes, desde niños hasta adultos mayores.
+                     <p className="width-70 m-auto texto-nosotros"> En Global System Dental brindamos`una atención odontológica integral, priorizando la salud y el bienestar de nuestros pacientes, desde niños hasta adultos mayores.
                     Con 40 años de experiencia profesional, el Dr Rafael Pérez ofrece una atención personalizada desde el inicio hasta el final de tratamiento, abarcando todas las áreas que comprende un tratamiento odontológico. Además, contamos con tecnología de última generación
                     Ahora lo sabes, si estás en busca de mejorar tu sonrisa, ¡no dudes en contactarnos! </p>
                 </section>

@@ -51,25 +51,24 @@ ol {
 
 
 .section-formulario-contacto {
-  margin: 50px 0px 50px 0px;
   align-items: center;
-  height: 80vh;
+  height: 95vh;
 
 }
 
 .imagen-reservar-hora {
-  height: 80vh;
+  height: 75vh;
 }
 
 
 .div-reservar-hora {
-  height: 80vh;
+  height: 75vh;
   width: 100%;
 }
 
 .ul-formulario-reserva{
-  gap: 20px;
-  background-color: rgba(226, 226, 226, 0.582);
+  gap: 14px;
+  background-color: rgba(223, 222, 222, 0.616);
   color: var(--gris-oscuro);
   height: 100%;
  
@@ -77,11 +76,7 @@ ol {
 
 .ul-formulario-reserva label {
   display: block;
-  width: 120px;
-}
-
-.ul-formulario-reserva input, textarea {
-  width: 80%;
+  width: 135px;
 }
 
 .li-formulario {
@@ -145,6 +140,10 @@ ol {
 .btn-deshabilitar {
   background-color: rgb(116, 112, 112);
   color: white;
+}
+
+.li-formulario input, textarea {
+  width: 100%;
 }
 
 @media (min-width: 1200px) {

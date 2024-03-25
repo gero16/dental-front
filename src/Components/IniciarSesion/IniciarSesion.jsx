@@ -45,7 +45,7 @@ const IniciarSesion = () => {
             <Navbar> </Navbar>
 
             
-            <section className="flex-column-center section-sesion">
+            <section className="flex-column-center section-sesion fondo-blanco-img">
                 <h1> Iniciar Sesión </h1>
                     <ul className="ul-iniciar-sesion flex-column">
                         <li className="flex-around gap-20">

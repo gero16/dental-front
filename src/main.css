@@ -121,7 +121,7 @@ ul, ol {
   background-color: rgb(16, 141, 43);
 }
 
-.fondo-blanco {
+.fondo-blanco-img {
     background-image: url('../../../public/fondo-blanco.jpg');
     background-repeat: no-repeat;
     background-position: 50% 45%;

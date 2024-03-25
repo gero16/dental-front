@@ -16,7 +16,7 @@ const Index = () => {
     return (
         <> 
 
-        <section className="fondo-blanco">
+        <section className="fondo-blanco-img">
             <ContenidoPortada> </ContenidoPortada>
 
         

@@ -17,7 +17,7 @@ const Contacto = () => {
             <Navbar /> 
             <section className="portada-contacto"> </section>
 
-            <section className="fondo-blanco">
+            <section className="fondo-blanco-img">
                 <section className="container ">
                     
                     <section className="flex section-contacto-header">

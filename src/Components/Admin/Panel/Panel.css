@@ -1,0 +1,17 @@
+.section-panel {
+    height: 100vh;
+    gap: 20px;
+  
+}
+
+.div-panel {
+    width: 25vw;
+  
+}
+.img-panel {
+    width: 25vw;
+}
+
+.h2-panel {
+    color: var(--gris-oscuro)
+}

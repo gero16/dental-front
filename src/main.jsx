@@ -18,6 +18,10 @@ import Registro from './Components/Registro/Registro.jsx';
 import Blog from './Components/Contacto/Blog/Blog.jsx';
 import Publicacion from './Components/Publicacion/Publicacion.jsx';
 
+import Panel from './Components/Admin/Panel/Panel.jsx';
+import HorasDisponibles from './Components/Admin/HorasDisponibles/HorasDisponibles.jsx';
+import AdminPublicaciones from './Components/Admin/AdminPublicaciones/AdminPublicaciones.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -66,7 +70,19 @@ const router = createBrowserRouter([
     path: "/registrarse",
     element: <Registro> </Registro>,
   },
-
+  {
+    path: "/admin/panel",
+    element: <Panel> </Panel>,
+  },
+  {
+    path: "/admin/panel/administrar-publicaciones",
+    element:  <AdminPublicaciones />,
+  },
+  {
+    path: "/admin/panel/horas-disponibles",
+    element:  <HorasDisponibles />,
+  },
+  
 ]);
 
 

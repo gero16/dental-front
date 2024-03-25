@@ -51,20 +51,22 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li> 
+                            <NavLink to={`/blog`} > 
+                                <span className="span-link "> Blog </span>
+                            </NavLink>
+                        </li>
+                        <li> 
                             <NavLink to={`/reservar-hora`} > 
                                 <span className="span-link "> Reservar Hora </span>
                             </NavLink>
                         </li>
+
                         <li> 
                             <NavLink to={`/iniciar-sesion`} > 
                                 <span className="span-link ">  Iniciar Sesión </span>
                             </NavLink>
                         </li>
-                        <li> 
-                            <NavLink to={`/registrarse`} > 
-                                <span className="span-link "> Registrarse </span>
-                            </NavLink>
-                        </li>
+                       
                     </ul>
                 </nav>
 

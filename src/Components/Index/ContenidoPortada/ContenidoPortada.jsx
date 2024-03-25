@@ -1,6 +1,7 @@
 import "./ContenidoPortada.css"
 import Portada1 from "../../../../public/portada.png"
 import Portada2 from "../../../../public/portada-2.jpg"
+
 import logo2 from "../../../../public/logo-2.png"
 import { FaPhoneSquareAlt  } from 'react-icons/fa';
 
@@ -10,7 +11,17 @@ const ContenidoPortada = () => {
 
          <article className="article-portada "> 
 
-                <img src={Portada2} className="portada-img" alt="" />
+                <img src={ Portada2 } 
+                    className="portada-img" 
+                    alt="" 
+                />
+
+                {
+                    /*
+                     <img src={ Portada2 } className="portada-img" alt="" 
+                /> 
+                    */
+                }
                 {
                     /*  
                     Portada1 Usa este imagen con un borde
@@ -18,7 +29,7 @@ const ContenidoPortada = () => {
                     */ 
                 }
               
-                <section className="portada-texto">
+              <section className="portada-texto">
                     <h2 className="h2-portada-texto width-70"> Un dentista llega a la raiz del problema </h2>
                     <p className="width-70 p-portada-texto"> Atención personalizada para cada sonrisa </p>
                     
@@ -44,6 +55,7 @@ const ContenidoPortada = () => {
                     
 
                 </section>
+           
             </article>
         </>
     )

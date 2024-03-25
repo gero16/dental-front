@@ -6,7 +6,6 @@
     background-size: cover;
 }
 .h2-portada-texto {
-  
     padding: 15px;
     box-sizing: content-box;
 }
@@ -23,10 +22,10 @@
 
 .portada-img {
 
-    /*
+    
     background-image: url("../../../public/portada.png");
     background-size: contain;
-    */
+    
 }
 
 
@@ -39,8 +38,13 @@
     color: white;
     text-align: start;
     background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
-  
+}
 
+
+/* IMAGEN DEL LOGO PORTADA PARA EL INICIO */
+.portada-logo-img {
+    margin: 0 auto;
+    width: 90%;
 }
 
 .li-portada-texto {

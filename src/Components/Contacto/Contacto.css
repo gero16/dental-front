@@ -81,6 +81,11 @@ textarea {
     width: 100%;
 }
 
+.section-ubicaciones {
+    padding-bottom: 60px;
+  
+}
+
 @media (min-width: 1500px) {
     .section-contacto-formulario {
         height: 60vh;

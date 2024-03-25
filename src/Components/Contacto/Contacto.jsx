@@ -75,8 +75,11 @@ const Contacto = () => {
                 
                 
 
-                    <Ubicacion> </Ubicacion>
+                    <section className="section-ubicaciones">
+                        <Ubicacion> </Ubicacion>
 
+                    </section>
+                 
                 
                 </section>
             </section>

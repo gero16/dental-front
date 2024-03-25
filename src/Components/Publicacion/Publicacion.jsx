@@ -1,9 +1,11 @@
 import Footer from "../Footer/Footer"
+import Navbar from "../Navbar/Navbar"
 import "./Publicacion.css"
 
 const Publicacion = () => {
     return (
         <> 
+            <Navbar> </Navbar>
             <article className="publicacion">
                 
                 <section className="flex"> 

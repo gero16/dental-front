@@ -5,6 +5,15 @@
   background-size: 100%;
 }
 
+.lista-reservar {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  width: 100%;
+  padding: 30px;
+  background-color: #000000b2;
+  color: white;
+}
+
+
 .h1-reservar {
   font-weight: 00;
   font-size: 4.5vw;
@@ -19,11 +28,13 @@
   justify-content: center;
   gap: 50px;
   margin-top: 30px;
+  
 
 }
 
 .calendario {
   margin: 20px;
+  
 }
 
 .div-calendario {
@@ -40,9 +51,10 @@ ol {
 
 
 .section-formulario-contacto {
-  margin: 50px 0px 100px 0px;
+  margin: 50px 0px 50px 0px;
   align-items: center;
   height: 80vh;
+
 }
 
 .imagen-reservar-hora {
@@ -57,8 +69,8 @@ ol {
 
 .ul-formulario-reserva{
   gap: 20px;
-  background-color: var(--secundario);
-  color: var(--white);
+  background-color: rgba(226, 226, 226, 0.582);
+  color: var(--gris-oscuro);
   height: 100%;
  
 }
@@ -97,17 +109,11 @@ ol {
 }
 
 
-.lista-reservar {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 100vw;
-  padding: 30px;
-
-}
 
 .btn-enviar-reserva {
   padding: 10px;
   border-radius: 10px;
-  background-color: #F3F8FE;
+  background-color: #d2d3d4;
   color: rgb(90, 91, 92);
   cursor: pointer;
 }

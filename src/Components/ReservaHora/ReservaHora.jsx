@@ -68,7 +68,7 @@ const ReservaHora = () => {
 
             <section className="fondo-blanco">
 
-                <ul className="flex-column-center m-10 lista-reservar" >
+                <ul className="flex-column-center lista-reservar" >
                     <li> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
                     <li> Miercoles 13:00 - 20:00 (Montevideo) </li>
                     <li> Sabados 09:00 - 14:00 (Las Piedras) </li>
@@ -144,7 +144,7 @@ const ReservaHora = () => {
 
                         <ul className="ul-formulario-reserva flex-column-center">
                                 <li>
-                                    <h2 className="white"> Llenar Formulario </h2>
+                                    <h2> Llenar Formulario </h2>
                                 </li>
                                 <li className="li-formulario">
                                     <label htmlFor="">Nombre </label>

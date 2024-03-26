@@ -5,8 +5,8 @@ import ImagenLocal from "../../../public/local.jpg"
 import Navbar from "../Navbar/Navbar";
 import Ubicacion from "../Ubicacion/Ubicacion";
 import Footer from "../Footer/Footer";
-import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
-import PortadaTitulo from "../PortadaTitulo/PortadaTitulo";
+import { FaInstagram, FaFacebook, FaTwitter, FaPhoneSquareAlt } from 'react-icons/fa';
+
 
 const Contacto = () => {
 
@@ -24,10 +24,11 @@ const Contacto = () => {
 
             <section className="portada-contacto"> </section>
 
-            <section className="fondo-blanco-img">
-                <section className="container">
-                    
-                    <section className="flex section-contacto-header">
+            <section className="fondo-blanco-img flex-column gap-30">
+
+                <section className="section-contacto-header">
+                    <section className="container flex">
+
                         <section className="flex-column width-70">
                             <h1 className="titulo-contacto"> Pongase en  Contacto </h1>
                             <p className="p-header-contacto"> Envíenos un correo electrónico aquí: info@globalsystemdental.com o complete este formulario 
@@ -35,53 +36,56 @@ const Contacto = () => {
                             </p>
                         </section>
 
-                        <section className="m-10">
+                        <section className="flex-column-center-v">
                             <h3> Llame para una cita </h3>
-                            <h2 className="h2-numero"> + (598) 94 484 397 </h2>
+                            <h2 className="h2-numero-contacto flex-center-v gap-10"> <FaPhoneSquareAlt  size={20} />   + (598) 94 484 397 </h2>
                         </section>
-
-                        
                     </section>
-            
-                    <section className="flex section-contacto-formulario">
 
-                        <form action="#" className="formulario-contacto">
-                            <ul className="ul-formulario-contacto">
                         
-                                <li className="li-formulario-contacto">
-                                    <label htmlFor="">Nombre </label>
-                                    <input type="text" />
-                                </li>
-                                <li  className="li-formulario-contacto">
-                                    <label htmlFor=""> Apellido  </label>
-                                    <input type="text" />
-                                </li>
-                                <li  className="li-formulario-contacto">
-                                    <label htmlFor=""> Correo Electronico </label>
-                                    <input type="text" />
-                                </li>
-                                <li  className="li-formulario-contacto">
-                                    <label htmlFor=""> Titulo </label>
-                                    <input type="text" />
-                                </li>
-                                <li  className="li-formulario-contacto">
-                                    <label htmlFor=""> Mensaje </label>
-                                    <textarea type="text" />
-                                </li>
+                </section>
 
-                                <span className="btn-enviar-contacto text-center"> Enviar </span>
-                            </ul>
-                        </form>
+                <section className="container">
+                    
+                        <section className="flex section-contacto-formulario">
 
-                        <section className="img-contacto">      
-            
+                            <form action="#" className="formulario-contacto">
+                                <ul className="ul-formulario-contacto">
+                                    <li> <h3> Envienos su consulta! </h3> </li>
+                            
+                                    <li className="li-formulario-contacto">
+                                        <label htmlFor="">Nombre </label>
+                                        <input type="text" />
+                                    </li>
+                                    <li  className="li-formulario-contacto">
+                                        <label htmlFor=""> Apellido  </label>
+                                        <input type="text" />
+                                    </li>
+                                    <li  className="li-formulario-contacto">
+                                        <label htmlFor=""> Correo Electronico </label>
+                                        <input type="text" />
+                                    </li>
+                                    <li  className="li-formulario-contacto">
+                                        <label htmlFor=""> Titulo </label>
+                                        <input type="text" />
+                                    </li>
+                                    <li  className="li-formulario-contacto">
+                                        <label htmlFor=""> Mensaje </label>
+                                        <textarea type="text" />
+                                    </li>
+
+                                    <span className="btn-enviar-contacto text-center"> Enviar </span>
+                                </ul>
+                            </form>
+
+                            <section className="img-contacto">      
+                
+                            </section>
+                            
+
                         </section>
-                        
-
-                    </section>
+                    
                 
-                
-
                     <section className="section-ubicaciones">
                         <Ubicacion> </Ubicacion>
 
@@ -89,6 +93,7 @@ const Contacto = () => {
                  
                 
                 </section>
+
             </section>
          
         

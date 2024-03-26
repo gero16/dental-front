@@ -13,6 +13,8 @@
   --texto: #595959;
   --gris-oscuro: #5a5858;
   --oscuro-tr: #484848;
+  --negro-tr :#000000b2;
+  --color-blog: #0FA89D;
   box-sizing: border-box;
   
 }
@@ -72,6 +74,12 @@ ul, ol {
 .flex-center-v {
   display: flex;
   align-items: center;
+}
+
+.flex-column-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .flex-around {
@@ -139,6 +147,13 @@ ul, ol {
 .arcoiris-2 {
   border: 3px solid transparent;
   border-image: linear-gradient(to bottom right, #fce300 0%, #cf6209 25%, #da2505 50%, #fec837 75%, #e4037b 100%);
+  border-image-slice: 1;
+  margin: 20px auto;
+}
+
+.arcoiris-3 {
+  border: 3px solid transparent;
+  border-image: linear-gradient(to bottom right, #215F38 0%, #35cc56 25%, #23ca8a 50%, #0FA89D 75%, #086499 100%);
   border-image-slice: 1;
   margin: 20px auto;
 }

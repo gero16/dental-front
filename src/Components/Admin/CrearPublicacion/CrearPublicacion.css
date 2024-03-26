@@ -186,10 +186,22 @@
 }
 
 .pre-img {
-    height: 25vh;
+    height: 20vh;
 }
 
 
+.pre-contenido {
+
+    margin: 10px auto
+}
+
+.texto-pre {
+    font-size: 1vw;
+}
+
+.h2-pre {
+    font-size: 1.2vw;
+}
 #li-agregar {
     display: flex;
     justify-content: space-around;

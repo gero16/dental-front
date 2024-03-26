@@ -8,7 +8,7 @@ const CrearPublicacion = () => {
 
     const [inputValue, setInputValue] = useState('');
     const [listItems, setListItems] = useState([]);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState("https://st2.depositphotos.com/1371678/9634/i/450/depositphotos_96346704-stock-photo-dentist-examining-a-patients-teeth.jpg");
 
 
     const [selectedColor, setSelectedColor] = useState('#0FA89D');
@@ -19,19 +19,59 @@ const CrearPublicacion = () => {
 
     })
 
+    const [content, setContent] = useState([]);
 
-    const agregarInput = (valor) => {
-        setInputs([...inputs, { id: inputs.length, esInput : valor}
+    const addParagraph = () => {
+        setContent([...content, { type: 'parrafo', text: '' }]);
+      };
+    
+      const addSubtitle = () => {
+        setContent([...content, { type: 'subtitulo', text: '' }]);
+      };
+
+
+
+    const agregarInputContenido = (tipo) => {
+        setContent(
+            [...content, 
+                { 
+                    id: inputs.length, 
+                    type: tipo, 
+                    text : ""
+                }
         ]);
+        console.log(content)
+      };
+
+
+      const cambioEnContenido = (id, tipo, texto) => {
+        setContent(
+            [...content, 
+                { 
+                    id: id,
+                    type: tipo, 
+                    text : texto
+                }
+        ]);
+        console.log(content)
+      }
+
+
+      const handleTextChange = (index, newText) => {
+        setContent(prevContent => {
+          const updatedContent = [...prevContent];
+          updatedContent[index].text = newText;
+          return updatedContent;
+        });
+
+        console.log(content)
       };
 
       const handleColor = (event) => {
         setSelectedColor(event.target.value);
       };
 
-      const handleChange = (event) => {
-        setInputValue(event.target.value);
-      };
+   
 
       const handleSubmit = (event) => {
         event.preventDefault();
@@ -56,7 +96,6 @@ const CrearPublicacion = () => {
         <> 
             <Navbar> </Navbar>
             <div className="fondo-blanco-img">
-
 
                 <main className="principal container">
                     <article className="crear-post">
@@ -105,26 +144,31 @@ const CrearPublicacion = () => {
                                 <div className="div-li-contenido">
 
                                     <li id="li-agregar">
-                                        <label htmlFor="text" className="btn-agregar agregar-parrafo label-crear" onClick={ (e) => { agregarInput(false)} }> *Agregar Párrafo </label>
-                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarInput(false)} }>Agregar Subtítulo</label>
-                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear"  onClick={ (e) => { agregarInput(true)} }>Agregar Lista </label>
+                                        <label htmlFor="text" className="btn-agregar agregar-parrafo label-crear" onClick={ (e) => { agregarInputContenido("parrafo")} }> *Agregar Párrafo </label>
+                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarInputContenido("subtitulo")} }>Agregar Subtítulo</label>
+                                       
                                     </li>
 
-                                    <li> { inputs.map(input => (input.esInput 
-                                                ? ( 
-                                                    <input 
-                                                        key={input.id} 
-                                                        type="text"  
-                                                        placeholder={`Insertar elemento de su lista`} 
-                                                        className="height-80" 
-                                                        value={inputValue}
-                                                        onChange={ handleChange }
-                                                    />) 
-                                                :   <textarea 
-                                                        placeholder={`Input ${input.id}`} 
-                                                        name="" 
-                                                        className="height-80"
-                                                    />                                               
+                                    <li> 
+                                        { content.map((element, index) => (
+                                            <div key={index}>
+                                            { element.type === 'parrafo' ? (
+                                                <textarea
+                                                value={element.text}
+                                                onChange={(e) => handleTextChange(index, e.target.value)}
+                                                placeholder="Ingrese el párrafo"
+                                                />
+                                            ) : (
+                                                <textarea
+                                                    type="text"
+                                                    value={element.text}
+                                                    onChange={(e) => handleTextChange(index, e.target.value)}
+                                                    placeholder="Ingrese el subtítulo"
+                                                    
+                                                />
+                                            )}
+                                            <button onClick={() => handleRemoveElement(index)}>Eliminar</button>
+                                            </div>
                                         ))}
                                     </li>
                                     {
@@ -149,9 +193,9 @@ const CrearPublicacion = () => {
                         <div className="campos-obligatorios">* Campos obligatorios</div>
                     </article>
 
-
+                    {/*****  PREVIEWWWWW *****/}
                     <article className="preview">
-                        <section className="flex header-publicacion" style={{backgroundColor : selectedColor}}>
+                        <section className="flex header-publicacion" style={{ backgroundColor : selectedColor}}>
                             { selectedImage && (
                                 <img
                                     src={selectedImage}
@@ -166,13 +210,19 @@ const CrearPublicacion = () => {
                             </section>
 
                         </section>
+                        
 
-                        <div className="pre-contenido">
-                        <ul>
-                            { listItems.map((item, index) => (
-                                <li key={index}>{item}</li>
-                            ))}
-                        </ul>
+                        <div className="pre-contenido width-70 flex-column gap-10">
+                     
+                            {content ?  content.map((item, index) => (
+                             
+                                item.type === "parrafo" 
+                                    ? <p className="texto-pre"> {item.text} </p>
+                                    : <h2 className="h2-pre"> {item.text} </h2>
+                            ))
+                                : <p> Parrafo de relleno </p>
+                        }
+                    
                         </div>
                     </article>
                         

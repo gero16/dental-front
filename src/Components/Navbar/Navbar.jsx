@@ -71,6 +71,12 @@ const Navbar = () => {
                                 <span className="span-link ">  Iniciar Sesión </span>
                             </NavLink>
                         </li>
+
+                        <li> 
+                            <NavLink to={`/admin/panel`} > 
+                                <span className="span-link ">  Panel </span>
+                            </NavLink>
+                        </li>
                        
                     </ul>
                 </nav>

@@ -1,5 +1,6 @@
 import Navbar from "../../Navbar/Navbar"
 
+import { Link as Navigate, NavLink,} from "react-router-dom";
 
 const AdminPublicaciones = () => {
     return (
@@ -9,7 +10,10 @@ const AdminPublicaciones = () => {
             <Navbar> </Navbar>
 
             <h1> Admin Publicaciones </h1> 
-            <p> gsdgdgsd sd gsdgsdgsdg sd g </p>
+
+            <NavLink to={`/admin/panel/crear-publicacion`} > 
+                <span className="span-link "> Crear Publicacion </span>
+            </NavLink>
         </>
     )
 }

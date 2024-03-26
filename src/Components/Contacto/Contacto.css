@@ -105,18 +105,7 @@ textarea {
 
 
 
-@media (min-width: 1500px) {
-    .section-contacto-formulario {
-        height: 60vh;
-        margin: 0px 0px 30px 0px;
-    }
-    .titulo-contacto {
-        font-size: 2.5vw;
-    }
-    .p-header-contacto {
-        font-size: large;
-    }
-  
-   }
+
+   
 
 

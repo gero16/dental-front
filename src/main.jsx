@@ -21,6 +21,7 @@ import Publicacion from './Components/Publicacion/Publicacion.jsx';
 import Panel from './Components/Admin/Panel/Panel.jsx';
 import HorasDisponibles from './Components/Admin/HorasDisponibles/HorasDisponibles.jsx';
 import AdminPublicaciones from './Components/Admin/AdminPublicaciones/AdminPublicaciones.jsx';
+import CrearPublicacion from './Components/Admin/CrearPublicacion/CrearPublicacion.jsx';
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
   {
     path: "/admin/panel/horas-disponibles",
     element:  <HorasDisponibles />,
+  },
+  {
+    path: "/admin/panel/crear-publicacion",
+    element:  <CrearPublicacion />,
   },
   
 ]);

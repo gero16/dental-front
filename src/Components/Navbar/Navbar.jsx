@@ -45,11 +45,16 @@ const Navbar = () => {
                                 <span className="span-link "> Servicios </span>
                             </NavLink>
                         </li>
-                        <li> 
-                            <NavLink to={`/galeria`} > 
-                                <span className="span-link "> Galeria </span>
-                            </NavLink>
-                        </li>
+                        {
+                            /* 
+                                <li> 
+                                    <NavLink to={`/galeria`} > 
+                                        <span className="span-link "> Galeria </span>
+                                    </NavLink>
+                                </li>
+                            */ 
+                        }
+                        
                         <li> 
                             <NavLink to={`/blog`} > 
                                 <span className="span-link "> Blog </span>

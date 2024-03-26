@@ -1,0 +1,270 @@
+/*** CREAR POST ***/
+.principal {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.crear-post{
+    width: 100%;
+    color: #454444;
+    background-color: rgba(235, 233, 236, 0.93);
+    border-radius: 10px;
+    margin: 15px 0px 25px 0px;
+    padding: 20px;
+
+} 
+
+.crear-post h1 {
+    margin-bottom: 20px;
+}
+
+.crear-post li {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 12px;
+    padding: 5px 0px 5px 0px;
+    
+}
+
+.input-crear{
+    padding: 8px;
+}
+
+.crear-post input:focus {
+   outline: 1px solid purple;
+   border: 1px solid purple;
+    border-radius: 2px;
+}
+
+#imagen-post{
+    padding: 5px;
+}
+.label-imagen{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #f4f0f0;
+    color: #383636;
+    border: 1px solid rgb(135, 132, 132);
+    border-radius: 5px;
+    text-align: center;
+}
+.label-imagen:hover {
+    cursor: pointer;
+}
+
+.span-foto {
+    font-size: 11px;
+    padding: 5px 0px 0px 0px;
+    margin: 5px
+}
+
+.grid-input-img {
+    display: flex;
+    
+}
+
+#agregar-post {
+    padding: 5px; 
+}
+
+.span-enter {
+    font-size: 14px;
+}
+
+
+
+.label-etiqueta-post {
+    display: none;
+}
+
+
+.parrafos-post {
+    height: 130px;
+    margin-bottom: 5px;
+}
+
+.subtitulos-post{
+    margin-bottom: 5px;
+    padding: 8px 5px;
+}
+
+.li-button {
+    border-top: 1px solid gray;
+}
+
+#enviar-post{
+    font-size: 18px;
+    background-color: #f4f0f0;
+    border: 1px solid gray;
+    max-width: 200px;
+    padding: 10px;
+    margin: 15px 0px 15px 15px;
+}
+
+#enviar-post:hover {
+    cursor: pointer;
+}
+
+.etiquetas {
+    display: flex;
+    justify-content: center;
+}
+
+#terminar {
+    padding: 10px;
+}
+
+.botones {
+    background-color: #f4f0f0;
+    color: #383636;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+    padding: 10px;
+    border: 1px solid rgb(135, 132, 132);
+    border-radius: 5px;
+   
+}
+
+.select-etiqueta {
+    background-color: black;
+    color: white;
+}
+
+.botones:hover {
+    cursor: default;
+}
+
+.agregar-texto{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#agregar-texto-crear, #agregar-texto-editar {
+    background-color: #f4f0f0;
+    color: #383636;
+    border: 1px solid rgb(135, 132, 132);
+    margin: 10px 5px 0px 10px;
+    padding: 12px;
+    border: 1px solid rgb(135, 132, 132);
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+#agregar-texto:hover {
+    cursor: pointer;
+}
+
+.label-crear {
+    padding: 5px;
+}
+
+.btn-agregar:hover {
+    cursor: pointer;
+    color: black;
+    
+}
+
+
+/** PRE-VISUALIZACION DEL POST**/
+.preview {
+    width: 100%;
+    margin: 15px 0px 0px 10px;
+    font-family: 'Mulish', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.section-titulo-pre {
+    width: 100%;
+}
+
+.pre-titulo {
+    font-size: 1.4vw;
+}
+
+.pre-img {
+    height: 25vh;
+}
+
+
+#li-agregar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px!important
+}
+
+#agregar-input {
+    display: block;
+    width: 100%;
+}
+
+.btn-quitar-precargado {
+    color: #383636;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #f4f0f0;
+    border: 1px solid rgb(135, 132, 132);
+    cursor: pointer;
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+}
+.btn-quitar-contenido {
+    color: #383636;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #f4f0f0;
+    border: 1px solid rgb(135, 132, 132);
+    cursor: pointer;
+    margin: 0px 10px 0px 0px;
+    text-align: center;
+}
+
+ p {
+    font-size: small;
+}
+.datos-post p {
+    font-size:x-small;
+    margin-bottom: 5px;
+}
+
+.div-li-contenido{
+    min-height: 120px;
+    margin: 5px 0px;
+}
+
+
+.campos-obligatorios {
+    font-size: 14px;
+}
+
+
+@media (min-width: 1024px) {
+    .span-foto {
+        margin: 0px 5px 0px 5px;
+    }
+  }
+
+@media (max-width: 800px) {
+    .principal {
+       display: block;
+    }
+    .preview {
+        min-height: 200px;
+    }
+    .pre-img {
+        width: 320px;    
+    }
+  }
+@media (max-width: 400px) {
+   .crear-post{
+        width: 90%;
+   }
+   .preview {
+    width: 90%;
+   }
+  }

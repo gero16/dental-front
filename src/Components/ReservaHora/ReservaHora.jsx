@@ -140,7 +140,7 @@ const ReservaHora = () => {
                     <img src={Imagen} className="imagen-reservar-hora" alt="" />
                     
                 
-                    <div className="div-reservar-hora">
+                    <div className="div-reservar-hora ">
 
                         <ul className="ul-formulario-reserva flex-column-center">
                                 <li>
@@ -170,8 +170,10 @@ const ReservaHora = () => {
                                     <label htmlFor=""> Mensaje </label>
                                     <textarea type="text" />
                                 </li>
-
+                                
+                               
                                 <span className="btn-enviar-reserva"> Enviar </span>
+                           
                         </ul>
                     </div>
 

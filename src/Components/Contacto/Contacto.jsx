@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Ubicacion from "../Ubicacion/Ubicacion";
 import Footer from "../Footer/Footer";
 import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
+import PortadaTitulo from "../PortadaTitulo/PortadaTitulo";
 
 const Contacto = () => {
 
@@ -14,7 +15,13 @@ const Contacto = () => {
 
     return (
         <> 
-            <Navbar /> 
+            <Navbar> </Navbar> 
+
+            {
+                /* <PortadaTitulo titulo={"Contacto"} subtitulo={"Pongase en contacto con nosotros"} color={"#E5028E"}> </PortadaTitulo> */
+            }
+            
+
             <section className="portada-contacto"> </section>
 
             <section className="fondo-blanco-img">

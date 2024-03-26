@@ -18,7 +18,7 @@ const Contacto = () => {
             <section className="portada-contacto"> </section>
 
             <section className="fondo-blanco-img">
-                <section className="container ">
+                <section className="container">
                     
                     <section className="flex section-contacto-header">
                         <section className="flex-column width-70">

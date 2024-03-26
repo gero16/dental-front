@@ -191,16 +191,15 @@
 
 
 .pre-contenido {
-
     margin: 10px auto
 }
 
 .texto-pre {
-    font-size: 1vw;
+    font-size: 0.7vw;
 }
 
 .h2-pre {
-    font-size: 1.2vw;
+    font-size: 0.8vw;
 }
 #li-agregar {
     display: flex;

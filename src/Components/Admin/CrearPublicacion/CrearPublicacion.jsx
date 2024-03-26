@@ -14,48 +14,33 @@ const CrearPublicacion = () => {
     const [selectedColor, setSelectedColor] = useState('#0FA89D');
     const recommendedColors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
 
+    // Por ahora tengo los estados separados - Pero la idea es unirlos luego
     const [publicacion, setPublicacion] = useState({
-        titulo : "Titulo Momentaneamente Provisorio",
+        titulo : "",
+        fecha : "",
+        color: "",
+        contenido: [],
 
     })
 
     const [content, setContent] = useState([]);
 
-    const addParagraph = () => {
-        setContent([...content, { type: 'parrafo', text: '' }]);
-      };
-    
-      const addSubtitle = () => {
-        setContent([...content, { type: 'subtitulo', text: '' }]);
-      };
-
-
-
     const agregarInputContenido = (tipo) => {
-        setContent(
-            [...content, 
-                { 
+        setContent([...content, { 
                     id: inputs.length, 
                     type: tipo, 
-                    text : ""
-                }
-        ]);
+                    text : "" } ]);
         console.log(content)
       };
 
 
-      const cambioEnContenido = (id, tipo, texto) => {
-        setContent(
-            [...content, 
-                { 
-                    id: id,
-                    type: tipo, 
-                    text : texto
-                }
-        ]);
-        console.log(content)
-      }
-
+      const handleRemoveElement = (index) => {
+        setContent(prevContent => {
+          const updatedContent = [...prevContent];
+          updatedContent.splice(index, 1);
+          return updatedContent;
+        });
+      };
 
       const handleTextChange = (index, newText) => {
         setContent(prevContent => {
@@ -71,15 +56,6 @@ const CrearPublicacion = () => {
         setSelectedColor(event.target.value);
       };
 
-   
-
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        if (inputValue.trim() !== '') {
-          setListItems([...listItems, inputValue]);
-          setInputValue('');
-        }
-      };
 
       const handleImageChange = (event) => {
         const file = event.target.files[0];
@@ -98,6 +74,7 @@ const CrearPublicacion = () => {
             <div className="fondo-blanco-img">
 
                 <main className="principal container">
+
                     <article className="crear-post">
                         <h1>Crear Publicacion</h1>
 
@@ -171,16 +148,7 @@ const CrearPublicacion = () => {
                                             </div>
                                         ))}
                                     </li>
-                                    {
-                                        
-                                        <li className="agregar-texto">
-                                            <span>Previsualizar el Contenido</span>
-                                            <span data-id="agregar" id="agregar-texto-crear">Previsualizar Publicación</span>
-                                            <span className="span-enter">Presionar Enter</span>
-                                        </li>
-                                        
-                                    }
-                                   
+                                         
                                     <li className="li-button">
                                         <label>Terminar Publicación</label>
                                         <input id="enviar-post" type="submit" value="Finalizar" disabled />
@@ -214,14 +182,14 @@ const CrearPublicacion = () => {
 
                         <div className="pre-contenido width-70 flex-column gap-10">
                      
-                            {content ?  content.map((item, index) => (
-                             
+                            { content ?  content.map((item, index) => (
+                                
                                 item.type === "parrafo" 
                                     ? <p className="texto-pre"> {item.text} </p>
                                     : <h2 className="h2-pre"> {item.text} </h2>
-                            ))
+                                ))
                                 : <p> Parrafo de relleno </p>
-                        }
+                            }
                     
                         </div>
                     </article>

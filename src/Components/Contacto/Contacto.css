@@ -20,6 +20,7 @@
     background-color: white;
     padding: 30px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .formulario-contacto {
@@ -83,7 +84,6 @@ textarea {
 
 .section-ubicaciones {
     padding-bottom: 60px;
-  
 }
 
 @media (min-width: 1500px) {

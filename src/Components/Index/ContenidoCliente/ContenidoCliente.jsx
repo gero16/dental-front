@@ -27,7 +27,7 @@ const ContenidoCliente = () => {
                 </section>
 
                  
-                <ul class="menu">
+                <ul class="menu ">
                     <li>
                     <a href="#slide1"> </a>
                     </li>

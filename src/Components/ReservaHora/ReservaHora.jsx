@@ -74,6 +74,10 @@ const ReservaHora = () => {
                     <li> Sabados 09:00 - 14:00 (Las Piedras) </li>
                 </ul>
 
+                <section className="width-70 container flex-center">
+                    <h1 className="h1-reservar"> Reserve un turno!</h1>
+
+                </section>
                 <section className="flex section-calendario">
 
                     <div className="div-calendario flex-column p-20">

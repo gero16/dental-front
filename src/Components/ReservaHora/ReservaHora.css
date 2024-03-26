@@ -16,12 +16,13 @@
 
 .h1-reservar {
   font-weight: 00;
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   font-family: "Raleway", sans-serif;
+  
   text-shadow: 0 1px 0 rgba(8, 8, 8, 0.658);
   padding: 10px;
-  color: rgb(247, 247, 244);
- 
+
+
 }
 
 .section-calendario  {

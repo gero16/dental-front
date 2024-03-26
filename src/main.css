@@ -159,6 +159,10 @@ ul, ol {
 }
 
 
+.color-blog {
+  color: var(--color-blog);
+}
+
 .height-80 {
   height: 80px;
 }

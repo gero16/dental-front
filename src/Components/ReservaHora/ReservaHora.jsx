@@ -68,7 +68,7 @@ const ReservaHora = () => {
 
             <section className="fondo-blanco-img">
 
-                <ul className="flex-column-center lista-reservar" >
+                <ul className="flex-column-center lista-reservar color-blog" >
                     <li> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
                     <li> Miercoles 13:00 - 20:00 (Montevideo) </li>
                     <li> Sabados 09:00 - 14:00 (Las Piedras) </li>

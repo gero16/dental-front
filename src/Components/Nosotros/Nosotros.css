@@ -41,9 +41,11 @@
   
 
 }
-
+.portada-nosotros-big {
+    width: 70%;
+}
 .portada-nosotros {
-    width: 80%;
+    width: 72%;
 }
 
 

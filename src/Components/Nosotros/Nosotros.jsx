@@ -10,9 +10,27 @@ const Nosotros = () => {
 
             <main className="main-nosotros">
 
-                <section className="flex-center section-portada-nosotros">
-                    <img src="https://res.cloudinary.com/geronicola/image/upload/v1711325178/general-it/gtwqyvbfzlmdmt33r3tz.png" className="portada-nosotros" alt="" />
-                </section>
+           
+                    
+                    <picture  className="flex-column-center section-portada-nosotros"> 
+                        <source 
+                            srcSet="https://res.cloudinary.com/geronicola/image/upload/v1711325178/general-it/gtwqyvbfzlmdmt33r3tz.png" 
+                            media="(min-width: 1550px)" 
+                            className="portada-nosotros-big"
+                            /> 
+                            { /* 
+                                 <source srcSet="tablet.jpg" media="(min-width: 768px)" />
+                                <source srcSet="mobile.jpg" media="(min-width: 377px)" />
+                            */}
+                       
+                        <img 
+                            src="https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png" 
+                            className="portada-nosotros"
+                            alt="" />
+                      
+                    </picture>
+
+                
 
                 <section className="section-nosotros-texto m-auto flex-column-center">
               

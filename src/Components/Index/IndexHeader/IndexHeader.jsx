@@ -7,6 +7,8 @@ import logo2 from "../../../../public/logo-2.png"
 
 import Slider from "../../Slider/Slider"
 
+import { Fade, Slide } from "react-awesome-reveal";
+
 const images = [
     {
       imgUrl: Portada1,
@@ -25,14 +27,18 @@ const images = [
       },
   
   ];
-
+ 
 const IndexHeader = () => {
     return (
         <> 
 
 
+  <Slider images={images} autoplayInterval={5000} />
 
-                <Slider images={images} autoplayInterval={5000} />
+
+            
+            
+        
 
            
         

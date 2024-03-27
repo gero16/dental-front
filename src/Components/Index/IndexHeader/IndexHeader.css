@@ -63,47 +63,6 @@
     font-size: 1.1vw;
 }
 
-/* Slider.css */
-.article-portada {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .article-portada .portada-texto {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .article-portada .portada-texto img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .article-portada .portada-texto .lista-portada {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .article-portada .portada-texto .lista-portada-2 {
-    margin-top: 15px;
-  }
-  
-  .article-portada .portada-texto .lista-portada li {
-    margin-bottom: 5px;
-  }
-  
-  /* Agregamos estilos para controlar la transición en hover */
-  .article-portada:hover .portada-texto {
-    transition: transform 0.5s ease;
-  }
-  
-  .article-portada:hover .portada-texto div:nth-child(2n) {
-    transform: translateX(-100%);
-  }
-  
-  .article-portada:hover .portada-texto div:nth-child(3n) {
-    transform: translateX(-200%);
-  }
   
 @media (min-width: 800px) {
     .article-portada {

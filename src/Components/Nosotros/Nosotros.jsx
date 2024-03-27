@@ -24,7 +24,7 @@ const Nosotros = () => {
                             */}
                        
                         <img 
-                            src="https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png" 
+                            src="https://res.cloudinary.com/geronicola/image/upload/v1711325178/general-it/gtwqyvbfzlmdmt33r3tz.png" 
                             className="portada-nosotros"
                             alt="" />
                       

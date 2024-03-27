@@ -37,15 +37,13 @@
 .section-portada-nosotros {
     background: linear-gradient(to right,var(--primario) 50%, var(--white) 50%); 
     background-color: var(--primario);
-
-  
-
 }
+
 .portada-nosotros-big {
     width: 70%;
 }
 .portada-nosotros {
-    width: 72%;
+    width: 75%;
 }
 
 

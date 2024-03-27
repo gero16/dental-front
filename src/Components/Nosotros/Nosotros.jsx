@@ -19,10 +19,14 @@ const Nosotros = () => {
                             className="portada-nosotros-big"
                             /> 
                             { /* 
-                                 <source srcSet="tablet.jpg" media="(min-width: 768px)" />
+                                <source  srcSet="tablet.jpg" media="(min-width: 768px)" />
                                 <source srcSet="mobile.jpg" media="(min-width: 377px)" />
                             */}
                        
+                       <source  
+                            srcSet="https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png" 
+                            media="(min-width: 768px)" 
+                        />
                         <img 
                             src="https://res.cloudinary.com/geronicola/image/upload/v1711325178/general-it/gtwqyvbfzlmdmt33r3tz.png" 
                             className="portada-nosotros"

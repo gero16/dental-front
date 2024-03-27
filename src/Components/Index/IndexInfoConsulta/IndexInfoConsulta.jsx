@@ -1,12 +1,12 @@
 import { useState } from "react"
 
 import Imagen from "../../../../public/borde.jpg"
-import "./ContenidoInfoConsulta.css"
+import "./IndexInfoConsulta.css"
 import logo2 from "../../../../public/logo-2.png"
 
 import Icono from "../../../../public/diente-t.webp"
 
-const ContenidoInfoConsulta = () => {
+const IndexInfoConsulta = () => {
 
     return (
         <>
@@ -42,4 +42,4 @@ const ContenidoInfoConsulta = () => {
     )
 }
 
-export default ContenidoInfoConsulta
+export default IndexInfoConsulta

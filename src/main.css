@@ -168,3 +168,6 @@ ul, ol {
   height: 80px;
 }
 
+.small {
+  font-size: small;
+}

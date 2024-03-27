@@ -1,12 +1,12 @@
 import "./Index.css"
 
 import Footer from "../Footer/Footer.jsx"
-import ContenidoSaludDental from "./Contenidos/ContenidoSaludDental.jsx"
-import ContenidoServicios from "./Contenidos/ContenidoServicios.jsx"
-import ContenidoPortada from "./ContenidoPortada/ContenidoPortada.jsx"
-import ContenidoInfoConsulta from "./ContenidoInfoConsulta/ContenidoInfoConsulta.jsx"
+import IndexSaludDental from "./Contenidos/IndexSaludDental.jsx"
+import IndexServicios from "./Contenidos/IndexServicios.jsx"
+import IndexHeader from "./IndexHeader/IndexHeader.jsx"
+import IndexInfoConsulta from "./IndexInfoConsulta/IndexInfoConsulta.jsx"
 
-import ContenidoCliente from "./ContenidoCliente/ContenidoCliente.jsx"
+import IndexOpinionCliente from "./IndexOpinionCliente/IndexOpinionCliente.jsx"
 import Ubicacion from "../Ubicacion/Ubicacion.jsx"
 
 
@@ -17,16 +17,16 @@ const Index = () => {
         <> 
 
         <section className="fondo-blanco-img">
-            <ContenidoPortada> </ContenidoPortada>
+            <IndexHeader> </IndexHeader>
 
         
-            <ContenidoServicios> </ContenidoServicios> 
+            <IndexServicios> </IndexServicios> 
         
-            <ContenidoSaludDental> </ContenidoSaludDental>
+            <IndexSaludDental> </IndexSaludDental>
 
-            <ContenidoInfoConsulta> </ContenidoInfoConsulta>
+            <IndexInfoConsulta> </IndexInfoConsulta>
 
-            <ContenidoCliente> </ContenidoCliente>
+            <IndexOpinionCliente> </IndexOpinionCliente>
 
             <article className="article-info-consulta2">
                 <section> 

@@ -1,6 +1,6 @@
-import "./ContenidoCliente.css"
+import "./IndexOpinionCliente.css"
 
-const ContenidoCliente = () => {
+const IndexOpinionCliente = () => {
 
     return (
         <>
@@ -47,4 +47,4 @@ const ContenidoCliente = () => {
     )
 }
 
-export default ContenidoCliente
+export default IndexOpinionCliente

@@ -6,10 +6,10 @@ import Icono4 from "../../../../public/icono1.jpg"
 import Icono5 from "../../../../public/icono2.jpg"
 import Icono6 from "../../../../public/icono3.jpg"
 
-import "./ContenidoServicio.css"
+import "./IndexServicios.css"
 
 
-const ContenidoServicios = () => {
+const IndexServicios = () => {
 
     return (
         <>
@@ -51,4 +51,4 @@ const ContenidoServicios = () => {
     )
 }
 
-export default ContenidoServicios
+export default IndexServicios

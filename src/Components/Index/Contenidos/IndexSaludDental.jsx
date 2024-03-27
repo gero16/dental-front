@@ -23,7 +23,7 @@ const ContenidoSaludDental = () => {
 
                 <section className="contenido-salud-dental-divs">
                     <div className="div-salud-dental"> 
-                        <h3 onClick={() => cambiarEstado(0)}> Conservar los dientes de por vida </h3> 
+                        <h4 onClick={() => cambiarEstado(0)}> Conservar los dientes de por vida </h4> 
                         { mostrar[0] 
                             ? <p> Al cepillarnos los dientes dos veces al día, mantener una dieta baja en azúcar y visitar regularmente a nuestro profesional dental, 
                                 podemos ayudar a reducir el riesgo de enfermedades como la caries dental y la enfermedad de las encías, las cuales pueden provocar la pérdida de 
@@ -33,7 +33,7 @@ const ContenidoSaludDental = () => {
                     </div>
 
                     <div className="div-salud-dental"> 
-                        <h3 onClick={() => cambiarEstado(1)}> Reducir el riesgo de enfermedad </h3> 
+                        <h4 onClick={() => cambiarEstado(1)}> Reducir el riesgo de enfermedad </h4> 
                         { mostrar[1]  
                             ? <p> 
                                 La investigación ha encontrado que la cantidad de dientes que tenemos está fuertemente relacionada con cuánto tiempo viviremos. Aquellos con 20 
@@ -44,7 +44,7 @@ const ContenidoSaludDental = () => {
                     </div>
                     
                     <div className="div-salud-dental"> 
-                        <h3 onClick={() => cambiarEstado(2)}> Reducir el riesgo de cáncer y demencia</h3> 
+                        <h4 onClick={() => cambiarEstado(2)}> Reducir el riesgo de cáncer y demencia</h4> 
                         { mostrar[2]  
                             ? <p> 
                                 La pérdida de dientes debido a la caries dental y la enfermedad de las encías se puede prevenir casi en su totalidad y no hay 
@@ -56,7 +56,7 @@ const ContenidoSaludDental = () => {
 
                       
                     <div className="div-salud-dental"> 
-                        <h3 onClick={() => cambiarEstado(3)}> Tener un bebé saludable </h3> 
+                        <h4 onClick={() => cambiarEstado(3)}> Tener un bebé saludable </h4> 
                         { mostrar[3]  
                             ? <p> 
                                La investigación ha encontrado que la cantidad de dientes que tenemos está fuertemente relacionada con cuánto tiempo viviremos. 
@@ -67,7 +67,7 @@ const ContenidoSaludDental = () => {
                     </div>
 
                     <div className="div-salud-dental"> 
-                        <h3 onClick={() => cambiarEstado(4)}> Manteniendo nuestra apariencia </h3> 
+                        <h4 onClick={() => cambiarEstado(4)}> Manteniendo nuestra apariencia </h4> 
                         { mostrar[4] 
                             ? <p> 
                                Al cepillarnos los dientes dos veces al día, mantener una dieta baja en azúcar y visitar regularmente a nuestro profesional dental, podemos ayudar 

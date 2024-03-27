@@ -1,11 +1,11 @@
-import "./ContenidoPortada.css"
+import "./IndexHeader.css"
 import Portada1 from "../../../../public/portada.png"
 import Portada2 from "../../../../public/portada-2.jpg"
 
 import logo2 from "../../../../public/logo-2.png"
 import { FaPhoneSquareAlt  } from 'react-icons/fa';
 
-const ContenidoPortada = () => {
+const IndexHeader = () => {
     return (
         <> 
 
@@ -43,7 +43,7 @@ const ContenidoPortada = () => {
                         </li>
                     </ul>
 
-                    <ul className="lista-portada lista-portada-2 width-70" >
+                    <ul className="lista-portada lista-portada-2 width-70 small" >
                         
                         <li className="white li-portada-texto"> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
                         <li className="white  li-portada-texto"> Miercoles 13:00 - 20:00 (Montevideo) </li>
@@ -61,4 +61,4 @@ const ContenidoPortada = () => {
     )
 }
 
-export default ContenidoPortada
+export default IndexHeader

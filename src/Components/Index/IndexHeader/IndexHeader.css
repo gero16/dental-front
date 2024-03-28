@@ -108,11 +108,13 @@
 }
 
 .article-portada-banner {
+    /*
     background: var(--primario);
-    height: 60vh;
-    /* Fondo vede izq blanco der 
-    background: linear-gradient(to right, var(--primario),81%, var(--white), 90%, var(--white));
     */
+    height: 60vh;
+    
+    background: linear-gradient(to right, var(--primario),81%, var(--white), 90%, var(--white));
+    
 }
 
 

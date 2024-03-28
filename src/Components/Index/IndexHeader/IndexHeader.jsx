@@ -1,5 +1,5 @@
 import "./IndexHeader.css"
-import Portada1 from "../../../../public/portada.png"
+import Portada1 from "../../../../public/dental1.jpg"
 import Portada2 from "../../../../public/portada-2.jpg"
 import Portada3 from "../../../../public/portada-3.jpg"
 

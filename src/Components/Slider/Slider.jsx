@@ -56,7 +56,7 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
           images[currentImageIndex].id  
             ? <> </>
             :  <section className="portada-texto">
-              
+
               <h2 className="h2-portada-texto width-70">
                 {images[currentImageIndex].subtitulo}
               </h2>

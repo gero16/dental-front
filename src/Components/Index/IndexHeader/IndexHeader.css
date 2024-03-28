@@ -25,6 +25,7 @@
     background-size: contain;
     filter: grayscale(30%);
     filter: brightness(75%);
+
     
 }
 
@@ -38,6 +39,7 @@
     color: white;
     text-align: start;
     background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
+    border-left: 2px solid rgb(255, 255, 255);
 }
 
 
@@ -86,14 +88,10 @@
     transition: 0.3s ease-in-out;
 }
 
-
-
 .menu-portada li a:hover{
     transition: 0.3s ease-in-out;
     transform: scale(1.7);
 }
-
-
 
 #portada-4 {
     height: 60vh;
@@ -104,15 +102,20 @@
 }
 
 .article-portada {
-    background-color: var(--primario);
+    height: 88vh;
+    background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
+
 }
 
 .article-portada-banner {
-   
+    background: var(--primario);
+    height: 60vh;
     /* Fondo vede izq blanco der 
     background: linear-gradient(to right, var(--primario),81%, var(--white), 90%, var(--white));
     */
 }
+
+
 @media (min-width: 800px) {
     .article-portada {
         display: flex;

@@ -29,7 +29,7 @@ const IndexOpinionCliente = () => {
                  
                 <ul class="menu ">
                     <li>
-                    <a href="#slide1"> </a>
+                    <a href="#slide1" > </a>
                     </li>
                     <li>
                     <a href="#slide2"> </a>

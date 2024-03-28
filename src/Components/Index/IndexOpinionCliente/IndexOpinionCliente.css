@@ -33,11 +33,14 @@
     transform: scale(1.4);
 }
 
+
 .portada-color {
     background-color: var(--primario);
     border-radius: 10px;
     height: 8vh;
 }
+
+
 
 @media (min-width: 800px) {
     .contenido-clientes {

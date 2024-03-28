@@ -1,6 +1,6 @@
 
 .portada-border{
-    width: 21%;
+    width: 8vw;
     background-image: url("../../../public/borde.jpg");
     transform: rotate(180deg);
     background-size: cover;
@@ -21,10 +21,10 @@
 }
 
 .portada-img {
-
-    
     background-image: url("../../../public/portada.png");
     background-size: contain;
+    filter: grayscale(30%);
+    filter: brightness(75%);
     
 }
 
@@ -64,16 +64,46 @@
 }
 
   
+.menu-portada {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    z-index: 2;
+    padding: 10px;
+    background-color: var(--blanco)!important;
+}
+
+.menu-portada li a{
+    text-decoration: none;
+    background-color: var(--oscuro)!important;
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+
+#portada-4 {
+    width: 100vw;
+    filter: grayscale(100%);
+    filter: brightness(100%);
+    filter:contrast(120%);
+-webkit-filter:contrast(120%);
+    
+}
+
 @media (min-width: 800px) {
     .article-portada {
         display: flex;
     }
     .portada-img {
-        height: 110vh;
+        height: 88vh;
         width: 100%;
     }
     .portada-border {
-        height: 90vh;
+        height: 88vh;
     }
     .h2-portada-texto {
         font-size: 2.5vw;
@@ -81,7 +111,7 @@
     .portada-texto {
         flex-grow: 1;
         flex-wrap: wrap;
-        height: 110vh;
+        height: 88vh;
     }
     .p-portada-texto {
         font-size: 1.3vw;;

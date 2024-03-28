@@ -26,21 +26,13 @@ const images = [
         subtitulo: "Atencion Personalizada para cada sonrisa"
       },
   
-  ];
+];
  
 const IndexHeader = () => {
     return (
         <> 
 
-
-  <Slider images={images} autoplayInterval={5000} />
-
-
-            
-            
-        
-
-           
+        <Slider images={images} autoplayInterval={5000} />  
         
         </>
     )

@@ -13,12 +13,12 @@ const images = [
     {
       imgUrl: Portada1,
       parrafo: "Bienvenido a la Clinica Odontologica Integral",
-      subtitulo: "Agendate hoy con nosotros"
+      subtitulo: "Agendate hoy con nosotros!"
     },
     {
       imgUrl: Portada2,
       parrafo: "Un dentista llega a la raiz del problema",
-      subtitulo: "Agendate hoy con nosotros"
+      subtitulo: "Agendate hoy con nosotros!"
     },
     {
         imgUrl: Portada3,
@@ -32,7 +32,7 @@ const IndexHeader = () => {
     return (
         <> 
 
-          <Slider images={images} autoplayInterval={5000} />  
+          <Slider images={images} autoplayInterval={12000} />  
         
         </>
     )

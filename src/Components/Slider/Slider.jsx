@@ -33,15 +33,17 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
   };
 
   return (
+
     <article className="article-portada">
-      <Slide key={slideKey}> {/* Utiliza la clave única para forzar la recreación del componente Slide */}
+
+      <Slide key={slideKey} > {/* Utiliza la clave única para forzar la recreación del componente Slide */}
         
         <img
           src={images[currentImageIndex].imgUrl}
           className="portada-img"
           alt="slide"
         />
-        
+
         <section className="portada-texto">
           <h2 className="h2-portada-texto width-70">
             {images[currentImageIndex].subtitulo}
@@ -67,6 +69,7 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
             </li>
           </ul>
         </section>
+
       </Slide>
     </article>
   );

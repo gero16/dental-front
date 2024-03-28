@@ -96,7 +96,7 @@ const IndexHeader = () => {
     return (
         <> 
 
-          <ul className="menu menu-portada">
+          <ul className="menu menu-portada gap-5">
               <li onClick={(e) => cambiarOrdenImages(0) }>
                 <a> </a>
               </li>

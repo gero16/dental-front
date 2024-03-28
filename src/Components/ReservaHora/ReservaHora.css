@@ -18,25 +18,18 @@
   font-weight: 00;
   font-size: 3.5vw;
   font-family: "Raleway", sans-serif;
-  
   text-shadow: 0 1px 0 rgba(8, 8, 8, 0.658);
   padding: 10px;
-
-
 }
 
 .section-calendario  {
   justify-content: center;
   gap: 50px;
   margin-top: 30px;
-  
-
-
 }
 
 .calendario {
   margin: 20px;
-  
 }
 
 .div-calendario {

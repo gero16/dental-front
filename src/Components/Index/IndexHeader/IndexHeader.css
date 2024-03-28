@@ -69,7 +69,8 @@
         display: flex;
     }
     .portada-img {
-        height: 90vh;
+        height: 93vh;
+        width: 100%;
     }
     .portada-border {
         height: 90vh;
@@ -78,11 +79,9 @@
         font-size: 2.5vw;
     }
     .portada-texto {
-        
-        /* background: linear-gradient(to top, #009173, 20%, #007855); */
-
-        width: 80%;
-        height: 90vh;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        height: 93vh;
     }
     .p-portada-texto {
         font-size: 1.3vw;;

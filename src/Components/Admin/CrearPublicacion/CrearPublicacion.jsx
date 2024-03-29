@@ -23,13 +23,12 @@ const CrearPublicacion = () => {
 
     })
 
-
     const agregarContenido = (tipo) => {
         setPublicacion(prevPublicacion => {
             const nuevoContenido = {
                 id: prevPublicacion.contenido.length,
-                type: tipo,
-                text: ""
+                tipo: tipo,
+                texto: ""
             };
     
             return {
@@ -50,7 +49,7 @@ const CrearPublicacion = () => {
     const handleTextChange = (index, newText) => {
         setPublicacion(prevPublicacion => {
             const updatedContenido = [...prevPublicacion.contenido];
-            updatedContenido[index].text = newText;
+            updatedContenido[index].texto = newText;
             
             return {
                 ...prevPublicacion,
@@ -76,6 +75,24 @@ const CrearPublicacion = () => {
         reader.readAsDataURL(file);
     }
     };
+
+      
+    const agregarPublicacion = async (data) => {
+        let response = await fetch(`http://localhost:3000/publicaciones/agregar-publicacion`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+          });
+          
+          let result = await response.json();
+          if(result) {
+              console.log(result)
+
+          }
+    }
+
 
     return (
         <> 
@@ -143,16 +160,16 @@ const CrearPublicacion = () => {
                                     <li> 
                                         { publicacion.contenido.map((element, index) => (
                                             <div key={index}>
-                                            { element.type === 'parrafo' ? (
+                                            { element.tipo === 'parrafo' ? (
                                                 <textarea
-                                                value={element.text}
+                                                value={element.texto}
                                                 onChange={(e) => handleTextChange(index, e.target.value)}
                                                 placeholder="Ingrese el párrafo"
                                                 />
                                             ) : (
                                                 <textarea
                                                     type="text"
-                                                    value={element.text}
+                                                    value={element.texto}
                                                     onChange={(e) => handleTextChange(index, e.target.value)}
                                                     placeholder="Ingrese el subtítulo"
                                                     
@@ -163,9 +180,9 @@ const CrearPublicacion = () => {
                                         ))}
                                     </li>
                                          
-                                    <li className="li-button">
+                                    <li className="li-button text-center">
                                         <label>Terminar Publicación</label>
-                                        <input id="enviar-post" type="submit" value="Finalizar" disabled />
+                                        <span id="enviar-post" value="Finalizar"  onClick={() => agregarPublicacion(publicacion) } > Finalizar </span> 
                                     </li>
                                 </div>
                             </ul>
@@ -174,6 +191,7 @@ const CrearPublicacion = () => {
                         <div className="flex-center div-alert"></div>
                         <div className="campos-obligatorios">* Campos obligatorios</div>
                     </article>
+
 
                     {/*****  PREVIEWWWWW *****/}
                     <article className="preview">
@@ -198,9 +216,9 @@ const CrearPublicacion = () => {
                      
                             { publicacion.contenido ?  publicacion.contenido.map((item, index) => (
                                 
-                                item.type === "parrafo" 
-                                    ? <p className="texto-pre"> {item.text} </p>
-                                    : <h2 className="h2-pre"> {item.text} </h2>
+                                item.tipo === "parrafo" 
+                                    ? <p className="texto-pre"> { item.texto } </p>
+                                    : <h2 className="h2-pre"> { item.texto } </h2>
                                 ))
                                 : <p> Parrafo de relleno </p>
                             }

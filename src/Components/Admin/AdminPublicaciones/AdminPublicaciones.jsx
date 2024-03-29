@@ -61,7 +61,7 @@ const AdminPublicaciones = () => {
               <main className="publicaciones-blog flex">
                 { publicaciones.length > 0 
                   ? publicaciones.map((element, key) => {
-          
+                    console.log(element.contenido[0])
                     return (
                     
       
@@ -71,9 +71,10 @@ const AdminPublicaciones = () => {
                                 className="img-publicacion-blog"
                                 alt="" />
                             <section className="contenido-publicacion-blog">
+
                                 <h2 className="h2-publicacion-blog"> { element.titulo }</h2>
                               
-                              <p className="contenido-publicacion-blog"> {element.contenido[0].texto} ... </p>
+                                <p className="contenido-publicacion-blog"> {element.contenido[0].texto} ... </p>
 
                             <section className="eventos-publicacion flex-around">
 

@@ -4,9 +4,7 @@ import Navbar from "../../Navbar/Navbar"
 import { Link as Navigate, NavLink,} from "react-router-dom";
 
 const Blog = () => {
-    <NavLink to={`/iniciar-sesion`} > 
-                        <span className="span-link "> Iniciar Sesión <noscript></noscript> </span>
-                    </NavLink>
+
     return (
         <> 
             <Navbar> </Navbar>

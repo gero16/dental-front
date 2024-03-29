@@ -1,0 +1,28 @@
+.btn-eventos-publicacion  {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(130, 134, 130);
+    margin: 10px 0px;
+    transition: 0.3s ease-in-out;
+
+
+   
+}
+
+.btn-eventos-publicacion:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.2);
+    background-color: yel;
+}
+
+.btn-editar-publi:hover {
+    background-color: rgb(238, 222, 1);
+
+    color: rgb(29, 28, 28)
+}
+
+
+.btn-eliminar-publi:hover {
+    background-color: rgb(156, 7, 7);
+    color: white;
+}

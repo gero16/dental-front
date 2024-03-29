@@ -18,23 +18,28 @@ const CrearPublicacion = () => {
     const [publicacion, setPublicacion] = useState({
         titulo : "",
         fecha : "",
-        color: "",
+        color: "#0FA89D",
         contenido: [],
 
     })
 
-    const [content, setContent] = useState([]);
 
-    const agregarInputContenido = (tipo) => {
-        setContent([...content, { 
-                    id: inputs.length, 
-                    type: tipo, 
-                    text : "" } ]);
-        console.log(content)
-      };
-
-
-      const handleRemoveElement = (index) => {
+    const agregarContenido = (tipo) => {
+        setPublicacion(prevPublicacion => {
+            const nuevoContenido = {
+                id: prevPublicacion.contenido.length,
+                type: tipo,
+                text: ""
+            };
+    
+            return {
+                ...prevPublicacion,
+                contenido: [...prevPublicacion.contenido, nuevoContenido]
+            };
+        });
+    };
+    
+    const handleRemoveElement = (index) => {
         setContent(prevContent => {
           const updatedContent = [...prevContent];
           updatedContent.splice(index, 1);
@@ -42,31 +47,35 @@ const CrearPublicacion = () => {
         });
       };
 
-      const handleTextChange = (index, newText) => {
-        setContent(prevContent => {
-          const updatedContent = [...prevContent];
-          updatedContent[index].text = newText;
-          return updatedContent;
+    const handleTextChange = (index, newText) => {
+        setPublicacion(prevPublicacion => {
+            const updatedContenido = [...prevPublicacion.contenido];
+            updatedContenido[index].text = newText;
+            
+            return {
+                ...prevPublicacion,
+                contenido: updatedContenido
+            };
         });
+        console.log(publicacion)
+    };
+    
 
-        console.log(content)
-      };
-
-      const handleColor = (event) => {
-        setSelectedColor(event.target.value);
-      };
+    const handleColor = (event) => {
+    setSelectedColor(event.target.value);
+    };
 
 
-      const handleImageChange = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = () => {
-            setSelectedImage(reader.result);
-          };
-          reader.readAsDataURL(file);
-        }
-      };
+    const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+        setSelectedImage(reader.result);
+        };
+        reader.readAsDataURL(file);
+    }
+    };
 
     return (
         <> 
@@ -101,33 +110,38 @@ const CrearPublicacion = () => {
                                 </li>
                                 <li>
                                     <label htmlFor="text" className="label-crear">*Titulo</label>
-                                    <input type="text" name="titulo" id="titulo-post" className="vacio input-crear" />
+                                    <input 
+                                        type="text" 
+                                        name="titulo" 
+                                        id="titulo-post" 
+                                        className="vacio input-crear" 
+                                        onChange={ (e) => setPublicacion({ ...publicacion, titulo: e.target.value }) }  />
                                 </li>
 
                                 <li>
                                     <label htmlFor="text" className="label-crear">Color Portada</label>
                                     <div className="flex-center-center gap-20">
                                         <input type="color" name="color" id="titulo-post" className="vacio input-crear"  onChange={ handleColor } />
-                                        <div style={{ backgroundColor: selectedColor, width: '25px', height: '25px' }}></div>
+                                        <div style={{ backgroundColor: selectedColor, width: '25px', height: '25px' }}> </div>
                                     </div>
                                     
                                 </li>
-                    
                     
                                 <li>
                                     <label htmlFor="text" className="label-crear">Fecha</label>
                                     <input type="date" name="fecha" id="fecha-post" className="vacio input-crear"  />
                                 </li>
+
                                 <div className="div-li-contenido">
 
                                     <li id="li-agregar">
-                                        <label htmlFor="text" className="btn-agregar agregar-parrafo label-crear" onClick={ (e) => { agregarInputContenido("parrafo")} }> *Agregar Párrafo </label>
-                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarInputContenido("subtitulo")} }>Agregar Subtítulo</label>
+                                        <label htmlFor="text" className="btn-agregar agregar-parrafo label-crear" onClick={ (e) => { agregarContenido("parrafo")} }> *Agregar Párrafo </label>
+                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarContenido("subtitulo")} }>Agregar Subtítulo</label>
                                        
                                     </li>
 
                                     <li> 
-                                        { content.map((element, index) => (
+                                        { publicacion.contenido.map((element, index) => (
                                             <div key={index}>
                                             { element.type === 'parrafo' ? (
                                                 <textarea
@@ -166,7 +180,7 @@ const CrearPublicacion = () => {
                         <section className="flex header-publicacion" style={{ backgroundColor : selectedColor}}>
                             { selectedImage && (
                                 <img
-                                    src={selectedImage}
+                                    src={ selectedImage }
                                     alt="Vista previa de la imagen"
                                     style={{ display: 'block', maxWidth: '100%', maxHeight: '200px' }}
                                     className="pre-img"
@@ -182,7 +196,7 @@ const CrearPublicacion = () => {
 
                         <div className="pre-contenido width-70 flex-column gap-10">
                      
-                            { content ?  content.map((item, index) => (
+                            { publicacion.contenido ?  publicacion.contenido.map((item, index) => (
                                 
                                 item.type === "parrafo" 
                                     ? <p className="texto-pre"> {item.text} </p>

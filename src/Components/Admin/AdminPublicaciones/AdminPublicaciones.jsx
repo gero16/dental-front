@@ -83,7 +83,7 @@ const AdminPublicaciones = () => {
                                 <FaEdit size={20} /> 
                               </span> 
                               <span className="btn-eventos-publicacion btn-eliminar-publi flex-center-center ">
-                                <span> Eliminar </span> 
+                                <span> Borrar </span> 
                                 <TiDelete size={28} />
                               </span>
                             </section>

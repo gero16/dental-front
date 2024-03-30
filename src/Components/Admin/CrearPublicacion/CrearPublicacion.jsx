@@ -165,8 +165,8 @@ const CrearPublicacion = () => {
 
                                 <div className="div-li-contenido">
 
-                                    <li> 
-                                    {publicacion.contenido.map((element, index) => (
+                                    <li className="gap-10"> 
+                                    { publicacion.contenido.map((element, index) => (
                                         <div key={index}>
                                             { element.tipo === 'parrafo' ? (
                                                 <textarea
@@ -182,17 +182,15 @@ const CrearPublicacion = () => {
                                                     placeholder="Ingrese el subtítulo"
                                                 />
                                             ) : element.tipo === 'lista' ? (
-                                                // Aquí renderizas el JSX específico para el tipo 'lista'
-                                                <>
-                                                    <textarea
-                                                        value={element.texto}
-                                                        onChange={(e) => handleTextChange(index, e.target.value)}
-                                                        placeholder="Ingrese el título de la lista"
-                                                    />
-                                                 
-                                                    <button>Agregar elemento</button>
-                                                </>
+
+                                                <textarea
+                                                    value={element.texto}
+                                                    onChange={(e) => handleTextChange(index, e.target.value)}
+                                                    placeholder="Ingrese el título de la lista"
+                                                />                                               
+                                        
                                             ) : null}
+
                                         </div>
                                     ))}
 

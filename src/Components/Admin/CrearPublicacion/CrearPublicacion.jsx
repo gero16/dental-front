@@ -80,6 +80,7 @@ const CrearPublicacion = () => {
     }
     };
 
+ 
       
     const agregarPublicacion = async (data) => {
         // Creacion de ruta local para mandar la imagen

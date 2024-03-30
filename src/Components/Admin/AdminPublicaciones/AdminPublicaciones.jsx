@@ -12,6 +12,14 @@ import { TiDelete } from "react-icons/ti";
 
 const AdminPublicaciones = () => {
     const [publicaciones, setPublicaciones] = useState([])
+
+    const formatearTitulo = (titulo) => {
+      if(titulo.split(" ")) {
+          let tituloURL = titulo.toLowerCase().replaceAll(" ","-")
+          console.log(tituloURL)
+          return tituloURL
+      }
+  }
     
     async function fetchPublicaciones() {
         try {
@@ -35,7 +43,7 @@ const AdminPublicaciones = () => {
             console.log(publicaciones)
       }, [])
 
- 
+     
 
     console.log("Publicaciones:", publicaciones);
     return (
@@ -62,11 +70,13 @@ const AdminPublicaciones = () => {
               <main className="publicaciones-blog flex">
                 { publicaciones.length > 0 
                   ? publicaciones.map((element, key) => {
-                    console.log(element.contenido[0])
+                    console.log(element)
+                    const tituloURL = formatearTitulo(element.titulo)
+                    console.log(tituloURL)
                     return (
                     
       
-                        <NavLink to={`/blog/publicaciones/uso-de-protesis-removibles`} className="publicacion-blog arcoiris" >  
+                        <NavLink to={`/blog/publicaciones/${ tituloURL }`} className="publicacion-blog arcoiris" >  
                             <img 
                                 src="https://clinicajuliansaiz.com/wp-content/uploads/2021/05/protesis-dental-clinica-dental-julian-saiz-01.jpg" 
                                 className="img-publicacion-blog"
@@ -94,6 +104,7 @@ const AdminPublicaciones = () => {
 
                           
                               <span className="btn-eventos-publicacion btn-editar-publi flex-center-center gap-5"> 
+
                                 <span> Editar</span> 
                                 <FaEdit size={20} /> 
                               </span> 

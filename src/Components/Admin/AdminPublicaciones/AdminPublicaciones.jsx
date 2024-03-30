@@ -31,6 +31,7 @@ const AdminPublicaciones = () => {
       
       useEffect(() => {
             fetchPublicaciones()
+            
             console.log(publicaciones)
       }, [])
 
@@ -52,8 +53,8 @@ const AdminPublicaciones = () => {
                 </section>
 
                 <NavLink to={`/admin/panel/crear-publicacion`} > 
-                <span className="span-link "> Crear Publicacion </span>
-            </NavLink>
+                  <span className="span-link "> Crear Publicacion </span>
+                </NavLink>
 
 
 
@@ -74,8 +75,21 @@ const AdminPublicaciones = () => {
 
                                 <h2 className="h2-publicacion-blog"> { element.titulo }</h2>
                               
-                                <p className="contenido-publicacion-blog"> {element.contenido[0].texto} ... </p>
-
+                                {
+                                  element.contenido[0].tipo === "lista" ? (
+                                      <ul>
+                                          { 
+                                            element.contenido[0].texto.map((item, index) => (
+                                              <li className="small" key={index}>{item}</li>
+                                            ))
+                                          }
+                                      </ul>
+                                  ) : (
+                                      <p className="contenido-publicacion-blog">{element.contenido[0].texto}</p>
+                                  )
+                              }
+                                
+                               
                             <section className="eventos-publicacion flex-around">
 
                           

@@ -87,10 +87,13 @@ const CrearPublicacion = () => {
         const rutaImagen = archivos[0];
         console.log(rutaImagen);
 
+        console.log(data)
         const formData = new FormData();
-        formData.append('data', JSON.stringify(data)); // Si necesitas enviar otros datos además de la imagen
+        formData.append('titulo', JSON.stringify(data.titulo)); //
+        formData.append('color', JSON.stringify(data.color)); //
+        formData.append('contenido', JSON.stringify(data.contenido)); //
         formData.append('imagen', rutaImagen);
-        console.log(formData)
+   
 
         let response = await fetch(`http://localhost:3000/publicaciones/agregar-publicacion`, {
             method: 'POST',
@@ -115,7 +118,7 @@ const CrearPublicacion = () => {
                     <article className="crear-post">
                         <h1>Crear Publicacion</h1>
 
-                        <form className="formulario" action={`http://localhost:3000/publicaciones/agregar-publicacion/`} method="POST" encType="multipart/form-data">
+                        <form>
                             <ul>
                                 <li style={{display: "none"}}>
                                     <label htmlFor="">Token</label>
@@ -163,38 +166,48 @@ const CrearPublicacion = () => {
                                 <div className="div-li-contenido">
 
                                     <li> 
-                                        { publicacion.contenido.map((element, index) => (
-                                            <div key={index}>
+                                    {publicacion.contenido.map((element, index) => (
+                                        <div key={index}>
                                             { element.tipo === 'parrafo' ? (
                                                 <textarea
-                                                value={element.texto}
-                                                onChange={(e) => handleTextChange(index, e.target.value)}
-                                                placeholder="Ingrese el párrafo"
+                                                    value={element.texto}
+                                                    onChange={(e) => handleTextChange(index, e.target.value)}
+                                                    placeholder="Ingrese el párrafo"
                                                 />
-                                            ) : (
+                                            ) : element.tipo === 'subtitulo' ? (
                                                 <textarea
                                                     type="text"
                                                     value={element.texto}
                                                     onChange={(e) => handleTextChange(index, e.target.value)}
                                                     placeholder="Ingrese el subtítulo"
-                                                    
                                                 />
-                                            )}
-                                            <button onClick={() => handleRemoveElement(index)}>Eliminar</button>
-                                            </div>
-                                        ))}
+                                            ) : element.tipo === 'lista' ? (
+                                                // Aquí renderizas el JSX específico para el tipo 'lista'
+                                                <>
+                                                    <textarea
+                                                        value={element.texto}
+                                                        onChange={(e) => handleTextChange(index, e.target.value)}
+                                                        placeholder="Ingrese el título de la lista"
+                                                    />
+                                                 
+                                                    <button>Agregar elemento</button>
+                                                </>
+                                            ) : null}
+                                        </div>
+                                    ))}
+
                                     </li>
 
                                     <li id="li-agregar">
                                         <label htmlFor="text" className="btn-agregar agregar-parrafo label-crear" onClick={ (e) => { agregarContenido("parrafo")} }> *Agregar Párrafo </label>
                                         <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarContenido("subtitulo")} }>Agregar Subtítulo</label>
-                                       
+                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarContenido("lista")} }>Agregar Lista </label>   
                                     </li>
                                          
                                     <li className="li-button text-center">
                                         
                                         <label>Terminar Publicación</label>                          
-                                        <span id="enviar-post" value="Finalizar"  onClick={() => agregarPublicacion()}> Finalizar </span>
+                                        <span id="enviar-post" value="Finalizar"  onClick={() => agregarPublicacion(publicacion)}> Finalizar </span>
 
                                     </li>
                                 </div>

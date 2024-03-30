@@ -4,31 +4,33 @@ import Navbar from "../Navbar/Navbar"
 import "./Publicacion.css"
 import { useEffect, useState } from "react"
 
+
 const Publicacion = ({data}) => {
  const { titulo } = useParams()
  console.log(titulo)
 
+
  const [publicacion, setPublicacion] = useState([])
     
     async function fetchPublicacion() {
-        try {
-          const response = await fetch(`http://localhost:3000/publicaciones/traer-publicacion/${titulo}`); // Cambia la URL según la ruta de tu backend
-          if (!response.ok) {
-            throw new Error('Error al obtener las publicaciones');
-          }
-          const data = await response.json();
-          console.log(data)
-          setPublicacion(data)
-          return publicacion; // Devuelve los datos de las publicaciones
-        } catch (error) {
-          console.error('Error al obtener las publicaciones:', error);
-          return null; // Devuelve null si hay un error
+    try {
+        const response = await fetch(`http://localhost:3000/publicaciones/traer-publicacion/${titulo}`); // Cambia la URL según la ruta de tu backend
+        if (!response.ok) {
+        throw new Error('Error al obtener las publicaciones');
         }
-      }
+        const data = await response.json();
+        console.log(data)
+        setPublicacion(data)
+        return publicacion; // Devuelve los datos de las publicaciones
+    } catch (error) {
+        console.error('Error al obtener las publicaciones:', error);
+        return null; // Devuelve null si hay un error
+    }
+    }
 
       useEffect(() => {
         fetchPublicacion()
-        
+
         console.log(publicacion.color)
   }, [])
 

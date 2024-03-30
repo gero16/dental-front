@@ -78,7 +78,7 @@ const AdminPublicaciones = () => {
       
                         <NavLink to={`/blog/publicaciones/${ tituloURL }`} className="publicacion-blog arcoiris" >  
                             <img 
-                                src="https://clinicajuliansaiz.com/wp-content/uploads/2021/05/protesis-dental-clinica-dental-julian-saiz-01.jpg" 
+                                src={element.imagen} 
                                 className="img-publicacion-blog"
                                 alt="" />
                             <section className="contenido-publicacion-blog">

@@ -2,8 +2,44 @@ import "./Blog.css"
 import Footer from "../../Footer/Footer"
 import Navbar from "../../Navbar/Navbar"
 import { Link as Navigate, NavLink,} from "react-router-dom";
+import Publicacion from "../../Publicacion/Publicacion";
+import { useEffect, useState } from "react";
+import PublicacionBlog from "../../Publicacion/PublicacionBlog";
 
 const Blog = () => {
+    const [publicaciones, setPublicaciones] = useState([])
+
+    const formatearTitulo = (titulo) => {
+      if(titulo.split(" ")) {
+          let tituloURL = titulo.toLowerCase().replaceAll(" ","-")
+          console.log(tituloURL)
+          return tituloURL
+      }
+  }
+    
+    async function fetchPublicaciones() {
+        try {
+          const response = await fetch('http://localhost:3000/publicaciones/traer-publicaciones'); // Cambia la URL según la ruta de tu backend
+          if (!response.ok) {
+            throw new Error('Error al obtener las publicaciones');
+          }
+          const data = await response.json();
+          console.log(data.publicaciones)
+          setPublicaciones(data.publicaciones)
+          return publicaciones; // Devuelve los datos de las publicaciones
+        } catch (error) {
+          console.error('Error al obtener las publicaciones:', error);
+          return null; // Devuelve null si hay un error
+        }
+      }
+      
+      useEffect(() => {
+            fetchPublicaciones()
+            
+            console.log(publicaciones)
+      }, [])
+
+    
 
     return (
         <> 
@@ -20,6 +56,12 @@ const Blog = () => {
            <section className="fondo-blanco-img">
                 <main className="publicaciones-blog flex">
 
+
+
+        {
+            /**** 
+            
+            
                     <NavLink to={`/blog/publicaciones/uso-de-protesis-removibles`} className="publicacion-blog arcoiris" >  
                         <img 
                             src="https://clinicajuliansaiz.com/wp-content/uploads/2021/05/protesis-dental-clinica-dental-julian-saiz-01.jpg" 
@@ -33,6 +75,7 @@ const Blog = () => {
                         </section>
                      
                     </NavLink>
+                    
                     
 
                     <NavLink className="publicacion-blog arcoiris">
@@ -116,6 +159,20 @@ const Blog = () => {
                         </section>
 
                     </NavLink>
+            
+            
+            ****/
+        }
+                { publicaciones.length > 0 
+                    ? publicaciones.map((element, index) => (
+                    
+                        <PublicacionBlog data={element}> </PublicacionBlog>
+                     
+                        ))
+                    : <> </>
+                }
+ 
+
                 </main>
            </section>
 

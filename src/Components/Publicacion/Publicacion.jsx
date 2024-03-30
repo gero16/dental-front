@@ -2,7 +2,8 @@ import Footer from "../Footer/Footer"
 import Navbar from "../Navbar/Navbar"
 import "./Publicacion.css"
 
-const Publicacion = () => {
+const Publicacion = ({data}) => {
+
     return (
         <> 
             <Navbar> </Navbar>
@@ -10,17 +11,34 @@ const Publicacion = () => {
                 
                 <section className="flex"> 
                     <img  
-                        src="https://clinicajuliansaiz.com/wp-content/uploads/2021/05/protesis-dental-clinica-dental-julian-saiz-01.jpg" 
+                        src={data.imagen} 
                         className="img-publicacion" 
                         alt="" />
 
                     <section className="section-titulo-contenido flex-column-center">
-                        <h1 className="h1-publicacion"> La importancia de la salud en las encías </h1>
+                        <h1 className="h1-publicacion"> {data.titulo} </h1>
                     </section>
                     
                 </section>
 
                 <section className="contenido-publicacion flex-column gap-30">
+                    { data.contenido.map((element, index) => (
+                        <div key={index}>
+                            { element.tipo === 'parrafo' ? (
+                                    <p> { element.texto } </p>
+                            ) : element.tipo === 'subtitulo' ? (
+                                    <h3> { element.texto } </h3>
+                            ) : element.tipo === 'lista' ? (
+                                    <ul>
+                                        {element.texto.split('\n').map((item, itemIndex) => (
+                                            <li key={itemIndex}>{item}</li>
+                                        ))}
+                                    </ul>
+                            ) : null}
+
+                        </div>
+                    ))}
+
                     <p> La salud de nuestros dientes depende en gran parte de la salud de las encías. </p>
                     <p> Cuidar tus encías es fundamental para evitar problemas periodontales, entre las que se incluyen enfermedades como la gingivitis y la periodontitis, o incluso la pérdida de los dientes. </p>
                     <p> El principal síntoma de una mala salud en las encías es que tu boca muestra hipersensibilidad a tomar cosas frías o calientes. También pueden llegar a tener mal aliento o una movilidad excesiva de los dientes más o menos 1 milímetro. </p>

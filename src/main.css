@@ -179,3 +179,12 @@ ul, ol {
 .medium {
   font-size: 1.4vw!important;
 }
+
+@media (min-width: 1500px) {
+  .h1-publicacion {
+    font-size: 1.8vw!important;
+    width: 75%;
+  }
+  
+}
+

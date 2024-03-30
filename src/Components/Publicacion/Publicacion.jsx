@@ -49,7 +49,7 @@ const Publicacion = ({data}) => {
                             className="img-publicacion" 
                             alt="" />
     
-                        <section className="section-titulo-contenido flex-column-center" style={{backgroundColor : `${publicacion.color}`}}>
+                        <section className="section-titulo-contenido flex-column-center text-center" style={{backgroundColor : `${publicacion.color}`}}>
                             <h1 className="h1-publicacion"> {publicacion.titulo} </h1>
                         </section>
                         
@@ -63,14 +63,14 @@ const Publicacion = ({data}) => {
                             ? publicacion.contenido.map((element, index) => (
                                 <div key={index}>
                                     { element.tipo === 'parrafo' ? (
-                                            <p> { element.texto } </p>
+                                            <p className="p-publicacion"> { element.texto } </p>
                                     ) : element.tipo === 'subtitulo' ? (
-                                            <h3> { element.texto } </h3>
+                                            <h3 className="p-publicacion"> { element.texto } </h3>
                                     ) : element.tipo === 'lista' ? (
                                             <ul className="flex-column gap-20 lista-publicacion">
                                                 { 
                                                     element.texto.map((item, itemIndex) => (
-                                                        <li key={itemIndex} className="small">
+                                                        <li key={itemIndex} className="small p-publicacion">
                                                              {item}  
                                                         </li>
                                                     ))

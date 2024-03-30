@@ -112,7 +112,7 @@ const IndexHeader = () => {
           </ul>
 
          
-          <Slider images={listaImagenes} fraction={0.5} autoplayInterval={120000} />  
+          <Slider images={listaImagenes} fraction={0.5} autoplayInterval={5000} />  
               
           
          

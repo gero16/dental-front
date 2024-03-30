@@ -39,7 +39,7 @@
     color: white;
     text-align: start;
     background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
-    border-left: 2px solid rgb(255, 255, 255);
+    border-left: 4px solid rgb(255, 255, 255);
 }
 
 

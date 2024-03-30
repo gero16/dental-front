@@ -23,12 +23,16 @@
 .portada-img {
     background-image: url("../../../public/portada.png");
     background-size: contain;
+    /*
     filter: grayscale(30%);
     filter: brightness(75%);
-
-    
+    */
+    border-right: 4px solid rgb(255, 255, 255);
 }
 
+.portada-img::before {
+    
+}
 
 .portada-texto {
     display: flex;
@@ -39,7 +43,7 @@
     color: white;
     text-align: start;
     background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
-    border-left: 4px solid rgb(255, 255, 255);
+   
 }
 
 

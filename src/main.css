@@ -174,3 +174,7 @@ ul, ol {
 .small {
   font-size: small;
 }
+
+.medium {
+  font-size: 1.4vw!important;
+}

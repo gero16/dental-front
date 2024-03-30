@@ -9,13 +9,6 @@ import PublicacionBlog from "../../Publicacion/PublicacionBlog";
 const Blog = () => {
     const [publicaciones, setPublicaciones] = useState([])
 
-    const formatearTitulo = (titulo) => {
-      if(titulo.split(" ")) {
-          let tituloURL = titulo.toLowerCase().replaceAll(" ","-")
-          console.log(tituloURL)
-          return tituloURL
-      }
-  }
     
     async function fetchPublicaciones() {
         try {

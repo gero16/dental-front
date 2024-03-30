@@ -66,6 +66,8 @@ const CrearPublicacion = () => {
 
     const handleColor = (event) => {
     setSelectedColor(event.target.value);
+    
+    setPublicacion({...publicacion, color : selectedColor})
     };
 
 

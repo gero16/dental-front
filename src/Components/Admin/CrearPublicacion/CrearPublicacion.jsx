@@ -231,7 +231,7 @@ const CrearPublicacion = () => {
                                     className="pre-img"
                                 />
                             )}
-                            <section className="flex-column-center section-titulo-pre">
+                            <section className="flex-column-center section-titulo-pre text-center">
                                 <h2 className="pre-titulo titulo-post white"> {publicacion.titulo}</h2>
                             </section>
                         </section>

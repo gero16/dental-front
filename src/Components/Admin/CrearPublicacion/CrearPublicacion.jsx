@@ -239,13 +239,13 @@ const CrearPublicacion = () => {
 
                             { publicacion.contenido.map((element, index) => (
                                 <div key={index}>
-                                    {element.tipo === 'parrafo' && (
+                                    { element.tipo === 'parrafo' && (
                                         <p className="small">{element.texto}</p>
                                     )}
-                                    {element.tipo === 'subtitulo' && (
+                                    { element.tipo === 'subtitulo' && (
                                         <h3 className="small">{element.texto}</h3>
                                     )}
-                                    {element.tipo === 'lista' && (
+                                    { element.tipo === 'lista' && (
                                         listas[index] && (
                                             <ul className="flex-column gap-5 small">
                                                 {listas[index].map((item, itemIndex) => (

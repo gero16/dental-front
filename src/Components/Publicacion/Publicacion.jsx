@@ -67,11 +67,11 @@ const Publicacion = ({data}) => {
                                     ) : element.tipo === 'subtitulo' ? (
                                             <h3> { element.texto } </h3>
                                     ) : element.tipo === 'lista' ? (
-                                            <ul className="flex-column gap-20">
+                                            <ul className="flex-column gap-20 lista-publicacion">
                                                 { 
                                                     element.texto.map((item, itemIndex) => (
                                                         <li key={itemIndex} className="small">
-                                                            * {item}  
+                                                             {item}  
                                                         </li>
                                                     ))
                                                 }

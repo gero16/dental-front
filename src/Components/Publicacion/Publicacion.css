@@ -21,3 +21,8 @@
     width: 70%;
     margin: 20px auto;
 }
+
+.lista-publicacion {
+    margin-left: 20px;
+    list-style:disc
+}

@@ -17,6 +17,7 @@ const CrearPublicacion = () => {
     // Por ahora tengo los estados separados - Pero la idea es unirlos luego
     const [publicacion, setPublicacion] = useState({
         titulo : "",
+        imagen: "https://st2.depositphotos.com/1371678/9634/i/450/depositphotos_96346704-stock-photo-dentist-examining-a-patients-teeth.jpg",
         fecha : "",
         color: "#0FA89D",
         contenido: [],
@@ -39,12 +40,15 @@ const CrearPublicacion = () => {
     };
     
     const handleRemoveElement = (index) => {
-        setContent(prevContent => {
-          const updatedContent = [...prevContent];
-          updatedContent.splice(index, 1);
-          return updatedContent;
+        setPublicacion(prevPublicacion => {
+            const updatedContenido = [...prevPublicacion.contenido];
+            updatedContenido.splice(index, 1);
+            return {
+                ...prevPublicacion,
+                contenido: updatedContenido
+            };
         });
-      };
+    };
 
     const handleTextChange = (index, newText) => {
         setPublicacion(prevPublicacion => {
@@ -70,7 +74,7 @@ const CrearPublicacion = () => {
     if (file) {
         const reader = new FileReader();
         reader.onload = () => {
-        setSelectedImage(reader.result);
+        setPublicacion({...publicacion, imagen : reader.result});
         };
         reader.readAsDataURL(file);
     }
@@ -78,12 +82,19 @@ const CrearPublicacion = () => {
 
       
     const agregarPublicacion = async (data) => {
+        // Creacion de ruta local para mandar la imagen
+        const archivos = document.querySelector("#imagen-post").files
+        const rutaImagen = archivos[0];
+        console.log(rutaImagen);
+
+        const formData = new FormData();
+        formData.append('data', JSON.stringify(data)); // Si necesitas enviar otros datos además de la imagen
+        formData.append('imagen', rutaImagen);
+        console.log(formData)
+
         let response = await fetch(`http://localhost:3000/publicaciones/agregar-publicacion`, {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify(data)
+            body: formData
           });
           
           let result = await response.json();
@@ -104,7 +115,7 @@ const CrearPublicacion = () => {
                     <article className="crear-post">
                         <h1>Crear Publicacion</h1>
 
-                        <form className="formulario" action={`/`} method="POST" encType="multipart/form-data">
+                        <form className="formulario" action={`http://localhost:3000/publicaciones/agregar-publicacion/`} method="POST" encType="multipart/form-data">
                             <ul>
                                 <li style={{display: "none"}}>
                                     <label htmlFor="">Token</label>
@@ -151,12 +162,6 @@ const CrearPublicacion = () => {
 
                                 <div className="div-li-contenido">
 
-                                    <li id="li-agregar">
-                                        <label htmlFor="text" className="btn-agregar agregar-parrafo label-crear" onClick={ (e) => { agregarContenido("parrafo")} }> *Agregar Párrafo </label>
-                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarContenido("subtitulo")} }>Agregar Subtítulo</label>
-                                       
-                                    </li>
-
                                     <li> 
                                         { publicacion.contenido.map((element, index) => (
                                             <div key={index}>
@@ -179,10 +184,18 @@ const CrearPublicacion = () => {
                                             </div>
                                         ))}
                                     </li>
+
+                                    <li id="li-agregar">
+                                        <label htmlFor="text" className="btn-agregar agregar-parrafo label-crear" onClick={ (e) => { agregarContenido("parrafo")} }> *Agregar Párrafo </label>
+                                        <label htmlFor="text" className="btn-agregar agregar-subtitulo label-crear" onClick={ (e) => { agregarContenido("subtitulo")} }>Agregar Subtítulo</label>
+                                       
+                                    </li>
                                          
                                     <li className="li-button text-center">
-                                        <label>Terminar Publicación</label>
-                                        <span id="enviar-post" value="Finalizar"  onClick={() => agregarPublicacion(publicacion) } > Finalizar </span> 
+                                        
+                                        <label>Terminar Publicación</label>                          
+                                        <span id="enviar-post" value="Finalizar"  onClick={() => agregarPublicacion()}> Finalizar </span>
+
                                     </li>
                                 </div>
                             </ul>
@@ -196,9 +209,9 @@ const CrearPublicacion = () => {
                     {/*****  PREVIEWWWWW *****/}
                     <article className="preview">
                         <section className="flex header-publicacion" style={{ backgroundColor : selectedColor}}>
-                            { selectedImage && (
+                            { publicacion.imagen && (
                                 <img
-                                    src={ selectedImage }
+                                    src={ publicacion.imagen }
                                     alt="Vista previa de la imagen"
                                     style={{ display: 'block', maxWidth: '100%', maxHeight: '200px' }}
                                     className="pre-img"

@@ -247,10 +247,10 @@ const CrearPublicacion = () => {
                                     )}
                                     { element.tipo === 'lista' && (
                                         listas[index] && (
-                                            <ul className="flex-column gap-5 small">
+                                            <ul className="flex-column gap-5 small lista-publicacion">
                                                 {listas[index].map((item, itemIndex) => (
                                                     <li key={itemIndex} className="small">
-                                                        * {item}
+                                                        {item}
                                                     </li>
                                                 ))}
                                             </ul>

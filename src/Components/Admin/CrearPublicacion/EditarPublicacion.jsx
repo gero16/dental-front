@@ -1,21 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./CrearPublicacion.css";
 import Navbar from "../../Navbar/Navbar";
+import { useParams } from "react-router-dom";
 
-const CrearPublicacion = () => {
-    const [inputs, setInputs] = useState([]);
-    const [inputValue, setInputValue] = useState('');
-    const [listItems, setListItems] = useState([]);
+
+const EditarPublicacion = ({data}) => {
+
+    const { titulo } = useParams()
+
+
     const [selectedImage, setSelectedImage] = useState("https://st2.depositphotos.com/1371678/9634/i/450/depositphotos_96346704-stock-photo-dentist-examining-a-patients-teeth.jpg");
     const [selectedColor, setSelectedColor] = useState('#0FA89D');
     const recommendedColors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
 
-    const [publicacion, setPublicacion] = useState({
-        titulo : "",
-        imagen: "https://st2.depositphotos.com/1371678/9634/i/450/depositphotos_96346704-stock-photo-dentist-examining-a-patients-teeth.jpg",
-        color: "#0FA89D",
-        contenido: [],
-    });
+  
+
+    const [publicacion, setPublicacion] = useState({contenido: []});
+    
+    async function fetchPublicacion() {
+    try {
+        const response = await fetch(`http://localhost:3000/publicaciones/traer-publicacion/${titulo}`); // Cambia la URL según la ruta de tu backend
+        if (!response.ok) {
+        throw new Error('Error al obtener las publicaciones');
+        }
+        const data = await response.json();
+        console.log(data)
+        setPublicacion(data)
+        console.log(publicacion)
+        return publicacion; // Devuelve los datos de las publicaciones
+    } catch (error) {
+        console.error('Error al obtener las publicaciones:', error);
+        return null; // Devuelve null si hay un error
+    }
+    }
+
+      useEffect(() => {
+        fetchPublicacion()
+
+        console.log(publicacion)
+  }, [])
 
     const [listas, setListas] = useState([]);
 
@@ -162,12 +185,12 @@ const CrearPublicacion = () => {
                                         <div style={{ backgroundColor: selectedColor, width: '25px', height: '25px' }}> </div>
                                     </div>
                                 </li>
-                          
+                              
                                 <div className="div-li-contenido">
                                     <li className="gap-10"> 
-                                        {publicacion.contenido.map((element, index) => (
+                                        { publicacion.contenido && publicacion.contenido.map((element, index) => (
                                             <div key={index} className="text-center">
-                                                {element.tipo === 'parrafo' ? (
+                                                { element.tipo === 'parrafo' ? (
                                                     <> 
                                                         <span> Parrafo </span>
                                                         <textarea
@@ -262,4 +285,4 @@ const CrearPublicacion = () => {
     )
 }
 
-export default CrearPublicacion;
+export default EditarPublicacion;

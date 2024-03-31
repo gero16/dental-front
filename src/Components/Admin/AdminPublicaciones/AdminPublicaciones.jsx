@@ -103,15 +103,26 @@ const AdminPublicaciones = () => {
                             <section className="eventos-publicacion flex-around">
 
                           
-                              <span className="btn-eventos-publicacion btn-editar-publi flex-center-center gap-5"> 
-
+                             
+                              <NavLink 
+                                to={`/admin/panel/admin-publicaciones/editar-publicacion/${ tituloURL }`} 
+                                className="btn-eventos-publicacion btn-editar-publi flex-center-center gap-5 " >  
+                              
                                 <span> Editar</span> 
                                 <FaEdit size={20} /> 
-                              </span> 
-                              <span className="btn-eventos-publicacion btn-eliminar-publi flex-center-center ">
+                           
+                     
+                              </NavLink>
+                    
+                              <NavLink 
+                                to={`/admin/panel/admin-publicaciones/eliminar-publicacion/${ tituloURL }`}
+                              className="btn-eventos-publicacion btn-eliminar-publi flex-center-center"
+                              >
+                              
                                 <span> Borrar </span> 
-                                <TiDelete size={28} />
-                              </span>
+                                <FaEdit size={28} /> 
+                              </NavLink>
+                          
                             </section>
                             </section>
                         

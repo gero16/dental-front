@@ -113,7 +113,7 @@ const EditarPublicacion = ({data}) => {
         }
     };
  
-    const agregarPublicacion = async (data) => {
+    const editarPublicacion = async (data) => {
         const archivos = document.querySelector("#imagen-post").files
         const rutaImagen = archivos[0];
 
@@ -123,8 +123,8 @@ const EditarPublicacion = ({data}) => {
         formData.append('contenido', JSON.stringify(data.contenido));
         formData.append('imagen', rutaImagen);
 
-        let response = await fetch(`http://localhost:3000/publicaciones/agregar-publicacion`, {
-            method: 'POST',
+        let response = await fetch(`http://localhost:3000/publicaciones/editar-publicacion/${ titulo }`, {
+            method: 'PUT',
             body: formData
         });
           
@@ -165,6 +165,7 @@ const EditarPublicacion = ({data}) => {
                                 <li>
                                     <label htmlFor="text" className="label-crear">*Titulo</label>
                                     <input 
+                                       value={publicacion.titulo}
                                         type="text" 
                                         name="titulo" 
                                         id="titulo-post" 
@@ -230,7 +231,7 @@ const EditarPublicacion = ({data}) => {
                                     </li>
                                     <li className="li-button text-center">
                                         <label>Terminar Publicación</label>                          
-                                        <span id="enviar-post" value="Finalizar"  onClick={() => agregarPublicacion(publicacion)}> Finalizar </span>
+                                        <span id="enviar-post" value="Finalizar"  onClick={() => editarPublicacion(publicacion)}> Finalizar </span>
                                     </li>
                                 </div>
                             </ul>

@@ -15,25 +15,42 @@ const PublicacionBlog = ({data}) => {
     const [width, setWidth] = useState(window.innerWidth);
 
     let textoPubli = data.contenido[0].texto
+    console.log(textoPubli)
     let textoPubli2 =  data.contenido[1].texto
+    
 
-    const limiteTexto = (texto, longitudMaxima, texto2) => {
-        // Verificar si el texto es más largo que la longitud máxima
-        if (texto.length > longitudMaxima) {
-          // Cortar el texto hasta la longitud máxima y agregar puntos suspensivos
-          return texto.substring(0, longitudMaxima) + '...';
-        } 
-        if(texto.length < longitudMaxima && texto.length < 150) {
-            console.log("hola")
-            const nuevo = texto.substring(0, longitudMaxima) + texto2.substring(0, longitudMaxima) + "..."
-            return nuevo
-        }
-        else {
-          // Si el texto no es más largo que la longitud máxima, devolver el texto original
-          return texto;
-        }
-    }
 
+       
+
+        function limiteTexto(numero) {
+            if (data.contenido.length < 2) {
+                return 'La lista debe tener al menos dos elementos';
+              }
+            
+              const primerElemento = data.contenido[0].texto
+              let segundoElemento = data.contenido[1].texto
+              let contenidoCompleto = '';
+            
+              if (primerElemento.length < numero) {
+                const caracteresRestantes = numero - primerElemento.length;
+            
+                if (segundoElemento.length < caracteresRestantes && data.contenido.length > 2) {
+                  const tercerElemento = data.contenido[1].texto;
+                  segundoElemento += tercerElemento.substring(0, caracteresRestantes - segundoElemento.length);
+                }
+            
+                contenidoCompleto = primerElemento + segundoElemento.substring(0, caracteresRestantes);
+              } else {
+                contenidoCompleto = primerElemento;
+              }
+
+              contenidoCompleto = contenidoCompleto.trim() + '...';
+            
+              return contenidoCompleto;
+          }
+          
+
+    
  
  
 
@@ -45,8 +62,8 @@ const PublicacionBlog = ({data}) => {
                     <h2 className={ claseCSS }>  { data.titulo } </h2>
                     
                 
-                        
-                         <p> { width < 1500 ? limiteTexto(textoPubli, 350, textoPubli2) :  limiteTexto(textoPubli, 500)}</p>
+
+                         <p> { width < 1550 ? limiteTexto(400) :  limiteTexto(600) }</p>
                     
                 
                     

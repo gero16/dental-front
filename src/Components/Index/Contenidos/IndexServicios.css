@@ -16,8 +16,8 @@
 
 }
 
-.titulo-servicio {
-    width: 45%;
+.section-titulo-servicio {
+
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -25,7 +25,21 @@
     color: var(--gris-oscuro);
 }
 
+.titulo-servicio {
+    font-size: 3vw;
+}
+
 .contenido-servicio h2 {
     font-weight: 500;
  
 }
+
+@media (min-width: 800px) {
+    .section-titulo-servicio {
+        width: 45%;
+    }
+    .titulo-servicio {
+        font-size: 3vw;
+    }
+   }
+  

@@ -199,6 +199,7 @@ const EditarPublicacion = ({data}) => {
                                                             onChange={(e) => handleTextChange(index, e.target.value)}
                                                             placeholder="Ingrese el párrafo"
                                                         />
+                                                        <span onClick={() => handleRemoveElement() }> Eliminar </span>
                                                     </>
                                                 ) : element.tipo === 'subtitulo' ? (
                                                     <> 
@@ -209,6 +210,7 @@ const EditarPublicacion = ({data}) => {
                                                             onChange={(e) => handleTextChange(index, e.target.value)}
                                                             placeholder="Ingrese el subtítulo"
                                                         />
+                                                        <span onClick={() => handleRemoveElement() }> Eliminar </span>
                                                     </>
                                                 ) : element.tipo === 'lista' ? (
                                                     <> 
@@ -219,6 +221,7 @@ const EditarPublicacion = ({data}) => {
                                                             onChange={(e) => handleTextChange(index, e.target.value, e.target.className)}
                                                             placeholder="Ingrese el título de la lista"
                                                         />
+                                                        <span onClick={() => handleRemoveElement() }> Eliminar </span>
                                                     </>
                                                 ) : null}
                                             </div>

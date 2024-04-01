@@ -1,14 +1,13 @@
+
 .section-ubicacion {
-    
-    margin : 20px;
     gap: 30px;
-    
- 
+    width: 80vw;
+    margin: 0 auto;
 }
 
 .h2-clinica {
     padding: 5px;
-    font-size: 1.8vw;
+    font-size: 3vw;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
 }
@@ -19,18 +18,27 @@
 }
 
 .article-ubicacion {
-    padding: 25px 40px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.555);
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
 }
 
 
 
 @media (min-width: 800px) {
+    .h2-clinica {
+
+        font-size: 1.8vw;
+    }
     .section-ubicacion {
         flex-direction: row;
+        margin : 20px;
+    }
+    .article-ubicacion {
+        padding: 25px 40px;
     }
   }
 

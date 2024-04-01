@@ -106,7 +106,7 @@
 }
 
 .article-portada {
-    height: 88vh;
+
     background: linear-gradient(to top, var(--primario), 40%, var(--secundario));
 
 }
@@ -124,6 +124,7 @@
 
 @media (min-width: 800px) {
     .article-portada {
+        height: 88vh;
         display: flex;
     }
     .portada-img {

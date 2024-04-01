@@ -37,17 +37,21 @@ h2 {
     gap: 50px;
 }
 
+.contenido-salud-dental-h2 {
+    font-size: large;
+}
 
 .h2-salud-dental {
     color: var(--primario);
+    font-size: x-large;
 }
 
 .contenido-salud-dental-h2 {
-  width: 70%;
+  
 }
 
 .contenido-salud-dental-divs {
-    width: 50%;
+
 }
 
 .icono-servicio {
@@ -68,14 +72,22 @@ h2 {
     justify-content: space-evenly;
 }
 
+.sections-info-consulta2 {
+    margin: 0 auto;
+}
+
 .article-info-consulta2  p {
-    font-size: 1.3vw;
+
 }
 
 .h2-numero {
     color: var(--primario);
 }
 
+
+.info-consulta2-h2 {
+    font-size: 6vw;
+}
 
 .btn-consultar {
     padding: 10px;
@@ -108,6 +120,15 @@ input, textarea {
         
     }
  
+    .contenido-salud-dental-h2 {
+        width: 70%;
+      }
+      
+      .contenido-salud-dental-divs {
+          width: 50%;
+      }
+
+      
     .contenido-salud-dental {
         display: flex;
        
@@ -115,6 +136,16 @@ input, textarea {
     .article-info-consulta2 {
        display: flex;
     }
+    .sections-info-consulta2{
+        width: 50%;
+    }
+    .article-info-consulta2 p {
+        font-size: 1.3vw;
+     }
+     .info-consulta2-h2 {
+        font-size: 2.2vw;
+     }
+
     .section-ubicacion {
         flex-direction: row;
     }

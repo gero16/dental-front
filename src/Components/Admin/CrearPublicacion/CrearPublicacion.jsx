@@ -175,6 +175,7 @@ const CrearPublicacion = () => {
                                                             onChange={(e) => handleTextChange(index, e.target.value)}
                                                             placeholder="Ingrese el párrafo"
                                                         />
+                                                         <span> Eliminar </span>
                                                     </>
                                                 ) : element.tipo === 'subtitulo' ? (
                                                     <> 
@@ -185,6 +186,7 @@ const CrearPublicacion = () => {
                                                             onChange={(e) => handleTextChange(index, e.target.value)}
                                                             placeholder="Ingrese el subtítulo"
                                                         />
+                                                        <span> Eliminar </span>
                                                     </>
                                                 ) : element.tipo === 'lista' ? (
                                                     <> 
@@ -195,6 +197,7 @@ const CrearPublicacion = () => {
                                                             onChange={(e) => handleTextChange(index, e.target.value, e.target.className)}
                                                             placeholder="Ingrese el título de la lista"
                                                         />
+                                                         <span> Eliminar </span>
                                                     </>
                                                 ) : null}
                                             </div>

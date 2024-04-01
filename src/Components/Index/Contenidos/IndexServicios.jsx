@@ -16,8 +16,8 @@ const IndexServicios = () => {
           
           <article className="contenido-servicios container">
 
-                <section className="titulo-servicio"> 
-                    <h2>  En un ambiente cómodo y relajante, puede aprovechar una gran cantidad de servicios </h2> 
+                <section className="section-titulo-servicio"> 
+                    <h2 className="titulo-servicio">  En un ambiente cómodo y relajante, puede aprovechar una gran cantidad de servicios </h2> 
                 </section>
 
                 <section  className="contenido-servicio flex arcoiris"> 

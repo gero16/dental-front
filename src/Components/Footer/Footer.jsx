@@ -43,7 +43,7 @@ const Footer = () => {
                             </section>
 
                         
-                            <section>
+                            <section className="section-footer-redes">
                                 <ul className="lista-redes-sociales flex">
                                     <li> <FaInstagram  style={{ fontSize: '30px'}} />  </li>
                                     <li> <FaFacebook  style={{ fontSize: '30px'}} />  </li>

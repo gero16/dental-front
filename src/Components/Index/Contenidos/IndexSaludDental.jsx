@@ -14,7 +14,7 @@ const ContenidoSaludDental = () => {
 
     return (
         <>
-            <article className="contenido-salud-dental container">
+            <article className="contenido-salud-dental container flex-column gap-10">
 
                 <section className="contenido-salud-dental-h2"> 
                     <h2 className="h2-salud-dental"> ¿Por qué es importante la salud dental? </h2>

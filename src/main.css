@@ -180,6 +180,14 @@ ul, ol {
   font-size: 1.4vw!important;
 }
 
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
 @media (min-width: 1500px) {
   .h1-publicacion {
     font-size: 1.8vw!important;

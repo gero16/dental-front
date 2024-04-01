@@ -43,13 +43,13 @@
 }
 
 .lista-info-consulta {
-    margin-top: 20px;
-    gap: 20px;
-    
+
 }
 
 .lista-info-consulta li {
     color: #ffffff;
+    font-size: 3vw;
+    margin: 10px;
 }
 
 .imagen-info-consulta {
@@ -60,7 +60,7 @@
 
 
 .consulta-gratis {
-    font-size:small;
+   font-size: xx-small;
     padding: 10px;
     border-radius: 10px;
     filter: blur(0);
@@ -71,8 +71,16 @@
     margin: 20px 0px
 }
 
+.contenido-info-consulta {
+    width: 100%;
+    height: 100%;
+}
+
 
 @media (min-width: 800px) {
+    .consulta-gratis {
+        font-size:small;
+    }
     .article-info-consulta {
         display: flex;
     }
@@ -82,6 +90,12 @@
     }
     .contenido-info-consulta {
         height: 85vh;
+    }
+    .lista-info-consulta {
+        gap: 20px;
+    }
+    .lista-info-consulta li {
+        font-size: 1vw;
     }
 
   }

@@ -16,17 +16,17 @@ const Ubicacion = () => {
             <section className="section-ubicacion flex-column-center">
 
                 {
-                    width <= 1500 
+                    width <= 800 
                         ? <> 
                             <article className="flex-column-center article-ubicacion">
                                 <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
                                 <span className="mb-5"> Torre García 536 </span>
-                                <Mapa ubicacion={ubiLasPiedras} style={[250, 400, 0]}> </Mapa>
+                                <Mapa ubicacion={ubiLasPiedras} style={[150, 280, 0]}> </Mapa>
                             </article> 
                             <article className="flex-column-center article-ubicacion">
                                 <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
                                 <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
-                            <Mapa ubicacion={ubiTresCruces} style={[250, 400, 0]} > </Mapa>
+                            <Mapa ubicacion={ubiTresCruces} style={[200, 300, 0]} > </Mapa>
                             </article>
                         </>
                     

@@ -18,6 +18,7 @@ footer h5 {
 
 .section-footer {
     padding: 30px 0px;
+    display: flex;
 }
 
 .section-footer > {
@@ -44,10 +45,10 @@ footer h5 {
   }
 
   .div-footer {
-    gap: 100px;
+    gap: 20px;
     margin: 20px 0px;
-   
-    justify-content: space-between;
+    flex-direction: column;
+
   }
 
 
@@ -57,11 +58,20 @@ footer h5 {
     color: white !important;
   }
 
-
-
+  .lista-redes-sociales {
+    display: flex;
+    flex-direction: column;
+  }
 
 @media (min-width: 800px) {
-    .section-footer {}
+  .div-footer {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 100px
+  }
+    .lista-redes-sociales {
+      flex-direction: row;
+    }
   }
 
  

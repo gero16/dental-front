@@ -8,13 +8,13 @@ a {
 }
 .span-link {
     color: #595959;
-    font-size: 1.1vw;
+    font-size: 2.5vw;
     font-weight: 500;
 
 }
 
 .img-logo {
-    width: 12vw;
+    width: 50vw;
 }
 
 .nav-principal {
@@ -37,6 +37,33 @@ a {
     padding: 1px;
 }
 
+.article-portada {
+    width: 100%;
+}
+
+.img-menu {
+    filter: invert(0.78);
+    height: 10vw;
+    width: 10vw;
+}
+
+@media (min-width: 800px) {
+    .article-portada {
+        height: 88vh;
+    }
+    #portada-img {
+        display: block;
+    }
+    .img-logo {
+        width: 15vw;
+    }
+    .span-link {
+       font-size: 1.2vw;
+    }
+    .nav-horario {
+       font-size: 0.7vw;
+    }
+   }
 
 @media (min-width: 1500px) {
  .span-link {

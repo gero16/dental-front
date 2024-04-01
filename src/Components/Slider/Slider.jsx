@@ -37,20 +37,15 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
   return (
     <> 
     
-    <article className={images[currentImageIndex].id   ? "article-portada article-portada-banner" : "article-portada"}>
+    <article className={images[currentImageIndex].id   ? "article-portada article-portada-banner" : "article-portada"} >
 
       <Slide key={slideKey} > {/* Utiliza la clave única para forzar la recreación del componente Slide */}
         
         <img src={images[currentImageIndex].imgUrl}
-             className="portada-img"
+             className="portada-img display-none"
              alt="slide"
-             id={ images[currentImageIndex].id ?  images[currentImageIndex].id : ""}
+             id="portada-img"
         />
-
-        { images[currentImageIndex].numero == 111
-          ? <section className='portada-border'> </section>
-          : <> </>
-        }
 
         {
           images[currentImageIndex].id  

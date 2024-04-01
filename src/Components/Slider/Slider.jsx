@@ -34,21 +34,23 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
       setSlideKey((prevKey) => prevKey + 1); // Actualiza la clave única para reiniciar la animación
     };
 
+    const imgBanner = "https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png"
+
   return (
     <> 
     
-    <article className={images[currentImageIndex].id   ? "article-portada article-portada-banner" : "article-portada"} >
+    <article className={images[currentImageIndex].imgUrl === imgBanner  ? "article-portada article-portada-banner" : "article-portada"} >
 
       <Slide key={slideKey} > {/* Utiliza la clave única para forzar la recreación del componente Slide */}
         
         <img src={images[currentImageIndex].imgUrl}
              className="portada-img display-none"
              alt="slide"
-             id="portada-img"
+             id={images[currentImageIndex].imgUrl === imgBanner ? "img-banner" : ""}
         />
 
         {
-          images[currentImageIndex].id  
+          images[currentImageIndex].imgUrl === imgBanner 
             ? <> </>
             :  <section className="portada-texto">
 

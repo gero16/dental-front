@@ -15,14 +15,9 @@ const PublicacionBlog = ({data}) => {
     const [width, setWidth] = useState(window.innerWidth);
 
     let textoPubli = data.contenido[0].texto
-    console.log(textoPubli)
     let textoPubli2 =  data.contenido[1].texto
     
-
-
-       
-
-        function limiteTexto(numero) {
+    function limiteTexto(numero) {
             if (data.contenido.length < 2) {
                 return 'La lista debe tener al menos dos elementos';
               }
@@ -47,13 +42,8 @@ const PublicacionBlog = ({data}) => {
               contenidoCompleto = contenidoCompleto.trim() + '...';
             
               return contenidoCompleto;
-          }
+    }
           
-
-    
- 
- 
-
     return (
         <> 
            <NavLink to={`/blog/publicaciones/${ data.url }`}  className="publicacion-blog arcoiris">
@@ -61,8 +51,6 @@ const PublicacionBlog = ({data}) => {
                 <section className="contenido-publicacion-blog"> 
                     <h2 className={ claseCSS }>  { data.titulo } </h2>
                     
-                
-
                          <p> { width < 1550 ? limiteTexto(400) :  limiteTexto(600) }</p>
                     
                 

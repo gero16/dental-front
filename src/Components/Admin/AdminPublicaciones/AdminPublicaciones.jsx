@@ -13,6 +13,8 @@ import { TiDelete } from "react-icons/ti";
 const AdminPublicaciones = () => {
     const [publicaciones, setPublicaciones] = useState([])
 
+    const [width, setWidth] = useState(window.innerWidth);
+
     const formatearTitulo = (titulo) => {
       if(titulo.split(" ")) {
           let tituloURL = titulo.toLowerCase().replaceAll(" ","-")
@@ -43,6 +45,33 @@ const AdminPublicaciones = () => {
             console.log(publicaciones)
       }, [])
 
+      function limiteTexto(numero, data) {
+        if (data.contenido.length < 2) {
+            return 'La lista debe tener al menos dos elementos';
+          }
+        
+          const primerElemento = data.contenido[0].texto
+          let segundoElemento = data.contenido[1].texto
+          let contenidoCompleto = '';
+        
+          if (primerElemento.length < numero) {
+            const caracteresRestantes = numero - primerElemento.length;
+        
+            if (segundoElemento.length < caracteresRestantes && data.contenido.length > 2) {
+              const tercerElemento = data.contenido[1].texto;
+              segundoElemento += tercerElemento.substring(0, caracteresRestantes - segundoElemento.length);
+            }
+        
+            contenidoCompleto = primerElemento + segundoElemento.substring(0, caracteresRestantes);
+          } else {
+            contenidoCompleto = primerElemento;
+          }
+
+          contenidoCompleto = contenidoCompleto.trim() + '...';
+        
+          return contenidoCompleto;
+      }
+      
      
 
     console.log("Publicaciones:", publicaciones);
@@ -95,7 +124,8 @@ const AdminPublicaciones = () => {
                                           }
                                       </ul>
                                   ) : (
-                                      <p className="contenido-publicacion-blog">{element.contenido[0].texto}</p>
+                                  
+                                      <p className="contenido-publicacion-blog"> { width < 1550 ? limiteTexto(400, element) :  limiteTexto(600, element) } </p>
                                   )
                               }
                                 

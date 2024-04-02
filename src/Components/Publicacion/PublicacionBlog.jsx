@@ -3,11 +3,10 @@ import Footer from "../Footer/Footer"
 import Navbar from "../Navbar/Navbar"
 import Publicacion from "./Publicacion";
 import "./Publicacion.css"
-
-import { Link as Navigate, NavLink,} from "react-router-dom";
+import { Link as Navigate, NavLink, useNavigate,} from "react-router-dom";
 
 const PublicacionBlog = ({data}) => {
-    //console.log(data)
+    console.log(data.url[0])
     
     //console.log(data.contenido[0].texto.length)
 
@@ -50,21 +49,46 @@ const PublicacionBlog = ({data}) => {
             
               return contenidoCompleto;
     }
-          
+
+
+    const navigate = useNavigate();
+   
+    const queryString = encodeURIComponent('son-seguras-las-radiografías-dentales');
+
+
+    const handleClick = () => {
+      navigate(`/blog/publicaciones/¿${queryString}?`);
+  }
+
     return (
         <> 
-           <NavLink to={`/blog/publicaciones/${ data.url }`}  className="publicacion-blog arcoiris">
-                <img  src={ data.imagen } className="img-publicacion-blog" alt="" />
-                <section className="contenido-publicacion-blog"> 
-                    <h2 className={ claseCSS }>  { data.titulo } </h2>
-                    
-                         <p> { width < 1550 ? limiteTexto(450) :  limiteTexto(600) }</p>
-                    
-                
-                    
-                </section>
 
-            </NavLink>
+
+
+        {
+          data.url[0] === "¿" 
+          ? <article  className="publicacion-blog arcoiris">
+            <img  src={ data.imagen } className="img-publicacion-blog" alt="" />
+              <section className="contenido-publicacion-blog"> 
+                <h2 className={ claseCSS }>  { data.titulo } </h2>
+              
+                  <p> { width < 1550 ? limiteTexto(450) :  limiteTexto(600) }</p>
+            </section>
+          </article>
+          :   <NavLink to={`/blog/publicaciones¿${data.url}`} className="publicacion-blog arcoiris">
+          <img  src={ data.imagen } className="img-publicacion-blog" alt="" />
+          <section className="contenido-publicacion-blog"> 
+              <h2 className={ claseCSS }>  { data.titulo } </h2>
+              
+                   <p> { width < 1550 ? limiteTexto(450) :  limiteTexto(600) }</p>
+              
+          
+              
+          </section>
+
+      </NavLink>
+        }
+        
         </>
     )
 }

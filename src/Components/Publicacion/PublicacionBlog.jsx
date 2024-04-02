@@ -25,7 +25,14 @@ const PublicacionBlog = ({data}) => {
               const primerElemento = data.contenido[0].texto
               let segundoElemento = data.contenido[1].texto
               let contenidoCompleto = '';
-            
+
+              if (primerElemento.length > numero) {
+                console.log("ssdffsasfa")
+                const textoLimitado = primerElemento.substring(0, numero);
+                contenidoCompleto = textoLimitado;
+                return contenidoCompleto;
+              }
+              console.log(primerElemento.length)
               if (primerElemento.length < numero) {
                 const caracteresRestantes = numero - primerElemento.length;
             
@@ -51,7 +58,7 @@ const PublicacionBlog = ({data}) => {
                 <section className="contenido-publicacion-blog"> 
                     <h2 className={ claseCSS }>  { data.titulo } </h2>
                     
-                         <p> { width < 1550 ? limiteTexto(400) :  limiteTexto(600) }</p>
+                         <p> { width < 1550 ? limiteTexto(450) :  limiteTexto(600) }</p>
                     
                 
                     

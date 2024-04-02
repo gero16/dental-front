@@ -37,7 +37,9 @@
 .section-portada-nosotros {
     background: linear-gradient(to right,var(--primario) 50%, var(--white) 50%); 
     background-color: var(--primario);
+
 }
+
 
 .portada-nosotros-big {
     width: 70%;
@@ -52,7 +54,9 @@
     padding: 20px 50px;
     color: var(--primario);
     background-color: var(--white);
-    height: 32vh;
+    height: 40vh;
+
+    padding: 0px;
     
     /*   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;   */
     
@@ -88,10 +92,12 @@
 }
 
 
-@media (-width: 1500px) {
-
-
- 
+@media (min-width: 800px) {
+    .section-nosotros-texto {
   
-  }
+        height: 32vh;
+    
+     
+    }
+}
   

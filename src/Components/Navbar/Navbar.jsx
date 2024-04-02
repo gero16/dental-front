@@ -14,9 +14,8 @@ const Navbar = () => {
 
             <header>
                 
-                
+                <nav className="container nav-principal flex-center-v gap-20"> 
 
-                <nav className="flex container nav-principal"> 
                     <img src={logo} className="img-logo" alt="" />
 
                     {
@@ -43,15 +42,7 @@ const Navbar = () => {
                                     <span className="span-link "> Servicios </span>
                                 </NavLink>
                             </li>
-                            {
-                                /* 
-                                    <li> 
-                                        <NavLink to={`/galeria`} > 
-                                            <span className="span-link "> Galeria </span>
-                                        </NavLink>
-                                    </li>
-                                */ 
-                            }
+                     
                             
                             <li> 
                                 <NavLink to={`/blog`} > 

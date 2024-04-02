@@ -2,8 +2,14 @@ import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
 import "./Nosotros.css"
 import FondoBlanco from "/fondo-blanco.jpg"
+import { useState } from "react"
 
 const Nosotros = () => {
+
+    const [width, setWidth] = useState(window.innerWidth)
+    console.log(width)
+
+
     return (
         <> 
             <Navbar> </Navbar>
@@ -11,8 +17,9 @@ const Nosotros = () => {
             <main className="main-nosotros">
 
            
-                    
-                    <picture  className="flex-column-center section-portada-nosotros"> 
+                {
+                    width > 800 
+                    ? <picture  className="flex-column-center section-portada-nosotros"> 
                         <source 
                             srcSet="https://res.cloudinary.com/geronicola/image/upload/v1711325178/general-it/gtwqyvbfzlmdmt33r3tz.png" 
                             media="(min-width: 1550px)" 
@@ -22,8 +29,8 @@ const Nosotros = () => {
                                 <source  srcSet="tablet.jpg" media="(min-width: 768px)" />
                                 <source srcSet="mobile.jpg" media="(min-width: 377px)" />
                             */}
-                       
-                       <source  
+                        
+                        <source  
                             srcSet="https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png" 
                             media="(min-width: 768px)" 
                         />
@@ -31,8 +38,11 @@ const Nosotros = () => {
                             src="https://res.cloudinary.com/geronicola/image/upload/v1711325178/general-it/gtwqyvbfzlmdmt33r3tz.png" 
                             className="portada-nosotros"
                             alt="" />
-                      
+                        
                     </picture>
+                    : <> </>
+                }
+           
 
                 
 

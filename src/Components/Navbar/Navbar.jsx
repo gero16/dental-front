@@ -16,8 +16,19 @@ const Navbar = () => {
                 
                 <nav className="container nav-principal flex-center-v gap-20"> 
 
-                    <img src={logo} className="img-logo" alt="" />
-
+                    <section>
+                        <img src={logo} className="img-logo" alt="" />
+                        <ul className="display-none">
+                            <li> Nosotros </li>
+                            <li> Contacto </li>
+                            <li> Servicios </li>
+                            <li> Blog </li>
+                            <li> Reservar Hora </li>
+                            <li> Iniciar Sesión </li>
+                            <li> Panel </li>
+                        </ul>
+                    </section>
+                  
                     {
                         width < 800 
                             ? <img src={ imagenMenu } alt="" className="img-menu" /> 

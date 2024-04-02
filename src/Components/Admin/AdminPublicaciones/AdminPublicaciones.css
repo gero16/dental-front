@@ -30,22 +30,98 @@
 }
 
 .article-crear {
-    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiL_pw-i5zALVbDhcehG4xfEraUy_8nbVCv-gcRGRCSPMOqbpKvEnNUEXeIGHjsLmHFXXvEIsjUNnKmTx6meiWyHdPNE-9jM63tJe0ZaJMfiKTjevhdvl0OBeWsRpLRWMTcPwcFUMQUAiUf/s1600/randolimagenes.blogspot.com+-+Gratis+Wallpapers+-+Descargar+fondos+abstracto+de+pantalla+-+%25252871%252529.jpg");
-    background-size: 250%;
-    background-position: 0% -50%;
-
+    width: 100%;
+    position: relative;
+    background-image: url("../../../../public/fondo-dentista.jpg");
+    background-size: 140%; /* Ajusta según tu necesidad */
+    background-position: 50% 75%;
+    padding: 30px;
+   
 }
 
-.img-crear {
-    width: 100%;   
-}
+.article-crear::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-.img-crear-2 {
-    transform: rotate(180deg);
+    backdrop-filter: blur(20px); 
+    z-index: -1; 
 }
 
 .section-admin-crear {
-    color: rgb(255, 231, 12)!important;
-    background-color: rgba(0, 0, 0, 0.308);
     padding: 15px;
+    background-color: rgba(0, 0, 0, 0.151);
+    padding: 30px;
+    border-radius: 10px;
+ 
 }
+.h2-crear-admin {
+    z-index: 10;
+    font-size: 4vw!important;
+}
+.neonText {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+  }
+
+
+  .brand-logo {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    font-size: 4.5vh;
+    padding: 0;
+    white-space: nowrap;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
+    animation: glow .59s infinite alternate;
+}
+
+.brand-logo-2{
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
+    animation: glow .59s infinite alternate;
+}
+
+@keyframes glow {
+    to {
+     text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px var(--color-blog), 0 0 16px var(--color-blog), 0 0 20px var(--color-blog), 0 0 24px var(--color-blog), 0 0 28px var(--color-blog);
+    }
+  }
+  .brand-logo{
+          text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
+          animation: glow .59s infinite alternate;
+  }
+
+  
+
+.shadow {
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1), 
+                0px 0px 10px rgba(255, 255, 255, 1), 
+                0px 0px 15px rgba(255, 255, 255, 1),
+                0px 0px 20px rgba(0, 255, 70),
+                0px 0px 30px rgba(0, 255, 70),
+                0px 0px 40px rgba(0, 255, 70),
+                0px 0px 55px rgba(0, 255, 70),
+                0px 0px 75px rgba(0, 255, 70);
+  }
+
+  .img-crear-admin {
+    width: 100%;
+  }

@@ -8,6 +8,7 @@ import "./AdminPublicaciones.css"
 import { FaEdit  } from "react-icons/fa";
 import { TiDelete } from "react-icons/ti";
 import Loader from "../../Loader/Loader";
+import Imagen from "../../../../public/sonrisa-3.jpg";
 
 
 
@@ -100,26 +101,30 @@ const AdminPublicaciones = () => {
             <section className="fondo-blanco-img">
               <main className="publicaciones-blog flex">
 
-              <NavLink to={`/admin/panel/crear-publicacion`} className="publicacion-blog arcoiris article-crear article-crear flex-column-center" > 
-       
-        
-                  <section className="section-admin-crear flex-column gap-20">
+                <NavLink to={`/admin/panel/crear-publicacion`} className="publicacion-blog arcoiris article-crear" > 
+                    <section className="section-admin-crear flex-around gap-10">
 
-                    <h2 className="white">  Crear Publicacion </h2>
-                    <p className="white width-70"> Cree una publicacion para añadir al Blog.</p>
-                    <ul className="white  width-70 small">
-                      <li className="bold"> Requisitos Mínimos : </li>
-                      <li> Subir Imagen </li>
-                      <li> Titulo </li>
-                      <li> Un Parrafo  </li>
-                  </ul>
-                  </section>
-          
-              
+                      <div className="bg">
+                        <h2 className="brand-logo h2-crear-admin"> Crear Publicación </h2>
+                      </div>
+                      
+                      <section className="flex-column bg">
+                        <p className="width-70 brand-logo-2 x-large"> Cree una publicacion para añadir al Blog.</p>
+                        <ul className="width-70 small brand-logo-2 ">
+                          <li className="bold"> Requisitos Mínimos : </li>
+                          <li> Subir Imagen </li>
+                          <li> Titulo </li>
+                          <li> Un Parrafo  </li>
+                        </ul>
+                      </section>
 
-                    
-    
-                </NavLink>
+                    </section>
+            
+                
+
+                      
+      
+                  </NavLink>
 
 
                 { publicaciones.length > 0 

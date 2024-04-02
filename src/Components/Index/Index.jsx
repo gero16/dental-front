@@ -37,7 +37,7 @@ const Index = () => {
                 </section>
 
                 <section className="sections-info-consulta2"> 
-                    <h2> Solicite su cita hoy </h2>
+                    <h2 className="info-consulta2-h2"> Solicite su cita hoy </h2>
                     <p> Por dudas o consultas </p>
                     <p className="btn-consultar"> <a href="/contacto"> Consultar </a> </p>
                 </section>

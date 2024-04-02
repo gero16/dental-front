@@ -49,7 +49,7 @@ const Blog = () => {
             </section>
            
            <section className="fondo-blanco-img">
-                <main className="publicaciones-blog flex">
+                <main className="flex-column publicaciones-blog">
 
                 { publicaciones.length > 0 
                     ? publicaciones.map((element, index) => (

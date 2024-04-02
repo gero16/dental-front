@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 const EditarPublicacion = ({data}) => {
 
-    const { titulo } = useParams()
+    const { idPublicacion } = useParams()
 
 
     const [selectedImage, setSelectedImage] = useState("https://st2.depositphotos.com/1371678/9634/i/450/depositphotos_96346704-stock-photo-dentist-examining-a-patients-teeth.jpg");
@@ -19,7 +19,7 @@ const EditarPublicacion = ({data}) => {
     
     async function fetchPublicacion() {
     try {
-        const response = await fetch(`http://localhost:3000/publicaciones/traer-publicacion/${titulo}`); // Cambia la URL según la ruta de tu backend
+        const response = await fetch(`http://localhost:3000/publicaciones/traer-publicacion/${ idPublicacion }`); // Cambia la URL según la ruta de tu backend
         if (!response.ok) {
         throw new Error('Error al obtener las publicaciones');
         }

@@ -23,6 +23,7 @@ import HorasDisponibles from './Components/Admin/HorasDisponibles/HorasDisponibl
 import AdminPublicaciones from './Components/Admin/AdminPublicaciones/AdminPublicaciones.jsx';
 import CrearPublicacion from './Components/Admin/CrearPublicacion/CrearPublicacion.jsx';
 import EditarPublicacion from './Components/Admin/CrearPublicacion/EditarPublicacion.jsx';
+import EliminarPublicacion from './Components/Admin/EliminarPublicacion/EliminarPublicacion.jsx';
 
 
 const router = createBrowserRouter([
@@ -90,8 +91,12 @@ const router = createBrowserRouter([
     element:  <CrearPublicacion />,
   },
   {
-    path: "/admin/panel/admin-publicaciones/editar-publicacion/:titulo",
+    path: "/admin/panel/admin-publicaciones/editar-publicacion/:idPublicacion",
     element:  <EditarPublicacion />,
+  },
+  {
+    path: "/admin/panel/admin-publicaciones/eliminar-publicacion/:idPublicacion",
+    element:  <EliminarPublicacion />,
   },
   
 ]);

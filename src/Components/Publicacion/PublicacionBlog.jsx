@@ -10,6 +10,7 @@ const PublicacionBlog = ({data}) => {
     const claseCSS = data.titulo.length < 24 ? 'h2-publicacion-blog' : 'h2-publicacion-blog medium';
     const [width, setWidth] = useState(window.innerWidth);
     
+    
     function limiteTexto(numero) {
             if (data.contenido.length < 2) {
                 return 'La lista debe tener al menos dos elementos';

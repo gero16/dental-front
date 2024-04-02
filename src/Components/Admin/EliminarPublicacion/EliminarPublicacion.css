@@ -1,0 +1,15 @@
+.btns-eliminar {
+    padding: 10px;
+    border-radius : 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-eliminar-cancelar {
+    background-color:#154360;
+
+}
+
+.btn-eliminar-confirmar {
+    background-color: var(--primario);
+}

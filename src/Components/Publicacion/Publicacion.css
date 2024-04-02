@@ -25,7 +25,9 @@
 .lista-publicacion {
     margin-left: 20px;
     list-style:disc
+ 
 }
+
 
 
 @media (min-width: 1500px) {

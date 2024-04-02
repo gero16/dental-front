@@ -50,44 +50,20 @@ const PublicacionBlog = ({data}) => {
               return contenidoCompleto;
     }
 
-
-    const navigate = useNavigate();
-   
-    const queryString = encodeURIComponent('son-seguras-las-radiografías-dentales');
-
-
-    const handleClick = () => {
-      navigate(`/blog/publicaciones/¿${queryString}?`);
-  }
-
     return (
         <> 
 
-
-
-        {
-          data.url[0] === "¿" 
-          ? <article  className="publicacion-blog arcoiris">
-            <img  src={ data.imagen } className="img-publicacion-blog" alt="" />
-              <section className="contenido-publicacion-blog"> 
-                <h2 className={ claseCSS }>  { data.titulo } </h2>
-              
-                  <p> { width < 1550 ? limiteTexto(450) :  limiteTexto(600) }</p>
-            </section>
-          </article>
-          :   <NavLink to={`/blog/publicaciones¿${data.url}`} className="publicacion-blog arcoiris">
+      
+       <NavLink to={`/blog/publicaciones/${data.id}`} className="publicacion-blog arcoiris">
           <img  src={ data.imagen } className="img-publicacion-blog" alt="" />
           <section className="contenido-publicacion-blog"> 
-              <h2 className={ claseCSS }>  { data.titulo } </h2>
-              
-                   <p> { width < 1550 ? limiteTexto(450) :  limiteTexto(600) }</p>
-              
-          
-              
-          </section>
+            <h2 className={ claseCSS }>  { data.titulo } </h2>
+      
+            <p> { width < 1550 ? limiteTexto(450) :  limiteTexto(600) }</p>
+         </section>
 
       </NavLink>
-        }
+      
         
         </>
     )

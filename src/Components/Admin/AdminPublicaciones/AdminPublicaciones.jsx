@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import "./AdminPublicaciones.css"
 import { FaEdit  } from "react-icons/fa";
 import { TiDelete } from "react-icons/ti";
+import Loader from "../../Loader/Loader";
 
 
 
@@ -99,13 +100,10 @@ const AdminPublicaciones = () => {
               <main className="publicaciones-blog flex">
                 { publicaciones.length > 0 
                   ? publicaciones.map((element, key) => {
-                    console.log(element)
-                    const tituloURL = formatearTitulo(element.titulo)
-                    console.log(tituloURL)
                     return (
                     
       
-                        <NavLink to={`/blog/publicaciones/${ tituloURL }`} className="publicacion-blog arcoiris" >  
+                        <NavLink to={`/blog/publicaciones/${ element.id }`} className="publicacion-blog arcoiris" >  
                             <img 
                                 src={element.imagen} 
                                 className="img-publicacion-blog"
@@ -135,7 +133,7 @@ const AdminPublicaciones = () => {
                           
                              
                               <NavLink 
-                                to={`/admin/panel/admin-publicaciones/editar-publicacion/${ tituloURL }`} 
+                                to={`/admin/panel/admin-publicaciones/editar-publicacion/${ element.id }`} 
                                 className="btn-eventos-publicacion btn-editar-publi flex-center-center gap-5 " >  
                               
                                 <span> Editar</span> 
@@ -145,7 +143,7 @@ const AdminPublicaciones = () => {
                               </NavLink>
                     
                               <NavLink 
-                                to={`/admin/panel/admin-publicaciones/eliminar-publicacion/${ tituloURL }`}
+                                to={`/admin/panel/admin-publicaciones/eliminar-publicacion/${ element.id }`}
                               className="btn-eventos-publicacion btn-eliminar-publi flex-center-center"
                               >
                               
@@ -162,7 +160,9 @@ const AdminPublicaciones = () => {
                     )
                   })
                   
-                : <> </> 
+                : <section className="flex-column-center container"> 
+                    <Loader> </Loader>
+                </section> 
               
               }
             

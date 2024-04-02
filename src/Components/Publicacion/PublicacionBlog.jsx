@@ -6,15 +6,9 @@ import "./Publicacion.css"
 import { Link as Navigate, NavLink, useNavigate,} from "react-router-dom";
 
 const PublicacionBlog = ({data}) => {
-    console.log(data.url[0])
     
-    //console.log(data.contenido[0].texto.length)
-
     const claseCSS = data.titulo.length < 24 ? 'h2-publicacion-blog' : 'h2-publicacion-blog medium';
     const [width, setWidth] = useState(window.innerWidth);
-
-    let textoPubli = data.contenido[0].texto
-    let textoPubli2 =  data.contenido[1].texto
     
     function limiteTexto(numero) {
             if (data.contenido.length < 2) {
@@ -26,12 +20,11 @@ const PublicacionBlog = ({data}) => {
               let contenidoCompleto = '';
 
               if (primerElemento.length > numero) {
-                console.log("ssdffsasfa")
                 const textoLimitado = primerElemento.substring(0, numero);
                 contenidoCompleto = textoLimitado;
                 return contenidoCompleto;
               }
-              console.log(primerElemento.length)
+ 
               if (primerElemento.length < numero) {
                 const caracteresRestantes = numero - primerElemento.length;
             

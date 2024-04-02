@@ -5,6 +5,7 @@ import { Link as Navigate, NavLink,} from "react-router-dom";
 import Publicacion from "../../Publicacion/Publicacion";
 import { useEffect, useState } from "react";
 import PublicacionBlog from "../../Publicacion/PublicacionBlog";
+import Loader from "../../Loader/Loader.jsx"
 
 const Blog = () => {
     const [publicaciones, setPublicaciones] = useState([])
@@ -55,7 +56,9 @@ const Blog = () => {
                         <PublicacionBlog data={element}> </PublicacionBlog>
                      
                         ))
-                    : <> </>
+                    : <section className="flex-column-center container"> 
+                      <Loader> </Loader>
+                    </section>
                 }
  
 

@@ -134,10 +134,11 @@ input, textarea {
        
     }
     .article-info-consulta2 {
-       display: flex;
+       flex-direction: row;
     }
     .sections-info-consulta2{
         width: 50%;
+        gap: 20px;
     }
     .article-info-consulta2 p {
         font-size: 1.3vw;

@@ -9,44 +9,62 @@ const Ubicacion = () => {
     const [width, setWidth] = useState(window.innerWidth);
 
 
-    const style = [300, 500, 0]
+    const estilo1 = [140, 260, 0]
+    const estilo2 = [200, 360, 0]
+    const estilo3= width > 1201 && width < 1550 ? [350, 450, 0] :  [500, 700, 0]
     return (
 
         <> 
             <section className="section-ubicacion flex-column-center">
 
-                {
-                    width <= 800 
-                        ? <> 
-                            <article className="flex-column-center article-ubicacion">
-                                <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
-                                <span className="mb-5"> Torre García 536 </span>
-                                <Mapa ubicacion={ubiLasPiedras} style={[150, 280, 0]}> </Mapa>
-                            </article> 
-                            <article className="flex-column-center article-ubicacion">
-                                <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
-                                <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
-                            <Mapa ubicacion={ubiTresCruces} style={[200, 300, 0]} > </Mapa>
-                            </article>
-                        </>
-                    
-                        : <> 
-                            <article className="flex-column-center article-ubicacion">
-                                <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
-                                <span className="mb-5"> Torre García 536 </span>
-                                <Mapa ubicacion={ubiLasPiedras} style={[300, 500, 0]}> </Mapa>
-                            </article> 
-                            <article className="flex-column-center article-ubicacion">
-                                <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
-                                <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
-                            <Mapa ubicacion={ubiTresCruces} style={[300, 500, 0]} > </Mapa>
-    
-                            </article>
-                        </>  
-                        
-    
-                }
-               
+               {
+                 (width <= 950) 
+                 ? (
+                     <>
+                         <article className="flex-column-center article-ubicacion">
+                             <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
+                             <span className="mb-5"> Torre García 536 </span>
+                             <Mapa ubicacion={ubiLasPiedras} style={estilo1} > </Mapa>
+                         </article> 
+                         <article className="flex-column-center article-ubicacion">
+                             <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
+                             <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
+                             <Mapa ubicacion={ubiTresCruces} style={estilo1}> </Mapa>
+                         </article>
+                     </>
+                 )
+                 : (
+                     (width > 950 && width <= 1200)
+                         ? (
+                             <>
+                                 <article className="flex-column-center article-ubicacion">
+                                     <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
+                                     <span className="mb-5"> Torre García 536 </span>
+                                     <Mapa ubicacion={ubiLasPiedras} style={estilo2} > </Mapa>
+                                 </article> 
+                                 <article className="flex-column-center article-ubicacion">
+                                     <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
+                                     <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
+                                     <Mapa ubicacion={ubiTresCruces} style={estilo2} > </Mapa>
+                                 </article>
+                             </>
+                         )
+                         : (
+                             <>
+                                 <article className="flex-column-center article-ubicacion">
+                                     <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
+                                     <span className="mb-5"> Torre García 536 </span>
+                                     <Mapa ubicacion={ubiLasPiedras} style={estilo3}> </Mapa>
+                                 </article> 
+                                 <article className="flex-column-center article-ubicacion">
+                                     <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
+                                     <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
+                                     <Mapa ubicacion={ubiTresCruces} style={estilo3} > </Mapa>
+                                 </article>
+                             </>
+                         )
+                 )
+               }
 
               
             </section>

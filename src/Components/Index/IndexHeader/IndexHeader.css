@@ -115,7 +115,7 @@
     */
 
     height: 35vh;
-    background: linear-gradient(to right, var(--primario),81%, var(--white), 90%, var(--white));
+    background: linear-gradient(to right, var(--primario),71%, var(--white), 90%, var(--white));
     box-sizing: border-box;
 }
 
@@ -124,13 +124,12 @@
 @media (min-width: 800px) {
 
     .article-portada-banner {
-        height: 70vh!important;
+        height: 65vh!important;
 
 
     }
     #img-banner {
-        height: 70vh;
-
+        height: 65vh;
         margin: 0 5%!important;
     }
     
@@ -159,6 +158,12 @@
     }
    }
   
+   @media (min-width: 1000px) {
+    #img-banner {
+        margin: 0 13%!important;
+    }
+   }
+   
    @media (min-width: 1500px) {
     .p-portada-texto {
         font-size: 1.1vw;;

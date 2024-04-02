@@ -18,10 +18,12 @@
     margin: 0px auto;
     padding: 40px 0px;
     gap: 30px;
+    flex-wrap: wrap;
 
 }
 
 .publicacion-blog {
+    width: 80vw;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     background-color: rgba(250, 250, 250, 0.76);
     cursor: pointer;
@@ -56,12 +58,11 @@
 
 @media (min-width: 800px) {
     .publicaciones-blog {
-        width: 24vw;
-        flex-direction: row;
         flex-wrap: wrap;
+        flex-direction: row;
     }
-    .img-publicacion-blog {
-        width: 23.5vw;
+    .publicacion-blog {
+        width: 30%;
     }
     .h2-publicacion-blog {
         font-size: 1.8vw;

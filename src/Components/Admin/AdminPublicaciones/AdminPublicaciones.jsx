@@ -54,7 +54,13 @@ const AdminPublicaciones = () => {
           const primerElemento = data.contenido[0].texto
           let segundoElemento = data.contenido[1].texto
           let contenidoCompleto = '';
-        
+
+          if (primerElemento.length > numero) {
+            const textoLimitado = primerElemento.substring(0, numero);
+            contenidoCompleto = textoLimitado;
+            return contenidoCompleto;
+          }
+
           if (primerElemento.length < numero) {
             const caracteresRestantes = numero - primerElemento.length;
         
@@ -71,7 +77,7 @@ const AdminPublicaciones = () => {
           contenidoCompleto = contenidoCompleto.trim() + '...';
         
           return contenidoCompleto;
-      }
+}
       
      
 
@@ -90,19 +96,36 @@ const AdminPublicaciones = () => {
            
                 </section>
 
-                <NavLink to={`/admin/panel/crear-publicacion`} > 
-                  <span className="span-link "> Crear Publicacion </span>
+            
+            <section className="fondo-blanco-img">
+              <main className="publicaciones-blog flex">
+
+              <NavLink to={`/admin/panel/crear-publicacion`} className="publicacion-blog arcoiris article-crear article-crear flex-column-center" > 
+       
+        
+                  <section className="section-admin-crear flex-column gap-20">
+
+                    <h2 className="white">  Crear Publicacion </h2>
+                    <p className="white width-70"> Cree una publicacion para añadir al Blog.</p>
+                    <ul className="white  width-70 small">
+                      <li className="bold"> Requisitos Mínimos : </li>
+                      <li> Subir Imagen </li>
+                      <li> Titulo </li>
+                      <li> Un Parrafo  </li>
+                  </ul>
+                  </section>
+          
+              
+
+                    
+    
                 </NavLink>
 
 
-
-            <section className="fondo-blanco-img">
-              <main className="publicaciones-blog flex">
                 { publicaciones.length > 0 
                   ? publicaciones.map((element, key) => {
                     return (
                     
-      
                         <NavLink to={`/blog/publicaciones/${ element.id }`} className="publicacion-blog arcoiris" >  
                             <img 
                                 src={element.imagen} 
@@ -110,7 +133,7 @@ const AdminPublicaciones = () => {
                                 alt="" />
                             <section className="contenido-publicacion-blog">
 
-                                <h2 className="h2-publicacion-blog"> { element.titulo }</h2>
+                                <h2 className="h2-publicacion-blog medium"> { element.titulo }</h2>
                               
                                 {
                                   element.contenido[0].tipo === "lista" ? (
@@ -123,7 +146,7 @@ const AdminPublicaciones = () => {
                                       </ul>
                                   ) : (
                                   
-                                      <p className="contenido-publicacion-blog"> { width < 1550 ? limiteTexto(400, element) :  limiteTexto(600, element) } </p>
+                                      <p className="contenido-publicacion-blog"> { width < 1550 ? limiteTexto(200, element) :  limiteTexto(300, element) }</p>
                                   )
                               }
                                 

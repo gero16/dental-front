@@ -196,6 +196,13 @@ ul, ol {
   cursor :default!important;
 }
 
+.width-80 {
+  width: 80%;
+}
+
+.bold {
+  font-weight: bold;
+}
 @media (min-width: 1500px) {
   .h1-publicacion {
     font-size: 1.8vw!important;

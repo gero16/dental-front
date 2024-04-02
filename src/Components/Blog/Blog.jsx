@@ -1,11 +1,11 @@
 import "./Blog.css"
-import Footer from "../../Footer/Footer"
-import Navbar from "../../Navbar/Navbar"
+import Footer from "../Footer/Footer.jsx"
+import Navbar from "../Navbar/Navbar.jsx"
 import { Link as Navigate, NavLink,} from "react-router-dom";
-import Publicacion from "../../Publicacion/Publicacion";
+import Publicacion from "../Publicacion/Publicacion.jsx";
 import { useEffect, useState } from "react";
-import PublicacionBlog from "../../Publicacion/PublicacionBlog";
-import Loader from "../../Loader/Loader.jsx"
+import PublicacionBlog from "../Publicacion/PublicacionBlog.jsx";
+import Loader from "../Loader/Loader.jsx"
 //import "../../Loader/Loader.css"
 
 const Blog = () => {

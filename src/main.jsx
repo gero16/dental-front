@@ -15,7 +15,7 @@ import Galeria from './Components/Galeria/Galeria.jsx';
 import Servicios from './Components/Servicios/Servicios.jsx';
 import IniciarSesion from './Components/IniciarSesion/IniciarSesion.jsx';
 import Registro from './Components/Registro/Registro.jsx';
-import Blog from './Components/Contacto/Blog/Blog.jsx';
+import Blog from './Components/Blog/Blog.jsx';
 import Publicacion from './Components/Publicacion/Publicacion.jsx';
 
 import Panel from './Components/Admin/Panel/Panel.jsx';

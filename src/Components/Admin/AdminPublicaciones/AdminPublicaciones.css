@@ -28,3 +28,24 @@
     color: white;
     border: 3px solid rgb(223, 9, 9);
 }
+
+.article-crear {
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiL_pw-i5zALVbDhcehG4xfEraUy_8nbVCv-gcRGRCSPMOqbpKvEnNUEXeIGHjsLmHFXXvEIsjUNnKmTx6meiWyHdPNE-9jM63tJe0ZaJMfiKTjevhdvl0OBeWsRpLRWMTcPwcFUMQUAiUf/s1600/randolimagenes.blogspot.com+-+Gratis+Wallpapers+-+Descargar+fondos+abstracto+de+pantalla+-+%25252871%252529.jpg");
+    background-size: 250%;
+    background-position: 0% -50%;
+
+}
+
+.img-crear {
+    width: 100%;   
+}
+
+.img-crear-2 {
+    transform: rotate(180deg);
+}
+
+.section-admin-crear {
+    color: rgb(255, 231, 12)!important;
+    background-color: rgba(0, 0, 0, 0.308);
+    padding: 15px;
+}

@@ -40,9 +40,8 @@
 }
 
 .formulario-contacto {
-    width: 45%;
     border-radius: 10px;
-    height: 100%;
+
 
 }
 
@@ -68,6 +67,7 @@
 }
 
 .img-contacto {
+    display: none;
     background-image: url("../../../public/local.jpg");
     background-size: 100%;
     background-position: 0% 38%;
@@ -105,7 +105,31 @@ textarea {
 
 
 
+.img-contacto {
+    display: none;
+    background-image: url("../../../public/local.jpg");
+    background-size: 100%;
+    background-position: 0% 38%;
+    height: 100%;
+    width: 45%;
+}
 
+
+
+@media (min-width: 800px) {
+    .formulario-contacto {
+        width: 45%;
+    }
+    .img-contacto {
+        display: block;
+        background-image: url("../../../public/local.jpg");
+        background-size: 100%;
+        background-position: 0% 38%;
+        height: 100%;
+        width: 45%;
+    }
+    
+  }
    
 
 

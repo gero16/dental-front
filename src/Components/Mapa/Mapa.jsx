@@ -6,6 +6,7 @@ import { useGeolocated } from "react-geolocated";
 const Mapa = ({ubicacion, style, clinica}) => {
 
     const ubiTresCruces = [-34.89578868112877, -56.16680986705166]
+   
     const ubiLasPiedras = [-34.728089, -56.213810]
 
     const iconoRojo = new L.Icon({
@@ -27,7 +28,7 @@ const Mapa = ({ubicacion, style, clinica}) => {
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                    <Marker position={ubiTresCruces} icon={iconoRojo}> </Marker>
+                    <Marker position={ ubiTresCruces } icon={iconoRojo}> </Marker>
                  </MapContainer>   
                                   
                 :  <MapContainer 
@@ -38,7 +39,7 @@ const Mapa = ({ubicacion, style, clinica}) => {
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Marker position={ubiLasPiedras} icon={iconoRojo}> </Marker>
+                        <Marker position={ ubiLasPiedras } icon={iconoRojo}> </Marker>
                     </MapContainer>
             }
                    

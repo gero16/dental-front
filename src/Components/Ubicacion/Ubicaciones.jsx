@@ -24,12 +24,13 @@ const Ubicaciones = () => {
                          <article className="flex-column-center article-ubicacion">
                              <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
                              <span className="mb-5"> Torre García 536 </span>
-                             <Mapa ubicacion={ubiLasPiedras} style={estilo1} > </Mapa>
+                             <Mapa ubicacion={ubiLasPiedras} clinica={"las-piedras"}  style={estilo1}> </Mapa>
                          </article> 
+
                          <article className="flex-column-center article-ubicacion">
                              <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
                              <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
-                             <Mapa ubicacion={ubiTresCruces} style={estilo1}> </Mapa>
+                             <Mapa ubicacion={ubiTresCruces} clinica={"tres-cruces"} style={estilo1} > </Mapa>
                          </article>
                      </>
                  )
@@ -40,12 +41,13 @@ const Ubicaciones = () => {
                                  <article className="flex-column-center article-ubicacion">
                                      <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
                                      <span className="mb-5"> Torre García 536 </span>
-                                     <Mapa ubicacion={ubiLasPiedras} style={estilo2} > </Mapa>
+                                     <Mapa ubicacion={ubiLasPiedras} clinica={"las-piedras"}  style={estilo2}> </Mapa>
                                  </article> 
+
                                  <article className="flex-column-center article-ubicacion">
                                      <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
                                      <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
-                                     <Mapa ubicacion={ubiTresCruces} style={estilo2} > </Mapa>
+                                     <Mapa ubicacion={ubiTresCruces} clinica={"tres-cruces"} style={estilo2} > </Mapa>
                                  </article>
                              </>
                          )
@@ -54,12 +56,13 @@ const Ubicaciones = () => {
                                  <article className="flex-column-center article-ubicacion">
                                      <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
                                      <span className="mb-5"> Torre García 536 </span>
-                                     <Mapa ubicacion={ubiLasPiedras} style={estilo3}> </Mapa>
+                                     <Mapa ubicacion={ubiLasPiedras} clinica={"las-piedras"}  style={estilo3}> </Mapa>
                                  </article> 
+
                                  <article className="flex-column-center article-ubicacion">
                                      <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
                                      <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
-                                     <Mapa ubicacion={ubiTresCruces} style={estilo3} > </Mapa>
+                                     <Mapa ubicacion={ubiTresCruces} clinica={"tres-cruces"} style={estilo3} > </Mapa>
                                  </article>
                              </>
                          )

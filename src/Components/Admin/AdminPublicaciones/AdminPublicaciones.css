@@ -50,7 +50,7 @@
 
 .section-admin-crear {
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.151);
+ 
     padding: 30px;
     border-radius: 10px;
  
@@ -59,19 +59,6 @@
     z-index: 10;
     font-size: 4vw!important;
 }
-.neonText {
-    color: #fff;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-  }
-
 
   .brand-logo {
     position: relative;
@@ -79,33 +66,36 @@
     display: inline-block;
     font-size: 4.5vh;
     padding: 0;
-    white-space: nowrap;
+
     font-family: 'Pacifico', cursive;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
-    animation: glow .59s infinite alternate;
+    animation: glow-1 .59s infinite alternate;
 }
 
 .brand-logo-2{
     position: relative;
     color: #fff;
     display: inline-block;
-    white-space: nowrap;
+
     font-family: 'Pacifico', cursive;
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
-    animation: glow .59s infinite alternate;
+    animation: glow-2 .59s infinite alternate;
 }
 
-@keyframes glow {
-    to {
-     text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px var(--color-blog), 0 0 16px var(--color-blog), 0 0 20px var(--color-blog), 0 0 24px var(--color-blog), 0 0 28px var(--color-blog);
-    }
-  }
-  .brand-logo{
-          text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
-          animation: glow .59s infinite alternate;
-  }
 
-  
+  @keyframes glow-2 {
+    to {
+        text-shadow: 0 0 4px #fff, 0 0 0px #fff, 0 0 12px var(--color-blog), 0 0 16px var(--color-blog), 0 0 20px var(--color-blog), 0 0 24px var(--color-blog), 0 0 28px var(--color-blog) ;
+    }
+}
+
+@keyframes glow-1 {
+    to {
+        text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px rgb(252, 227, 2), 0 0 16px rgb(252, 227, 2), 0 0 20px rgb(252, 227, 2), 0 0 24px rgb(252, 227, 2), 0 0 28px rgb(252, 227, 2) ;
+    }
+}
+
+
 
 .shadow {
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 1), 

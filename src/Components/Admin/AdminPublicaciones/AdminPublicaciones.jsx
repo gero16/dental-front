@@ -108,13 +108,13 @@ const AdminPublicaciones = () => {
                         <h2 className="brand-logo h2-crear-admin"> Crear Publicación </h2>
                       </div>
                       
-                      <section className="flex-column bg">
-                        <p className="width-70 brand-logo-2 x-large"> Cree una publicacion para añadir al Blog.</p>
-                        <ul className="width-70 small brand-logo-2 ">
-                          <li className="bold"> Requisitos Mínimos : </li>
-                          <li> Subir Imagen </li>
-                          <li> Titulo </li>
-                          <li> Un Parrafo  </li>
+                      <section className="flex-column bg gap-5">
+                        <p className="brand-logo-2 x-large"> Cree una publicacion para añadir al Blog.</p>
+                          <span className="brand-logo-2 bold large"> Requisitos Mínimos : </span>
+                        <ul className="small brand-logo-2 ">
+                          <li>-  Subir Imagen </li>
+                          <li> - Titulo </li>
+                          <li> - Un Parrafo  </li>
                         </ul>
                       </section>
 

@@ -1,4 +1,5 @@
 import logo from "../../../public/logo-3.jpg"
+import logoGrande from "../../../public/logo-grande.jpg"
 import "./Navbar.css"
 import imagenMenu from "../../../public/menu.png"
 
@@ -17,7 +18,7 @@ const Navbar = () => {
                 <nav className="container nav-principal flex-center-v gap-20"> 
 
                     <section>
-                        <img src={logo} className="img-logo" alt="" />
+                        <img src={logoGrande} className="img-logo" alt="" />
                         <ul className="display-none">
                             <li> Nosotros </li>
                             <li> Contacto </li>

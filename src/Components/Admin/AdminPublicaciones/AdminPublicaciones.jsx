@@ -110,7 +110,7 @@ const AdminPublicaciones = () => {
                       
                       <section className="flex-column bg gap-5">
                         <p className="brand-logo-2 x-large"> Cree una publicación para agregar al Blog.</p>
-                          <span className="brand-logo-2 bold large"> Requisitos Mínimos : </span>
+                          <span className="brand-logo-2 large"> Requisitos Mínimos : </span>
                           <ul className="small brand-logo-2 ">
                             <li> - Titulo </li>
                             <li>-  Imagen </li>

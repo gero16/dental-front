@@ -8,6 +8,7 @@ import IndexInfoConsulta from "./IndexInfoConsulta/IndexInfoConsulta.jsx"
 
 import IndexOpinionCliente from "./IndexOpinionCliente/IndexOpinionCliente.jsx"
 import Ubicacion from "../Ubicacion/Ubicacion.jsx"
+import Ubicaciones from "../Ubicacion/Ubicaciones.jsx"
 
 
 const Index = () => {
@@ -44,7 +45,7 @@ const Index = () => {
 
             </article>
 
-            <Ubicacion> </Ubicacion>
+            <Ubicaciones> </Ubicaciones>
 
             <Footer> </Footer>
         </section>

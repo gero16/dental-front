@@ -6,12 +6,20 @@ import Navbar from "../Navbar/Navbar";
 import Ubicacion from "../Ubicacion/Ubicacion";
 import Footer from "../Footer/Footer";
 import { FaInstagram, FaFacebook, FaTwitter, FaPhoneSquareAlt } from 'react-icons/fa';
+import { useState } from "react";
 
 
 const Contacto = () => {
 
     const ubiTresCruces = [-34.89578868112877, -56.16680986705166]
     const ubiLasPiedras = [-34.7277481203798, -56.21380023171297]
+
+    const [lasPiedrasUbi, setLasPiedrasUbi] = useState(false)
+
+    const cambiarUbi = (valor) => {
+        console.log(valor)
+        setLasPiedrasUbi(valor)
+    }
 
     return (
         <> 
@@ -86,18 +94,21 @@ const Contacto = () => {
                         </section>
                     
                 
-                    <section className="section-ubicaciones">
-                        <ul>
-                            <li>   
-                                <span> Clinica - Las Piedras </span> 
-                            </li>
-                            <li>    
-                                <span> Clinica - Tres Cruces </span> 
-                            </li>
-                        </ul>
-                      
-                 
-                        <Ubicacion> </Ubicacion>
+                    <section className="section-ubicaciones flex">
+                
+                        <h4 onClick={() => cambiarUbi(true)}> Clinica - Las Piedras </h4> 
+                    
+                        <h4 onClick={() => cambiarUbi(false)}> Clinica - Tres Cruces </h4> 
+                        
+                       
+
+                        {
+                            lasPiedrasUbi === false 
+                            ? <Ubicacion clinica={"tres-cruces"}> </Ubicacion>
+                            : <Ubicacion clinica={"las-piedras"}> </Ubicacion>
+                        }
+                       
+                        
 
                     </section>
                  

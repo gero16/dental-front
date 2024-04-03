@@ -1,7 +1,7 @@
 
 import "./ReservaHora.css"
+import './Calendar.css';
 
-import 'react-calendar/dist/Calendar.css';
 
 import Navbar from "../Navbar/Navbar";
 import Calendar from 'react-calendar';
@@ -87,12 +87,13 @@ const ReservaHora = () => {
 
                         <Calendar 
                             onChange={(e) => seleccionarDia(e)} 
-                            value={value} 
+                            onClickDay={(e) => console.log(e)} 
                             locale={"es-uy"} 
                             tileDisabled= { ({ date, view }) => 
                                 (view === "month" && date.getDay() === 0) 
                                     || date.getDay() === 1 || date.getDay() === 5 }  
                         />
+                        
                     </div>
 
                   
@@ -103,7 +104,7 @@ const ReservaHora = () => {
                         <h2> Horarios Disponibles </h2> 
                         <div className="flex-center div-horas">   
 
-                            <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e)}>
+                            <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e) }>
                                 {
                                     /*             <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:00-09:30"} > </Hora>  
                                 <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:30-10:00"} > </Hora>      */

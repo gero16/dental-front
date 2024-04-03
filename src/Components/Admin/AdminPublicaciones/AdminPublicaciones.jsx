@@ -92,7 +92,7 @@ const AdminPublicaciones = () => {
             <section className="portada-noticias flex">
                 <section className="noticias-portada-texto flex-column-center">
                     <h1 className="h1-noticias"> Administrar Publicaciones </h1>
-                    <p> Lea nuestras publicaciones y únase a la conversación. </p>
+                    <p>  Agregue, elimine o edite cualquiera de sus publicaciones </p>
                 </section>
            
                 </section>
@@ -101,99 +101,92 @@ const AdminPublicaciones = () => {
             <section className="fondo-blanco-img">
               <main className="publicaciones-blog flex">
 
-                <NavLink to={`/admin/panel/crear-publicacion`} className="publicacion-blog arcoiris article-crear" > 
-                    <section className="section-admin-crear flex-around gap-30">
-
-                      <div className="bg">
-                        <h2 className="brand-logo h2-crear-admin"> Crear Publicación </h2>
-                      </div>
-                      
-                      <section className="flex-column bg gap-5">
-                        <p className="brand-logo-2 x-large"> Cree una publicación para agregar al Blog.</p>
-                          <span className="brand-logo-2 large"> Requisitos Mínimos : </span>
-                          <ul className="small brand-logo-2 ">
-                            <li> - Titulo </li>
-                            <li>-  Imagen </li>
-                            <li> - Parrafo  </li>
-                          </ul>
-                        </section>
-
-                    </section>
-            
                 
 
-                      
-      
-                  </NavLink>
-
-
-                { publicaciones.length > 0 
-                  ? publicaciones.map((element, key) => {
-                    return (
-                    
-                        <NavLink to={`/blog/publicaciones/${ element.id }`} className="publicacion-blog arcoiris" >  
-                            <img 
-                                src={element.imagen} 
-                                className="img-publicacion-blog"
-                                alt="" />
-                            <section className="contenido-publicacion-blog">
-
-                                <h2 className="h2-publicacion-blog medium"> { element.titulo }</h2>
-                              
-                                {
-                                  element.contenido[0].tipo === "lista" ? (
-                                      <ul>
-                                          { 
-                                            element.contenido[0].texto.map((item, index) => (
-                                              <li className="small" key={index}>{item}</li>
-                                            ))
-                                          }
-                                      </ul>
-                                  ) : (
-                                  
-                                      <p className="contenido-publicacion-blog"> { width < 1550 ? limiteTexto(200, element) :  limiteTexto(300, element) }</p>
-                                  )
-                              }
-                                
-                               
-                            <section className="eventos-publicacion flex-around">
-
-                          
-                             
-                              <NavLink 
-                                to={`/admin/panel/admin-publicaciones/editar-publicacion/${ element.id }`} 
-                                className="btn-eventos-publicacion btn-editar-publi flex-center-center gap-5 " >  
-                              
-                                <span> Editar</span> 
-                                <FaEdit size={20} /> 
-                           
-                     
-                              </NavLink>
-                    
-                              <NavLink 
-                                to={`/admin/panel/admin-publicaciones/eliminar-publicacion/${ element.id }`}
-                              className="btn-eventos-publicacion btn-eliminar-publi flex-center-center"
-                              >
-                              
-                                <span> Borrar </span> 
-                                <FaEdit size={28} /> 
-                              </NavLink>
-                          
-                            </section>
-                            </section>
-                        
-                        </NavLink>
-                                  
-                
-                    )
-                  })
                   
-                : <section className="flex-column-center container"> 
-                    <Loader> </Loader>
-                </section> 
-              
-              }
-            
+                  { publicaciones.length > 0 ? (
+                      <>
+                        <NavLink to={`/admin/panel/crear-publicacion`} className="publicacion-blog arcoiris article-crear" > 
+                          <section className="section-admin-crear flex-around gap-30">
+
+                            <div className="bg">
+                              <h2 className="brand-logo h2-crear-admin"> Crear Publicación </h2>
+                            </div>
+                            
+                            <section className="flex-column bg gap-5">
+                              <p className="brand-logo-2 x-large"> Cree una publicación para agregar al Blog.</p>
+                                <span className="brand-logo-2 large"> Requisitos Mínimos : </span>
+                                <ul className="small brand-logo-2 ">
+                                  <li> - Titulo </li>
+                                  <li>-  Imagen </li>
+                                  <li> - Parrafo  </li>
+                                </ul>
+                              </section>
+
+                          </section>
+                        </NavLink>
+
+                        { publicaciones.map((element, key) => {
+                            return (
+                              <NavLink to={`/blog/publicaciones/${ element.id }`} className="publicacion-blog arcoiris" >  
+                              <img 
+                                  src={element.imagen} 
+                                  className="img-publicacion-blog"
+                                  alt="" />
+                              <section className="contenido-publicacion-blog">
+  
+                                  <h2 className="h2-publicacion-blog medium"> { element.titulo }</h2>
+                                
+                                  {
+                                    element.contenido[0].tipo === "lista" ? (
+                                        <ul>
+                                            { 
+                                              element.contenido[0].texto.map((item, index) => (
+                                                <li className="small" key={index}>{item}</li>
+                                              ))
+                                            }
+                                        </ul>
+                                    ) : (
+                                    
+                                        <p className="contenido-publicacion-blog"> { width < 1550 ? limiteTexto(200, element) :  limiteTexto(300, element) }</p>
+                                    )
+                                }
+                                  
+                                  
+                                <section className="eventos-publicacion flex-around">
+    
+                                  <NavLink 
+                                    to={`/admin/panel/admin-publicaciones/editar-publicacion/${ element.id }`} 
+                                    className="btn-eventos-publicacion btn-editar-publi flex-center-center gap-5 " >  
+                                  
+                                    <span> Editar</span> 
+                                    <FaEdit size={20} /> 
+                              
+                        
+                                  </NavLink>
+                        
+                                  <NavLink 
+                                    to={`/admin/panel/admin-publicaciones/eliminar-publicacion/${ element.id }`}
+                                  className="btn-eventos-publicacion btn-eliminar-publi flex-center-center"
+                                  >
+                                  
+                                    <span> Borrar </span> 
+                                    <FaEdit size={28} /> 
+                                  </NavLink>
+                              
+                                </section>
+                                </section>
+                            
+                            </NavLink>
+                            );
+                        })}
+                      </>
+                  ) : (
+                      <section className="flex-column-center container">
+                          <Loader />
+                    </section>
+                  )}
+
               </main>
             </section>
                         

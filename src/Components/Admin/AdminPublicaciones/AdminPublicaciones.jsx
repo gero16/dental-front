@@ -102,21 +102,21 @@ const AdminPublicaciones = () => {
               <main className="publicaciones-blog flex">
 
                 <NavLink to={`/admin/panel/crear-publicacion`} className="publicacion-blog arcoiris article-crear" > 
-                    <section className="section-admin-crear flex-around gap-10">
+                    <section className="section-admin-crear flex-around gap-30">
 
                       <div className="bg">
                         <h2 className="brand-logo h2-crear-admin"> Crear Publicación </h2>
                       </div>
                       
                       <section className="flex-column bg gap-5">
-                        <p className="brand-logo-2 x-large"> Cree una publicacion para añadir al Blog.</p>
+                        <p className="brand-logo-2 x-large"> Cree una publicación para agregar al Blog.</p>
                           <span className="brand-logo-2 bold large"> Requisitos Mínimos : </span>
-                        <ul className="small brand-logo-2 ">
-                          <li>-  Subir Imagen </li>
-                          <li> - Titulo </li>
-                          <li> - Un Parrafo  </li>
-                        </ul>
-                      </section>
+                          <ul className="small brand-logo-2 ">
+                            <li> - Titulo </li>
+                            <li>-  Imagen </li>
+                            <li> - Parrafo  </li>
+                          </ul>
+                        </section>
 
                     </section>
             

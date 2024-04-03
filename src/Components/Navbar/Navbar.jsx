@@ -12,7 +12,6 @@ const Navbar = () => {
 
     return (
         <> 
-
             <header>
                 
                 <nav className="container nav-principal flex-center-v gap-20"> 

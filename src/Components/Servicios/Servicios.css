@@ -1,0 +1,16 @@
+.portada-img-servicio {
+    width: 60vw;
+}
+
+.article-servicio {
+    background-color: white;
+    margin : 30px auto;
+
+}
+
+.section-servicio-contenido {
+    height: 70vh;
+}
+.img-servicio {
+    height: 70vh;
+}

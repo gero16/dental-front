@@ -1,48 +1,121 @@
 import { useParams } from "react-router-dom"
 import Navbar from "../Navbar/Navbar"
+import { FaPhoneSquareAlt } from 'react-icons/fa';
+import Imagen from "../../../public/servicio-2.jpg"
+import Imagen2 from "../../../public/servicio-1.jpg"
+import Imagen3 from "../../../public/servicio-3.jpg"
+import Imagen4 from "../../../public/servicio-4.jpg"
+
+import Footer from "../Footer/Footer"
+
+import "./Servicios.css"
 
 const Servicios = () => {
+
     let { servicio } = useParams();
 
-    const separarTexto = (texto, separador) => {
-        if(texto.split(separador)) {
-            const result = texto.split(separador)
-            return result
-        }
-    }
-
-    const transformarMayuscula = (texto, palabras) => {
-        const textoSeparado = separarTexto(texto, "-")
-        if(palabras > 1) {
-            let tituloFinal = ""
-            for (let i = 0; i < textoSeparado.length; i++) {
-                const palabra = textoSeparado[i].charAt(0).toUpperCase() + textoSeparado[i].slice(1)
-                tituloFinal = tituloFinal +  " " + palabra
-            }
-            return tituloFinal
-        }
-
-        if(palabras === 1) {
-            const resultadoFinal = texto.charAt(0).toUpperCase() + texto.slice(1)
-            return resultadoFinal
-        }
-
-        
-}
-
- const servicioSeleccionado = transformarMayuscula(servicio, 2)
- console.log(servicioSeleccionado)
-  
     return (
         <> 
             <Navbar> </Navbar>
 
-            <main className="container">
 
-                <h1> Servicios </h1>
+                <article className={"article-portada"} >
 
-                <h2> { ` ${ servicioSeleccionado } ` } </h2>
-            </main>
+                    <img src={Imagen}
+                        className="portada-img-servicio"
+                        alt="slide"
+                    />
+
+                   <section className="flex-column-center">
+
+                        <h2 className="h2-portada-texto width-70 white"> ODONTOLOGÍA General </h2>
+
+                        <p className="width-70 p-portada-texto white"> Nuestro equipo tiene un gran conocimiento sobre las interrelaciones de su salud oral y sistémica. </p>
+
+                        <span className="span-portada-numero white"> Reservar Hora </span>
+                      
+                    </section>
+
+                </article>
+
+                <article className={"article-servicio flex gap-20 container"} >
+
+
+                    <section className="section-servicio-contenido">
+
+                        <h2 className="width-70">  ¿Es difícil para usted mantener la salud bucal? </h2>
+
+                        <p className="width-70 p-portada-texto"> Nuestro enfoque es optimizar la salud de todo su cuerpo, incluidos sus dientes, no solo tratar sus síntomas dentales como la mayoría 
+                            de las prácticas dentales tradicionales. Mi equipo y yo lo consideramos como una persona completa que tiene el potencial innato para estar saludable. 
+                            ¡Juntos, trabajaremos para maximizar su salud y diagnosticar y eliminar la causa de sus problemas de salud para que pueda florecer su "yo más saludable"! 
+                        </p>
+
+                      
+                    </section>
+                    
+                    <img src={Imagen4}
+                        className="img-servicio"
+                        alt="slide"
+                    />
+
+                </article>
+
+                
+                <article className={"article-servicio flex gap-20 container"} >
+
+                    <img src={Imagen2}
+                        className="img-servicio"
+                        alt="slide"
+                    />
+                   <section className="section-servicio-contenido">
+
+                        <h2 className="width-70">  Odontología Preventiva </h2>
+
+                        <p className="width-70 p-portada-texto"> ¡Juntos, podemos ayudarlo a mantenerse libre de los problemas dentales comunes de enfermedad de las encías, caries, tratamientos 
+                        de conducto y pérdida de dientes!
+                        </p>
+
+                       <h3>Nuestros servicios dentales preventivos holísticos incluyen: </h3>
+                       <ul>
+                        <li> Exámenes dentales holísticos </li>
+                        <li> Plan de Salud Periodontal Personalizado </li>
+                        <li> Detección de cáncer bucal VELscope </li>
+                       </ul>
+
+                    </section>
+                    
+
+                </article>
+
+                 
+                <article className={"article-servicio flex gap-20 container"} >
+                    <section className="section-servicio-contenido">
+
+                        <h2 className="width-70"> Odontología Restauradora </h2>
+
+                        <p className="width-70 p-portada-texto"> ¡Juntos, podemos ayudarlo a mantenerse libre de los problemas dentales comunes de enfermedad de las encías, 
+                        caries, tratamientos de conducto y pérdida de dientes!
+                        </p>
+
+                       <h3> Nuestros servicios dentales preventivos holísticos incluyen: </h3>
+                       <ul>
+                        <li> Rellenos </li>
+                        <li> Coronas y Puentes </li>
+                        <li> Implantes dentales de zicornio </li>
+                       </ul>
+
+                    </section>
+                    
+                    <img src={Imagen3}
+                        className="img-servicio"
+                        alt="slide"
+                    />
+
+                </article>
+
+
+            <Footer> </Footer>
+            
         </>
     )
 }

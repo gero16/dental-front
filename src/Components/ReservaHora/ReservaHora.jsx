@@ -141,9 +141,6 @@ const ReservaHora = () => {
 
                 <section className="flex-center section-formulario-contacto">
 
-                    <img src={Imagen} className="imagen-reservar-hora" alt="" />
-                    
-                
                     <div className="div-reservar-hora ">
 
                         <ul className="ul-formulario-reserva flex-column-center">

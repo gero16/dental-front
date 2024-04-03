@@ -74,15 +74,17 @@ const ReservaHora = () => {
                     <li> Sabados 09:00 - 14:00 (Las Piedras) </li>
                 </ul>
 
-                <section className="width-70 container flex-center">
+              
+                <section className="flex-center">
                     <h1 className="h1-reservar"> Reserve un turno!</h1>
-
                 </section>
-                <section className="flex section-calendario">
+                <section className="container flex-column-center section-contacto-turno">
+      
+                    <article className="flex section-calendario">
 
-                    <div className="div-calendario flex-column p-20">
+                    <div className="div-calendario flex-column">
                     <h2> Fechas Disponibles </h2> 
-                    
+
                         <Calendar 
                             onChange={(e) => seleccionarDia(e)} 
                             value={value} 
@@ -93,7 +95,10 @@ const ReservaHora = () => {
                         />
                     </div>
 
-                    <section className="flex-column section-horas-disponibles p-20">
+                  
+                    </article>
+                    
+                    <article className="flex-column section-horas-disponibles p-20">
 
                         <h2> Horarios Disponibles </h2> 
                         <div className="flex-center div-horas">   
@@ -103,7 +108,7 @@ const ReservaHora = () => {
                                     /*             <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:00-09:30"} > </Hora>  
                                 <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:30-10:00"} > </Hora>      */
                                 }
-                        
+
                                 <li data-id="09:00-09:30" className={ `${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora' ) } ` } > 09:00 - 09:30 </li>
                                 <li data-id="09:30-10:00" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 09:30 - 10:00 </li>
                                 <li data-id="10:00-10:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 10:00 - 10:30 </li>
@@ -133,13 +138,14 @@ const ReservaHora = () => {
                                 
                             </ul>
                         </div>
-                    
-                    
-                    </section> 
+
+
+                    </article> 
 
                 </section>
+          
 
-                <section className="flex-center section-formulario-contacto">
+                <main className="flex-center section-formulario-contacto">
 
                     <div className="div-reservar-hora ">
 
@@ -172,13 +178,15 @@ const ReservaHora = () => {
                                     <textarea type="text" />
                                 </li>
                                 
-                               
-                                <span className="btn-enviar-reserva"> Enviar </span>
+                                <div className="text-center">
+                                    <span className="btn-enviar-reserva"> Enviar </span>
+                                </div>
                            
                         </ul>
                     </div>
 
-                </section>
+                </main>
+
 
             </section>
 

@@ -5,11 +5,12 @@
   padding: 30px;
   background-color: var(--negro-tr);
   color: white;
+
 }
 
 
 .h1-reservar {
-  font-weight: 00;
+
   font-size: 3.5vw;
   font-family: "Raleway", sans-serif;
   text-shadow: 0 1px 0 rgba(8, 8, 8, 0.658);
@@ -17,10 +18,12 @@
 
 }
 
+
 .section-calendario  {
   justify-content: center;
   gap: 50px;
   margin-top: 30px;
+
 }
 
 .calendario {
@@ -32,6 +35,8 @@
   align-items: center;
   background-color: var(--blanco-contacto);
   border-radius: 10px;
+  padding: 20px;
+
 }
 
 ol {
@@ -44,8 +49,10 @@ ol {
 
 .section-formulario-contacto {
   align-items: center;
-  margin-top: 50px
+  margin-top: 50px;
+
 }
+
 
 .imagen-reservar-hora {
   height: 75vh;
@@ -53,7 +60,7 @@ ol {
 
 
 .div-reservar-hora {
-  height: 75vh;
+  height: 82vh;
   width: 100%;
 }
 
@@ -62,7 +69,7 @@ ol {
   background-color: var(--primario);
    color: var(--white);
   height: 100%;
- 
+  padding: 20px 0px;
 }
 
 .ul-formulario-reserva label {
@@ -96,12 +103,14 @@ ol {
 
 
 
+
 .btn-enviar-reserva {
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   background-color: #043317;
   color: white;
+  width: 100%;
 }
 
 .react-calendar {
@@ -137,8 +146,13 @@ ol {
   width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
+  .section-contacto-turno {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
   
+  }
  }
 
 @media (min-width: 1500px) {

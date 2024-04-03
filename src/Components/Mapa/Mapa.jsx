@@ -16,42 +16,31 @@ const Mapa = ({ubicacion, style, clinica}) => {
       });
 
       console.log(clinica)
+
+      let ubicacionCoordenadas;
+
+    if (clinica === "tres-cruces") ubicacionCoordenadas = ubiTresCruces
+    
+    if (clinica === "las-piedras") ubicacionCoordenadas = ubiLasPiedras;
+
+    console.log(ubicacionCoordenadas)
     return (
-        <> 
-
-            { clinica === "tres-cruces" 
-                ? <MapContainer 
-                    center={ubicacion} 
-                    zoom={16} 
-                    scrollWheelZoom={true}
-                    style={{ height: style[0], width: style[1], margin: style[2] }} >
-                    <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                    <Marker position={ ubiTresCruces } icon={iconoRojo}> </Marker>
-                 </MapContainer>   
-                                  
-                :  <MapContainer 
-                        center={ubicacion} 
-                        zoom={16} 
-                        scrollWheelZoom={true}
-                        style={{ height: style[0], width: style[1], margin: style[2] }} >
-                        <TileLayer
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Marker position={ ubiLasPiedras } icon={iconoRojo}> </Marker>
-                    </MapContainer>
-            }
-                   
-                   
-
-                    
-
-
-              
-
-               
-        </>
+        
+           
+        <MapContainer
+            center={ubicacionCoordenadas}
+            zoom={16}
+            scrollWheelZoom={true}
+            style={{ height: style[0], width: style[1], margin: style[2] }}
+        >
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={ubicacionCoordenadas} icon={iconoRojo} />
+        </MapContainer>
+                       
+        
     )
 }
 

@@ -27,19 +27,23 @@
 }
 
 
-
 @media (min-width: 800px) {
     .h2-clinica {
-
         font-size: 1.8vw;
     }
+ 
+    .article-ubicacion {
+        padding: 25px 40px;
+    }
+  }
+
+@media (min-width: 900px) {
+
     .section-ubicacion {
         flex-direction: row;
         margin : 20px auto;
     }
-    .article-ubicacion {
-        padding: 25px 40px;
-    }
+  
   }
 
   @media (min-width: 1500px) {

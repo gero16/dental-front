@@ -3,7 +3,7 @@ import "./Contacto.css"
 import "leaflet/dist/leaflet.css";
 import ImagenLocal from "../../../public/local.jpg"
 import Navbar from "../Navbar/Navbar";
-import Ubicacion from "../Ubicacion/Ubicacion";
+import Ubicaciones from "../Ubicacion/Ubicaciones";
 import Footer from "../Footer/Footer";
 import { FaInstagram, FaFacebook, FaTwitter, FaPhoneSquareAlt } from 'react-icons/fa';
 import { useState } from "react";
@@ -94,22 +94,11 @@ const Contacto = () => {
                         </section>
                     
                 
-                    <section className="section-ubicaciones flex">
-                
-                        <h4 onClick={() => cambiarUbi(true)}> Clinica - Las Piedras </h4> 
+                    <section className="section-ubicaciones flex-column">
+
+                       <Ubicaciones> </Ubicaciones>
+                       
                     
-                        <h4 onClick={() => cambiarUbi(false)}> Clinica - Tres Cruces </h4> 
-                        
-                       
-
-                        {
-                            lasPiedrasUbi === false 
-                            ? <Ubicacion clinica={"tres-cruces"}> </Ubicacion>
-                            : <Ubicacion clinica={"las-piedras"}> </Ubicacion>
-                        }
-                       
-                        
-
                     </section>
                  
                 

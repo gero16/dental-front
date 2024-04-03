@@ -18,26 +18,19 @@ const Ubicacion = ({clinica}) => {
         <> 
             <section className="section-ubicacion flex-column-center">
              
-             {
-                clinica === "tres-cruces" 
+             { clinica === "tres-cruces" 
                 ? <article className="flex-column-center article-ubicacion">
-                    <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
-                    <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
-                    <Mapa ubicacion={ ubiTresCruces } clinica={"tres-cruces"} style={estilo2}> </Mapa>
-                </article>
-
-                : <article className="flex-column-center article-ubicacion">
+                <h2 className="h2-clinica"> Clinica - Tres Cruces </h2>
+                <span className="mb-5"> Victor Haedo 2322 Apto 109 </span>
+                <Mapa ubicacion={ ubiTresCruces } clinica={"tres-cruces"} style={estilo2}> </Mapa>
+                 </article>
+                : 
+                <article className="flex-column-center article-ubicacion">
                     <h2 className="h2-clinica"> Clinica - Las Piedras </h2>
                     <span className="mb-5">  Torre García 536 </span>
                     <Mapa ubicacion={ ubiLasPiedras}  clinica={"las-piedras"} style={estilo2}> </Mapa>
                 </article>
              }
-    
-                
-            
-                    
-            
-        
 
               
             </section>

@@ -51,7 +51,7 @@ const Contacto = () => {
 
                             <form action="#" className="formulario-contacto">
                                 <ul className="ul-formulario-contacto">
-                                    <li> <h3> Envienos su consulta! </h3> </li>
+                                    <li> <h3 className="h3-contacto"> ¡Envienos su consulta! </h3> </li>
                             
                                     <li className="li-formulario-contacto">
                                         <label htmlFor="">Nombre </label>
@@ -87,6 +87,16 @@ const Contacto = () => {
                     
                 
                     <section className="section-ubicaciones">
+                        <ul>
+                            <li>   
+                                <span> Clinica - Las Piedras </span> 
+                            </li>
+                            <li>    
+                                <span> Clinica - Tres Cruces </span> 
+                            </li>
+                        </ul>
+                      
+                 
                         <Ubicacion> </Ubicacion>
 
                     </section>

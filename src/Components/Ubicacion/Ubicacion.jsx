@@ -9,8 +9,8 @@ const Ubicacion = () => {
     const [width, setWidth] = useState(window.innerWidth);
 
 
-    const estilo1 = [140, 260, 0]
-    const estilo2 = [200, 360, 0]
+    const estilo1 = [190, 290, 0]
+    const estilo2 = [220, 380, 0]
     const estilo3= width > 1201 && width < 1550 ? [350, 450, 0] :  [500, 700, 0]
     return (
 

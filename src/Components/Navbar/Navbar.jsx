@@ -18,7 +18,9 @@ const Navbar = () => {
                 <nav className="container nav-principal flex-center-v gap-20"> 
 
                     <section>
-                        <img src={logoGrande} className="img-logo" alt="" />
+                        <NavLink to={`/`} >     
+                            <img src={logoGrande} className="img-logo" alt="" />
+                        </NavLink>
                         <ul className="display-none">
                             <li> Nosotros </li>
                             <li> Contacto </li>

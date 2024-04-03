@@ -50,14 +50,13 @@
 
 .section-admin-crear {
     padding: 15px;
- 
     padding: 30px;
     border-radius: 10px;
  
 }
 .h2-crear-admin {
     z-index: 10;
-    font-size: 4vw!important;
+    font-size: 4vw
 }
 
   .brand-logo {
@@ -76,10 +75,8 @@
     position: relative;
     color: #fff;
     display: inline-block;
-
     font-family: 'Pacifico', cursive;
     text-shadow: 0 0 4px #fff, 0 0 0px #fff, 0 0 4px var(--color-blog), 0 0 16px var(--color-blog), 0 0 20px var(--color-blog), 0 0 24px var(--color-blog), 0 0 28px var(--color-blog) ;
- 
 }
 
 
@@ -112,6 +109,19 @@
     width: 100%;
   }
 
+
+
+
+  @media (min-width: 800px) {
+    .section-admin-crear {
+        flex-direction: row;
+        align-items: space-around;
+    }
+
+    .h2-crear-admin {
+        font-size: 4vw;
+    }
+  }
   
 @media (min-width: 1550px) {
     .article-crear {

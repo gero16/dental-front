@@ -88,6 +88,10 @@ ul, ol {
   display: flex;
   justify-content: space-around;
 }
+
+.text-start {
+  text-align:start;
+}
 .none {
   display : none;
 }

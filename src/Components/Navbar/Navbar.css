@@ -77,6 +77,12 @@ a {
     max-height: 9999999px;
 }
 
+.link-activo span {
+    padding: 10px;
+    color: var(--color-blog);
+}
+
+  
 @media (min-width: 800px) {
     .article-portada {
         height: 88vh;

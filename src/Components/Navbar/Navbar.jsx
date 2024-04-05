@@ -84,8 +84,11 @@ const Navbar = () => {
                                 <NavLink to={`/servicios/servicio-general`} className={selectedLink === '/servicios' ? 'link-activo' : ''} onClick={() => handleLinkClick('/servicios')} > 
                                     <span className="span-link"> 
                                             
-                                         Servicios
-                                        <IoIosArrowDown />
+                                         <span> Servicios </span>
+                                  
+                                            <IoIosArrowDown  />
+
+
 
                                         <ul 
                                             className="lista-servicios flex-column gap-10 inactive">
@@ -112,13 +115,13 @@ const Navbar = () => {
                             </li>
     
                             <li> 
-                                <NavLink to={`/iniciar-sesion`} className={selectedLink === '/iniciar-sesión' ? 'link-activo' : ''} onClick={() => handleLinkClick('/iniciar-sesión')}> 
+                                <NavLink to={`/iniciar-sesion`} className={selectedLink === '/iniciar-sesion' ? 'link-activo' : ''} onClick={() => handleLinkClick('/iniciar-sesion')}> 
                                     <span className="span-link ">  Iniciar Sesión </span>
                                 </NavLink>
                             </li>
     
                             <li> 
-                                <NavLink to={`/admin/panel`} className={selectedLink === '/panel' ? 'link-activo' : ''} onClick={() => handleLinkClick('/panel')} > 
+                                <NavLink to={`/admin/panel`} className={selectedLink === '/admin/panel' ? 'link-activo' : ''} onClick={() => handleLinkClick('/admin/panel')} > 
                                     <span className="span-link ">  Panel </span>
                                 </NavLink>
                             </li>

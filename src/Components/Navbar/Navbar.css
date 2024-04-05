@@ -93,14 +93,14 @@ a {
         width: 13vw;
     }
     .span-link {
-       font-size: 1.2vw;
+       font-size: 1vw;
     }
     .nav-horario {
        font-size: 0.7vw;
     }
    }
 
-@media (min-width: 1500px) {
+@media (min-width: 1551px) {
  .span-link {
     font-size: 0.85vw!important;
  }

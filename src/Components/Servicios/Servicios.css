@@ -7,11 +7,14 @@
     background-color: white;
     margin : 30px auto;
     overflow:hidden;
+    background-color: #F3F8FE;
+    padding: 20px;
 
 }
 
 .section-servicio-contenido {
-    height: 70vh;
+    padding : 30px;
+    margin: 30px
 }
 .img-servicio {
     height: 60vh;
@@ -19,7 +22,11 @@
 }
 
 .h2-servicio-general {
-    font-size: 2.1vw;
+    font-size: 1.6vw;
+}
+
+.h3-servicio-general {
+    font-size: 1.3vw;
 }
 
 .p-servicio-texto {

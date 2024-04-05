@@ -32,7 +32,7 @@ const Servicios = () => {
 
                    <section className="flex-column-center section-portada-servicio text-start">
 
-                        <h2 className="h2-portada-texto width-70 white"> ODONTOLOGÍA General </h2>
+                        <h2 className="h2-portada-texto white"> ODONTOLOGÍA General </h2>
 
                         <p className="width-70 p-portada-texto white"> Nuestro equipo tiene un gran conocimiento sobre las interrelaciones de su salud oral y sistémica. </p>
 
@@ -44,14 +44,14 @@ const Servicios = () => {
 
                 </article>
 
-                <article className={"article-servicio flex-center-center gap-20 container"} >
+                <article className={"article-servicio flex-center-center gap-20 container article-portada-servicio "} >
 
 
-                    <section className="section-servicio-contenido">
+                    <section className="section-servicio-contenido flex-column gap-20">
 
-                        <h2 className="h2-servicio-general width-70">  ¿Es difícil para usted mantener la salud bucal? </h2>
+                        <h2 className="h2-servicio-general verde-principal">  ¿Es difícil para usted mantener la salud bucal? </h2>
 
-                        <p className="width-70 p-servicio-texto"> Nuestro enfoque es optimizar la salud de todo su cuerpo, incluidos sus dientes, no solo tratar sus síntomas dentales como la mayoría 
+                        <p className="p-servicio-texto"> Nuestro enfoque es optimizar la salud de todo su cuerpo, incluidos sus dientes, no solo tratar sus síntomas dentales como la mayoría 
                             de las prácticas dentales tradicionales. Mi equipo y yo lo consideramos como una persona completa que tiene el potencial innato para estar saludable. 
                             ¡Juntos, trabajaremos para maximizar su salud y diagnosticar y eliminar la causa de sus problemas de salud para que pueda florecer su "yo más saludable"! 
                         </p>
@@ -68,17 +68,17 @@ const Servicios = () => {
                 </article>
 
                 
-                <article className={"article-servicio flex gap-20 container"} >
+                <article className={"article-servicio flex-center-center gap-20 container article-portada-servicio"} >
 
                     <img src={Imagen2}
                         className="img-servicio"
                         alt="slide"
                     />
-                   <section className="section-servicio-contenido">
+                   <section className="section-servicio-contenido flex-column gap-20">
 
-                        <h2 className="h2-servicio-general width-70">  Odontología Preventiva </h2>
+                        <h2 className="h2-servicio-general verde-principal">  Odontología Preventiva </h2>
 
-                        <p className="width-70 p-servicio-texto"> ¡Juntos, podemos ayudarlo a mantenerse libre de los problemas dentales comunes de enfermedad de las encías, caries, tratamientos 
+                        <p className="p-servicio-texto"> ¡Juntos, podemos ayudarlo a mantenerse libre de los problemas dentales comunes de enfermedad de las encías, caries, tratamientos 
                         de conducto y pérdida de dientes!
                         </p>
 
@@ -95,16 +95,16 @@ const Servicios = () => {
                 </article>
 
                  
-                <article className={"article-servicio flex gap-20 container"} >
-                    <section className="section-servicio-contenido">
+                <article className={"article-servicio flex-center-center gap-20 container article-portada-servicio"} >
 
-                        <h2 className="h2-servicio-general width-70"> Odontología Restauradora </h2>
+                    <section className="section-servicio-contenido flex-column gap-20">
+                        <h2 className="h2-servicio-general verde-principal"> Odontología Restauradora </h2>
 
-                        <p className="width-70 p-servicio-texto"> ¡Juntos, podemos ayudarlo a mantenerse libre de los problemas dentales comunes de enfermedad de las encías, 
+                        <p className="p-servicio-texto"> ¡Juntos, podemos ayudarlo a mantenerse libre de los problemas dentales comunes de enfermedad de las encías, 
                         caries, tratamientos de conducto y pérdida de dientes!
                         </p>
 
-                       <h3> Nuestros servicios dentales preventivos holísticos incluyen: </h3>
+                       <h3 className="h3-servicio-general verde-principal"> Nuestros servicios dentales preventivos holísticos incluyen: </h3>
                        <ul>
                         <li> Rellenos </li>
                         <li> Coronas y Puentes </li>

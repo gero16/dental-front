@@ -215,6 +215,11 @@ ul, ol {
 .wrap{
   flex-wrap: wrap;
 }
+
+.verde-principal {
+  color: var(--primario);
+}
+
 @media (min-width: 1500px) {
   .h1-publicacion {
     font-size: 1.8vw!important;

@@ -3,6 +3,8 @@ import logoGrande from "../../../public/logo-grande.jpg"
 import "./Navbar.css"
 import imagenMenu from "../../../public/menu.png"
 
+import { IoIosArrowDown } from "react-icons/io";
+
 import { Link as Navigate, NavLink,} from "react-router-dom";
 import { useState } from "react";
 
@@ -10,6 +12,11 @@ const Navbar = () => {
 
     const [width, setWidth] = useState(window.innerWidth)
 
+    const [active, setActive] = useState(false)
+    const cambio = (valor) => {
+        setActive(valor)
+        console.log(e)
+    }
     return (
         <> 
             <header>
@@ -23,7 +30,16 @@ const Navbar = () => {
                         <ul className="display-none">
                             <li> Nosotros </li>
                             <li> Contacto </li>
-                            <li> Servicios </li>
+                            <li> 
+                                Servicios
+                                <IoIosArrowDown />
+                                <ul>
+                                    <li> Servicio Periodontal </li>
+                                    <li> Servicio General </li>
+                                    <li> Servicio Cosmético </li>
+                                    <li> Ácido Hialuronico </li>
+                                </ul> 
+                            </li>
                             <li> Blog </li>
                             <li> Reservar Hora </li>
                             <li> Iniciar Sesión </li>
@@ -50,9 +66,23 @@ const Navbar = () => {
                                     <span className="span-link "> Contacto </span>
                                 </NavLink>
                             </li>
-                            <li> 
+                            <li className="li-servicios"> 
                                 <NavLink to={`/servicios/servicio-general`} > 
-                                    <span className="span-link "> Servicios </span>
+                                    <span className="span-link "> 
+                                            
+                                         Servicios
+                                        <IoIosArrowDown />
+
+                                        <ul 
+                                            className="lista-servicios flex-column gap-10 inactive"
+                                            onClick={(e) => cambio(!active, e)}>
+                                            <li> Servicio Periodontal </li>
+                                            <li> Servicio General </li>
+                                            <li> Servicio Cosmético </li>
+                                            <li> Ácido Hialuronico </li>
+                                        </ul> 
+                                
+                                     </span>
                                 </NavLink>
                             </li>
                      

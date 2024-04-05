@@ -19,6 +19,7 @@ a {
 
 .nav-principal {
     padding: 10px 0px;
+
 }
 
 .lista-navbar {
@@ -45,6 +46,34 @@ a {
     filter: invert(0.78);
     height: 10vw;
     width: 10vw;
+}
+
+.inactive {
+    opacity: 0;
+    transition: all 1s;
+    overflow: hidden;
+    /* Antes   max-height: 0; pero con 10 cuando quito el parrafo queda mas prolijo */
+    max-height: 10;
+}
+
+.active {
+    opacity: 1;
+    transition: all 1s;
+    max-height: 9999999px;
+}
+
+
+.lista-servicios {
+    position: absolute;
+    background-color: white;
+    padding: 30px 30px 20px 20px;
+    border-radius: 5px;
+}
+
+.li-servicios:hover .lista-servicios {
+    opacity: 1;
+    transition: all 1s;
+    max-height: 9999999px;
 }
 
 @media (min-width: 800px) {

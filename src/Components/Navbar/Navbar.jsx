@@ -68,7 +68,7 @@ const Navbar = () => {
                             </li>
                             <li className="li-servicios"> 
                                 <NavLink to={`/servicios/servicio-general`} > 
-                                    <span className="span-link "> 
+                                    <span className="span-link"> 
                                             
                                          Servicios
                                         <IoIosArrowDown />

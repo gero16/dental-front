@@ -7,6 +7,7 @@ import Imagen3 from "../../../public/canino.jpg"
 import Imagen4 from "../../../public/integral.jpg"
 import Icono from "../../../public/implantes.png"
 import Icono2 from "../../../public/diente-2.png"
+import Icono3 from "../../../public/limpieza-de-dientes.png"
 
 
 import Footer from "../Footer/Footer"
@@ -37,7 +38,7 @@ const Servicios = () => {
 
                         <span className="width-70 span-portada-numero white"> Reservar Hora </span>
 
-                        <img src={Icono2} alt="" className="imagen-icono-servicio"/>
+                        <img src={Icono} alt="" className="imagen-icono-servicio"/>
                       
                     </section>
 

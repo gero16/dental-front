@@ -1,10 +1,12 @@
 .portada-img-servicio {
     width: 60vw;
+
 }
 
 .article-portada-servicio {
     background-color: white;
     margin : 30px auto;
+    overflow:hidden;
 
 }
 
@@ -29,12 +31,16 @@
     max-width: 550px;
 }
 
-
+.section-portada-servicio {
+    position: relative; /* Asegúrate de que la posición sea relativa para que los elementos posicionados absolutamente sean relativos a este contenedor */
+    overflow: hidden; 
+}
 
 .imagen-icono-servicio {
     padding: 10%;
     filter:opacity(0.3);
     position: absolute;
-    left: 65%;
+    top: 0.5%;
+    left: 25%;
     z-index: 10;
 }

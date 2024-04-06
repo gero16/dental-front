@@ -21,7 +21,7 @@ const ReservaHora = () => {
         hora: "",
         nombre:"",
         correo: "",
-        titulo: "",
+        asunto: "",
         mensaje: ""
     })
     
@@ -151,13 +151,10 @@ const ReservaHora = () => {
                                     <h2> Llenar Formulario </h2>
                                 </li>
                                 <li className="li-formulario">
-                                    <label htmlFor="">Nombre </label>
+                                    <label htmlFor="">Nombre Completo </label>
                                     <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  nombre : evento.target.value} )} />
                                 </li>
-                                <li  className="li-formulario">
-                                    <label htmlFor=""> Apellido  </label>
-                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  apellido : evento.target.value} )} />
-                                </li>
+                        
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Correo Electronico </label>
                                     <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  correo : evento.target.value} )} />
@@ -165,10 +162,6 @@ const ReservaHora = () => {
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Telefono </label>
                                     <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  telefono : evento.target.value} )} />
-                                </li>
-                                <li  className="li-formulario">
-                                    <label htmlFor=""> Titulo </label>
-                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  titulo : evento.target.value} )} />
                                 </li>
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Mensaje </label>

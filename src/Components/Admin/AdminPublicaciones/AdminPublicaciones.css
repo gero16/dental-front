@@ -33,6 +33,7 @@
     background-size: 140%; /* Ajusta según tu necesidad */
     background-position: 50% 75%;
     padding: 30px;
+    transition: 0.5s ease-in-out;
    
 }
 
@@ -46,6 +47,13 @@
     height: 100%;
     backdrop-filter: blur(20px); 
     z-index: -1; 
+    transition: 0.5s ease-in-out;
+}
+
+.article-crear:hover,  .article-crear::before{
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(0px); 
+    filter: brightness(0.8);
 }
 
 .section-admin-crear {

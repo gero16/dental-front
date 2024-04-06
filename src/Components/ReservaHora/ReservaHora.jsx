@@ -11,56 +11,52 @@ import Footer from "../Footer/Footer";
 import Hora from "./Hora";
 const ReservaHora = () => {
 
-    const [value, onChange] = useState(new Date());
 
-    // Tendre que tener un objeto con todas las horas y su true o false 
-
-    const horaSeleccionada = {
-        "09:00-09:30" : false,
-        "09:30-10:00": false
-    }
-
-    console.log(horaSeleccionada["09:00-09:30"])
-
-    const [hora, setHora] = useState(false)
-    const [horaAnterior, setHoraAnterior] = useState("")
-    const [dia, setDia] = useState()
+    const [horaSeleccionada, setHoraSeleccionada] = useState("")
     const [sabado, setSabado] = useState(false)
     const [habilitado, setHabilitado] = useState(false)
+
+    const [datosAgenda, setDatosAgenda] = useState({
+        dia: "",
+        hora: "",
+        nombre:"",
+        correo: "",
+        titulo: "",
+        mensaje: ""
+    })
     
+    const conversionDias = {
+        "Tue" : "Martes",
+        "Wed" : "Miercoles",
+        "Thu" : "Jueves",
+        "Say" : "Sabado"     
+    }
 
     const seleccionarHora = (hora) => {
         
-        const horaSeleccionada = hora.target.dataset.id
+        const horaElegida = hora.target.dataset.id
+        console.log(horaElegida)
+        console.log(horaElegida.target)
+
+        setHoraSeleccionada(horaElegida)
         console.log(horaSeleccionada)
-
-        console.log(horaAnterior.length === 0)
-        if(horaAnterior.length === 0) {
-            setHora(hora[`${horaSeleccionada}`] = true)
-            // Para posteriori
-            setHoraAnterior(horaSeleccionada)
-        }
-
-        if (horaAnterior > 0) {
-            setHora(hora[`${horaSeleccionada}`] = true)
-            setHora(hora[horaAnterior] = false)
-            // Para posteriori
-            setHoraAnterior(horaSeleccionada)
-        }
-        
-        console.log(hora)
-        //return hora
+        setDatosAgenda({...datosAgenda,  hora : horaElegida})
     }
     
     const seleccionarDia = (e) => {
+
         console.log(e)
         const obtenerDia = e.toString().split(" ")
         console.log(obtenerDia[0])
         if(obtenerDia[0] === "Sat") setSabado(true)
         if(obtenerDia[0] !== "Sat") setSabado(false)
 
-
+        let nombreDay = obtenerDia[0] 
+        setDatosAgenda({...datosAgenda,  dia : conversionDias[nombreDay]})
+        
     }
+
+    console.log(datosAgenda)
     return (
         <> 
             <Navbar /> 
@@ -119,7 +115,7 @@ const ReservaHora = () => {
                                 <li data-id="12:30-13:00" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 12:30 - 13:00 </li>
                             </ul>
 
-                            <ul className="lista-horas-disponibles-2">
+                            <ul className="lista-horas-disponibles-2"  onClick={(e) => seleccionarHora(e)} >
                                 <li data-id="13:00-13:30" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 13:00 - 13:30 </li>
                                 <li data-id="13:30-14:00" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 13:30 - 14:00 </li>
                                 <li data-id="14:00-14:30" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 14:00 - 14:30 </li>
@@ -128,7 +124,7 @@ const ReservaHora = () => {
                                 <li data-id="14:30-15:00" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 15:30 - 16:00 </li>
                                 <li data-id="16:00-16:30" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 16:00 - 16:30 </li>
                             </ul>
-                            <ul className="lista-horas-disponibles-2">
+                            <ul className="lista-horas-disponibles-2" onClick={(e) => seleccionarHora(e)}>
                                 <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 16:30 - 17:00 </li>
                                 <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 17:00 - 17:30 </li>
                                 <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 17:30 - 18:00 </li>
@@ -156,27 +152,27 @@ const ReservaHora = () => {
                                 </li>
                                 <li className="li-formulario">
                                     <label htmlFor="">Nombre </label>
-                                    <input type="text" />
+                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  nombre : evento.target.value} )} />
                                 </li>
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Apellido  </label>
-                                    <input type="text" />
+                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  apellido : evento.target.value} )} />
                                 </li>
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Correo Electronico </label>
-                                    <input type="text" />
+                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  correo : evento.target.value} )} />
                                 </li>
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Telefono </label>
-                                    <input type="text" />
+                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  telefono : evento.target.value} )} />
                                 </li>
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Titulo </label>
-                                    <input type="text" />
+                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  titulo : evento.target.value} )} />
                                 </li>
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Mensaje </label>
-                                    <textarea type="text" />
+                                    <textarea type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  mensaje : evento.target.value} )} />
                                 </li>
                                 
                                 <div className="text-center">

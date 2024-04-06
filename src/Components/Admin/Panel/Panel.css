@@ -1,17 +1,34 @@
-.section-panel {
-    height: 100vh;
+.section-panel-big {
+    height: 86vh;
+}
+
+.section-panel-small {
+    padding: 30px;
     gap: 20px;
-  
+    width: 50%;
 }
 
 .div-panel {
     width: 25vw;
+
   
 }
 .img-panel {
-    width: 25vw;
+    width: 20vw;
+    filter: brightness(84%);
+    border-radius: 10px;
 }
 
 .h2-panel {
-    color: var(--gris-oscuro)
+    transition: all 0.5s ease-out;
+    margin: 20px;
+    color: var(--gris-oscuro);
+}
+
+.h2-panel-1:hover, .h2-panel-2:hover {
+    color: var(--color-blog);
+    filter: brightness(110%);
+
+    transition: all 0.5s ease-out;
+    transform:scale(1.2); 
 }

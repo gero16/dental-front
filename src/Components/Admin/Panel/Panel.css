@@ -28,7 +28,6 @@
 .h2-panel-1:hover, .h2-panel-2:hover {
     color: var(--color-blog);
     filter: brightness(110%);
-
     transition: all 0.5s ease-out;
     transform:scale(1.2); 
 }

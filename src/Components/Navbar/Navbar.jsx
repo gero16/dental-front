@@ -65,22 +65,22 @@ const Navbar = () => {
                         width < 800 
                             ? <img src={ imagenMenu } alt="" className="img-menu" /> 
                             : <ul className="flex-center-center lista-navbar">
-                            <li> 
+                            <li className="li-link"> 
                                 <NavLink to={`/`} className={selectedLink === '/' ? 'link-activo' : ''} onClick={(e) => handleLinkClick('/' )} > 
                                     <span  className="span-link " > Inicio </span>
                                 </NavLink>
                             </li>
-                            <li> 
+                            <li className="li-link">
                                 <NavLink to={`/nosotros`} className={selectedLink === '/nosotros' ? 'link-activo' : ''} onClick={(e) => handleLinkClick('/nosotros', e)} > 
                                     <span className="span-link "> Nosotros </span>
                                 </NavLink>
                             </li>
-                            <li> 
+                            <li className="li-link">
                                 <NavLink to={`/contacto`} className={selectedLink === '/contacto' ? 'link-activo' : ''} onClick={() => handleLinkClick('/contacto')} > 
                                     <span className="span-link "> Contacto </span>
                                 </NavLink>
                             </li>
-                            <li className="li-servicios"> 
+                            <li className="li-servicios li-link"> 
                                 <NavLink to={`/servicios/servicio-general`} className={selectedLink === '/servicios' ? 'link-activo' : ''} onClick={() => handleLinkClick('/servicios')} > 
                                     <span className="span-link"> 
                                             
@@ -103,24 +103,24 @@ const Navbar = () => {
                             </li>
                      
                             
-                            <li> 
+                            <li className="li-link">
                                 <NavLink to={`/blog`} className={selectedLink === '/blog' ? 'link-activo' : ''} onClick={() => handleLinkClick('/blog')} > 
                                     <span className={"span-link"}> Blog </span>
                                 </NavLink>
                             </li>
-                            <li> 
+                            <li className="li-link">
                                 <NavLink to={`/reservar-hora`} className={selectedLink === '/reservar-hora' ? 'link-activo' : ''} onClick={() => handleLinkClick('/reservar-hora')}> 
                                     <span className="span-link "> Reservar Hora </span>
                                 </NavLink>
                             </li>
     
-                            <li> 
+                            <li className="li-link">
                                 <NavLink to={`/iniciar-sesion`} className={selectedLink === '/iniciar-sesion' ? 'link-activo' : ''} onClick={() => handleLinkClick('/iniciar-sesion')}> 
                                     <span className="span-link ">  Iniciar Sesión </span>
                                 </NavLink>
                             </li>
     
-                            <li> 
+                            <li className="li-link">
                                 <NavLink to={`/admin/panel`} className={selectedLink === '/admin/panel' ? 'link-activo' : ''} onClick={() => handleLinkClick('/admin/panel')} > 
                                     <span className="span-link ">  Panel </span>
                                 </NavLink>

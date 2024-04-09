@@ -1,10 +1,4 @@
 
-.portada-border{
-    width: 8vw;
-    background-image: url("../../../public/borde.jpg");
-    transform: rotate(180deg);
-    background-size: cover;
-}
 .h2-portada-texto {
     padding: 15px;
     box-sizing: content-box;
@@ -30,9 +24,7 @@
     border-right: 4px solid rgb(255, 255, 255);
 }
 
-.portada-img::before {
-    
-}
+
 
 .portada-texto {
     display: flex;

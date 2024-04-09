@@ -6,28 +6,38 @@ import './Calendar.css';
 import Navbar from "../Navbar/Navbar";
 import Calendar from 'react-calendar';
 import { useEffect, useState } from "react";
-import Imagen from "../../../public/vista.jpg"
 import Footer from "../Footer/Footer";
-import Hora from "./Hora";
 const ReservaHora = () => {
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
-    
+    const url = "global-system-back-production.up.railway.app/horarios"
+
     async function fetchHorasDisponibles() {
         try {
-          const response = await fetch('global-system-back-production.up.railway.app/horarios'); // Cambia la URL según la ruta de tu backend
+          const response = await fetch(url);
+          console.log(response);
+      
           if (!response.ok) {
-            throw new Error('Error al obtener las horarios');
+            throw new Error('Error al obtener los horarios: ' + response.statusText);
           }
+      
+          const contentType = response.headers.get('content-type');
+          if (!contentType || !contentType.includes('application/json')) {
+            throw new Error('Respuesta no válida: No es JSON');
+          }
+      
           const data = await response.json();
-          console.log(data)
-          setHorasDisponibles(data)
-          return horasDisponibles; // Devuelve los datos de las publicaciones
+          if (data && data.horarios) {
+            console.log(data.horarios);
+            setHorasDisponibles(data.horarios);
+            return data.horarios;
+          }
         } catch (error) {
-          console.error('Error al obtener las horarios:', error);
-          return null; // Devuelve null si hay un error
+          console.error(error.message);
+          return null;
         }
       }
+      
       
       useEffect(() => {
             fetchHorasDisponibles()

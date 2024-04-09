@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer";
 const ReservaHora = () => {
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
-    const url = "global-system-back-production.up.railway.app/horarios"
+    const url = "https://global-system-back-production.up.railway.app/horarios"
 
     async function fetchHorasDisponibles() {
         try {

@@ -10,6 +10,7 @@ import Footer from "../Footer/Footer";
 const ReservaHora = () => {
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
+
     const url = "https://global-system-back-production.up.railway.app/horarios"
 
     async function fetchHorasDisponibles() {
@@ -62,7 +63,7 @@ const ReservaHora = () => {
         "Tue" : "Martes",
         "Wed" : "Miercoles",
         "Thu" : "Jueves",
-        "Say" : "Sabado"     
+        "Sat" : "Sabado"     
     }
 
     const seleccionarHora = (hora) => {
@@ -107,6 +108,7 @@ const ReservaHora = () => {
                 <section className="flex-center">
                     <h1 className="h1-reservar"> Reserve un turno!</h1>
                 </section>
+                
                 <section className="container flex-column-center section-contacto-turno">
       
                     <article className="flex section-calendario">

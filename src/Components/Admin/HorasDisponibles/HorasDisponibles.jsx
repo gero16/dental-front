@@ -8,14 +8,6 @@ const HorasDisponibles = () => {
     const [sabado, setSabado] = useState(false)
     const [habilitado, setHabilitado] = useState(false)
 
-    const [datosAgenda, setDatosAgenda] = useState({
-        dia: "",
-        hora: "",
-        nombre:"",
-        correo: "",
-        asunto: "",
-        mensaje: ""
-    })
 
     const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
     
@@ -46,9 +38,9 @@ const HorasDisponibles = () => {
       
           const data = await response.json();
           if (data && data.horarios) {
-            console.log(data.horarios);
-            setHorasDisponibles(data.horarios);
-            return data.horarios;
+
+            // setHorasDisponibles esta dentro de esta funcion
+            deshabilitarHorariosDia(diaSeleccionado, data.horarios)
           }
         } catch (error) {
           console.error(error.message);
@@ -61,8 +53,6 @@ const HorasDisponibles = () => {
         const obtenerDia = e.toString().split(" ")
         console.log(obtenerDia[0])
         let nombreDay = obtenerDia[0] 
-        console.log(conversionDias)
-        console.log(conversionDias[nombreDay])
         setDiaSeleccionado(conversionDias[nombreDay])
      
     }
@@ -75,19 +65,45 @@ const HorasDisponibles = () => {
       const inicioSabado = "09:00-09:30"
       const finSabado = "12:30-13:00"
 
-      useEffect(() => {
+
+      const deshabilitarHorariosDia = (dia, arrayHoras) => {
+          const diaLowerCase =  dia.toLowerCase()
+          console.log(diaLowerCase)
+        if(diaLowerCase === "sabado") {
+            const horariosSabado = arrayHoras.map((hora) => ({
+                ...hora,
+                disponible: hora.dia === "sabado" ? true : false
+            }));
+            console.log(horariosSabado)
+            setHorasDisponibles(horariosSabado)
+        }
+
+        
+        if(diaLowerCase !== "sabado") {
+            const horariosSemanales = arrayHoras.map((hora) => ({
+                ...hora,
+                disponible: hora.dia === "sabado" ? false : true
+            }));
+
+            console.log(horariosSemanales)
+            setHorasDisponibles(horariosSemanales)
+        }
+        return horasDisponibles
+      }
+    useEffect(() => {
        
-     console.log(diaSeleccionado)
+
+        deshabilitarHorariosDia(diaSeleccionado, horasDisponibles)
+
+
   }, [diaSeleccionado])
 
 
-      const deshabilitarHorario = (horario) => {
-        const buscarHorario = horasDisponibles
-        console.log(horario)
+      const deshabilitarHorario = (hora) => {
+        const horaElegida = hora.target.dataset.id
 
-        let horarioEncontrado = buscarHorario.find((e) => e.horario === (horario.target.dataset.id))
-        console.log(horarioEncontrado)
-        horarioEncontrado.disponible = false
+        setHoraSeleccionada(horaElegida)
+     
       }
 
 
@@ -136,7 +152,9 @@ const HorasDisponibles = () => {
                            { horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
                                 <li 
                                     key={ index } 
-                                    className={diaSeleccionado !=="Sabado" ? "btn-deshabilitar" : ""}> 
+                                    className={elemento.disponible === false ? "btn-deshabilitar" : "btn-habilitado"}
+                                    data-id={elemento.horario}
+                                    > 
                                     { elemento.horario } 
                                 </li>
                             ))
@@ -145,14 +163,25 @@ const HorasDisponibles = () => {
 
                         <ul className="lista-horas-disponibles-2"  onClick={(e) => deshabilitarHorario(e)} >
                             { horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
-                                    <li key={ index } className={diaSeleccionado === "Sabado" ? "btn-deshabilitar" : ""}> { elemento.horario } </li>
+                                    <li 
+                                        key={ index } 
+                                        className={!elemento.disponible ? "btn-deshabilitar" : "btn-habilitado"}
+                                        data-id={elemento.horario}
+                                        > { elemento.horario }
+
+                                    </li>
                                 ))
                             }
                         </ul>
 
                         <ul className="lista-horas-disponibles-2" onClick={(e) => deshabilitarHorario(e)}>
                             { horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
-                                    <li key={ index } className={diaSeleccionado === "Sabado"? "btn-deshabilitar" : ""}> { elemento.horario } </li>
+                                    <li 
+                                        key={ index } 
+                                        className={!elemento.disponible ? "btn-deshabilitar" : "btn-habilitado"}
+                                        data-id={elemento.horario}
+                                        > { elemento.horario } 
+                                        </li>
                                 ))
                             }
                         </ul>

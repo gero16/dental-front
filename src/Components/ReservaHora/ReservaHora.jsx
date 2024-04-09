@@ -5,12 +5,35 @@ import './Calendar.css';
 
 import Navbar from "../Navbar/Navbar";
 import Calendar from 'react-calendar';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Imagen from "../../../public/vista.jpg"
 import Footer from "../Footer/Footer";
 import Hora from "./Hora";
 const ReservaHora = () => {
 
+    const [horasDisponibles, setHorasDisponibles] = useState([])
+    
+    async function fetchHorasDisponibles() {
+        try {
+          const response = await fetch('global-system-back-production.up.railway.app/horarios'); // Cambia la URL según la ruta de tu backend
+          if (!response.ok) {
+            throw new Error('Error al obtener las horarios');
+          }
+          const data = await response.json();
+          console.log(data)
+          setHorasDisponibles(data)
+          return horasDisponibles; // Devuelve los datos de las publicaciones
+        } catch (error) {
+          console.error('Error al obtener las horarios:', error);
+          return null; // Devuelve null si hay un error
+        }
+      }
+      
+      useEffect(() => {
+            fetchHorasDisponibles()
+            
+            console.log(horasDisponibles)
+      }, [])
 
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
     const [sabado, setSabado] = useState(false)

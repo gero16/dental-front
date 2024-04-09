@@ -21,10 +21,6 @@ footer h5 {
     display: flex;
 }
 
-.section-footer > {
-    color: #FFFFFF;
-    font-size: 0.83em;
-} 
 
 .logo {
     filter: invert(100%);

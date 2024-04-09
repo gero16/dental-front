@@ -14,7 +14,7 @@ const Blog = () => {
     
     async function fetchPublicaciones() {
         try {
-          const response = await fetch('http://localhost:3000/publicaciones/traer-publicaciones'); // Cambia la URL según la ruta de tu backend
+          const response = await fetch('global-system-back-production.up.railway.app/publicaciones/traer-publicaciones'); // Cambia la URL según la ruta de tu backend
           if (!response.ok) {
             throw new Error('Error al obtener las publicaciones');
           }

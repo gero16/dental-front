@@ -25,11 +25,11 @@ const Navbar = () => {
 
 
     const handleLinkClick = (link) => {
-        console.log(e)
+        console.log(selectedLink)
+        console.log(link)
  
-            setSelectedLink(link);
-    
-    };
+        setSelectedLink(link);
+     };
 
     return (
         <> 
@@ -37,33 +37,11 @@ const Navbar = () => {
                 
                 <nav className="container nav-principal flex-center-v gap-20"> 
 
-                    <section>
-                        <NavLink to={`/`} >     
-                            <img src={logoGrande} className="img-logo" alt="" />
-                        </NavLink>
-                        <ul className="display-none">
-                            <li> Nosotros </li>
-                            <li> Contacto </li>
-                            <li> 
-                                Servicios
-                                <IoIosArrowDown />
-                                <ul>
-                                    <li> Servicio Periodontal </li>
-                                    <li> Servicio General </li>
-                                    <li> Servicio Cosmético </li>
-                                    <li> Ácido Hialuronico </li>
-                                </ul> 
-                            </li>
-                            <li> Blog </li>
-                            <li> Reservar Hora </li>
-                            <li> Iniciar Sesión </li>
-                            <li> Panel </li>
-                        </ul>
-                    </section>
                   
                     {
                         width < 800 
                             ? <img src={ imagenMenu } alt="" className="img-menu" /> 
+                            
                             : <ul className="flex-center-center lista-navbar">
                             <li className="li-link"> 
                                 <NavLink to={`/`} className={selectedLink === '/' ? 'link-activo' : ''} onClick={(e) => handleLinkClick('/' )} > 

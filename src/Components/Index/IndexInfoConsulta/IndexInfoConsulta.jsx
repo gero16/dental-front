@@ -1,8 +1,6 @@
 import { useState } from "react"
 
-import Imagen from "../../../../public/borde.jpg"
 import "./IndexInfoConsulta.css"
-import logo2 from "../../../../public/logo-2.png"
 
 
 const IndexInfoConsulta = () => {

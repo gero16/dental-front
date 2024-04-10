@@ -9,7 +9,7 @@ import imagen from "../public/global.fw.png"
 import Navbar from "./Components/Navbar/Navbar.jsx"
 import Index from "./Components/Index/Index.jsx"
 import Contacto from './Components/Contacto/Contacto';
-import ReservaHora from './Components/ReservaHora/ReservaHora';
+import HoraReserva from './Components/HoraReserva/HoraReserva';
 import Nosotros from './Components/Nosotros/Nosotros.jsx';
 import Galeria from './Components/Galeria/Galeria.jsx';
 import Servicios from './Components/Servicios/Servicios.jsx';
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/reservar-hora",
-    element: <ReservaHora> </ReservaHora>,
+    element: <HoraReserva> </HoraReserva>,
   },
   {
     path: "/iniciar-sesion",

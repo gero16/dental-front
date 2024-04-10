@@ -1,5 +1,5 @@
 
-import "./ReservaHora.css"
+import "./HoraReserva.css"
 import './Calendar.css';
 
 
@@ -7,7 +7,9 @@ import Navbar from "../Navbar/Navbar";
 import Calendar from 'react-calendar';
 import { useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
-const ReservaHora = () => {
+
+
+const HoraReserva = () => {
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
     const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
@@ -278,4 +280,4 @@ const ReservaHora = () => {
     )
 }
 
-export default ReservaHora
+export default HoraReserva

@@ -221,10 +221,7 @@ ul, ol {
 }
 
 
-.btn-habilitado {
-  cursor: pointer;
-  font-weight: 600;
-}
+
 
 @media (min-width: 1500px) {
   .h1-publicacion {

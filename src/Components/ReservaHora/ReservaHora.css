@@ -92,6 +92,9 @@ ol {
 
 .div-horas {
   gap: 10px;
+  padding: 20px;
+  border: 2px solid rgb(182, 181, 181);
+  border-radius: 10px;
 }
 
 .div-horas li {
@@ -140,6 +143,13 @@ ol {
 .btn-deshabilitar {
   background-color: rgb(116, 112, 112);
   color: white;
+}
+
+.btn-habilitado {
+  background-color: var(--color-blog)!important;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .li-formulario input, textarea {

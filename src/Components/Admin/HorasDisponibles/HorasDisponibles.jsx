@@ -5,9 +5,6 @@ import Calendar from "react-calendar";
 const HorasDisponibles = () => {
     const [horasDisponibles, setHorasDisponibles] = useState([])
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
-    const [sabado, setSabado] = useState(false)
-    const [habilitado, setHabilitado] = useState(false)
-
 
     const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
     
@@ -57,6 +54,9 @@ const HorasDisponibles = () => {
      
     }
 
+   
+    
+
       useEffect(() => {
             fetchHorasDisponibles()
       }, [])
@@ -72,6 +72,7 @@ const HorasDisponibles = () => {
         if(diaLowerCase === "sabado") {
             const horariosSabado = arrayHoras.map((hora) => ({
                 ...hora,
+                habilitado: hora.dia === "sabado" ? true : false,
                 disponible: hora.dia === "sabado" ? true : false
             }));
             console.log(horariosSabado)
@@ -82,6 +83,7 @@ const HorasDisponibles = () => {
         if(diaLowerCase !== "sabado") {
             const horariosSemanales = arrayHoras.map((hora) => ({
                 ...hora,
+                habilitado: hora.dia === "sabado" ? false : true,
                 disponible: hora.dia === "sabado" ? false : true
             }));
 
@@ -98,13 +100,23 @@ const HorasDisponibles = () => {
 
   }, [diaSeleccionado])
 
-
-      const deshabilitarHorario = (hora) => {
-        const horaElegida = hora.target.dataset.id
-
-        setHoraSeleccionada(horaElegida)
-     
-      }
+  const deshabilitarHorario = (hora) => {
+    const horaElegida = hora.target.dataset.id;
+    // Crear una copia de horasDisponibles
+    const nuevaHorasDisponibles = horasDisponibles.map((elemento) => {
+        // Si el horario coincide con el horario elegido, deshabilitarlo
+        if (elemento.horario === horaElegida) {
+            return {
+                ...elemento,
+                disponible: !elemento.disponible
+            };
+        }
+        // De lo contrario, mantener el elemento sin cambios
+        return elemento;
+    });
+    // Establecer el nuevo estado
+    setHorasDisponibles(nuevaHorasDisponibles);
+};
 
 
       const indiceUno = 6; 
@@ -142,7 +154,7 @@ const HorasDisponibles = () => {
                 
                 </article>
                 
-                <article className="flex-column section-horas-disponibles p-20">
+                <article className="flex-column section-horas-disponibles">
 
                     <h2> Horarios Disponibles </h2> 
                     <div className="flex-center div-horas">   
@@ -152,7 +164,7 @@ const HorasDisponibles = () => {
                            { horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
                                 <li 
                                     key={ index } 
-                                    className={elemento.disponible === false ? "btn-deshabilitar" : "btn-habilitado"}
+                                    className={!elemento.habilitado  || !elemento.disponible  ? "btn-deshabilitar" : "btn-habilitado"}
                                     data-id={elemento.horario}
                                     > 
                                     { elemento.horario } 
@@ -165,7 +177,7 @@ const HorasDisponibles = () => {
                             { horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
                                     <li 
                                         key={ index } 
-                                        className={!elemento.disponible ? "btn-deshabilitar" : "btn-habilitado"}
+                                        className={!elemento.habilitado  || !elemento.disponible  ? "btn-deshabilitar" : "btn-habilitado"}
                                         data-id={elemento.horario}
                                         > { elemento.horario }
 
@@ -178,7 +190,7 @@ const HorasDisponibles = () => {
                             { horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
                                     <li 
                                         key={ index } 
-                                        className={!elemento.disponible ? "btn-deshabilitar" : "btn-habilitado"}
+                                        className={!elemento.habilitado  || !elemento.disponible  ? "btn-deshabilitar" : "btn-habilitado"}
                                         data-id={elemento.horario}
                                         > { elemento.horario } 
                                         </li>

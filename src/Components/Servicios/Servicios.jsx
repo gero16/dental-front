@@ -52,7 +52,10 @@ const Servicios = () => {
                         <h2 className="h2-servicio-general verde-principal">  ¿Es difícil para usted mantener la salud bucal? </h2>
 
                         <p className="p-servicio-texto"> Nuestro enfoque es optimizar la salud de todo su cuerpo, incluidos sus dientes, no solo tratar sus síntomas dentales como la mayoría 
-                            de las prácticas dentales tradicionales. Mi equipo y yo lo consideramos como una persona completa que tiene el potencial innato para estar saludable. 
+                            de las prácticas dentales tradicionales. 
+                        </p>
+                        <p className="p-servicio-texto">
+                            Mi equipo y yo lo consideramos como una persona completa que tiene el potencial innato para estar saludable. 
                             ¡Juntos, trabajaremos para maximizar su salud y diagnosticar y eliminar la causa de sus problemas de salud para que pueda florecer su "yo más saludable"! 
                         </p>
 
@@ -82,11 +85,11 @@ const Servicios = () => {
                         de conducto y pérdida de dientes!
                         </p>
 
-                       <h3>Nuestros servicios dentales preventivos holísticos incluyen: </h3>
+                       <h3 className="verde-principal"> Nuestros servicios dentales preventivos holísticos incluyen: </h3>
                        <ul>
-                        <li> Exámenes dentales holísticos </li>
-                        <li> Plan de Salud Periodontal Personalizado </li>
-                        <li> Detección de cáncer bucal VELscope </li>
+                        <li> - Exámenes dentales holísticos </li>
+                        <li> - Plan de Salud Periodontal Personalizado </li>
+                        <li> - Detección de cáncer bucal VELscope </li>
                        </ul>
 
                     </section>
@@ -106,9 +109,9 @@ const Servicios = () => {
 
                        <h3 className="h3-servicio-general verde-principal"> Nuestros servicios dentales preventivos holísticos incluyen: </h3>
                        <ul>
-                        <li> Rellenos </li>
-                        <li> Coronas y Puentes </li>
-                        <li> Implantes dentales de zicornio </li>
+                        <li> - Rellenos </li>
+                        <li> - Coronas y Puentes </li>
+                        <li> - Implantes dentales de zicornio </li>
                        </ul>
 
                     </section>

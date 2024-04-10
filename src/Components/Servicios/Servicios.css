@@ -7,17 +7,18 @@
     margin : 30px auto;
     overflow:hidden;
     background-color: #F3F8FE;
-    padding: 20px;
-
+    padding: 30px;
+    
 }
 
 .section-servicio-contenido {
     padding : 30px;
-    margin: 30px
+    margin: 30px;
 }
+
 .img-servicio {
     height: 60vh;
-
+    filter: brightness(90%);
 }
 
 .h2-servicio-general {
@@ -29,12 +30,12 @@
 }
 
 .p-servicio-texto {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     color: var(--gris);
 }
 #imagen1-servicio-general {
     height: 50vh;
-    max-width: 550px;
+    max-width: 630px;
 }
 
 .section-portada-servicio {
@@ -48,5 +49,12 @@
     position: absolute;
     top: 0.5%;
     left: 25%;
-    z-index: 10;
+    z-index: 1;
+}
+
+.h2-portada-texto {
+    z-index: 2;
+}
+.p-portada-texto {
+    z-index: 2;
 }

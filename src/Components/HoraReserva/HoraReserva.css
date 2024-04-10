@@ -23,7 +23,6 @@
   justify-content: center;
   gap: 50px;
   margin-top: 30px;
-
 }
 
 .calendario {
@@ -83,6 +82,7 @@ ol {
 
 .section-horas-disponibles {
   gap : 20px;
+  margin-top: 30px;
   align-items: center;
   border-radius: 10px;
   background-color: var(--blanco-contacto);
@@ -208,10 +208,6 @@ ol {
  }
 
 @media (min-width: 1500px) {
-
-  .section-formulario-contacto {
-    height: 85vh;
-  }
   .span-link {
      font-size: 1vw;
   }

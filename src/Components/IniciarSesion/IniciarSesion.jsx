@@ -46,8 +46,9 @@ const IniciarSesion = () => {
 
             
             <section className="flex-column-center section-sesion fondo-blanco-img">
-                <h1> Iniciar Sesión </h1>
+            
                     <ul className="ul-iniciar-sesion flex-column">
+                        <li className="text-center">  <h1> Iniciar Sesión </h1>  </li>
                         <li className="flex-around gap-20">
                             <label htmlFor="" className="label-sesion"> Correo </label>
                             <input 

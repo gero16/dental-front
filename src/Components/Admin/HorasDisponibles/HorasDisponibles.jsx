@@ -15,10 +15,15 @@ const HorasDisponibles = () => {
         "Sat" : "Sabado"     
     }
 
+    const indiceUno = 6; 
+    const indiceDosInicio = 7; 
+    const indiceDosFinal = 13; 
+    const indiceTresInicio = 14; 
+    const indiceTresFinal = 20; 
+
 
     const url = "https://global-system-back-production.up.railway.app/horarios"
 
-    
     async function fetchHorasDisponibles() {
         try {
           const response = await fetch(url);
@@ -43,9 +48,9 @@ const HorasDisponibles = () => {
           console.error(error.message);
           return null;
         }
-      }
+    }
       
-      
+  
     const seleccionarDia = (e) => {
         const obtenerDia = e.toString().split(" ")
         console.log(obtenerDia[0])
@@ -54,16 +59,10 @@ const HorasDisponibles = () => {
      
     }
 
-   
-    
-
-      useEffect(() => {
+    useEffect(() => {
             fetchHorasDisponibles()
-      }, [])
+    }, [])
 
-
-      const inicioSabado = "09:00-09:30"
-      const finSabado = "12:30-13:00"
 
 
       const deshabilitarHorariosDia = (dia, arrayHoras) => {
@@ -92,13 +91,8 @@ const HorasDisponibles = () => {
         }
         return horasDisponibles
       }
-    useEffect(() => {
-       
 
-        deshabilitarHorariosDia(diaSeleccionado, horasDisponibles)
-
-
-  }, [diaSeleccionado])
+ 
 
   const deshabilitarHorario = (hora) => {
     const horaElegida = hora.target.dataset.id;
@@ -119,12 +113,11 @@ const HorasDisponibles = () => {
 };
 
 
-      const indiceUno = 6; 
-      const indiceDosInicio = 7; 
-      const indiceDosFinal = 13; 
-      const indiceTresInicio = 14; 
-      const indiceTresFinal = 20; 
+useEffect(() => {
+    deshabilitarHorariosDia(diaSeleccionado, horasDisponibles)
 
+
+}, [diaSeleccionado])
 
     return (
 

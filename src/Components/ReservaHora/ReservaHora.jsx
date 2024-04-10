@@ -10,8 +10,47 @@ import Footer from "../Footer/Footer";
 const ReservaHora = () => {
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
+    const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
+
+    const [horaSeleccionada, setHoraSeleccionada] = useState("")
+
+    const [datosAgenda, setDatosAgenda] = useState({
+        dia: "",
+        hora: "",
+        nombre:"",
+        correo: "",
+        asunto: "",
+        mensaje: ""
+    })
 
     const url = "https://global-system-back-production.up.railway.app/horarios"
+
+    const deshabilitarHorariosDia = (dia, arrayHoras) => {
+        const diaLowerCase =  dia.toLowerCase()
+        console.log(diaLowerCase)
+      if(diaLowerCase === "sabado") {
+          const horariosSabado = arrayHoras.map((hora) => ({
+              ...hora,
+              habilitado: hora.dia === "sabado" ? true : false,
+              disponible: hora.dia === "sabado" ? true : false
+          }));
+          console.log(horariosSabado)
+          setHorasDisponibles(horariosSabado)
+      }
+
+      
+      if(diaLowerCase !== "sabado") {
+          const horariosSemanales = arrayHoras.map((hora) => ({
+              ...hora,
+              habilitado: hora.dia === "sabado" ? false : true,
+              disponible: hora.dia === "sabado" ? false : true
+          }));
+
+          console.log(horariosSemanales)
+          setHorasDisponibles(horariosSemanales)
+      }
+      return horasDisponibles
+    }
 
     async function fetchHorasDisponibles() {
         try {
@@ -29,36 +68,16 @@ const ReservaHora = () => {
       
           const data = await response.json();
           if (data && data.horarios) {
-            console.log(data.horarios);
-            setHorasDisponibles(data.horarios);
-            return data.horarios;
+
+            // setHorasDisponibles esta dentro de esta funcion
+            deshabilitarHorariosDia(diaSeleccionado, data.horarios)
           }
         } catch (error) {
           console.error(error.message);
           return null;
         }
-      }
+    }
       
-      
-      useEffect(() => {
-            fetchHorasDisponibles()
-            
-            console.log(horasDisponibles)
-      }, [])
-
-    const [horaSeleccionada, setHoraSeleccionada] = useState("")
-    const [sabado, setSabado] = useState(false)
-    const [habilitado, setHabilitado] = useState(false)
-
-    const [datosAgenda, setDatosAgenda] = useState({
-        dia: "",
-        hora: "",
-        nombre:"",
-        correo: "",
-        asunto: "",
-        mensaje: ""
-    })
-    
     const conversionDias = {
         "Tue" : "Martes",
         "Wed" : "Miercoles",
@@ -66,29 +85,61 @@ const ReservaHora = () => {
         "Sat" : "Sabado"     
     }
 
+    const indiceUno = 6; 
+    const indiceDosInicio = 7; 
+    const indiceDosFinal = 13; 
+    const indiceTresInicio = 14; 
+    const indiceTresFinal = 20; 
+
+
     const seleccionarHora = (hora) => {
-        
+
+            console.log(hora.target.dataset)
         const horaElegida = hora.target.dataset.id
         console.log(horaElegida)
-        console.log(horaElegida.target)
 
         setHoraSeleccionada(horaElegida)
         console.log(horaSeleccionada)
         setDatosAgenda({...datosAgenda,  hora : horaElegida})
+
     }
     
+    
     const seleccionarDia = (e) => {
-
-        console.log(e)
         const obtenerDia = e.toString().split(" ")
         console.log(obtenerDia[0])
-        if(obtenerDia[0] === "Sat") setSabado(true)
-        if(obtenerDia[0] !== "Sat") setSabado(false)
-
         let nombreDay = obtenerDia[0] 
-        setDatosAgenda({...datosAgenda,  dia : conversionDias[nombreDay]})
-        
+        setDiaSeleccionado(conversionDias[nombreDay])
+     
     }
+
+          
+    const calcularClases = (elemento) => {
+        let clases = "btn-habilitado"; // Clase por defecto
+        
+        if (!elemento.habilitado || !elemento.disponible) {
+          clases = "btn-deshabilitar"; // Cambiar clase si no está habilitado o disponible
+        }
+      
+        if (horaSeleccionada === elemento.horario) {
+          clases += " btn-elegido"; // Agregar clase si cumple la condición de elegido
+        }
+      
+        return clases;
+      };
+      
+      
+    useEffect(() => {
+        fetchHorasDisponibles()
+        
+        console.log(horasDisponibles)
+    }, [])
+
+    useEffect(() => {
+        deshabilitarHorariosDia(diaSeleccionado, horasDisponibles)
+
+    }, [diaSeleccionado])
+
 
     console.log(datosAgenda)
     return (
@@ -136,40 +187,43 @@ const ReservaHora = () => {
                         <div className="flex-center div-horas">   
 
                             <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e) }>
-                                {
-                                    /*             <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:00-09:30"} > </Hora>  
-                                <Hora seleccionado={hora} estadoSabado={sabado} hora={"09:30-10:00"} > </Hora>      */
-                                }
-
-                                <li data-id="09:00-09:30" className={ `${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora' ) } ` } > 09:00 - 09:30 </li>
-                                <li data-id="09:30-10:00" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 09:30 - 10:00 </li>
-                                <li data-id="10:00-10:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 10:00 - 10:30 </li>
-                                <li data-id="10:30-11:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 10:30 - 11:30 </li>
-                                <li data-id="11:30-12:00" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 11:30 - 12:00 </li>
-                                <li data-id="12:00-12:30" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 12:00 - 12:30 </li>
-                                <li data-id="12:30-13:00" className={`${ (!sabado ? 'btn-deshabilitar' : 'sabado li-hora') } `} > 12:30 - 13:00 </li>
+                                
+                            { horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
+                                   <li  key={index}
+                                        className={calcularClases(elemento)}
+                                        data-id={elemento.horario}
+                                    >
+                                    { elemento.horario.split("-").join(" - ") }
+                                 </li>
+                                ))
+                            }
                             </ul>
 
                             <ul className="lista-horas-disponibles-2"  onClick={(e) => seleccionarHora(e)} >
-                                <li data-id="13:00-13:30" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 13:00 - 13:30 </li>
-                                <li data-id="13:30-14:00" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 13:30 - 14:00 </li>
-                                <li data-id="14:00-14:30" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 14:00 - 14:30 </li>
-                                <li data-id="14:30-15:00" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 14:30 - 15:00 </li>
-                                <li data-id="14:30-15:00" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 15:00 - 15:30 </li>
-                                <li data-id="14:30-15:00" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 15:30 - 16:00 </li>
-                                <li data-id="16:00-16:30" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 16:00 - 16:30 </li>
-                            </ul>
-                            <ul className="lista-horas-disponibles-2" onClick={(e) => seleccionarHora(e)}>
-                                <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 16:30 - 17:00 </li>
-                                <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 17:00 - 17:30 </li>
-                                <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 17:30 - 18:00 </li>
-                                <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 18:00 - 18:30 </li>
-                                <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 18:30 - 19:00 </li>
-                                <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 19:00 - 19:30 </li>
-                                <li data-id="" className={`${ (sabado ? 'btn-deshabilitar' : 'li-hora') } `}> 19:30 - 20:00 </li>
+                                { horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
                                 
+                                <li key={index}
+                                    className={calcularClases(elemento)}
+                                    data-id={elemento.horario}
+                                >
+                                    { elemento.horario.split("-").join(" - ") }
+                                </li>
+                                    ))
+                                }
                             </ul>
-                        </div>
+
+                            <ul className="lista-horas-disponibles-2" onClick={(e) => seleccionarHora(e)}>
+                                { horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
+                                        <li key={index}
+                                            className={calcularClases(elemento)}
+                                            data-id={elemento.horario}
+                                        >
+                                            { elemento.horario.split("-").join(" - ") }
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                            </div>
 
 
                     </article> 

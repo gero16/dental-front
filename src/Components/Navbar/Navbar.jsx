@@ -36,7 +36,7 @@ const Navbar = () => {
             <header>
                 
                 <nav className="container nav-principal flex-center-v gap-20"> 
-
+                    <img src={logo} className="img-logo" alt="" />
                   
                     {
                         width < 800 

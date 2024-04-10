@@ -22,7 +22,8 @@ const HoraReserva = () => {
         nombre:"",
         correo: "",
         asunto: "",
-        mensaje: ""
+        mensaje: "",
+        horario: ""
     })
 
     const url = "https://global-system-back-production.up.railway.app/horarios"
@@ -96,13 +97,13 @@ const HoraReserva = () => {
 
     const seleccionarHora = (hora) => {
 
-            console.log(hora.target.dataset)
+        console.log(hora.target.dataset)
         const horaElegida = hora.target.dataset.id
         console.log(horaElegida)
 
         setHoraSeleccionada(horaElegida)
         console.log(horaSeleccionada)
-        setDatosAgenda({...datosAgenda,  hora : horaElegida})
+        setDatosAgenda({...datosAgenda,  horario : horaElegida})
 
     }
     
@@ -145,6 +146,19 @@ const HoraReserva = () => {
 
 
     console.log(datosAgenda)
+
+    const fetchInfoAgenda = async (data) => {
+  
+        let response = await fetch(`http://localhost:3000/horarios/agendar`, {
+            method: 'POST',
+            body: JSON.stringify(data)
+        });
+          
+        let result = await response.json();
+        if(result) {
+            console.log(result);
+        }
+    }
     return (
         <> 
             <Navbar /> 
@@ -261,7 +275,7 @@ const HoraReserva = () => {
                                 </li>
                                 
                                 <div className="text-center">
-                                    <span className="btn-enviar-reserva"> Enviar </span>
+                                    <span className="btn-enviar-reserva" onClick={() => fetchInfoAgenda(datosAgenda) }> Enviar </span>
                                 </div>
                            
                         </ul>

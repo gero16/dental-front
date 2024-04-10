@@ -123,14 +123,18 @@ useEffect(() => {
 
         <> 
             <Navbar> </Navbar>
-            <h1> Horas Disponibles </h1>
-
             
+            <section className="flex-center">
+                    <h1 className="h1-reservar"> Habilitar/Deshabilitar - Horarios  </h1>
+            </section>
+
             <section className="container flex-column-center section-contacto-turno">
       
                 <article className="flex section-calendario">
 
                 <div className="div-calendario flex-column">
+
+        
                 <h2> Fechas Disponibles </h2> 
 
                     <Calendar 

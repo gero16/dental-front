@@ -43,3 +43,11 @@
 .li-sesion {
     gap: 10px;
 }
+
+
+
+@media (min-width: 1550px) {
+    .ul-iniciar-sesion {
+        width: 26vw;
+    }
+}

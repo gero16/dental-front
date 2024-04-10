@@ -94,10 +94,21 @@
 
 @media (min-width: 800px) {
     .section-nosotros-texto {
+        height: 26vh;
+    }
+}
   
-        height: 32vh;
-    
-     
+
+@media (min-width: 1500px) {
+    .section-nosotros-texto {
+        height: 20vh;
+
+    }
+    .texto-nosotros {
+        font-size: large;
+    }
+    .p-tecnologias-utilizadas {
+        font-size: large;
     }
 }
   

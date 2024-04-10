@@ -58,33 +58,33 @@ const Nosotros = () => {
             
                 <section className="tecnologias-nosotros m-auto flex-column">
                     <h2 className="h2-tecnologias-utilizadas width-70 m-auto"> Tecnologias que utilizamos </h2>
-                    <ul className="width-70 m-auto flex-column ul-nosotros">
+                    <ul className="width-70 m-auto flex-column ul-nosotros width-70">
                         <li className="li-nosotros flex-column">
                             <h3> 3D Computerizado CAD/CAM </h3>
-                            <p> Se toma una impresión digital de sus dientes. Con la tecnología de diseño asistido por computadora creamos la nueva restauración en menos de 2 horas </p>
+                            <p className="p-tecnologias-utilizadas"> Se toma una impresión digital de sus dientes. Con la tecnología de diseño asistido por computadora creamos la nueva restauración en menos de 2 horas </p>
                         </li>
                         <li className="li-nosotros flex-column">
                             <h3> Cámaras intraorales </h3>
-                            <p> Una cámara intraoral nos permite investigar tu boca y mostrarte exactamente lo que está pasando </p>
+                            <p className="p-tecnologias-utilizadas"> Una cámara intraoral nos permite investigar tu boca y mostrarte exactamente lo que está pasando </p>
                         </li>
                         <li className="li-nosotros flex-column">
                             <h3> Implantes digitales </h3>
-                            <p> determinar la ubicación de su tejido óseo y nervios para que podamos completar el procedimiento de manera más efectiva y eficiente. </p>
+                            <p className="p-tecnologias-utilizadas"> determinar la ubicación de su tejido óseo y nervios para que podamos completar el procedimiento de manera más efectiva y eficiente. </p>
                         </li>
               
 
                
                         <li className="li-nosotros flex-column">
                             <h3> ¡Zoom! Blanqueamiento dental </h3>
-                            <p> Puede blanquear tus dientes hasta ocho tonos en una sola aplicación. </p>
+                            <p className="p-tecnologias-utilizadas"> Puede blanquear tus dientes hasta ocho tonos en una sola aplicación. </p>
                         </li>
                         <li className="li-nosotros flex-column">
                             <h3> Láseres dentales </h3>
-                            <p> Un haz de luz concentrado corta, coagula y vaporiza simultáneamente el tejido con total exactitud y precisión. </p>
+                            <p className="p-tecnologias-utilizadas"> Un haz de luz concentrado corta, coagula y vaporiza simultáneamente el tejido con total exactitud y precisión. </p>
                         </li>
                         <li className="li-nosotros flex-column">
                             <h3> Radiografías digitales </h3>
-                            <p> Estas unidades son más seguras que las unidades de rayos X tradicionales ya que utilizan menos radiación. </p>
+                            <p className="p-tecnologias-utilizadas"> Estas unidades son más seguras que las unidades de rayos X tradicionales ya que utilizan menos radiación. </p>
                         </li>
                     </ul>
                 </section>

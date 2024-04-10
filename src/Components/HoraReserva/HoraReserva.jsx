@@ -193,9 +193,22 @@ const HoraReserva = () => {
                                     || date.getDay() === 1 || date.getDay() === 5 }  
                         />
                         
+                        <ul className="flex-column">
+                            <li> 
+                                <span className="color-calendario-1 cuadrado-color"> </span> 
+                                <span> Fecha Seleccionada </span> 
+                            </li>
+                            <li> 
+                                <span className="color-calendario-2 cuadrado-color"> </span> 
+                                <span> Fecha Actual </span> 
+                            </li>
+                            <li> 
+                                <span className="color-calendario-3 cuadrado-color"> </span> 
+                                <span> Fechas Deshabilitadas </span> 
+                            </li>
+                        </ul>
                     </div>
 
-                  
                     </article>
                     
                     <article className="flex-column section-horas-disponibles p-20">
@@ -216,7 +229,7 @@ const HoraReserva = () => {
                             }
                             </ul>
 
-                            <ul className="lista-horas-disponibles-2"  onClick={(e) => seleccionarHora(e)} >
+                            <ul className="lista-horas-disponibles-2 "  onClick={(e) => seleccionarHora(e)} >
                                 { horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
                                 
                                 <li key={index}
@@ -241,7 +254,20 @@ const HoraReserva = () => {
                                 }
                             </ul>
                             </div>
-
+                            <ul className="flex-column">
+                                <li> 
+                                    <span className="color-horarios-1 cuadrado-color"> </span> 
+                                    <span> Horario Seleccionado </span> 
+                                </li>
+                                <li> 
+                                    <span className="color-horarios-2 cuadrado-color"> </span> 
+                                    <span> Horarios Disponibles </span> 
+                                </li>
+                                <li> 
+                                    <span className="color-horarios-3 cuadrado-color"> </span> 
+                                    <span> Horario Deshabilitado  </span> 
+                                </li>
+                            </ul>
 
                     </article> 
 
@@ -252,31 +278,34 @@ const HoraReserva = () => {
 
                     <div className="div-reservar-hora ">
 
-                        <ul className="ul-formulario-reserva flex-column-center">
+                        <ul className="ul-formulario-reserva flex-column-center gap-30">
                                 <li>
                                     <h2> Llenar Formulario </h2>
                                 </li>
-                                <li className="li-formulario">
+                                <li className="li-formulario flex-center-center">
                                     <label htmlFor="">Nombre Completo </label>
-                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  nombre : evento.target.value} )} />
+                                    <input className="input-reserva" type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  nombre : evento.target.value} )} />
                                 </li>
                         
-                                <li  className="li-formulario">
+                                <li  className="li-formulario flex-center-center">
                                     <label htmlFor=""> Correo Electronico </label>
-                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  correo : evento.target.value} )} />
+                                    <input className="input-reserva" type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  correo : evento.target.value} )} />
                                 </li>
-                                <li  className="li-formulario">
+                                <li className="li-formulario flex-center-center">
                                     <label htmlFor=""> Telefono </label>
-                                    <input type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  telefono : evento.target.value} )} />
+                                    <input className="input-reserva" type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  telefono : evento.target.value} )} />
                                 </li>
                                 <li  className="li-formulario">
                                     <label htmlFor=""> Mensaje </label>
                                     <textarea type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  mensaje : evento.target.value} )} />
                                 </li>
                                 
-                                <div className="text-center">
+                                <li className="li-formulario text-center">
+                                    <span>  </span>
                                     <span className="btn-enviar-reserva" onClick={() => fetchInfoAgenda(datosAgenda) }> Enviar </span>
-                                </div>
+                                </li>
+                               
+                            
                            
                         </ul>
                     </div>

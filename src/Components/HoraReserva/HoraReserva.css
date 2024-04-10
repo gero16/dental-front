@@ -65,7 +65,6 @@ ol {
 }
 
 .ul-formulario-reserva{
-  gap: 14px;
   background-color: var(--primario);
    color: var(--white);
   height: 100%;
@@ -105,15 +104,15 @@ ol {
 }
 
 
-
-
 .btn-enviar-reserva {
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
   background-color: #043317;
   color: white;
-  width: 100%;
+  width: 320px;
+  display: block;
+  margin: 10px 0px;
 }
 
 .react-calendar {
@@ -159,6 +158,44 @@ ol {
 
 .li-formulario input, textarea {
   width: 100%;
+}
+
+.cuadrado-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.color-horarios-1 {
+  background-color: var(--color-blog);
+}
+.color-horarios-2 {
+  background-color: var(--elegido);
+}
+
+.color-horarios-3 {
+  background-color: #E8EAEC;
+}
+
+.color-calendario-1 {
+  background-color: var(--color-blog)
+}
+
+.color-calendario-2 {
+  background-color: black
+}
+
+.color-calendario-3 {
+  background-color: #bbbdc0;
+}
+
+
+
+.input-reserva {
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(228, 225, 225);
 }
 
 @media (min-width: 800px) {

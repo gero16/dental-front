@@ -167,7 +167,7 @@ const HorasDisponibles = () => {
                                     className={!elemento.habilitado  || !elemento.disponible  ? "btn-deshabilitar" : "btn-habilitado"}
                                     data-id={elemento.horario}
                                     > 
-                                    { elemento.horario } 
+                                    { elemento.horario.split('-').join(' - ') }
                                 </li>
                             ))
                            }
@@ -175,11 +175,13 @@ const HorasDisponibles = () => {
 
                         <ul className="lista-horas-disponibles-2"  onClick={(e) => deshabilitarHorario(e)} >
                             { horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
+                            
                                     <li 
                                         key={ index } 
                                         className={!elemento.habilitado  || !elemento.disponible  ? "btn-deshabilitar" : "btn-habilitado"}
                                         data-id={elemento.horario}
-                                        > { elemento.horario }
+                                        >   
+                                        { elemento.horario.split('-').join(' - ') }
 
                                     </li>
                                 ))
@@ -192,7 +194,9 @@ const HorasDisponibles = () => {
                                         key={ index } 
                                         className={!elemento.habilitado  || !elemento.disponible  ? "btn-deshabilitar" : "btn-habilitado"}
                                         data-id={elemento.horario}
-                                        > { elemento.horario } 
+                                        >
+                                        { elemento.horario.split('-').join(' - ') }
+                                        
                                         </li>
                                 ))
                             }

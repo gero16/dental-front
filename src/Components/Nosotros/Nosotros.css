@@ -94,14 +94,14 @@
 
 @media (min-width: 800px) {
     .section-nosotros-texto {
-        height: 26vh;
+        height: 28vh;
     }
 }
   
 
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
     .section-nosotros-texto {
-        height: 20vh;
+        height: 26vh;
 
     }
     .texto-nosotros {

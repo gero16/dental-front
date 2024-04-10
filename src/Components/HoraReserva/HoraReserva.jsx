@@ -123,7 +123,8 @@ const HoraReserva = () => {
           clases = "btn-deshabilitar"; // Cambiar clase si no está habilitado o disponible
         }
       
-        if (horaSeleccionada === elemento.horario) {
+        if (horaSeleccionada === elemento.horario && (elemento.habilitado || elemento.disponible) ) {
+        
           clases += " btn-elegido"; // Agregar clase si cumple la condición de elegido
         }
       

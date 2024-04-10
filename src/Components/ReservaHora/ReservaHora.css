@@ -146,14 +146,14 @@ ol {
 }
 
 .btn-habilitado {
-  background-color: var(--color-blog)!important;
+  background-color: var(--elegido)!important;
   color: white;
   cursor: pointer;
   font-weight: 600;
 }
 
 .btn-elegido {
-  background-color: var(--elegido)!important;
+  background-color: var(--color-blog)!important;
 
 }
 

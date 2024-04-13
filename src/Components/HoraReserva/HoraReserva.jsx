@@ -33,34 +33,7 @@ const HoraReserva = () => {
 
 
 
-    const deshabilitarHorariosDia = (dia, arrayHoras) => {
-        const diaLowerCase =  dia.toLowerCase()
  
-      if(diaLowerCase === "sabado") {
-        console.log(diaLowerCase)
-          const horariosSabado = arrayHoras.map((hora) => ({
-              ...hora,
-              habilitado: hora.dia === "sabado" ? true : false,
-              disponible: hora.dia === "sabado" ? true : false
-          }));
-
-          setHorasDisponibles(horariosSabado)
-      }
-
-      
-      if(diaLowerCase !== "sabado") {
-          const horariosSemanales = arrayHoras.map((hora) => ({
-              ...hora,
-              habilitado: hora.dia === "sabado" ? false : true,
-              disponible: hora.dia === "sabado" ? false : true
-          }));
-
-  
-          setHorasDisponibles(horariosSemanales)
-      }
-      return horasDisponibles
-    }
-
     async function fetchHorasDisponibles(fecha) {
         console.log(fecha)
       

@@ -13,12 +13,7 @@ const HoraReserva = () => {
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
     const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
-  
-
-
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
-
-
     const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date())
 
     const [datosAgenda, setDatosAgenda] = useState({
@@ -31,9 +26,6 @@ const HoraReserva = () => {
         horario: ""
     })
 
-
-
- 
     async function fetchHorasDisponibles(fecha) {
         console.log(fecha)
       
@@ -79,7 +71,7 @@ const HoraReserva = () => {
         "Oct": 9,
         "Nov": 10,
         "Dec": 11
-        };
+    };
           
           
     
@@ -108,7 +100,7 @@ const HoraReserva = () => {
         setDatosAgenda({...datosAgenda,  horario : horaElegida})
 
     }
-    // 
+    
     
     const seleccionarDia = (e) => {
         const obtenerDia = e.toString().split(" ")
@@ -126,7 +118,7 @@ const HoraReserva = () => {
     }
 
           
-    const calcularClases = (elemento) => {
+    const calcularDisponibilidad = (elemento) => {
         let clases = "btn-habilitado"; // Clase por defecto
         if (!elemento.habilitado || !elemento.disponible) {
           clases = "btn-deshabilitar"; // Cambiar clase si no está habilitado o disponible
@@ -246,7 +238,7 @@ const HoraReserva = () => {
                             
                             horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
                                    <li  key={index}
-                                        className={calcularClases(elemento)}
+                                        className={calcularDisponibilidad(elemento)}
                                         data-id={elemento.horario}
                                     >
                                     { elemento.horario.split("-").join(" - ") }
@@ -261,7 +253,7 @@ const HoraReserva = () => {
                                     horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
                                 
                                 <li key={index}
-                                    className={calcularClases(elemento)}
+                                    className={calcularDisponibilidad(elemento)}
                                     data-id={elemento.horario}
                                 >
                                     { elemento.horario.split("-").join(" - ") }
@@ -275,7 +267,7 @@ const HoraReserva = () => {
                                 { horasDisponibles.length > 0 ?
                                     horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
                                         <li key={index}
-                                            className={calcularClases(elemento)}
+                                            className={calcularDisponibilidad(elemento)}
                                             data-id={elemento.horario}
                                         >
                                             { elemento.horario.split("-").join(" - ") }

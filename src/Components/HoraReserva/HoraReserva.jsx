@@ -63,9 +63,8 @@ const HoraReserva = () => {
         console.log(fecha)
       
         try {
-            let response = await fetch("http://localhost:3000/horarios/fechas", {
+            let response = await fetch(`http://localhost:3000/horarios/fechas/${fecha}`, {
                 method: 'POST',
-                body: JSON.stringify(fecha)
             });
 
           console.log(response);

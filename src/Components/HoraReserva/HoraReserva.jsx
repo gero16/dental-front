@@ -16,6 +16,9 @@ const HoraReserva = () => {
 
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
 
+
+    const [fechaSeleccionada, setFechaSeleccionada] = useState("")
+
     const [datosAgenda, setDatosAgenda] = useState({
         dia: "",
         hora: "",
@@ -26,18 +29,19 @@ const HoraReserva = () => {
         horario: ""
     })
 
-    const url = "https://global-system-back-production.up.railway.app/horarios"
+
 
     const deshabilitarHorariosDia = (dia, arrayHoras) => {
         const diaLowerCase =  dia.toLowerCase()
-        console.log(diaLowerCase)
+ 
       if(diaLowerCase === "sabado") {
+        console.log(diaLowerCase)
           const horariosSabado = arrayHoras.map((hora) => ({
               ...hora,
               habilitado: hora.dia === "sabado" ? true : false,
               disponible: hora.dia === "sabado" ? true : false
           }));
-          console.log(horariosSabado)
+
           setHorasDisponibles(horariosSabado)
       }
 
@@ -49,15 +53,21 @@ const HoraReserva = () => {
               disponible: hora.dia === "sabado" ? false : true
           }));
 
-          console.log(horariosSemanales)
+  
           setHorasDisponibles(horariosSemanales)
       }
       return horasDisponibles
     }
 
-    async function fetchHorasDisponibles() {
+    async function fetchHorasDisponibles(fecha) {
+        console.log(fecha)
+      
         try {
-          const response = await fetch(url);
+            let response = await fetch("http://localhost:3000/horarios/fechas", {
+                method: 'POST',
+                body: JSON.stringify(fecha)
+            });
+
           console.log(response);
       
           if (!response.ok) {
@@ -70,17 +80,36 @@ const HoraReserva = () => {
           }
       
           const data = await response.json();
-          if (data && data.horarios) {
 
-            // setHorasDisponibles esta dentro de esta funcion
-            deshabilitarHorariosDia(diaSeleccionado, data.horarios)
+          if (data && data.horarios) {
+            console.log(data.horarios)
+            setHorasDisponibles(data.horarios)
+           // deshabilitarHorariosDia(diaSeleccionado, data.horarios)
           }
         } catch (error) {
           console.error(error.message);
           return null;
         }
     }
-      
+
+
+    const meses = {
+        "Jan": 0,
+        "Feb": 1,
+        "Mar": 2,
+        "Apr": 3,
+        "May": 4,
+        "Jun": 5,
+        "Jul": 6,
+        "Aug": 7,
+        "Sep": 8,
+        "Oct": 9,
+        "Nov": 10,
+        "Dec": 11
+        };
+          
+          
+    
     const conversionDias = {
         "Tue" : "Martes",
         "Wed" : "Miercoles",
@@ -106,12 +135,19 @@ const HoraReserva = () => {
         setDatosAgenda({...datosAgenda,  horario : horaElegida})
 
     }
-    
+    // 
     
     const seleccionarDia = (e) => {
         const obtenerDia = e.toString().split(" ")
-        console.log(obtenerDia[0])
         let nombreDay = obtenerDia[0] 
+        let numeroMes = obtenerDia[1]
+
+        var año = obtenerDia[3];
+        var mes = meses[numeroMes];
+        var dia = obtenerDia[2];
+        var fechaFormateada = año + "-" + mes + "-" + dia;
+
+
         setDiaSeleccionado(conversionDias[nombreDay])
      
     }
@@ -119,7 +155,6 @@ const HoraReserva = () => {
           
     const calcularClases = (elemento) => {
         let clases = "btn-habilitado"; // Clase por defecto
-        
         if (!elemento.habilitado || !elemento.disponible) {
           clases = "btn-deshabilitar"; // Cambiar clase si no está habilitado o disponible
         }
@@ -133,19 +168,36 @@ const HoraReserva = () => {
       };
       
       
-    useEffect(() => {
-        fetchHorasDisponibles()
+    const transformarFecha = (fechaSinFormato) => {
+        // "Thu Apr 12 2024 00:00:00 GMT-0300"
+        let fechaOriginal = new Date(fechaSinFormato);
+
+        let año = fechaOriginal.getFullYear();
+        let mes = ("0" + (fechaOriginal.getMonth() + 1)).slice(-2); 
+        let dia = ("0" + fechaOriginal.getDate()).slice(-2);
+        let fechaFormateada = año + "-" + mes + "-" + dia;
+        return fechaFormateada
         
-        console.log(horasDisponibles)
+    }
+
+    useEffect(() => {
+
+        var fechaHoy = new Date();
+        const fechaFormateada = transformarFecha(fechaHoy)
+        console.log(fechaFormateada)
+        fetchHorasDisponibles(fechaFormateada)
+
     }, [])
 
     useEffect(() => {
-        deshabilitarHorariosDia(diaSeleccionado, horasDisponibles)
+        //deshabilitarHorariosDia(diaSeleccionado, horasDisponibles)
+        
+        // traer horario segun cambio de fecga
+        //    fetchHorasDisponibles()
 
     }, [diaSeleccionado])
 
 
-    console.log(datosAgenda)
 
     const fetchInfoAgenda = async (data) => {
   
@@ -159,6 +211,7 @@ const HoraReserva = () => {
             console.log(result);
         }
     }
+    
     return (
         <> 
             <Navbar /> 
@@ -218,19 +271,23 @@ const HoraReserva = () => {
 
                             <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e) }>
                                 
-                            { horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
+                            { horasDisponibles.length > 0 ?
+                            
+                            horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
                                    <li  key={index}
                                         className={calcularClases(elemento)}
                                         data-id={elemento.horario}
                                     >
                                     { elemento.horario.split("-").join(" - ") }
                                  </li>
-                                ))
+                                ))   
+                                : <> Cargando horariooooooos  1 </>
                             }
                             </ul>
 
                             <ul className="lista-horas-disponibles-2 "  onClick={(e) => seleccionarHora(e)} >
-                                { horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
+                                { horasDisponibles.length > 0 ?
+                                    horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
                                 
                                 <li key={index}
                                     className={calcularClases(elemento)}
@@ -239,11 +296,13 @@ const HoraReserva = () => {
                                     { elemento.horario.split("-").join(" - ") }
                                 </li>
                                     ))
+                                    : <> Cargando horariooooooos 2 </>
                                 }
                             </ul>
 
                             <ul className="lista-horas-disponibles-2" onClick={(e) => seleccionarHora(e)}>
-                                { horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
+                                { horasDisponibles.length > 0 ?
+                                    horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
                                         <li key={index}
                                             className={calcularClases(elemento)}
                                             data-id={elemento.horario}
@@ -251,6 +310,7 @@ const HoraReserva = () => {
                                             { elemento.horario.split("-").join(" - ") }
                                         </li>
                                     ))
+                                    : <> Cargando horariooooooos 3 </>
                                 }
                             </ul>
                             </div>

@@ -198,6 +198,15 @@ ol {
   border: 1px solid rgb(228, 225, 225);
 }
 
+.btn-deshabilitar-horarios {
+  background-color: var(--gris-oscuro);
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
 @media (min-width: 800px) {
   .section-contacto-turno {
     flex-direction: row;

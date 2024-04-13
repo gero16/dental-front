@@ -5,6 +5,7 @@ import Calendar from "react-calendar";
 const HorasDisponibles = () => {
     const [horasDisponibles, setHorasDisponibles] = useState([])
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
+    const [fechaHoras, setFechaHoras] = useState()
 
     const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
     
@@ -27,7 +28,7 @@ const HorasDisponibles = () => {
     async function fetchHorasDisponibles() {
         try {
           const response = await fetch(url);
-          console.log(response);
+          //console.log(response);
       
           if (!response.ok) {
             throw new Error('Error al obtener los horarios: ' + response.statusText);
@@ -52,10 +53,18 @@ const HorasDisponibles = () => {
       
   
     const seleccionarDia = (e) => {
+        console.log(e)
         const obtenerDia = e.toString().split(" ")
-        console.log(obtenerDia[0])
+        console.log(obtenerDia)
         let nombreDay = obtenerDia[0] 
         setDiaSeleccionado(conversionDias[nombreDay])
+
+        const objeto = {
+            fecha: obtenerDia[2],
+            dia: obtenerDia[0]
+
+        }   
+    
      
     }
 
@@ -118,6 +127,55 @@ useEffect(() => {
 
 
 }, [diaSeleccionado])
+
+const fetchCambiarHorarios = async (datos) => {
+    console.log(datos)
+    console.log(diaSeleccionado)
+    const horasFiltradas = datos.filter((e) => e.dia === diaSeleccionado)
+
+    const horariosDiposniblesFecha = {
+        horas : horasFiltradas,
+        dia : diaSeleccionado,
+        fecha : new Date("2021-03-25")
+    }
+
+    let response = await fetch(`http://localhost:3000/horarios/agendar`, {
+        method: 'POST',
+        body: JSON.stringify(datos)
+    });
+        
+    console.log(response)
+}
+
+
+function obtenerDiasMesActual() {
+    const fechaActual = new Date();
+    const añoActual = fechaActual.getFullYear();
+    const mesActual = fechaActual.getMonth();
+
+    // Obtener el número de días en el mes actual
+    const numeroDias = new Date(añoActual, mesActual + 1, 0).getDate();
+
+    // Obtener el día de la semana en que comienza el mes actual (0 = Domingo, 1 = Lunes, ..., 6 = Sábado)
+    const primerDiaSemana = new Date(añoActual, mesActual, 1).getDay();
+
+    // Array para almacenar los días del mes actual con sus fechas
+    const diasDelMes = [];
+
+    // Iterar sobre los días del mes y añadirlos al array
+    for (let dia = 1; dia <= numeroDias; dia++) {
+        diasDelMes.push({
+            diaSemana: (primerDiaSemana + dia - 1) % 7, // Convertir al formato 0-6
+            fecha: new Date(añoActual, mesActual, dia)
+        });
+    }
+
+    return diasDelMes;
+}
+
+// Ejemplo de uso
+const diasMesActual = obtenerDiasMesActual();
+console.log(diasMesActual);
 
     return (
 
@@ -203,6 +261,9 @@ useEffect(() => {
 
                 </article> 
 
+                <section className="container">
+                    <span className="btn-deshabilitar-horarios" onClick={() => fetchCambiarHorarios(horasDisponibles) }> Deshabilitar horarios </span>
+                </section>
             </section>
 
         </>

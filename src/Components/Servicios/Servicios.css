@@ -34,8 +34,8 @@
     color: var(--gris);
 }
 #imagen1-servicio-general {
-    height: 50vh;
-    max-width: 630px;
+    height: 44vh;
+    max-width: 100%;
 }
 
 .section-portada-servicio {
@@ -57,4 +57,12 @@
 }
 .p-portada-texto {
     z-index: 2;
+}
+
+
+@media (min-width: 1600px) {
+    #imagen1-servicio-general {
+        height: 35vh;
+        max-width: 100%;
+    }
 }

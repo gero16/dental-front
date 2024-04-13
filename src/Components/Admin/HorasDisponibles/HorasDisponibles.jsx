@@ -160,6 +160,19 @@ function obtenerDiasMesActual() {
     return diasDelMes;
 }
 
+
+const seleccionarHora = (hora) => {
+
+    console.log(hora.target.dataset)
+    const horaElegida = hora.target.dataset.id
+    console.log(horaElegida)
+
+    setHoraSeleccionada(horaElegida)
+    console.log(horaSeleccionada)
+    setDatosAgenda({...datosAgenda,  horario : horaElegida})
+
+}
+
 useEffect(() => {
 
     var fechaHoy = new Date();

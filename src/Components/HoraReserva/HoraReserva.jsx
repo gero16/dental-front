@@ -13,11 +13,13 @@ const HoraReserva = () => {
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
     const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
+  
+
 
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
 
 
-    const [fechaSeleccionada, setFechaSeleccionada] = useState("")
+    const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date())
 
     const [datosAgenda, setDatosAgenda] = useState({
         dia: "",
@@ -83,7 +85,6 @@ const HoraReserva = () => {
           if (data && data.horarios) {
             console.log(data.horarios)
             setHorasDisponibles(data.horarios)
-           // deshabilitarHorariosDia(diaSeleccionado, data.horarios)
           }
         } catch (error) {
           console.error(error.message);
@@ -148,7 +149,7 @@ const HoraReserva = () => {
 
 
         setDiaSeleccionado(conversionDias[nombreDay])
-     
+        setFechaSeleccionada(e)
     }
 
           
@@ -189,12 +190,10 @@ const HoraReserva = () => {
     }, [])
 
     useEffect(() => {
-        //deshabilitarHorariosDia(diaSeleccionado, horasDisponibles)
-        
-        // traer horario segun cambio de fecga
-        //    fetchHorasDisponibles()
 
-    }, [diaSeleccionado])
+        fetchHorasDisponibles(fechaSeleccionada)
+
+    }, [fechaSeleccionada])
 
 
 

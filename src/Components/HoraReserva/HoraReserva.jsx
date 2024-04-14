@@ -10,42 +10,9 @@ import Footer from "../Footer/Footer";
 import { Context } from "../../Context/Context"
 
 const HoraReserva = () => {
-    const { transformarFecha, conversionDias, fetchHorasDisponibles } = useContext(Context)
-
-    const stringDia = new Date().toString().split(" ")
-    console.log(stringDia)
-
-    const [horasDisponibles, setHorasDisponibles] = useState([])
-    const [diaSeleccionado, setDiaSeleccionado] = useState(conversionDias[stringDia[0]])
-    const [horaSeleccionada, setHoraSeleccionada] = useState("")
-    const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date())
-
-    const [datosAgenda, setDatosAgenda] = useState({
-        dia: "",
-        hora: "",
-        nombre:"",
-        correo: "",
-        asunto: "",
-        mensaje: "",
-        horario: ""
-    })
-
-    const meses = {
-        "Jan": 0,
-        "Feb": 1,
-        "Mar": 2,
-        "Apr": 3,
-        "May": 4,
-        "Jun": 5,
-        "Jul": 6,
-        "Aug": 7,
-        "Sep": 8,
-        "Oct": 9,
-        "Nov": 10,
-        "Dec": 11
-    };
-          
-          
+    const { transformarFecha, conversionDias, fetchHorasDisponibles, horasDisponibles, diaSeleccionado, 
+        horaSeleccionada,fechaSeleccionada, seleccionarDia, seleccionarHora } = useContext(Context)
+       
     const indiceUno = 6; 
     const indiceDosInicio = 7; 
     const indiceDosFinal = 13; 
@@ -53,35 +20,6 @@ const HoraReserva = () => {
     const indiceTresFinal = 20; 
 
 
-    const seleccionarHora = (hora) => {
-
-        console.log(hora.target.dataset)
-        const horaElegida = hora.target.dataset.id
-        console.log(horaElegida)
-
-        setHoraSeleccionada(horaElegida)
-        console.log(horaSeleccionada)
-        setDatosAgenda({...datosAgenda,  horario : horaElegida})
-
-    }
-    
-    
-    const seleccionarDia = (e) => {
-        const obtenerDia = e.toString().split(" ")
-        let nombreDay = obtenerDia[0] 
-        let numeroMes = obtenerDia[1]
-
-        var año = obtenerDia[3];
-        var mes = meses[numeroMes];
-        var dia = obtenerDia[2];
-        var fechaFormateada = año + "-" + mes + "-" + dia;
-
-
-        setDiaSeleccionado(conversionDias[nombreDay])
-        setFechaSeleccionada(e)
-    }
-
-          
     const calcularDisponibilidad = (elemento) => {
         let clases = "btn-habilitado"; // Clase por defecto
         if (!elemento.habilitado || !elemento.disponible) {
@@ -110,8 +48,8 @@ const HoraReserva = () => {
         }
     }
 
-    useEffect(() => {
 
+    useEffect(() => {
         var fechaHoy = new Date();
         const fechaFormateada = transformarFecha(fechaHoy)
         console.log(fechaFormateada)
@@ -125,9 +63,6 @@ const HoraReserva = () => {
 
     }, [fechaSeleccionada])
 
-
-
-    
     
     return (
         <> 

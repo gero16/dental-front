@@ -8,10 +8,6 @@ const Hora = ({hora, estadoSabado, seleccionado}) => {
     const nuevaHora = `${splitHora[0]} - ${splitHora[1]}`
     console.log(nuevaHora)
 
-
-
-    
-
     return (
             <>
              {

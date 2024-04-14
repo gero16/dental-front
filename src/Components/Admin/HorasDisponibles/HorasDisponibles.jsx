@@ -4,10 +4,9 @@ import Calendar from "react-calendar";
 
 const HorasDisponibles = () => {
     const [horasDisponibles, setHorasDisponibles] = useState([])
+    const [diaSeleccionado, setDiaSeleccionado] = useState(conversionDias[stringDia[0]])
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
     const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date())
-
-    const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
     
     const conversionDias = {
         "Tue" : "Martes",
@@ -26,37 +25,35 @@ const HorasDisponibles = () => {
 
     async function fetchHorasDisponibles(fecha) {
         console.log(fecha)
-      
+        
         try {
             let response = await fetch(`http://localhost:3000/horarios/fechas/${fecha}`, {
                 method: 'POST',
             });
 
-          console.log(response);
-      
-          if (!response.ok) {
+            console.log(response);
+        
+            if (!response.ok) {
             throw new Error('Error al obtener los horarios: ' + response.statusText);
-          }
-      
-          const contentType = response.headers.get('content-type');
-          if (!contentType || !contentType.includes('application/json')) {
+            }
+        
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
             throw new Error('Respuesta no válida: No es JSON');
-          }
-      
-          const data = await response.json();
+            }
+        
+            const data = await response.json();
 
-          if (data && data.horarios) {
+            if (data && data.horarios) {
             console.log(data.horarios)
             setHorasDisponibles(data.horarios)
-          }
+            }
         } catch (error) {
-          console.error(error.message);
-          return null;
+            console.error(error.message);
+            return null;
         }
     }
 
-      
-  
     const seleccionarDia = (e) => {
         console.log(e)
         const obtenerDia = e.toString().split(" ")
@@ -67,9 +64,7 @@ const HorasDisponibles = () => {
         setFechaSeleccionada(e)
     }
 
-
-
-  const deshabilitarHorario = (hora) => {
+    const deshabilitarHorario = (hora) => {
     const horaElegida = hora.target.dataset.id;
     // Crear una copia de horasDisponibles
     const nuevaHorasDisponibles = horasDisponibles.map((elemento) => {
@@ -85,34 +80,34 @@ const HorasDisponibles = () => {
     });
     // Establecer el nuevo estado
     setHorasDisponibles(nuevaHorasDisponibles);
-};
+    };
 
-const transformarFecha = (fechaSinFormato) => {
-    // "Thu Apr 12 2024 00:00:00 GMT-0300"
-    let fechaOriginal = new Date(fechaSinFormato);
+    const transformarFecha = (fechaSinFormato) => {
+        // "Thu Apr 12 2024 00:00:00 GMT-0300"
+        let fechaOriginal = new Date(fechaSinFormato);
 
-    let año = fechaOriginal.getFullYear();
-    let mes = ("0" + (fechaOriginal.getMonth() + 1)).slice(-2); 
-    let dia = ("0" + fechaOriginal.getDate()).slice(-2);
-    let fechaFormateada = año + "-" + mes + "-" + dia;
-    return fechaFormateada
-    
-}
-
-
-const calcularDisponibilidad = (elemento) => {
-    let clases = "btn-habilitado"; // Clase por defecto
-    if (!elemento.habilitado || !elemento.disponible) {
-      clases = "btn-deshabilitar"; // Cambiar clase si no está habilitado o disponible
+        let año = fechaOriginal.getFullYear();
+        let mes = ("0" + (fechaOriginal.getMonth() + 1)).slice(-2); 
+        let dia = ("0" + fechaOriginal.getDate()).slice(-2);
+        let fechaFormateada = año + "-" + mes + "-" + dia;
+        return fechaFormateada
+        
     }
-  
-    if (horaSeleccionada === elemento.horario && (elemento.habilitado || elemento.disponible) ) {
+
+
+    const calcularDisponibilidad = (elemento) => {
+        let clases = "btn-habilitado"; // Clase por defecto
+        if (!elemento.habilitado || !elemento.disponible) {
+        clases = "btn-deshabilitar"; // Cambiar clase si no está habilitado o disponible
+        }
     
-      clases += " btn-elegido"; // Agregar clase si cumple la condición de elegido
-    }
-  
-    return clases;
-  };
+        if (horaSeleccionada === elemento.horario && (elemento.habilitado || elemento.disponible) ) {
+        
+        clases += " btn-elegido"; // Agregar clase si cumple la condición de elegido
+        }
+    
+        return clases;
+    };
   
 
 const fetchCambiarHorarios = async (datos) => {
@@ -188,15 +183,11 @@ useEffect(() => {
 
 }, [fechaSeleccionada])
 
-
-
-
 // Ejemplo de uso
 const diasMesActual = obtenerDiasMesActual();
 console.log(diasMesActual);
 
     return (
-
         <> 
             <Navbar> </Navbar>
             

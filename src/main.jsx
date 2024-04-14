@@ -24,6 +24,7 @@ import AdminPublicaciones from './Components/Admin/AdminPublicaciones/AdminPubli
 import CrearPublicacion from './Components/Admin/CrearPublicacion/CrearPublicacion.jsx';
 import EditarPublicacion from './Components/Admin/CrearPublicacion/EditarPublicacion.jsx';
 import EliminarPublicacion from './Components/Admin/EliminarPublicacion/EliminarPublicacion.jsx';
+import { CustomProvider } from './Context/Context.jsx';
 
 
 const router = createBrowserRouter([
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+
+      <CustomProvider>
+          <RouterProvider router={ router } />
+      </CustomProvider>
+      
   </React.StrictMode>,
 )

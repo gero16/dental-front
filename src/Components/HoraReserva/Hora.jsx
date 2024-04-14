@@ -21,8 +21,7 @@ const Hora = ({hora, estadoSabado, seleccionado}) => {
                     className={`${ (!estadoSabado ? 'btn-deshabilitar' : 'sabado li-hora seleccionado') } ` } > 
                     { nuevaHora }
                 </li>
-                    : 
-                    <li 
+                    : <li 
                     data-id={`${ hora }`}
                     className={`${ (!estadoSabado ? 'btn-deshabilitar' : 'sabado li-hora') } ` } > 
                     { nuevaHora }

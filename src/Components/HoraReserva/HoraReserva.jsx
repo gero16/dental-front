@@ -10,9 +10,34 @@ import Footer from "../Footer/Footer";
 
 
 const HoraReserva = () => {
+     
+    const conversionDias = {
+        "Mon" : "Lunes",
+        "Tue" : "Martes",
+        "Wed" : "Miercoles",
+        "Thu" : "Jueves",
+        "Fri": "Friday",
+        "Sat" : "Sabado",  
+        "Sun": "Domingo"   
+    }
+      
+    const transformarFecha = (fechaSinFormato) => {
+        // "Thu Apr 12 2024 00:00:00 GMT-0300"
+        let fechaOriginal = new Date(fechaSinFormato);
+
+        let año = fechaOriginal.getFullYear();
+        let mes = ("0" + (fechaOriginal.getMonth() + 1)).slice(-2); 
+        let dia = ("0" + fechaOriginal.getDate()).slice(-2);
+        let fechaFormateada = año + "-" + mes + "-" + dia;
+        return fechaFormateada
+        
+    }
+    
+    const stringDia = new Date().toString().split(" ")
+    console.log(stringDia)
 
     const [horasDisponibles, setHorasDisponibles] = useState([])
-    const [diaSeleccionado, setDiaSeleccionado] = useState("Martes")
+    const [diaSeleccionado, setDiaSeleccionado] = useState(conversionDias[stringDia[0]])
     const [horaSeleccionada, setHoraSeleccionada] = useState("")
     const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date())
 
@@ -33,8 +58,6 @@ const HoraReserva = () => {
             let response = await fetch(`http://localhost:3000/horarios/fechas/${fecha}`, {
                 method: 'POST',
             });
-
-          console.log(response);
       
           if (!response.ok) {
             throw new Error('Error al obtener los horarios: ' + response.statusText);
@@ -74,13 +97,7 @@ const HoraReserva = () => {
     };
           
           
-    
-    const conversionDias = {
-        "Tue" : "Martes",
-        "Wed" : "Miercoles",
-        "Thu" : "Jueves",
-        "Sat" : "Sabado"     
-    }
+   
 
     const indiceUno = 6; 
     const indiceDosInicio = 7; 
@@ -132,17 +149,18 @@ const HoraReserva = () => {
         return clases;
       };
       
-      
-    const transformarFecha = (fechaSinFormato) => {
-        // "Thu Apr 12 2024 00:00:00 GMT-0300"
-        let fechaOriginal = new Date(fechaSinFormato);
-
-        let año = fechaOriginal.getFullYear();
-        let mes = ("0" + (fechaOriginal.getMonth() + 1)).slice(-2); 
-        let dia = ("0" + fechaOriginal.getDate()).slice(-2);
-        let fechaFormateada = año + "-" + mes + "-" + dia;
-        return fechaFormateada
-        
+    
+    const fetchInfoAgenda = async (data) => {
+  
+        let response = await fetch(`http://localhost:3000/horarios/agendar`, {
+            method: 'POST',
+            body: JSON.stringify(data)
+        });
+          
+        let result = await response.json();
+        if(result) {
+            console.log(result);
+        }
     }
 
     useEffect(() => {
@@ -162,18 +180,7 @@ const HoraReserva = () => {
 
 
 
-    const fetchInfoAgenda = async (data) => {
-  
-        let response = await fetch(`http://localhost:3000/horarios/agendar`, {
-            method: 'POST',
-            body: JSON.stringify(data)
-        });
-          
-        let result = await response.json();
-        if(result) {
-            console.log(result);
-        }
-    }
+    
     
     return (
         <> 
@@ -244,7 +251,7 @@ const HoraReserva = () => {
                                     { elemento.horario.split("-").join(" - ") }
                                  </li>
                                 ))   
-                                : <> Cargando horariooooooos  1 </>
+                                : <>  </>
                             }
                             </ul>
 
@@ -259,7 +266,7 @@ const HoraReserva = () => {
                                     { elemento.horario.split("-").join(" - ") }
                                 </li>
                                     ))
-                                    : <> Cargando horariooooooos 2 </>
+                                    : <> No hay horarios disponibles para los dias { diaSeleccionado }!  </>
                                 }
                             </ul>
 
@@ -273,7 +280,7 @@ const HoraReserva = () => {
                                             { elemento.horario.split("-").join(" - ") }
                                         </li>
                                     ))
-                                    : <> Cargando horariooooooos 3 </>
+                                    : <> </>
                                 }
                             </ul>
                             </div>

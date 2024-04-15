@@ -108,8 +108,8 @@ export const CustomProvider = ({ children }) => {
       
 return (
     <Context.Provider 
-        value={{ transformarFecha, conversionDias, fetchHorasDisponibles, seleccionarDia, seleccionarHora, horasDisponibles, diaSeleccionado, 
-        horaSeleccionada,fechaSeleccionada, meses, stringDia,  setDatosAgenda, datosAgenda
+        value={{ transformarFecha, conversionDias, fetchHorasDisponibles, seleccionarDia, seleccionarHora, horasDisponibles, setHorasDisponibles,
+           diaSeleccionado, horaSeleccionada,fechaSeleccionada, meses, stringDia,  setDatosAgenda, datosAgenda
         
         }}> 
             

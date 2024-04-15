@@ -1,19 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Navbar from "../../Navbar/Navbar"
 import Calendar from "react-calendar";
+import { Context } from "../../../Context/Context"
+
 
 const HorasDisponibles = () => {
-    const [horasDisponibles, setHorasDisponibles] = useState([])
-    const [diaSeleccionado, setDiaSeleccionado] = useState(conversionDias[stringDia[0]])
-    const [horaSeleccionada, setHoraSeleccionada] = useState("")
-    const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date())
-    
-    const conversionDias = {
-        "Tue" : "Martes",
-        "Wed" : "Miercoles",
-        "Thu" : "Jueves",
-        "Sat" : "Sabado"     
-    }
+    const { transformarFecha, conversionDias, fetchHorasDisponibles, horasDisponibles, setHorasDisponibles, diaSeleccionado, 
+        horaSeleccionada,fechaSeleccionada, seleccionarDia,  setDatosAgenda, datosAgenda } = useContext(Context)
+
+    const [horasSeleccionadas, setHorasSeleccionadas] = useState([])
+
 
     const indiceUno = 6; 
     const indiceDosInicio = 7; 
@@ -21,48 +17,6 @@ const HorasDisponibles = () => {
     const indiceTresInicio = 14; 
     const indiceTresFinal = 20; 
 
-
-
-    async function fetchHorasDisponibles(fecha) {
-        console.log(fecha)
-        
-        try {
-            let response = await fetch(`http://localhost:3000/horarios/fechas/${fecha}`, {
-                method: 'POST',
-            });
-
-            console.log(response);
-        
-            if (!response.ok) {
-            throw new Error('Error al obtener los horarios: ' + response.statusText);
-            }
-        
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-            throw new Error('Respuesta no válida: No es JSON');
-            }
-        
-            const data = await response.json();
-
-            if (data && data.horarios) {
-            console.log(data.horarios)
-            setHorasDisponibles(data.horarios)
-            }
-        } catch (error) {
-            console.error(error.message);
-            return null;
-        }
-    }
-
-    const seleccionarDia = (e) => {
-        console.log(e)
-        const obtenerDia = e.toString().split(" ")
-        console.log(obtenerDia)
-        let nombreDay = obtenerDia[0] 
-
-        setDiaSeleccionado(conversionDias[nombreDay])
-        setFechaSeleccionada(e)
-    }
 
     const deshabilitarHorario = (hora) => {
     const horaElegida = hora.target.dataset.id;
@@ -82,20 +36,10 @@ const HorasDisponibles = () => {
     setHorasDisponibles(nuevaHorasDisponibles);
     };
 
-    const transformarFecha = (fechaSinFormato) => {
-        // "Thu Apr 12 2024 00:00:00 GMT-0300"
-        let fechaOriginal = new Date(fechaSinFormato);
-
-        let año = fechaOriginal.getFullYear();
-        let mes = ("0" + (fechaOriginal.getMonth() + 1)).slice(-2); 
-        let dia = ("0" + fechaOriginal.getDate()).slice(-2);
-        let fechaFormateada = año + "-" + mes + "-" + dia;
-        return fechaFormateada
-        
-    }
-
 
     const calcularDisponibilidad = (elemento) => {
+        console.log(elemento)
+
         let clases = "btn-habilitado"; // Clase por defecto
         if (!elemento.habilitado || !elemento.disponible) {
         clases = "btn-deshabilitar"; // Cambiar clase si no está habilitado o disponible
@@ -110,63 +54,7 @@ const HorasDisponibles = () => {
     };
   
 
-const fetchCambiarHorarios = async (datos) => {
-    console.log(datos)
-    console.log(diaSeleccionado)
-    const horasFiltradas = datos.filter((e) => e.dia === diaSeleccionado)
 
-    const horariosDiposniblesFecha = {
-        horas : horasFiltradas,
-        dia : diaSeleccionado,
-        fecha : new Date("2021-03-25")
-    }
-
-    let response = await fetch(`http://localhost:3000/horarios/agendar`, {
-        method: 'POST',
-        body: JSON.stringify(datos)
-    });
-        
-    console.log(response)
-}
-
-
-function obtenerDiasMesActual() {
-    const fechaActual = new Date();
-    const añoActual = fechaActual.getFullYear();
-    const mesActual = fechaActual.getMonth();
-
-    // Obtener el número de días en el mes actual
-    const numeroDias = new Date(añoActual, mesActual + 1, 0).getDate();
-
-    // Obtener el día de la semana en que comienza el mes actual (0 = Domingo, 1 = Lunes, ..., 6 = Sábado)
-    const primerDiaSemana = new Date(añoActual, mesActual, 1).getDay();
-
-    // Array para almacenar los días del mes actual con sus fechas
-    const diasDelMes = [];
-
-    // Iterar sobre los días del mes y añadirlos al array
-    for (let dia = 1; dia <= numeroDias; dia++) {
-        diasDelMes.push({
-            diaSemana: (primerDiaSemana + dia - 1) % 7, // Convertir al formato 0-6
-            fecha: new Date(añoActual, mesActual, dia)
-        });
-    }
-
-    return diasDelMes;
-}
-
-
-const seleccionarHora = (hora) => {
-
-    console.log(hora.target.dataset)
-    const horaElegida = hora.target.dataset.id
-    console.log(horaElegida)
-
-    setHoraSeleccionada(horaElegida)
-    console.log(horaSeleccionada)
-    setDatosAgenda({...datosAgenda,  horario : horaElegida})
-
-}
 
 useEffect(() => {
 
@@ -183,25 +71,30 @@ useEffect(() => {
 
 }, [fechaSeleccionada])
 
-// Ejemplo de uso
-const diasMesActual = obtenerDiasMesActual();
-console.log(diasMesActual);
 
-    return (
-        <> 
-            <Navbar> </Navbar>
-            
+return (
+    <> 
+        <Navbar /> 
+
+
+        <section className="fondo-blanco-img">
+
+            <ul className="flex-column-center lista-reservar color-blog small" >
+                <li> Martes y Jueves 13:00 - 20:00 (Las Piedras) </li>
+                <li> Miercoles 13:00 - 20:00 (Montevideo) </li>
+                <li> Sabados 09:00 - 14:00 (Las Piedras) </li>
+            </ul>
+
+          
             <section className="flex-center">
-                    <h1 className="h1-reservar"> Habilitar/Deshabilitar - Horarios  </h1>
+                <h1 className="h1-reservar"> Reserve un turno!</h1>
             </section>
-
+            
             <section className="container flex-column-center section-contacto-turno">
-      
+  
                 <article className="flex section-calendario">
 
                 <div className="div-calendario flex-column">
-
-        
                 <h2> Fechas Disponibles </h2> 
 
                     <Calendar 
@@ -213,71 +106,136 @@ console.log(diasMesActual);
                                 || date.getDay() === 1 || date.getDay() === 5 }  
                     />
                     
+                    <ul className="flex-column">
+                        <li> 
+                            <span className="color-calendario-1 cuadrado-color"> </span> 
+                            <span> Fecha Seleccionada </span> 
+                        </li>
+                        <li> 
+                            <span className="color-calendario-2 cuadrado-color"> </span> 
+                            <span> Fecha Actual </span> 
+                        </li>
+                        <li> 
+                            <span className="color-calendario-3 cuadrado-color"> </span> 
+                            <span> Fechas Deshabilitadas </span> 
+                        </li>
+                    </ul>
                 </div>
 
-                
                 </article>
                 
-                <article className="flex-column section-horas-disponibles">
+                <article className="flex-column section-horas-disponibles p-20">
 
                     <h2> Horarios Disponibles </h2> 
                     <div className="flex-center div-horas">   
 
-                    <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e) }>
-                                
-                        { horasDisponibles.length > 0 ?
+                        <ul className="lista-horas-disponibles-1" onClick={(e) => deshabilitarHorario(e) }>
                             
-                            horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
-                                <li  key={index}
-                                        className={calcularDisponibilidad(elemento)}
-                                        data-id={elemento.horario}
-                                    >
-                                    { elemento.horario.split("-").join(" - ") }
-                                </li>
-                                ))   
-                                : <> Cargando horariooooooos  1 </>
-                            }
-                            </ul>
-
-                            <ul className="lista-horas-disponibles-2 "  onClick={(e) => seleccionarHora(e)} >
-                                { horasDisponibles.length > 0 ?
-                                    horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
-                                
-                                <li key={index}
+                        { horasDisponibles.length > 0 ?
+                        
+                        horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
+                               <li  key={index}
                                     className={calcularDisponibilidad(elemento)}
                                     data-id={elemento.horario}
                                 >
-                                    { elemento.horario.split("-").join(" - ") }
-                                </li>
-                                    ))
-                                    : <> Cargando horariooooooos 2 </>
-                                }
-                            </ul>
+                                { elemento.horario.split("-").join(" - ") }
+                             </li>
+                            ))   
+                            : <>  </>
+                        }
+                        </ul>
 
-                            <ul className="lista-horas-disponibles-2" onClick={(e) => seleccionarHora(e)}>
-                                { horasDisponibles.length > 0 ?
-                                    horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
-                                        <li key={index}
-                                            className={calcularDisponibilidad(elemento)}
-                                            data-id={elemento.horario}
-                                        >
-                                            { elemento.horario.split("-").join(" - ") }
-                                        </li>
-                                    ))
-                                    : <> Cargando horariooooooos 3 </>
-                                }
-                            </ul>
-                    </div>
+                        <ul className="lista-horas-disponibles-2 "  onClick={(e) => deshabilitarHorario(e)} >
+                            { horasDisponibles.length > 0 ?
+                                horasDisponibles.slice(indiceDosInicio,  indiceDosFinal +1).map((elemento, index) => (
+                            
+                            <li key={index}
+                                className={calcularDisponibilidad(elemento)}
+                                data-id={elemento.horario}
+                            >
+                                { elemento.horario.split("-").join(" - ") }
+                            </li>
+                                ))
+                                : <> No hay horarios disponibles para los dias { diaSeleccionado }!  </>
+                            }
+                        </ul>
 
+                        <ul className="lista-horas-disponibles-2" onClick={(e) => deshabilitarHorario(e)}>
+                            { horasDisponibles.length > 0 ?
+                                horasDisponibles.slice(indiceTresInicio,  indiceTresFinal +1).map((elemento, index) => (
+                                    <li key={index}
+                                        className={calcularDisponibilidad(elemento)}
+                                        data-id={elemento.horario}
+                                    >
+                                        { elemento.horario.split("-").join(" - ") }
+                                    </li>
+                                ))
+                                : <> </>
+                            }
+                        </ul>
+                        </div>
+                        <ul className="flex-column">
+                            <li> 
+                                <span className="color-horarios-1 cuadrado-color"> </span> 
+                                <span> Horario Seleccionado </span> 
+                            </li>
+                            <li> 
+                                <span className="color-horarios-2 cuadrado-color"> </span> 
+                                <span> Horarios Disponibles </span> 
+                            </li>
+                            <li> 
+                                <span className="color-horarios-3 cuadrado-color"> </span> 
+                                <span> Horario Deshabilitado  </span> 
+                            </li>
+                        </ul>
 
                 </article> 
 
-                <section className="container">
-                    <span className="btn-deshabilitar-horarios" onClick={() => fetchCambiarHorarios(horasDisponibles) }> Deshabilitar horarios </span>
-                </section>
             </section>
+      
 
-        </>
+            <main className="flex-center section-formulario-contacto">
+
+                <div className="div-reservar-hora ">
+
+                    <ul className="ul-formulario-reserva flex-column-center gap-30">
+                            <li>
+                                <h2> Llenar Formulario </h2>
+                            </li>
+                            <li className="li-formulario flex-center-center">
+                                <label htmlFor="">Nombre Completo </label>
+                                <input className="input-reserva" type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  nombre : evento.target.value} )} />
+                            </li>
+                    
+                            <li  className="li-formulario flex-center-center">
+                                <label htmlFor=""> Correo Electronico </label>
+                                <input className="input-reserva" type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  correo : evento.target.value} )} />
+                            </li>
+                            <li className="li-formulario flex-center-center">
+                                <label htmlFor=""> Telefono </label>
+                                <input className="input-reserva" type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  telefono : evento.target.value} )} />
+                            </li>
+                            <li  className="li-formulario">
+                                <label htmlFor=""> Mensaje </label>
+                                <textarea type="text" onChange={(evento) => setDatosAgenda({...datosAgenda,  mensaje : evento.target.value} )} />
+                            </li>
+                            
+                            <li className="li-formulario text-center">
+                                <span>  </span>
+                                <span className="btn-enviar-reserva" onClick={() => fetchInfoAgenda(datosAgenda) }> Enviar </span>
+                            </li>
+                           
+                        
+                       
+                    </ul>
+                </div>
+
+            </main>
+
+
+        </section>
+   
+    </>
     )
 }
 

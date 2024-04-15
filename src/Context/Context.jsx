@@ -16,10 +16,8 @@ export const CustomProvider = ({ children }) => {
 
   const [datosAgenda, setDatosAgenda] = useState({
     dia: "",
-    hora: "",
     nombre:"",
     correo: "",
-    asunto: "",
     mensaje: "",
     horario: ""
   })
@@ -31,6 +29,8 @@ export const CustomProvider = ({ children }) => {
   const [diaSeleccionado, setDiaSeleccionado] = useState(conversionDias[stringDia[0]])
   const [horaSeleccionada, setHoraSeleccionada] = useState("")
   const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date())
+
+  const [agenda, setAgenda] = useState([])
 
 
     const transformarFecha = (fechaSinFormato) => {
@@ -101,13 +101,15 @@ export const CustomProvider = ({ children }) => {
 
       setDiaSeleccionado(conversionDias[nombreDay])
       setFechaSeleccionada(e)
+   
+      setDatosAgenda({...datosAgenda,  dia : conversionDias[nombreDay]})
   }
 
       
 return (
     <Context.Provider 
         value={{ transformarFecha, conversionDias, fetchHorasDisponibles, seleccionarDia, seleccionarHora, horasDisponibles, diaSeleccionado, 
-        horaSeleccionada,fechaSeleccionada, meses, stringDia, setDatosAgenda   
+        horaSeleccionada,fechaSeleccionada, meses, stringDia,  setDatosAgenda, datosAgenda
         
         }}> 
             

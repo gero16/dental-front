@@ -11,7 +11,7 @@ import { Context } from "../../Context/Context"
 
 const HoraReserva = () => {
     const { transformarFecha, conversionDias, fetchHorasDisponibles, horasDisponibles, diaSeleccionado, 
-        horaSeleccionada,fechaSeleccionada, seleccionarDia, seleccionarHora } = useContext(Context)
+        horaSeleccionada,fechaSeleccionada, seleccionarDia, seleccionarHora, setDatosAgenda, datosAgenda } = useContext(Context)
        
     const indiceUno = 6; 
     const indiceDosInicio = 7; 
@@ -19,7 +19,7 @@ const HoraReserva = () => {
     const indiceTresInicio = 14; 
     const indiceTresFinal = 20; 
 
-
+    
     const calcularDisponibilidad = (elemento) => {
         let clases = "btn-habilitado"; // Clase por defecto
         if (!elemento.habilitado || !elemento.disponible) {
@@ -36,9 +36,12 @@ const HoraReserva = () => {
       
     
     const fetchInfoAgenda = async (data) => {
-  
+        console.log(data)
         let response = await fetch(`http://localhost:3000/horarios/agendar`, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+              },
             body: JSON.stringify(data)
         });
           

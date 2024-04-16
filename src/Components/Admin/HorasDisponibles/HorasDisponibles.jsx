@@ -32,8 +32,8 @@ const HorasDisponibles = () => {
         // De lo contrario, mantener el elemento sin cambios
         return elemento;
     });
-    // Establecer el nuevo estado
-    setHorasDisponibles(nuevaHorasDisponibles);
+        // Establecer el nuevo estado
+        setHorasDisponibles(nuevaHorasDisponibles);
     };
 
 

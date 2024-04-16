@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./CrearPublicacion.css";
 import Navbar from "../../Navbar/Navbar";
+import { Context } from "../../../Context/Context";
 
 const CrearPublicacion = () => {
     const [inputs, setInputs] = useState([]);
@@ -9,6 +10,7 @@ const CrearPublicacion = () => {
     const [selectedImage, setSelectedImage] = useState("https://st2.depositphotos.com/1371678/9634/i/450/depositphotos_96346704-stock-photo-dentist-examining-a-patients-teeth.jpg");
     const [selectedColor, setSelectedColor] = useState('#0FA89D');
     const recommendedColors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
+    const { urlBackend_Produccion, urlBackend_Desarrollo } = useContext(Context)
 
     const [publicacion, setPublicacion] = useState({
         titulo : "",
@@ -100,7 +102,7 @@ const CrearPublicacion = () => {
         formData.append('contenido', JSON.stringify(data.contenido));
         formData.append('imagen', rutaImagen);
 
-        let response = await fetch(`http://localhost:3000/publicaciones/agregar-publicacion`, {
+        let response = await fetch(`${ urlBackend_Produccion }/publicaciones/agregar-publicacion`, {
             method: 'POST',
             body: formData
         });

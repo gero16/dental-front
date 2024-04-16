@@ -25,8 +25,12 @@ const ServicioCosmetico = () => {
                     <p className="width-70 p-portada-texto white"> Combinamos el arte y la ciencia de la odontología estética para crear tratamientos únicos y mínimamente invasivos que realmente funcionan </p>
 
                     <span className="width-70 span-portada-numero white"> Reservar Hora </span>
+                      
+                    <section className="section-icono">
 
-                    <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-cosmetico"/>
+                        <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-cosmetico"/>
+                    </section>
+                   
                 
                 </section>
 

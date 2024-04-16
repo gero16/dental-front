@@ -26,7 +26,10 @@ const ServicioGeneral = () => {
 
                 <span className="width-70 span-portada-numero white"> Reservar Hora </span>
 
-                <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-general"/>
+                <section className="section-icono">
+                    <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-general"/>
+                </section>
+              
             
             </section>
 

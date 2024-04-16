@@ -10,13 +10,16 @@ const ServicioAcido = () => {
     return (
         <> 
         
-            <article className={"article-portada"} >
+            <article className={"article-portada"} id="portada-acido" >
 
-                <img src={"https://s3.abcstatics.com/media/bienestar/2020/11/29/acido-hilauronico-khC--1248x698@abc.jpg"}
-                    className="portada-img-servicio"
-                    id="portada-acido"
-                    alt="slide"
-                />
+               
+                    <img src={"https://s3.abcstatics.com/media/bienestar/2020/11/29/acido-hilauronico-khC--1248x698@abc.jpg"}
+                        className="portada-img-servicio"
+                        id="img-portada-acido"
+                        alt="slide"
+                    />
+    
+               
 
                 <section className="flex-column-center section-portada-servicio text-start"  id="section-portada-acido">
 
@@ -25,8 +28,11 @@ const ServicioAcido = () => {
                     <p className="width-70 p-portada-texto white"> La sustancia, de origen natural, se utiliza para rejuvenecer la piel y afinar los rasgos del rostro </p>
 
                     <span className="width-70 span-portada-numero white"> Reservar Hora </span>
+                    
+                    <section className="section-icono">
 
-                    <img src={Icono} alt="" className="imagen-icono-servicio"/>
+                        <img src={Icono} alt="" className="imagen-icono-servicio"/>
+                    </section>
                 
                 </section>
 

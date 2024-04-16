@@ -43,25 +43,29 @@
     overflow: hidden; 
 }
 
-.imagen-icono-servicio {
-    padding: 10%;
-    filter:opacity(0.3);
+.section-icono {
     position: absolute;
-    top: 0.5%;
-    left: 25%;
+    background-color: rgba(255, 255, 255, 0.281)!important;
+    border-radius: 100%;
+    transform: translate(30%, 10%); /* Centrar el elemento */
+    padding: 25%;
+    filter:opacity(0.3);  
     z-index: 1;
 }
 
+.imagen-icono-servicio {
+  
+    object-fit: contain; /* Esto asegurará que la imagen se ajuste dentro de su contenedor sin ser recortada */
+    width: 150%; /* Ajusta el ancho de la imagen para que ocupe todo el espacio disponible */
+   
+}
+
 #icono-servicio-general {
-   left: 20%;
-   top: -6%;
-   height: 105vh;
+
 }
 
 #icono-servicio-cosmetico {
-    left: 20%;
-    top: -7%;
-    height: 102vh;
+
  }
  
 
@@ -82,11 +86,14 @@
 
 
 #section-portada-acido {
-    background-color: rgb(233, 190, 2)
+    background-color: rgb(214, 176, 3)
 }
 
-#portada-acido{
-
+#portada-acido {
+    height: 85vh
+}
+#img-portada-acido{
+ width: 55vw;
 }
 
 

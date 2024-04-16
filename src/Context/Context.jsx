@@ -54,7 +54,7 @@ export const CustomProvider = ({ children }) => {
         console.log(fecha)
       
         try {
-            let response = await fetch(`http://localhost:3000/horarios/fechas/${fecha}`, {
+            let response = await fetch(`${ urlBackend_Produccion }/horarios/fechas/${ fecha }`, {
                 method: 'POST',
             });
       

@@ -12,7 +12,13 @@ import Contacto from './Components/Contacto/Contacto';
 import HoraReserva from './Components/HoraReserva/HoraReserva';
 import Nosotros from './Components/Nosotros/Nosotros.jsx';
 import Galeria from './Components/Galeria/Galeria.jsx';
+
 import Servicios from './Components/Servicios/Servicios.jsx';
+import ServicioGeneral from './Components/Servicios/ServicioGeneral.jsx';
+import ServicioCosmetico from './Components/Servicios/ServicioCosmetico.jsx';
+import ServicioPeriodontal from './Components/Servicios/ServicioPeriodontal.jsx';
+import ServicioAcido from './Components/Servicios/ServicioAcido.jsx';
+
 import IniciarSesion from './Components/IniciarSesion/IniciarSesion.jsx';
 import Registro from './Components/Registro/Registro.jsx';
 import Blog from './Components/Blog/Blog.jsx';
@@ -52,9 +58,31 @@ const router = createBrowserRouter([
 
   },
   {
-    path: "/servicios/:servicio",
-    element: <Servicios> </Servicios>
+    path: "/servicios", 
+    element:  <Servicios />,
+    children : [
+      {
+        path: "servicio-general",
+        element: <ServicioGeneral />,
+      },
+      {
+        path: "servicio-periodontal",
+        element: <ServicioPeriodontal />,
+      },
+      {
+        path: "servicio-cosmetico",
+        element: <ServicioCosmetico />,
+      },
+      {
+        path: "acido-hialoronico",
+        element: <ServicioAcido />,
+      },
+    ]
   },
+ 
+  
+
+
   {
     path: "/blog",
     element: <Blog> </Blog>

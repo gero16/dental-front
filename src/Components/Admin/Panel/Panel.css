@@ -26,7 +26,7 @@
 .h2-panel {
     transition: all 0.5s ease-out;
     margin: 20px;
-
+    font-size: large;
 }
 
 .div-panel-1:hover .h2-panel-1, .div-panel-2:hover .h2-panel-2 {

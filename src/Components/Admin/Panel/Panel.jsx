@@ -11,7 +11,7 @@ const Panel = () => {
 
             <section className="section-panel-small flex-center-center">
 
-                <NavLink to={`/admin/panel/administrar-publicaciones`} className="div-panel div-panel-1 text-center" > 
+                <NavLink to={`/admin/panel/administrar-publicaciones`} className="div-panel div-panel-1" > 
                     <h2 className="h2-panel h2-panel-1"> Administrar Publicaciones </h2>
                     <img 
                         src="https://uem.edu.mx/wp-content/uploads/2021/01/6909-scaled-1024x732.jpg" 

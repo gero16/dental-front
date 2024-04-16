@@ -119,13 +119,10 @@ const CrearPublicacion = () => {
                 estado : true,
                 mensaje: result.mensaje
             })
-
             setTimeout(function(){
                 setPublicacionAgregada(false)
-            }, 10000);
-            
+            }, 10000);  
         }
-        
     }
 
     return (

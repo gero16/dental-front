@@ -20,7 +20,7 @@ const HorasDisponibles = () => {
 
     const deshabilitarHorario = (hora) => {
     const horaElegida = hora.target.dataset.id;
-    // Crear una copia de horasDisponibles
+
     const nuevaHorasDisponibles = horasDisponibles.map((elemento) => {
         // Si el horario coincide con el horario elegido, deshabilitarlo
         if (elemento.horario === horaElegida) {
@@ -38,7 +38,6 @@ const HorasDisponibles = () => {
 
 
     const calcularDisponibilidad = (elemento) => {
-        console.log(elemento)
 
         let clases = "btn-habilitado"; // Clase por defecto
         if (!elemento.habilitado || !elemento.disponible) {

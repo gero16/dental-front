@@ -4,6 +4,9 @@ export const Context = createContext()
 
 export const CustomProvider = ({ children }) => {
 
+  const urlBackend_Produccion = import.meta.env.VITE_URL_BACKEND_PRODUCCION
+ const urlBackend_Desarrollo = import.meta.env.VITE_URL_BACKEND_DESARROLLO
+
   const conversionDias = {
     "Mon" : "Lunes",
     "Tue" : "Martes",
@@ -109,7 +112,7 @@ export const CustomProvider = ({ children }) => {
 return (
     <Context.Provider 
         value={{ transformarFecha, conversionDias, fetchHorasDisponibles, seleccionarDia, seleccionarHora, horasDisponibles, setHorasDisponibles,
-           diaSeleccionado, horaSeleccionada,fechaSeleccionada, meses, stringDia,  setDatosAgenda, datosAgenda
+           diaSeleccionado, horaSeleccionada,fechaSeleccionada, meses, stringDia,  setDatosAgenda, datosAgenda, urlBackend_Produccion, urlBackend_Desarrollo
         
         }}> 
             

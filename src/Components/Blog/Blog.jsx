@@ -3,18 +3,19 @@ import Footer from "../Footer/Footer.jsx"
 import Navbar from "../Navbar/Navbar.jsx"
 import { Link as Navigate, NavLink,} from "react-router-dom";
 import Publicacion from "../Publicacion/Publicacion.jsx";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PublicacionBlog from "../Publicacion/PublicacionBlog.jsx";
 import Loader from "../Loader/Loader.jsx"
+import { Context } from "../../Context/Context.jsx";
 //import "../../Loader/Loader.css"
 
 const Blog = () => {
     const [publicaciones, setPublicaciones] = useState([])
+    const { urlBackend_Produccion, urlBackend_Desarrollo } = useContext(Context)
 
-    
     async function fetchPublicaciones() {
         try {
-          const response = await fetch('global-system-back-production.up.railway.app/publicaciones/traer-publicaciones'); // Cambia la URL según la ruta de tu backend
+        const response = await fetch(`${ urlBackend_Produccion }/publicaciones/traer-publicaciones`); // Cambia la URL según la ruta de tu backend
           if (!response.ok) {
             throw new Error('Error al obtener las publicaciones');
           }

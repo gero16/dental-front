@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Navbar from "../../Navbar/Navbar"
 
 import { Link as Navigate, NavLink,} from "react-router-dom";
@@ -9,13 +9,17 @@ import { FaEdit  } from "react-icons/fa";
 import { TiDelete } from "react-icons/ti";
 import Loader from "../../Loader/Loader";
 import Imagen from "../../../../public/sonrisa-3.jpg";
+import { Context } from "../../../Context/Context";
 
 
 
 const AdminPublicaciones = () => {
-    const [publicaciones, setPublicaciones] = useState([])
 
-    const [width, setWidth] = useState(window.innerWidth);
+  
+  const [publicaciones, setPublicaciones] = useState([])
+  const { urlBackend_Produccion, urlBackend_Desarrollo } = useContext(Context)
+  const [width, setWidth] = useState(window.innerWidth);
+  console.log(urlBackend_Desarrollo)
 
     const formatearTitulo = (titulo) => {
       if(titulo.split(" ")) {
@@ -27,7 +31,7 @@ const AdminPublicaciones = () => {
     
     async function fetchPublicaciones() {
         try {
-          const response = await fetch('http://localhost:3000/publicaciones/traer-publicaciones'); // Cambia la URL según la ruta de tu backend
+          const response = await fetch(`${ urlBackend_Produccion }/publicaciones/traer-publicaciones`); // Cambia la URL según la ruta de tu backend
           if (!response.ok) {
             throw new Error('Error al obtener las publicaciones');
           }
@@ -100,8 +104,6 @@ const AdminPublicaciones = () => {
             
             <section className="fondo-blanco-img">
               <main className="publicaciones-blog flex">
-
-                
 
                   
                   { publicaciones.length > 0 ? (

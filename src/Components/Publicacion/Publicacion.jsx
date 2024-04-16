@@ -2,17 +2,20 @@ import { useParams } from "react-router-dom"
 import Footer from "../Footer/Footer"
 import Navbar from "../Navbar/Navbar"
 import "./Publicacion.css"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { Context } from "../../Context/Context"
 
 
 const Publicacion = ({data}) => {
  const { idPublicacion } = useParams()
 
  const [publicacion, setPublicacion] = useState([])
-    
+
+ const { urlBackend_Produccion, urlBackend_Desarrollo } = useContext(Context)
+
     async function fetchPublicacion() {
     try {
-        const response = await fetch(`http://localhost:3000/publicaciones/traer-publicacion/${ idPublicacion }`); // Cambia la URL según la ruta de tu backend
+        const response = await fetch(`${ urlBackend_Produccion }/publicaciones/traer-publicacion/${ idPublicacion }`); // Cambia la URL según la ruta de tu backend
         if (!response.ok) {
         throw new Error('Error al obtener las publicaciones');
         }

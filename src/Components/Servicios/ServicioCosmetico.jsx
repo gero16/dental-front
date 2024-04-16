@@ -1,11 +1,9 @@
 import { useParams } from "react-router-dom"
 import Navbar from "../Navbar/Navbar"
 import { FaPhoneSquareAlt } from 'react-icons/fa';
-import Imagen from "../../../public/servicio-2.jpg"
-import Imagen2 from "../../../public/servicio-1.jpg"
-import Imagen3 from "../../../public/canino.jpg"
-import Imagen4 from "../../../public/integral.jpg"
-import Icono from "../../../public/implantes.png"
+import Imagen from "../../../public/sonrisa-3.jpg"
+
+import Icono from "../../../public/diente-2.png"
 import Icono2 from "../../../public/diente-2.png"
 import Icono3 from "../../../public/limpieza-de-dientes.png"
 
@@ -20,7 +18,7 @@ const ServicioCosmetico = () => {
                     alt="slide"
                 />
 
-                <section className="flex-column-center section-portada-servicio text-start">
+                <section className="flex-column-center section-portada-servicio text-start" id="section-portada-cosmetico">
 
                     <h2 className="h2-portada-texto white"> Odontología cosmetica </h2>
 
@@ -28,7 +26,7 @@ const ServicioCosmetico = () => {
 
                     <span className="width-70 span-portada-numero white"> Reservar Hora </span>
 
-                    <img src={Icono} alt="" className="imagen-icono-servicio"/>
+                    <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-cosmetico"/>
                 
                 </section>
 
@@ -42,17 +40,17 @@ const ServicioCosmetico = () => {
 
                         <h2 className="h2-servicio-general verde-principal"> Carillas sin preparación </h2>
 
-                        <h3> Inconvenientes de las carillas tradicionales </h3>
+                        <h3 className="h3-servicios verde-principal"> Inconvenientes de las carillas tradicionales </h3>
 
-                        <ul>
-                            <li> Aumento de la sensibilidad dental debido a la eliminación del esmalte sano de las encías. </li>
+                        <ul className="lista">
+                            <li>  Aumento de la sensibilidad dental debido a la eliminación del esmalte sano de las encías. </li>
                             <li> Permanencia. Una vez que se instala una carilla tradicional, debe usar carillas por el resto de su vida. </li>
                             <li> Alto riesgo de necesitar endodoncias en el futuro </li>
                         </ul>
 
-                        <h3> Ventajas de las carillas sin preparación </h3>
+                        <h3 className="h3-servicios verde-principal"> Ventajas de las carillas sin preparación </h3>
 
-                        <ul>
+                        <ul className="lista">
                             <li> hermosa sonrisa blanca </li>
                             <li> No daña tus dientes sanos. </li>
                             <li> Fácil instalación (y extracción, si alguna vez es necesario) </li>
@@ -60,7 +58,7 @@ const ServicioCosmetico = () => {
                     
                     </section>
 
-                    <img src={Imagen4}
+                    <img src="https://estudidentalbarcelona.com/wp-content/uploads/2016/10/indicaciones-carillas.jpg"
                         className="img-servicio"
                         id="imagen1-servicio-general"
                         alt="slide"

@@ -74,7 +74,7 @@ const router = createBrowserRouter([
         element: <ServicioCosmetico />,
       },
       {
-        path: "acido-hialoronico",
+        path: "acido-hialuronico",
         element: <ServicioAcido />,
       },
     ]

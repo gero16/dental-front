@@ -230,7 +230,9 @@ ul, ol {
 }
 
 
-
+.lista {
+  list-style: disc;
+}
 
 @media (min-width: 1500px) {
   .h1-publicacion {

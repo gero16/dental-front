@@ -69,7 +69,7 @@ const Navbar = () => {
                                         <ul className="lista-servicios flex-column gap-10 inactive">
                                         
                                             <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
-                                                <NavLink to={`/servicios/servicio-periodontal`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio General      </NavLink>
+                                                <NavLink to={`/servicios/servicio-general`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio General      </NavLink>
                                             </li>
                                              <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
                                                 <NavLink to={`/servicios/servicio-periodontal`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio Periodontal      </NavLink>

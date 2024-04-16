@@ -1,13 +1,10 @@
-import { useParams } from "react-router-dom"
-import Navbar from "../Navbar/Navbar"
-import { FaPhoneSquareAlt } from 'react-icons/fa';
+
 import Imagen from "../../../public/servicio-2.jpg"
 import Imagen2 from "../../../public/servicio-1.jpg"
 import Imagen3 from "../../../public/canino.jpg"
 import Imagen4 from "../../../public/integral.jpg"
-import Icono from "../../../public/implantes.png"
-import Icono2 from "../../../public/diente-2.png"
-import Icono3 from "../../../public/limpieza-de-dientes.png"
+import Icono from "../../../public/diente-mano.png"
+
 
 const ServicioGeneral = () => {
     return (
@@ -29,7 +26,7 @@ const ServicioGeneral = () => {
 
                 <span className="width-70 span-portada-numero white"> Reservar Hora </span>
 
-                <img src={Icono} alt="" className="imagen-icono-servicio"/>
+                <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-general"/>
             
             </section>
 

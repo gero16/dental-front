@@ -17,11 +17,18 @@
   --blanco-contacto : rgba(255, 255, 255, 0.836);
   --color-blog: #0FA89D;
   --elegido: #166dc4;
+  --rojo: rgb(136, 4, 4);
 
   box-sizing: border-box;
   
 }
 
+.rojo {
+  color: var(--rojo);
+  padding: 10px;
+  border: 3px solid var(--rojo);
+  border-radius: 10px;
+}
 body {
   color: #595959;
   width: 100%;

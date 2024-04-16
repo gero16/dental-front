@@ -4,13 +4,14 @@ import Navbar from "../../Navbar/Navbar";
 import { Context } from "../../../Context/Context";
 
 const CrearPublicacion = () => {
-    const [inputs, setInputs] = useState([]);
-    const [inputValue, setInputValue] = useState('');
-    const [listItems, setListItems] = useState([]);
-    const [selectedImage, setSelectedImage] = useState("https://st2.depositphotos.com/1371678/9634/i/450/depositphotos_96346704-stock-photo-dentist-examining-a-patients-teeth.jpg");
     const [selectedColor, setSelectedColor] = useState('#0FA89D');
     const recommendedColors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
     const { urlBackend_Produccion, urlBackend_Desarrollo } = useContext(Context)
+
+    const [ publicacionAgregada, setPublicacionAgregada ] = useState({
+        estado : false,
+        mensaje : ""
+    })
 
     const [publicacion, setPublicacion] = useState({
         titulo : "",
@@ -106,20 +107,42 @@ const CrearPublicacion = () => {
             method: 'POST',
             body: formData
         });
+
+        console.log(response)
           
-        let result = await response.json();
-        if(result) {
+        if(response.status === 200 ) {
+
+            let result = await response.json();
+           
             console.log(result);
+            setPublicacionAgregada({
+                estado : true,
+                mensaje: result.mensaje
+            })
+
+            setTimeout(function(){
+                setPublicacionAgregada(false)
+            }, 10000);
+            
         }
+        
     }
 
     return (
         <> 
             <Navbar />
+
+          
+
             <div className="fondo-blanco-img">
                 <main className="principal container">
+                 
                     <article className="crear-post">
                         <h1>Crear Publicacion</h1>
+                        { publicacionAgregada.estado  
+                            ? <h2 className="rojo text-center">  { publicacionAgregada.mensaje } </h2> 
+                            : <> </>
+                        }
                         <form>
                             <ul>
                                 <li style={{display: "none"}}>
@@ -263,6 +286,8 @@ const CrearPublicacion = () => {
                     </article>
                 </main>
             </div>
+
+       
         </>
     )
 }

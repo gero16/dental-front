@@ -12,8 +12,9 @@ const ServicioAcido = () => {
         
             <article className={"article-portada"} >
 
-                <img src={Imagen}
+                <img src={"https://s3.abcstatics.com/media/bienestar/2020/11/29/acido-hilauronico-khC--1248x698@abc.jpg"}
                     className="portada-img-servicio"
+                    id="portada-acido"
                     alt="slide"
                 />
 

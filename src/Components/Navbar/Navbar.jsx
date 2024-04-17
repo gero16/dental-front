@@ -47,7 +47,7 @@ const Navbar = () => {
                                 <section className="flex-center gap-10">
 
 
-                                    <ul className={"mostrar flex-column-center menu-phone gap-10" } >
+                                    <ul className={"mostrar flex-center-center menu-phone gap-10 wrap"} >
                                         
                                         <li className="li-link"> 
                                             <NavLink to={`/`} className={selectedLink === '/' ? 'link-activo' : ''} onClick={(e) => handleLinkClick('/' )} > 
@@ -93,10 +93,6 @@ const Navbar = () => {
                                         </li>
                                 
                                     
-                        
-                                    </ul>
-
-                                    <ul className={"mostrar flex-column-center menu-phone gap-10"} >  
                                         <li className="li-link">
                                                 <NavLink to={`/blog`} className={selectedLink === '/blog' ? 'link-activo' : ''} onClick={() => handleLinkClick('/blog')} > 
                                                     <span className={"span-link"}> Blog </span>
@@ -119,6 +115,10 @@ const Navbar = () => {
                                                 <span className="span-link ">  Panel </span>
                                             </NavLink>
                                         </li>
+                        
+                                    </ul>
+
+                                    <ul className={"mostrar flex-column-center menu-phone gap-10"} >  
                                     </ul>
                                 </section>
 

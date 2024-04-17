@@ -89,10 +89,14 @@ const ServicioPeriodontal = () => {
 
                 <article className={"article-servicio flex-center-center gap-20 container article-portada-servicio"} >
 
-                    <img src="https://www.connecticutperiodontist.com/wp-content/uploads/2021/09/Pinhole-hero.jpg"
-                        className="img-servicio"
-                        alt="slide"
-                    />
+            
+
+                        <img src="https://www.connecticutperiodontist.com/wp-content/uploads/2021/09/Pinhole-hero.jpg"
+                            className="img-servicio"
+                            id="img-servicio-periodontal-2"
+                            alt="slide"
+                        />
+        
                     <section className="section-servicio-contenido flex-column gap-20">
 
                         <h2 className="h2-servicio-general verde-principal"> Piphole® Gum Rejuvenation </h2>
@@ -129,6 +133,7 @@ const ServicioPeriodontal = () => {
 
                     <img src="https://grupodentalnieto.com/wp-content/uploads/2021/10/o_restauradora-1024x576.jpg"
                         className="img-servicio"
+                        id="img-servicio-periodontal-3"
                         alt="slide"
                     />
 

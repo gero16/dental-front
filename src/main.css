@@ -234,6 +234,10 @@ ul, ol {
   list-style: disc;
 }
 
+.p-10 {
+  padding: 10px;
+}
+
 @media (min-width: 1500px) {
   .h1-publicacion {
     font-size: 1.8vw!important;

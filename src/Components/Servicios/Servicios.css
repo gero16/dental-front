@@ -20,6 +20,13 @@
     height: 60vh;
     filter: brightness(90%);
 }
+#img-servicio-periodontal-2 {
+    height: 20vw;
+}
+#img-servicio-periodontal-3 {
+    height: 21vw;
+}
+
 
 .h2-servicio-general {
     font-size: 1.6vw;
@@ -34,7 +41,7 @@
     color: var(--gris);
 }
 #imagen1-servicio-general {
-    height: 44vh;
+    height: 46vh;
     max-width: 100%;
 }
 

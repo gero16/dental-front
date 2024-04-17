@@ -116,6 +116,7 @@ const EditarPublicacion = ({data}) => {
     };
  
     const editarPublicacion = async (data) => {
+        console.log(data)
         const archivos = document.querySelector("#imagen-post").files
         const rutaImagen = archivos[0];
 
@@ -125,7 +126,7 @@ const EditarPublicacion = ({data}) => {
         formData.append('contenido', JSON.stringify(data.contenido));
         formData.append('imagen', rutaImagen);
 
-        let response = await fetch(`${ urlBackend_Produccion }/publicaciones/editar-publicacion/${ titulo }`, {
+        let response = await fetch(`${ urlBackend_Produccion }/publicaciones/editar-publicacion/${ idPublicacion }`, {
             method: 'PUT',
             body: formData
         });
@@ -134,6 +135,7 @@ const EditarPublicacion = ({data}) => {
         if(result) {
             console.log(result);
         }
+        
     }
 
     return (

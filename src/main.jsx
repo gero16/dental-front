@@ -31,6 +31,7 @@ import CrearPublicacion from './Components/Admin/CrearPublicacion/CrearPublicaci
 import EditarPublicacion from './Components/Admin/CrearPublicacion/EditarPublicacion.jsx';
 import EliminarPublicacion from './Components/Admin/EliminarPublicacion/EliminarPublicacion.jsx';
 import { CustomProvider } from './Context/Context.jsx';
+import Agendados from './Components/Agenda/Agendados.jsx';
 
 
 const router = createBrowserRouter([
@@ -80,9 +81,6 @@ const router = createBrowserRouter([
     ]
   },
  
-  
-
-
   {
     path: "/blog",
     element: <Blog> </Blog>
@@ -127,7 +125,10 @@ const router = createBrowserRouter([
     path: "/admin/panel/admin-publicaciones/eliminar-publicacion/:idPublicacion",
     element:  <EliminarPublicacion />,
   },
-  
+  {
+    path: "/admin/panel/agendados",
+    element: <Agendados> </Agendados>
+  },
 ]);
 
 

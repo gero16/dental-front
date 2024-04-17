@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./CrearPublicacion.css";
 import Navbar from "../../Navbar/Navbar";
 import { useParams } from "react-router-dom";
+import { Context } from "../../../Context/Context";
 
 
 const EditarPublicacion = ({data}) => {
+    const { urlBackend_Produccion, urlBackend_Desarrollo } = useContext(Context)
 
     const { idPublicacion } = useParams()
 
@@ -19,7 +21,7 @@ const EditarPublicacion = ({data}) => {
     
     async function fetchPublicacion() {
     try {
-        const response = await fetch(`http://localhost:3000/publicaciones/traer-publicacion/${ idPublicacion }`); // Cambia la URL según la ruta de tu backend
+        const response = await fetch(`${ urlBackend_Produccion }/publicaciones/traer-publicacion/${ idPublicacion }`); // Cambia la URL según la ruta de tu backend
         if (!response.ok) {
         throw new Error('Error al obtener las publicaciones');
         }
@@ -123,7 +125,7 @@ const EditarPublicacion = ({data}) => {
         formData.append('contenido', JSON.stringify(data.contenido));
         formData.append('imagen', rutaImagen);
 
-        let response = await fetch(`http://localhost:3000/publicaciones/editar-publicacion/${ titulo }`, {
+        let response = await fetch(`${ urlBackend_Produccion }/publicaciones/editar-publicacion/${ titulo }`, {
             method: 'PUT',
             body: formData
         });

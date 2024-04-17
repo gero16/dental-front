@@ -86,7 +86,7 @@ return (
 
           
             <section className="flex-center">
-                <h1 className="h1-reservar"> Reserve un turno!</h1>
+                <h1 className="h1-reservar"> Habilitar/Deshabilitar Horarios </h1>
             </section>
             
             <section className="container flex-column-center section-contacto-turno">

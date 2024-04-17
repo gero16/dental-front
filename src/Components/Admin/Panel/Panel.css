@@ -5,19 +5,22 @@
 .section-panel-small {
     padding: 50px;
     gap: 20px;
-    width: 50%;
+    width: 65%;
     background-color: var(--oscuro);
     border-radius: 10px;
     
 }
 
+.h1-panel {
+    font-size: 2vw;
+}
 .div-panel {
     width: 25vw;
     color: var(--color-blog)
 }
 
 .img-panel {
-    width: 20vw;
+
     filter: brightness(84%);
     border-radius: 10px;
 

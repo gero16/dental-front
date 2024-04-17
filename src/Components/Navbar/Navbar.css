@@ -19,7 +19,7 @@ a {
 
 .nav-principal {
     padding: 10px 0px;
-
+ 
 }
 
 .lista-navbar {
@@ -111,6 +111,10 @@ a {
 
   
 @media (min-width: 800px) {
+    .nav-principal {
+        flex-direction: row;
+        align-items: center;
+    }
     .article-portada {
         height: 88vh;
     }

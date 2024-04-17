@@ -38,8 +38,9 @@ const Navbar = () => {
     return (
         <> 
             <header>
-                
-                <nav className="container nav-principal flex-center-v gap-20"> 
+
+                <nav className="container nav-principal flex-column-center gap-20"> 
+                <img src={logo} className="img-logo" alt="" />
                
                     { width < 800 
                             ? <> 

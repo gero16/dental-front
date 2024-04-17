@@ -42,6 +42,21 @@ a {
     width: 100%;
 }
 
+.menu-phone {
+    text-align: center;
+}
+.menu-phone li {
+    border: 0.5px solid rgb(146, 146, 146);
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+
+.section-img-menu {
+    width: 100vw;
+
+}
 .img-menu {
     filter: invert(0.78);
     height: 10vw;

@@ -238,6 +238,17 @@ ul, ol {
   padding: 10px;
 }
 
+.ocultar {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.mostrar {
+  opacity: 1;
+  max-height: 200px; /* Ajusta según sea necesario */
+}
+
 @media (min-width: 1500px) {
   .h1-publicacion {
     font-size: 1.8vw!important;

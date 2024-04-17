@@ -35,7 +35,8 @@ const Contacto = () => {
             <section className="fondo-blanco-img flex-column gap-30">
 
                 <section className="section-contacto-header">
-                    <section className="container flex">
+
+                    <section className="contacto-header-2 container flex-column-center gap-10">
 
                         <section className="flex-column width-70">
                             <h1 className="titulo-contacto"> Pongase en  Contacto </h1>
@@ -48,6 +49,7 @@ const Contacto = () => {
                             <h3> Llame para una cita </h3>
                             <h2 className="h2-numero-contacto flex-center-v gap-10"> <FaPhoneSquareAlt  size={20} />   + (598) 94 484 397 </h2>
                         </section>
+
                     </section>
 
                         

@@ -126,16 +126,15 @@ const HoraReserva = () => {
 
                             <ul className="lista-horas-disponibles-1" onClick={(e) => seleccionarHora(e) }>
                                 
-                            { horasDisponibles.length > 0 ?
-                            
-                            horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
-                                   <li  key={index}
-                                        className={calcularDisponibilidad(elemento)}
-                                        data-id={elemento.horario}
-                                    >
-                                    { elemento.horario.split("-").join(" - ") }
-                                 </li>
-                                ))   
+                            { horasDisponibles.length > 0 
+                                ? horasDisponibles.slice(0, indiceUno + 1).map((elemento, index) => (
+                                    <li  key={index}
+                                            className={calcularDisponibilidad(elemento)}
+                                            data-id={elemento.horario}
+                                        >
+                                        { elemento.horario.split("-").join(" - ") }
+                                    </li>
+                                    ))   
                                 : <>  </>
                             }
                             </ul>

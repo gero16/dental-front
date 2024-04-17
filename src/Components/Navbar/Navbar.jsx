@@ -65,32 +65,36 @@ const Navbar = () => {
                                             </NavLink>
                                         </li>
                                         
-                                        <li className="li-servicios li-link"> 
-                                        
-                                                <span className="span-link"> 
-                                                        
-                                                    <span> Servicios </span>
-                                                        <IoIosArrowDown  />
-
-                                                    <ul className="lista-servicios flex-column gap-10 inactive">
-                                                    
-                                                        <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
-                                                            <NavLink to={`/servicios/servicio-general`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio General      </NavLink>
-                                                        </li>
-                                                        <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
-                                                            <NavLink to={`/servicios/servicio-periodontal`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio Periodontal      </NavLink>
-                                                        </li>
-                                                        <li onClick={() => handleLinkClick('/servicio-cosmetico')} > 
-                                                            <NavLink to={`/servicios/servicio-cosmetico`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio Cosmetico      </NavLink>
-                                                        </li>
-                                                        <li onClick={() => handleLinkClick('/acido-hialuronico')} > 
-                                                            <NavLink to={`/servicios/acido-hialuronico`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >    Ácido Hialuronico      </NavLink>
-                                                        </li>                            
-                                                    </ul> 
-                                            
-                                                </span>
-                                    
+                                        <li className="li-link">
+                                            <NavLink to={`/servicios/servicio-general`} className={selectedLink === '/servicio/servicio-general' ? 'link-activo' : ''} onClick={() => handleLinkClick('/servicio/servicio-general')} > 
+                                                <span className="span-link "> Servicio General   </span>
+                                            </NavLink>
                                         </li>
+                                          
+                                        <li className="li-link">
+                                            <NavLink to={`/servicios/servicio-periodontal`} className={selectedLink === '/servicio/servicio-general' ? 'link-activo' : ''} onClick={() => handleLinkClick('/servicio/servicio-periodontal')} > 
+                                                <span className="span-link "> Servicio Periodontal     </span>
+                                            </NavLink>
+                                        </li>
+                                        
+                                          
+                                        <li className="li-link">
+                                            <NavLink to={`/servicios/servicio-cosmetico`} className={selectedLink === '/servicio/servicio-cosmetico' ? 'link-activo' : ''} onClick={() => handleLinkClick('/servicios/servicio-cosmetico')} > 
+                                                <span className="span-link "> Servicio Cosmetico   </span>
+                                            </NavLink>
+                                        </li>
+                                        
+                                          
+                                        <li className="li-link">
+                                            <NavLink to={`/servicios/acido-hialuronico`} className={selectedLink === '/servicio/servicio-general' ? 'link-activo' : ''} onClick={() => handleLinkClick('/servicios/acido-hialuronico')} > 
+                                                <span className="span-link ">  Ácido Hialuronico   </span>
+                                            </NavLink>
+                                        </li>
+                                       
+                                            
+                               
+                                    
+                            
                                 
                                     
                                         <li className="li-link">

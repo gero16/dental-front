@@ -42,7 +42,7 @@ const Blog = () => {
             <Navbar> </Navbar>
             
             <section className="portada-noticias flex">
-                <section className="noticias-portada-texto flex-column-center">
+                <section className="noticias-portada-texto flex-column-center text-center">
                     <h1 className="h1-noticias"> Noticias </h1>
                     <p> Lea nuestras publicaciones y únase a la conversación. </p>
                 </section>

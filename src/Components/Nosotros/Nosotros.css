@@ -5,13 +5,14 @@
     overflow: hidden;
     color: rgb(63, 62, 62);
     background-color: #F5F5F3;
-    
+    top: 20%;
 
 }
 
 .main-nosotros h2, ul {
     position: relative;
     z-index: 3;
+
 }
 
 .main-nosotros::before {
@@ -37,7 +38,7 @@
 .section-portada-nosotros {
     background: linear-gradient(to right,var(--primario) 50%, var(--white) 50%); 
     background-color: var(--primario);
-
+    margin-top: 20px;
 }
 
 
@@ -54,7 +55,7 @@
     padding: 20px 50px;
     color: var(--primario);
     background-color: var(--white);
-    height: 40vh;
+    height: 50vh;
 
     padding: 0px;
     

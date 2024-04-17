@@ -15,17 +15,18 @@
 }
 .p-header-contacto {
     width: 80%;
+    font-size: x-small;
 }
 
 .titulo-contacto {
     font-family: "Raleway", sans-serif;
-    font-size: 2.1vw;
+    font-size: 5vw;
     color: var(--color-blog);
 }
 
 .h2-numero-contacto {
     color: var(--color-blog);
-    font-size: 1.4vw;
+    font-size: 3vw;
 }
 
 .section-contacto-formulario {
@@ -119,6 +120,10 @@ textarea {
 
 
 @media (min-width: 800px) {
+    .contacto-header-2{
+        flex-direction: row;
+    }
+
     .formulario-contacto {
         width: 45%;
     }
@@ -135,7 +140,18 @@ textarea {
         border: 3px solid var(--color-blog);
         border-radius: 5px;
     }
+    .h2-numero-contacto {
+        font-size: 1.6vw; 
+    }
     
+   .titulo-contacto {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.1vw;
+    color: var(--color-blog);
+    }
+    .p-header-contacto {
+        font-size: 1.1vw;
+    }
   }
 
   

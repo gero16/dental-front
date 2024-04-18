@@ -165,7 +165,9 @@ textarea {
         height: 100%;
         width: 45%;
     }
-    
+    .p-header-contacto {
+        font-size: 0.9vw;
+    }
   }
    
    

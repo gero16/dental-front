@@ -1,8 +1,7 @@
 
 .section-ubicacion {
-    gap: 30px;
-    width: 80vw;
-    margin: 0 auto;
+    overflow: hidden;
+    margin: 20px auto 0px auto;
 }
 
 .h2-clinica {
@@ -23,9 +22,13 @@
     border-radius: 10px;
     margin: 20px auto;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
+    overflow: hidden;
+    height: 400px;
 }
 
+.mostrar-ubi {
+    cursor: pointer;
+}
 
 @media (min-width: 800px) {
     .h2-clinica {
@@ -33,23 +36,15 @@
     }
  
     .article-ubicacion {
+        overflow: hidden;
         padding: 25px 40px;
+        height: 560px;
+
     }
   }
 
-@media (min-width: 900px) {
 
-    .section-ubicacion {
-        flex-direction: row;
-        margin : 20px auto;
-    }
-  
-  }
 
-  @media (min-width: 1500px) {
-    .section-ubicacion {
-       margin: 20px 0px;
-    }
-  }
+
   
   

@@ -89,10 +89,7 @@
 
 
 @media (min-width: 800px) {
-    .main-nosotros::before {
-        top: 30%;
-        height: 80%;
-    }
+
     .section-nosotros-texto {
         height: 28vh;
         
@@ -103,23 +100,8 @@
     }
 }
 
-@media (min-width: 1300px) {
-    .main-nosotros::before {
-        top: 31%;
-    }
-}
-  
-@media (min-width: 1400px) {
-    .main-nosotros::before {
-        top: 32%;
-    }
-}
 
 @media (min-width: 1600px) {
-    .main-nosotros::before {
-        top: 37%;
-        height: 75%;
-    }
     .section-nosotros-texto {
         height: 26vh;
 

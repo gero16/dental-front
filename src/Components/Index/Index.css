@@ -157,7 +157,7 @@ input, textarea {
      }
 
     .section-ubicacion {
-        flex-direction: row;
+       /* flex-direction: row; */
     }
   }
   

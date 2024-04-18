@@ -25,7 +25,6 @@
     height: 100%;
     z-index: 2;
     opacity: 0.13;
-
     background-image: url('../../../public/portada-2.jpg');
     background-repeat: no-repeat;
     background-position: 50% 45%;
@@ -56,12 +55,8 @@
     color: var(--primario);
     background-color: var(--white);
     height: 50vh;
-
     padding: 0px;
-    
-    /*   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;   */
-    
- 
+
 }
 
 .texto-nosotros {
@@ -94,22 +89,46 @@
 
 
 @media (min-width: 800px) {
+    .main-nosotros::before {
+        top: 30%;
+        height: 80%;
+    }
     .section-nosotros-texto {
         height: 28vh;
+        
+    }
+
+    .section-portada-nosotros {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .main-nosotros::before {
+        top: 31%;
     }
 }
   
+@media (min-width: 1400px) {
+    .main-nosotros::before {
+        top: 32%;
+    }
+}
 
 @media (min-width: 1600px) {
+    .main-nosotros::before {
+        top: 37%;
+        height: 75%;
+    }
     .section-nosotros-texto {
         height: 26vh;
 
     }
     .texto-nosotros {
-        font-size: large;
+        font-size: medium;
     }
     .p-tecnologias-utilizadas {
-        font-size: large;
+        font-size: medium;
     }
 }
   

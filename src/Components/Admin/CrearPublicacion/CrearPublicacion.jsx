@@ -103,7 +103,7 @@ const CrearPublicacion = () => {
         formData.append('contenido', JSON.stringify(data.contenido));
         formData.append('imagen', rutaImagen);
 
-        let response = await fetch(`${ urlBackend_Produccion }/publicaciones/agregar-publicacion`, {
+        let response = await fetch(`${ urlBackend_Desarrollo }/publicaciones/agregar-publicacion`, {
             method: 'POST',
             body: formData
         });

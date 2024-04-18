@@ -87,7 +87,7 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.5s, max-height 0.5s;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
 .li-servicios:hover .lista-servicios {

@@ -75,7 +75,8 @@
 }
 
 .span-reservar {
-    font-size: 1vw;
+    font-size: 2vw;
+    margin: 5px 0px;
 }
 
 .h2-portada-texto {
@@ -128,6 +129,9 @@
     }
     .p-servicio-texto {
         font-size: smaller
+    }
+    .span-reservar {
+        font-size: 1.3vw;
     }
 
     #imagen1-servicio-general {

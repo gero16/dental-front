@@ -75,13 +75,14 @@ a {
     max-height: 9999999px;
 }
 
-
+/* .li-servicios padre */
 .lista-servicios {
     position: absolute;
     background-color: white;
     padding: 30px 30px 20px 20px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px;
+    
     z-index: 10;
     opacity: 0;
     max-height: 0;

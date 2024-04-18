@@ -20,7 +20,7 @@ const ServicioGeneral = () => {
 
             <section className="flex-column-center section-portada-servicio text-start">
 
-                <h2 className="h2-portada-texto white"> ODONTOLOGÍA General </h2>
+                <h2 className="h2-portada-servicios white"> ODONTOLOGÍA General </h2>
 
                 <p className="width-70 p-portada-texto white"> Nuestro equipo tiene un gran conocimiento sobre las interrelaciones de su salud oral y sistémica. </p>
 

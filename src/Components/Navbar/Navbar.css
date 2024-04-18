@@ -50,7 +50,6 @@ a {
     padding: 5px;
 }
 
-
 .section-img-menu {
     width: 100vw;
 
@@ -88,11 +87,12 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.5s, max-height 0.5s;
+    font-size: 1vw;
 }
 
 .li-servicios:hover .lista-servicios {
     opacity: 1;
-    max-height: 9999px; /* Ajusta según sea necesario */
+    max-height: 9999px; 
 }
 
 .link-activo span {

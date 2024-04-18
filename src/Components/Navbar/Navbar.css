@@ -1,6 +1,6 @@
 nav {
     justify-content:space-evenly;
-    gap: 150px;
+  
 }
 
 a {
@@ -87,7 +87,7 @@ a {
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.5s, max-height 0.5s;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 
 .li-servicios:hover .lista-servicios {
@@ -113,6 +113,9 @@ a {
 
   
 @media (min-width: 800px) {
+    nav {
+        gap: 100px;
+    }
     .nav-principal {
         flex-direction: row;
         align-items: center;

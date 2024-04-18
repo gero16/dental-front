@@ -1,15 +1,21 @@
 .portada-img-servicio {
-    width: 60vw;
+    width: 100vw;
 }
-
+.article-portada {
+    height: 44vh;
+}
 .article-portada-servicio {
     background-color: white;
     margin : 30px auto;
     overflow:hidden;
     background-color: #F3F8FE;
     padding: 30px;
-    
+    display: flex;
+    flex-direction: column;
+
 }
+
+
 
 .section-servicio-contenido {
     padding : 30px;
@@ -17,7 +23,7 @@
 }
 
 .img-servicio {
-    height: 60vh;
+    height: 55vh;
     filter: brightness(90%);
 }
 #img-servicio-periodontal-2 {
@@ -29,7 +35,7 @@
 
 
 .h2-servicio-general {
-    font-size: 1.6vw;
+    font-size: large
 }
 
 .h3-servicios {
@@ -37,17 +43,18 @@
 }
 
 .p-servicio-texto {
-    font-size: 1.1vw;
+    font-size: smaller;
     color: var(--gris);
 }
 #imagen1-servicio-general {
-    height: 4vh;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .section-portada-servicio {
     position: relative; /* Asegúrate de que la posición sea relativa para que los elementos posicionados absolutamente sean relativos a este contenedor */
     overflow: hidden; 
+
 }
 
 .section-icono {
@@ -67,14 +74,9 @@
    
 }
 
-#icono-servicio-general {
-
+.span-reservar {
+    font-size: 1vw;
 }
-
-#icono-servicio-cosmetico {
-
- }
- 
 
 .h2-portada-texto {
     z-index: 2;
@@ -103,6 +105,37 @@
  width: 55vw;
 }
 
+
+
+@media (min-width: 800px) {
+    .portada-img-servicio {
+        width: 60vw;
+    }
+    .article-portada {
+        height: 85vh;
+    }
+    .article-portada-servicio {
+
+        flex-direction: row;
+        
+    }
+
+    .h2-servicio-general {
+        font-size: large;
+    }
+    .h3-servicio-general {
+        font-size: medium;
+    }
+    .p-servicio-texto {
+        font-size: smaller
+    }
+
+    #imagen1-servicio-general {
+        height: 50%;
+        width: 50%;
+    }
+    
+}
 
 @media (min-width: 1600px) {
     #imagen1-servicio-general {

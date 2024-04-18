@@ -24,7 +24,7 @@ const ServicioGeneral = () => {
 
                 <p className="width-70 p-portada-texto white"> Nuestro equipo tiene un gran conocimiento sobre las interrelaciones de su salud oral y sistémica. </p>
 
-                <span className="width-70 span-portada-numero white"> Reservar Hora </span>
+                <span className="width-70 span-reservar white"> Reservar Hora </span>
 
                 <section className="section-icono">
                     <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-general"/>
@@ -78,9 +78,9 @@ const ServicioGeneral = () => {
 
             <h3 className="verde-principal"> Nuestros servicios dentales preventivos holísticos incluyen: </h3>
             <ul>
-                <li> - Exámenes dentales holísticos </li>
-                <li> - Plan de Salud Periodontal Personalizado </li>
-                <li> - Detección de cáncer bucal VELscope </li>
+                <li className="p-servicio-texto"> - Exámenes dentales holísticos </li>
+                <li className="p-servicio-texto"> - Plan de Salud Periodontal Personalizado </li>
+                <li className="p-servicio-texto"> - Detección de cáncer bucal VELscope </li>
             </ul>
 
             </section>
@@ -100,9 +100,9 @@ const ServicioGeneral = () => {
 
             <h3 className="h3-servicio-general verde-principal"> Nuestros servicios dentales preventivos holísticos incluyen: </h3>
             <ul>
-                <li> - Rellenos </li>
-                <li> - Coronas y Puentes </li>
-                <li> - Implantes dentales de zicornio </li>
+                <li className="p-servicio-texto"> - Rellenos </li>
+                <li className="p-servicio-texto"> - Coronas y Puentes </li>
+                <li className="p-servicio-texto"> - Implantes dentales de zicornio </li>
             </ul>
 
             </section>

@@ -23,7 +23,7 @@ const ServicioPeriodontal = () => {
 
                     <p className="width-70 p-portada-texto white"> ¡Nuestros tratamientos holísticos, mínimamente invasivos, modernos y de alta tecnología para la enfermedad de las encías realmente funcionan! </p>
 
-                    <span className="width-70 span-portada-numero white"> Reservar Hora </span>
+                    <span className="width-70 span-reservar white"> Reservar Hora </span>
                     
                     <section className="section-icono">
 

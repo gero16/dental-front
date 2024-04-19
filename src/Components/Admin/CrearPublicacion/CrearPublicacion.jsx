@@ -130,7 +130,7 @@ const CrearPublicacion = () => {
             <Navbar />
 
           
-
+            
             <div className="fondo-blanco-img">
                 <main className="principal container">
                  

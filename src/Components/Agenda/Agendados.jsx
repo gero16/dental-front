@@ -27,7 +27,7 @@ const Agendados = () => {
                 /* <PortadaTitulo titulo={"Contacto"} subtitulo={"Pongase en contacto con nosotros"} color={"#E5028E"}> </PortadaTitulo> */
             }
             
-
+            <section className="div-agenda"> 
             <section className="section-agenda container"> 
                 <section className="flex-center-v gap-10">
                     <h1 className="h1-agenda"> Personas Agendadas </h1>
@@ -81,8 +81,7 @@ const Agendados = () => {
                     
             </section>
 
-    
-    
+        </section> 
 
         </>
     )

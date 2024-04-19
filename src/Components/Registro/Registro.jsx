@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Navbar from "../Navbar/Navbar"
 import "./Registro.css"
+import { Context } from "../../Context/Context";
 
 const Registro = () => {
-    const urlBackend_Desarrollo = `http://localhost:3000`
+    const { urlBackend_Desarrollo, urlBackend_Produccion } = useContext(Context)
+       
 
     const [sesion, setSesion] = useState({
         correo : "",

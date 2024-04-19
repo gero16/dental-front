@@ -29,8 +29,6 @@
     background-repeat: no-repeat;
     background-position: 50% 45%;
     background-size: cover;
-    
-    
 }
 
 
@@ -56,12 +54,12 @@
     background-color: var(--white);
     height: 50vh;
     padding: 0px;
-
 }
 
 .texto-nosotros {
     font-weight: 600;
     color: var(--gris-oscuro);
+    
 }
 .tecnologias-nosotros {
     margin : 20px 0px 70px 0px;
@@ -92,11 +90,15 @@
 
     .section-nosotros-texto {
         height: 28vh;
-        
     }
 
     .section-portada-nosotros {
         margin-top: 0px;
+        
+    }
+
+    .h1-nosotros, .texto-nosotros {
+        margin-left: 17%;
     }
 }
 
@@ -104,13 +106,14 @@
 @media (min-width: 1600px) {
     .section-nosotros-texto {
         height: 26vh;
+        
 
     }
     .texto-nosotros {
-        font-size: medium;
+        font-size: 0.9vw
     }
     .p-tecnologias-utilizadas {
-        font-size: medium;
+        font-size: 0.9vw
     }
 }
   

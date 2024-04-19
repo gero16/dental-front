@@ -16,7 +16,7 @@ const ContenidoSaludDental = () => {
         <>
             <article className="contenido-salud-dental container flex-column gap-10">
 
-                <section className="contenido-salud-dental-h2"> 
+                <section className="contenido-salud-dental-h2 flex-column gap-10"> 
                     <h2 className="h2-salud-dental"> ¿Por qué es importante la salud dental? </h2>
                     <p className="p-salud-dental"> Nuestros dientes tienen un papel tan importante que desempeñar en nuestras vidas. Nos ayudan a masticar y digerir los alimentos, nos ayudan a hablar y hablar con claridad y también le dan forma a nuestra cara. </p>
                 </section>

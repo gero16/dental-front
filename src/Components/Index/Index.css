@@ -125,7 +125,7 @@ input, textarea {
 
       }
     .h2-salud-dental {
-        font-size: xx-large;
+        font-size: x-large;
     }
     .p-salud-dental {
         font-size: medium;
@@ -161,4 +161,16 @@ input, textarea {
     }
   }
   
+  @media (min-width: 1550px) {
+    .h2-portada-texto {
+        font-size: 2vw!important;
+    }
+    .p-portada-texto {
+        font-size: 0.9vw!important;
+    }
+    .span-portada-numero {
+        font-size: 0.9vw!important;
+    }
+  }
+
   

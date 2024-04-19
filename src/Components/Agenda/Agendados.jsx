@@ -75,15 +75,15 @@ const Agendados = () => {
                         <td> Monsanto Pereira </td>
                         <td>Revisión</td>
                     </tr>
+                    
                     </tbody>
                 </table>
                     
             </section>
 
     
-         
-        
-        <Footer> </Footer>
+    
+
         </>
     )
 }

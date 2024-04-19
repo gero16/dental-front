@@ -103,7 +103,7 @@ const CrearPublicacion = () => {
         formData.append('contenido', JSON.stringify(data.contenido));
         formData.append('imagen', rutaImagen);
 
-        let response = await fetch(`${ urlBackend_Desarrollo }/publicaciones/agregar-publicacion`, {
+        let response = await fetch(`${ urlBackend_Produccion }/publicaciones/agregar-publicacion`, {
             method: 'POST',
             body: formData
         });
@@ -197,7 +197,7 @@ const CrearPublicacion = () => {
                                                             onChange={(e) => handleTextChange(index, e.target.value)}
                                                             placeholder="Ingrese el párrafo"
                                                         />
-                                                         <span> Eliminar </span>
+                                                         <span onClick={() => handleRemoveElement(index)}> Eliminar </span>
                                                     </>
                                                 ) : element.tipo === 'subtitulo' ? (
                                                     <> 
@@ -208,7 +208,7 @@ const CrearPublicacion = () => {
                                                             onChange={(e) => handleTextChange(index, e.target.value)}
                                                             placeholder="Ingrese el subtítulo"
                                                         />
-                                                        <span> Eliminar </span>
+                                                        <span onClick={() => handleRemoveElement(index)}> Eliminar </span>
                                                     </>
                                                 ) : element.tipo === 'lista' ? (
                                                     <> 
@@ -219,7 +219,7 @@ const CrearPublicacion = () => {
                                                             onChange={(e) => handleTextChange(index, e.target.value, e.target.className)}
                                                             placeholder="Ingrese el título de la lista"
                                                         />
-                                                         <span> Eliminar </span>
+                                                         <span onClick={() => handleRemoveElement(index)}>  Eliminar </span>
                                                     </>
                                                 ) : null}
                                             </div>

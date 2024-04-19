@@ -1,11 +1,12 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Navbar from "../Navbar/Navbar"
 import "./IniciarSesion.css"
 import { Navigate, useNavigate } from "react-router-dom"
+import { Context } from "../../Context/Context";
 
 const IniciarSesion = () => {
     const navigate = useNavigate()
-    const urlBackend_Desarrollo = `http://localhost:3000`
+    const { urlBackend_Desarrollo, urlBackend_Produccion } = useContext(Context)
 
     const [sesion, setSesion] = useState("")
     const [error, setError] = useState(false)
@@ -18,7 +19,7 @@ const IniciarSesion = () => {
     const fetchIniciarSesion = async (data) => {
         console.log(data)
 
-        const response = await fetch(`${ urlBackend_Desarrollo }/usuario/iniciar-sesion`,  
+        const response = await fetch(`${ urlBackend_Produccion }/usuario/iniciar-sesion`,  
             {
                 method: 'POST',
                 headers: new Headers({

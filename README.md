@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Pagina Principal ###
+![App Screenshot](https://res.cloudinary.com/geronicola/image/upload/v1713552394/Global-System-Dental/t95kpkazjvxhmdfl2s7m.jpg)
 
-Currently, two official plugins are available:
+### Reservar Hora ###
+![App Screenshot](https://res.cloudinary.com/geronicola/image/upload/v1713552396/Global-System-Dental/hsfdlmrpye4ktklwb3bm.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Crear Publicación ###
+![App Screenshot](https://res.cloudinary.com/geronicola/image/upload/v1713552393/Global-System-Dental/omz9xivjekt9e0qabqao.jpg)
 
-## Expanding the ESLint configuration
+### Sección de Noticias ###
+![App Screenshot](https://res.cloudinary.com/geronicola/image/upload/v1713552519/Global-System-Dental/m9n2fk9w2zsodt0ao8fb.jpg)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

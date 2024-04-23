@@ -12,7 +12,7 @@ const Panel = () => {
 
         <section className="section-panel-big fondo-blanco-img flex-column-center text-center gap-30">
 
-            <h1 className="h1-panel verde-principal">Panel de Administracion </h1>
+            <h1 className="h1-panel verde-principal">Panel de Administración </h1>
 
             <section className="section-panel-small flex-center-center text-center">
 
@@ -27,7 +27,7 @@ const Panel = () => {
                 </NavLink> 
 
                 <NavLink to={`/admin/panel/agendados`} className="div-panel div-panel-2 text-center" > 
-                    <h2 className="h2-panel h2-panel-2"> Ver Agendados  </h2>
+                    <h2 className="h2-panel h2-panel-2"> Agendados  </h2>
                     <img src={Imagen2} alt=""  className="img-panel"  />
                 </NavLink> 
             </section>

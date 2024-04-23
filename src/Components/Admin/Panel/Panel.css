@@ -1,25 +1,25 @@
 .section-panel-big {
-    height: 86vh;
+    height: 80vh;
 }
 
 .section-panel-small {
     padding: 50px;
-    gap: 20px;
+    gap: 30px;
     width: 90%;
     background-color: var(--oscuro);
     border-radius: 10px;
-    
 }
 
 .h1-panel {
     font-size: 5vw;
 }
 .div-panel {
-    color: var(--color-blog)
+    color: var(--color-blog);
+    height: 100%
 }
 
 .img-panel {
-    width: 15vw;
+    width: 18vw;
     filter: brightness(84%);
     border-radius: 10px;
 
@@ -44,21 +44,18 @@
         width: 10vw;
     }
     .h2-panel {
-        font-size: medium;
+        font-size: large;
     }
     .section-panel-small {
         gap : 40px;
+        width: 50%;
     }
 }
 
 @media (min-width: 1500px) {
-    .section-panel-small{
-        width: 50%;
-    }
+
     .img-panel {
         width: 8vw;
     }
-    .h2-panel {
-        font-size: large;
-    }
+  
 }

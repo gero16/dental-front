@@ -14,7 +14,7 @@ const Panel = () => {
 
             <h1 className="h1-panel verde-principal">Panel de Administracion </h1>
 
-            <section className="section-panel-small flex-center-center text-center gap-40">
+            <section className="section-panel-small flex-center-center text-center">
 
                 <NavLink to={`/admin/panel/administrar-publicaciones`} className="div-panel div-panel-1" > 
                     <h2 className="h2-panel h2-panel-1"> Publicaciones </h2>

@@ -141,6 +141,10 @@ ul, ol {
   gap: 30px;
 }
 
+.gap-40 {
+  gap: 40px;
+}
+
 .p-20 {
   padding : 20px;
 }

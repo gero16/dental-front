@@ -12,7 +12,7 @@
 }
 
 .h1-panel {
-    font-size: 2vw;
+    font-size: 5vw;
 }
 .div-panel {
     color: var(--color-blog)
@@ -27,7 +27,7 @@
 
 .h2-panel {
     transition: all 0.5s ease-out;
-    margin: 20px;
+    margin: 5px;
     font-size: small;
 }
 
@@ -45,6 +45,9 @@
     }
     .h2-panel {
         font-size: medium;
+    }
+    .section-panel-small {
+        gap : 40px;
     }
 }
 

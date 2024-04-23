@@ -5,7 +5,7 @@
 .section-panel-small {
     padding: 50px;
     gap: 20px;
-    width: 65%;
+    width: 90%;
     background-color: var(--oscuro);
     border-radius: 10px;
     
@@ -15,12 +15,11 @@
     font-size: 2vw;
 }
 .div-panel {
-    width: 25vw;
     color: var(--color-blog)
 }
 
 .img-panel {
-
+    width: 15vw;
     filter: brightness(84%);
     border-radius: 10px;
 
@@ -29,7 +28,7 @@
 .h2-panel {
     transition: all 0.5s ease-out;
     margin: 20px;
-    font-size: large;
+    font-size: small;
 }
 
 .div-panel-1:hover .h2-panel-1, .div-panel-2:hover .h2-panel-2 {
@@ -39,3 +38,24 @@
     transform:scale(1.2); 
 }
 
+
+@media (min-width: 800px) {
+    .img-panel {
+        width: 10vw;
+    }
+    .h2-panel {
+        font-size: medium;
+    }
+}
+
+@media (min-width: 1500px) {
+    .section-panel-small{
+        width: 50%;
+    }
+    .img-panel {
+        width: 8vw;
+    }
+    .h2-panel {
+        font-size: large;
+    }
+}

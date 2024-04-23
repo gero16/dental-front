@@ -13,7 +13,8 @@ const Panel = () => {
         <section className="section-panel-big fondo-blanco-img flex-column-center text-center gap-30">
 
             <h1 className="h1-panel verde-principal">Panel de Administracion </h1>
-            <section className="section-panel-small flex-center-center text-center">
+
+            <section className="section-panel-small flex-center-center text-center gap-40">
 
                 <NavLink to={`/admin/panel/administrar-publicaciones`} className="div-panel div-panel-1" > 
                     <h2 className="h2-panel h2-panel-1"> Publicaciones </h2>

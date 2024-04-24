@@ -2,20 +2,18 @@ import { useContext, useState } from "react"
 import Navbar from "../Navbar/Navbar"
 import "./Registro.css"
 import { Context } from "../../Context/Context";
+import { useNavigate } from "react-router-dom";
 
 const Registro = () => {
     const { urlBackend_Desarrollo, urlBackend_Produccion } = useContext(Context)
-       
-
-    const [sesion, setSesion] = useState({
-        correo : "",
-        nombre: "",
-        password: "",
-    })
+    const navigate = useNavigate()
+    
+    const [sesion, setSesion] = useState("")
+    const [error, setError] = useState(false)
  
     const fetchRegistro = async () => {
         console.log(sesion)
-        const response = await fetch(`${ urlBackend_Desarrollo }/usuario/registrarse`,  
+        const response = await fetch(`${ urlBackend_Produccion }/usuario/registrarse`,  
             {
                 method: 'POST',
                 headers: new Headers({
@@ -30,17 +28,25 @@ const Registro = () => {
         console.log(resp)
             // geronicola1696@gmail.com
 
-            /*
+        if(response.status === 400) {
+            setError(true)
+        }
+            
         if(response.status === 200) {
             console.log(resp)
             const objeto = {usuario : resp.usuario, rol : resp.rol}
             localStorage.setItem("sesion", JSON.stringify(objeto));
-            navigate(`/usuario/${resp.usuario}`)
+            
+            
+            setTimeout(function(){
+                setSesion(false)
+                  navigate(`/`)
+            }, 5000); 
+
         }
-        if(response.status === 401) {
-            setError(true)
-        }
-        */
+
+      
+        
     }
 
     return (
@@ -50,6 +56,10 @@ const Registro = () => {
             
             <section className="flex-column-center section-sesion fondo-blanco-img">
                 <h1> Registrarse </h1>
+                    { sesion === true ? 
+                    <h1>  </h1>    
+                    : error.status === 400 ? <h1> Debe Completar todos los campos! </h1>  : <> </> 
+                    }
                     <ul className="ul-iniciar-sesion flex-column">
                         <li className="flex-around gap-20">
                             <label htmlFor="" className="label-sesion"> Correo </label>

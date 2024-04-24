@@ -32,9 +32,8 @@ const IniciarSesion = () => {
         console.log(response)
         const resp = await response.json()
         console.log(resp)
-            // geronicola1696@gmail.com
+        // geronicola1696@gmail.com
 
-        
         if(response.status === 200) {
             console.log(resp)
             const objeto = {usuario : resp.usuario, rol : resp.rol}
@@ -45,13 +44,14 @@ const IniciarSesion = () => {
 
             setTimeout(function(){
                 setSesion(false)
-                  navigate(`/`)
+                navigate(`/`)
             }, 5000); 
         }
         if(response.status === 401) {
             setSesion(false)
             setError(true)
         }
+  
         
     }
 
@@ -61,9 +61,10 @@ const IniciarSesion = () => {
 
             
             <section className="flex-column-center section-sesion fondo-blanco-img">
-                    { sesion === true ? 
-                    <h1> Bienvenido! </h1>    
-                    : error === true ? <h1> Usuario y/o Contraseña Incorrectos! </h1>  : <> </> 
+                    { sesion === true 
+                        ? <h1> Bienvenido! </h1>    
+                        : error === true 
+                            ? <h1> Usuario y/o Contraseña Incorrectos! </h1>  : <> </> 
                     }
                     <ul className="ul-iniciar-sesion flex-column">
                         <li className="text-center">  <h1> Iniciar Sesión </h1>  </li>

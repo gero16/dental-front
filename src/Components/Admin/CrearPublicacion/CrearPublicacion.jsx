@@ -97,15 +97,15 @@ const CrearPublicacion = () => {
         const archivos = document.querySelector("#imagen-post").files
         const rutaImagen = archivos[0];
 
-        const formData = new FormData();
-        formData.append('titulo', JSON.stringify(data.titulo));
-        formData.append('color', JSON.stringify(data.color));
-        formData.append('contenido', JSON.stringify(data.contenido));
-        formData.append('imagen', rutaImagen);
+        const formularioTitulo = new FormData();
+        formularioTitulo.append('titulo', JSON.stringify(data.titulo));
+        formularioTitulo.append('color', JSON.stringify(data.color));
+        formularioTitulo.append('contenido', JSON.stringify(data.contenido));
+        formularioTitulo.append('imagen', rutaImagen);
 
         let response = await fetch(`${ urlBackend_Produccion }/publicaciones/agregar-publicacion`, {
             method: 'POST',
-            body: formData
+            body: formularioTitulo
         });
 
         console.log(response)

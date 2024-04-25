@@ -23,6 +23,25 @@
   
 }
 
+
+.link-redes {
+  transition: 0.5s ease-in;
+}
+
+.link-redes:hover {
+  transition: 0.5s ease-in;
+  transform: scale(1.1);
+  filter: brightness(150%);
+}
+
+a {
+  color: #595959;
+}
+
+a:visited {
+  color: #595959;
+}
+
 .rojo {
   color: var(--rojo);
   padding: 10px;

@@ -45,9 +45,18 @@ const Footer = () => {
                         
                             <section className="section-footer-redes">
                                 <ul className="lista-redes-sociales flex">
+                                    <a href="https://www.instagram.com/globalsystemdental" className="link-redes">
                                     <li> <FaInstagram  style={{ fontSize: '30px'}} />  </li>
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=100065159214884" className="link-redes">
+
                                     <li> <FaFacebook  style={{ fontSize: '30px'}} />  </li>
-                                    <li> <FaTwitter  style={{ fontSize: '30px'}} /> </li>
+                                    </a>
+                                    <a href="#" className="link-redes">
+
+                                        <li> <FaTwitter  style={{ fontSize: '30px'}} /> </li>
+
+                                    </a>
                                 </ul>
                             </section>
 

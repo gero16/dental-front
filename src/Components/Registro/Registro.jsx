@@ -44,9 +44,6 @@ const Registro = () => {
             }, 5000); 
 
         }
-
-      
-        
     }
 
     return (

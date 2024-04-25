@@ -8,11 +8,13 @@ const Registro = () => {
     const { urlBackend_Desarrollo, urlBackend_Produccion } = useContext(Context)
     const navigate = useNavigate()
     
-    const [sesion, setSesion] = useState("")
+    const [registro, setRegistro] = useState(false)
+    const [usuario, setUsuario] = useState()
+    const [mensaje, setMensaje] = useState("")
     const [error, setError] = useState(false)
  
-    const fetchRegistro = async () => {
-        console.log(sesion)
+    const fetchRegistro = async (usuario) => {
+        console.log(usuario)
         const response = await fetch(`${ urlBackend_Produccion }/usuario/registrarse`,  
             {
                 method: 'POST',
@@ -21,7 +23,7 @@ const Registro = () => {
                     'Access-Control-Allow-Origin': '*',
             
                 }),
-                body : JSON.stringify(sesion),
+                body : JSON.stringify(usuario),
             })
         console.log(response)
         const resp = await response.json()
@@ -37,11 +39,11 @@ const Registro = () => {
             const objeto = {usuario : resp.usuario, rol : resp.rol}
             localStorage.setItem("sesion", JSON.stringify(objeto));
             
-            
+            setRegistro(true)
+            setMensaje(resp.mensaje)
             setTimeout(function(){
-                setSesion(false)
                   navigate(`/`)
-            }, 5000); 
+            }, 6000); 
 
         }
     }
@@ -52,19 +54,23 @@ const Registro = () => {
 
             
             <section className="flex-column-center section-sesion fondo-blanco-img">
-                <h1> Registrarse </h1>
-                    { sesion === true ? 
-                    <h1>  </h1>    
-                    : error.status === 400 ? <h1> Debe Completar todos los campos! </h1>  : <> </> 
+                
+                    { registro === true 
+                        ? <h1> { mensaje } </h1>    
+                        : error.status === 400 
+                            ? <h2> Debe Completar todos los campos! </h2>  
+                            : <> </> 
                     }
+
+                    <h1> Registrarse </h1>
                     <ul className="ul-iniciar-sesion flex-column">
                         <li className="flex-around gap-20">
                             <label htmlFor="" className="label-sesion"> Correo </label>
                             <input 
                                 type="text" 
                                 className="input-sesion"
-                                onChange={(evento) => setSesion({
-                                ...sesion, 
+                                onChange={(evento) => setUsuario({
+                                ...usuario, 
                                 correo : evento.target.value
                             })} />
                         </li>
@@ -73,8 +79,8 @@ const Registro = () => {
                             <input 
                                 type="text" 
                                 className="input-sesion"
-                                onChange={(evento) => setSesion({
-                                ...sesion, 
+                                onChange={(evento) => setUsuario({
+                                ...usuario, 
                                 nombre : evento.target.value
                             })} />
                         </li>
@@ -84,13 +90,13 @@ const Registro = () => {
                             <input 
                                 type="text" 
                                 className="input-sesion"
-                                onChange={(evento) => setSesion({
-                                ...sesion, 
+                                onChange={(evento) => setUsuario({
+                                ...usuario, 
                                 password : evento.target.value
                             })} />
                         </li>
                         <li className="flex-column text-center">
-                            <span className="btn-iniciar-sesion" onClick={() => fetchRegistro()}> Registrarse </span>
+                            <span className="btn-iniciar-sesion" onClick={() => fetchRegistro(usuario)}> Registrarse </span>
                         </li>
                     </ul>
              

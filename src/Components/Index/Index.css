@@ -87,12 +87,16 @@ h2 {
 
 .btn-consultar {
     padding: 10px;
-    background-color: rgb(235, 231, 231);
+    background-color: var(--primario);
+
     text-align: center;
     width: 100px;
     border-radius: 5px;
 }
 
+.btn-consultar a {
+    color: white;
+}
 
 input, textarea {
     padding :5px;
@@ -170,6 +174,12 @@ input, textarea {
     }
     .span-portada-numero {
         font-size: 0.9vw!important;
+    }
+    .info-consulta2-h2 {
+        font-size: 1.5vw;
+    }
+    .article-info-consulta2 p {
+        font-size: 0.9vw;
     }
   }
 

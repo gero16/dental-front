@@ -10,7 +10,7 @@
 
 
 .h1-reservar {
-
+  margin: 15px;
   font-size: 3.5vw;
   font-family: "Raleway", sans-serif;
   text-shadow: 0 1px 0 rgba(8, 8, 8, 0.658);
@@ -222,6 +222,9 @@ ol {
   }
   .nav-horario {
      font-size: 0.7vw;
+  }
+  .h1-reservar {
+    font-size: 2.5vw;
   }
 
  }

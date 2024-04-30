@@ -68,8 +68,9 @@ const Registro = () => {
                                 : <> </>
                     }
 
-                    <h1> Registrarse </h1>
-                    <ul className="ul-iniciar-sesion flex-column">
+                  
+                    <ul className="ul-iniciar-sesion flex-column-center">
+                        <li>  <h1> Registrarse </h1> </li>
                         <li className="flex-around gap-20">
                             <label htmlFor="" className="label-sesion"> Correo </label>
                             <input 

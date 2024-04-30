@@ -20,19 +20,6 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
       return () => clearInterval(intervalId); // Limpia el intervalo cuando el componente se desmonta
     }, [images.length, autoplayInterval]);
 
-    const nextSlide = () => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-      setSlideKey((prevKey) => prevKey + 1); // Actualiza la clave única para reiniciar la animación
-    };
-
-    const prevSlide = () => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === 0 ? images.length - 1 : prevIndex - 1
-      );
-      setSlideKey((prevKey) => prevKey + 1); // Actualiza la clave única para reiniciar la animación
-    };
 
     const imgBanner = "https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png"
 

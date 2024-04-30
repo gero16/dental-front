@@ -12,9 +12,11 @@ const Registro = () => {
     const [usuario, setUsuario] = useState()
     const [mensaje, setMensaje] = useState("")
     const [error, setError] = useState(false)
+    const [cargando , setCargando] = useState(false)
  
     const fetchRegistro = async (usuario) => {
         console.log(usuario)
+        setCargando(true)
         const response = await fetch(`${ urlBackend_Produccion }/usuario/registrarse`,  
             {
                 method: 'POST',
@@ -31,6 +33,7 @@ const Registro = () => {
             // geronicola1696@gmail.com
 
         if(response.status === 400) {
+            setCargando(true)
             setError(true)
         }
             
@@ -38,7 +41,8 @@ const Registro = () => {
             console.log(resp)
             const objeto = {usuario : resp.usuario, rol : resp.rol}
             localStorage.setItem("sesion", JSON.stringify(objeto));
-            
+
+            setCargando(true)
             setRegistro(true)
             setMensaje(resp.mensaje)
             setTimeout(function(){
@@ -59,7 +63,9 @@ const Registro = () => {
                         ? <h1> { mensaje } </h1>    
                         : error.status === 400 
                             ? <h2> Debe Completar todos los campos! </h2>  
-                            : <> </> 
+                            : cargando === true 
+                                ? <h2> Cargando...  </h2> 
+                                : <> </>
                     }
 
                     <h1> Registrarse </h1>

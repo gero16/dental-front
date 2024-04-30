@@ -16,9 +16,12 @@ const IniciarSesion = () => {
         password: "",
     })
  
+    const [cargando , setCargando] = useState(false)
+
     const fetchIniciarSesion = async (data) => {
         console.log(data)
 
+        setCargando(true)
         const response = await fetch(`${ urlBackend_Produccion }/usuario/iniciar-sesion`,  
             {
                 method: 'POST',
@@ -30,6 +33,7 @@ const IniciarSesion = () => {
                 body : JSON.stringify(data),
             })
         console.log(response)
+        
         const resp = await response.json()
         console.log(resp)
         // geronicola1696@gmail.com
@@ -39,6 +43,7 @@ const IniciarSesion = () => {
             const objeto = {usuario : resp.usuario, rol : resp.rol}
             localStorage.setItem("sesion", JSON.stringify(objeto));
          
+            setCargando(false)
             setSesion(true)
             setError(false)
 
@@ -64,7 +69,10 @@ const IniciarSesion = () => {
                     { sesion === true 
                         ? <h1> Bienvenido! </h1>    
                         : error === true 
-                            ? <h1> Usuario y/o Contraseña Incorrectos! </h1>  : <> </> 
+                            ? <h1> Usuario y/o Contraseña Incorrectos! </h1>  
+                            : cargando === true 
+                                ? <h2> Cargando...  </h2> 
+                                : <> </>
                     }
                     <ul className="ul-iniciar-sesion flex-column">
                         <li className="text-center">  <h1> Iniciar Sesión </h1>  </li>

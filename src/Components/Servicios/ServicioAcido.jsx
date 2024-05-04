@@ -4,6 +4,8 @@ import Imagen2 from "../../../public/servicio-1.jpg"
 import Imagen3 from "../../../public/canino.jpg"
 import Imagen4 from "../../../public/integral.jpg"
 import Icono from "../../../public/dientes.png"
+import imagenAcido from "../../../public/acido.jpg"
+import imagenAcido2 from "../../../public/acido-2.jpg"
 
 
 const ServicioAcido = () => {
@@ -13,7 +15,7 @@ const ServicioAcido = () => {
             <article className={"article-portada"} id="portada-acido" >
 
                
-                    <img src={"https://s3.abcstatics.com/media/bienestar/2020/11/29/acido-hilauronico-khC--1248x698@abc.jpg"}
+                    <img src={imagenAcido}
                         className="portada-img-servicio"
                         id="img-portada-acido"
                         alt="slide"
@@ -42,17 +44,17 @@ const ServicioAcido = () => {
                 <article className={"article-servicio flex-center-center gap-20 container article-portada-servicio "} >
 
 
-                    <section className="section-servicio-contenido flex-column gap-20">
+                    <section className="section-servicio-contenido flex-column gap-10">
 
                         <h2 className="h2-servicio-general verde-principal"> Ácido hialurónico </h2>
 
-                        <h3> ¿Que es ? </h3>
+                        <h3 className="h3-servicio-general verde-principal"> ¿Que es ? </h3>
 
                         <p> Es un producto natural, es tolerado de manera positiva por nuestro cuerpo, hidrata la piel («esencial para luchar contra 
                             los signos de la edad en la piel») y llega a las capas más profundas, actuando como «andamio» y promoviendo la producción de colágeno, básico para mantener la piel joven.
                         </p>
 
-                        <h3> Ventajas </h3>
+                        <h3 className="h3-servicio-general verde-principal"> Ventajas </h3>
 
                         <p> sirve, tanto para tratar arrugas medias, finas y profundas, como para reponer volúmenes perdidos y tensar los tejidos: cejas, pómulos, mentón, mandíbula, labios, ojeras, surco nasogeniano, pliegue de amargura, cuello, arrugas den el entrecejo y en la frente y patas de gallo. A la pregunta de si es doloroso, comenta que «la inyección es poco molesta y solo requiere anestesia tópica». Si hablamos de cuánto puede durar los resultados del tratamiento, comenta la doctora que puede ser hasta dos años. 
                             «Aunque el producto se haya reabsorbido, el efecto de corrección perdura más tiempo, debido a la regeneración del colágeno y del propio ácido hialurónico en la piel.
@@ -60,7 +62,7 @@ const ServicioAcido = () => {
                     
                     </section>
 
-                    <img src={Imagen4}
+                    <img src={imagenAcido2}
                         className="img-servicio"
                         id="imagen1-servicio-general"
                         alt="slide"

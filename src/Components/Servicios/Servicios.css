@@ -82,11 +82,19 @@
 .h2-portada-servicios {
     font-size: 2.2vw;
     z-index: 2;
+
+}
+
+.h2-portada-texto {
+    z-index: 2;
 }
 .p-portada-texto {
     font-size: 1.1vw;
-    z-index: 2;
+    z-index: 20;
+
 }
+
+
 
 #section-portada-periodontal {
     background-color: #147DE7;

@@ -12,6 +12,7 @@ import Ubicaciones from "../Ubicacion/Ubicaciones.jsx"
 
 import whatsapp from "../../../public/whatsapp.png"
 import { Link as Navigate, NavLink, useLocation ,} from "react-router-dom";
+import Whatsapp from "../Whatsapp/Whatsapp.jsx"
 
 
 const Index = () => {
@@ -51,9 +52,7 @@ const Index = () => {
             <Ubicaciones> </Ubicaciones>
 
 
-            <NavLink to={`https://wa.me/59898221815`} className="section-whatsapp" > 
-                <img src={whatsapp} alt="" />
-            </NavLink>
+            <Whatsapp> </Whatsapp>
 
             <Footer> </Footer>
         </section>

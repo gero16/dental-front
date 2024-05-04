@@ -8,6 +8,7 @@ import Calendar from 'react-calendar';
 import { useContext, useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
 import { Context } from "../../Context/Context"
+import Whatsapp from "../Whatsapp/Whatsapp";
 
 const HoraReserva = () => {
     const { transformarFecha, conversionDias, fetchHorasDisponibles, horasDisponibles, diaSeleccionado, 
@@ -231,7 +232,7 @@ const HoraReserva = () => {
 
          
 
-         
+            <Whatsapp> </Whatsapp>
             <Footer> </Footer>
             
         </>

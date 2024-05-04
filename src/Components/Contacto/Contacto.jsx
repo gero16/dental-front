@@ -7,6 +7,7 @@ import Ubicaciones from "../Ubicacion/Ubicaciones";
 import Footer from "../Footer/Footer";
 import { FaInstagram, FaFacebook, FaTwitter, FaPhoneSquareAlt } from 'react-icons/fa';
 import { useState } from "react";
+import Whatsapp from "../Whatsapp/Whatsapp";
 
 
 const Contacto = () => {
@@ -108,7 +109,7 @@ const Contacto = () => {
 
             </section>
          
-        
+        <Whatsapp> </Whatsapp>
         <Footer> </Footer>
         </>
     )

@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer"
 import "./Nosotros.css"
 import FondoBlanco from "/fondo-blanco.jpg"
 import { useState } from "react"
+import Whatsapp from "../Whatsapp/Whatsapp"
 
 const Nosotros = () => {
 
@@ -92,6 +93,7 @@ const Nosotros = () => {
 
             </main>
 
+            <Whatsapp> </Whatsapp>
             <Footer> </Footer>
 
         </>

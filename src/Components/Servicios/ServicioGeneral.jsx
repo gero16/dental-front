@@ -8,7 +8,7 @@ import { Link as Navigate, NavLink, useLocation ,} from "react-router-dom";
 
 const ServicioGeneral = () => {
     return (
-        <section> 
+        <section className="fondo-blanco-img-2"> 
 
             <article className={"article-portada"} >
 

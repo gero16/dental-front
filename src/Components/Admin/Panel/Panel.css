@@ -1,17 +1,21 @@
 .section-panel-big {
-    height: 80vh;
+    margin-top: 6%;
 }
 
 .section-panel-small {
-    padding: 50px;
-    gap: 30px;
+    padding: 35px;
     width: 90%;
     background-color: var(--oscuro);
     border-radius: 10px;
 }
 
+.article-panel {
+    padding: 15px;
+}
+
 .h1-panel {
     font-size: 5vw;
+    color: white;
 }
 .div-panel {
     color: var(--color-blog);
@@ -36,10 +40,15 @@
     filter: brightness(110%);
     transition: all 0.5s ease-out;
     transform:scale(1.2); 
+    
 }
 
 
 @media (min-width: 800px) {
+    .section-panel-big {
+        height: 80vh;
+
+    }
     .img-panel {
         width: 10vw;
     }

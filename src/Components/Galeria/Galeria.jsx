@@ -1,10 +1,6 @@
 import Navbar from "../Navbar/Navbar"
 import "./Galeria.css"
 
-import Galeria1 from "/galeria-1.jpg"
-import Galeria2 from "/galeria-2.jpg"
-import Galeria3 from "/galeria-3.jpg"
-
 const Galeria = () => {
     return (
         <> 
@@ -30,9 +26,9 @@ const Galeria = () => {
                 </ul>
 
                 <section>
-                    <img className="img-galeria" src={Galeria1} alt="" />
-                    <img className="img-galeria" src={Galeria2} alt="" />
-                    <img className="img-galeria" src={Galeria3} alt="" />
+                    <img className="img-galeria" src={""} alt="" />
+                    <img className="img-galeria" src={""} alt="" />
+                    <img className="img-galeria" src={""} alt="" />
                 </section>
                 
             

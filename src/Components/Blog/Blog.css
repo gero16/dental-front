@@ -57,12 +57,18 @@
 
 
 @media (min-width: 800px) {
+    .noticias-portada-texto {
+        margin-top: 6%;
+    }
     .publicaciones-blog {
         flex-wrap: wrap;
         flex-direction: row;
+        margin-top: 5%;
     }
     .publicacion-blog {
         width: 30%;
+        margin-top: 10px;
+
     }
     .h2-publicacion-blog {
         font-size: 1.8vw;

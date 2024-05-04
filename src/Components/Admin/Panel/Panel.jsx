@@ -12,24 +12,27 @@ const Panel = () => {
 
         <section className="section-panel-big fondo-blanco-img flex-column-center text-center gap-30">
 
-            <h1 className="h1-panel verde-principal">Panel de Administración </h1>
 
-            <section className="section-panel-small flex-center-center text-center">
+            <section className="section-panel-small">
+            <h1 className="h1-panel">Panel de Administración </h1>
+                <article className="article-panel flex-center-center text-center gap-40">
 
-                <NavLink to={`/admin/panel/administrar-publicaciones`} className="div-panel div-panel-1" > 
-                    <h2 className="h2-panel h2-panel-1"> Publicaciones </h2>
-                    <img src={Imagen1} alt=""  className="img-panel" />
-                </NavLink> 
+                    <NavLink to={`/admin/panel/administrar-publicaciones`} className="div-panel div-panel-1" > 
+                        <h2 className="h2-panel h2-panel-1"> Publicaciones </h2>
+                        <img src={Imagen1} alt=""  className="img-panel" />
+                    </NavLink> 
 
-                <NavLink to={`/admin/panel/horas-disponibles`} className="div-panel div-panel-2 text-center" > 
-                    <h2 className="h2-panel h2-panel-2">  Horarios </h2>
-                    <img src={Imagen3} alt=""  className="img-panel"  />
-                </NavLink> 
+                    <NavLink to={`/admin/panel/horas-disponibles`} className="div-panel div-panel-2 text-center" > 
+                        <h2 className="h2-panel h2-panel-2">  Horarios </h2>
+                        <img src={Imagen3} alt=""  className="img-panel"  />
+                    </NavLink> 
 
-                <NavLink to={`/admin/panel/agendados`} className="div-panel div-panel-2 text-center" > 
-                    <h2 className="h2-panel h2-panel-2"> Agendados  </h2>
-                    <img src={Imagen2} alt=""  className="img-panel"  />
-                </NavLink> 
+                    <NavLink to={`/admin/panel/agendados`} className="div-panel div-panel-2 text-center" > 
+                        <h2 className="h2-panel h2-panel-2"> Agendados  </h2>
+                        <img src={Imagen2} alt=""  className="img-panel"  />
+                    </NavLink> 
+
+                </article>
             </section>
 
         </section>

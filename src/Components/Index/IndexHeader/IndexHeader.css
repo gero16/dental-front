@@ -109,6 +109,7 @@
     height: 35vh;
     background: linear-gradient(to right, var(--primario),71%, var(--white), 90%, var(--white));
     box-sizing: border-box;
+
 }
 
 .img-portada-1{
@@ -117,6 +118,11 @@
 
 @media (min-width: 800px) {
 
+    .article-portada {
+        height: 88vh;
+        display: flex;
+        margin-top: 4%;
+    }
     .article-portada-banner {
         height: 65vh!important;
 
@@ -127,10 +133,6 @@
         margin: 0 5%!important;
     }
     
-    .article-portada {
-        height: 88vh;
-        display: flex;
-    }
     .portada-img {
         height: 88vh;
         width: 100%;

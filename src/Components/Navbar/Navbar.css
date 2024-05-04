@@ -1,6 +1,8 @@
 nav {
     justify-content:space-evenly;
-  
+    z-index: 10;
+    background-color: white;
+    width: 100vw!important;
 }
 
 a {
@@ -115,6 +117,8 @@ a {
 @media (min-width: 800px) {
     nav {
         gap: 100px;
+        position: fixed;
+        top: 0;
     }
     .nav-principal {
         flex-direction: row;

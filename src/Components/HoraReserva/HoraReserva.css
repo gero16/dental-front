@@ -5,7 +5,8 @@
   padding: 30px;
   background-color: var(--negro-tr);
   color: white;
- z-index: 2;
+  z-index: 2;
+  margin-top: 6%;
 }
 
 

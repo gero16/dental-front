@@ -183,9 +183,10 @@ ul, ol {
     background-size: cover;
 }
 
-.fondo-blanco-img-big {
-  background-image: url('/fondo-blanco.jpg');
+.fondo-blanco-img-2 {
+  background-image: url('/fondo-blanco-2.jpg');
   background-repeat: no-repeat;
+  background-position: 50% 10%;
   background-size: cover;
 
 }

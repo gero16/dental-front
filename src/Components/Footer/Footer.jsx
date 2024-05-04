@@ -1,4 +1,3 @@
-import logo from "../../../public/global.fw.png"
 import "./Footer.css"
 
 import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';

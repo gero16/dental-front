@@ -4,7 +4,7 @@ import './main.css'
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 
-import imagen from "../public/global.fw.png"
+
 
 import Navbar from "./Components/Navbar/Navbar.jsx"
 import Index from "./Components/Index/Index.jsx"

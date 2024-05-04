@@ -1,7 +1,4 @@
-import { useState } from "react"
-import Icono1 from "../../../../public/icono-1.png"
-import Icono2 from "../../../../public/icono-2.png"
-import Icono3 from "../../../../public/icono-3.png"
+
 import Icono4 from "../../../../public/icono1.jpg"
 import Icono5 from "../../../../public/icono2.jpg"
 import Icono6 from "../../../../public/icono3.jpg"

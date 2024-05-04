@@ -10,6 +10,9 @@ import IndexOpinionCliente from "./IndexOpinionCliente/IndexOpinionCliente.jsx"
 import Ubicacion from "../Ubicacion/Ubicacion.jsx"
 import Ubicaciones from "../Ubicacion/Ubicaciones.jsx"
 
+import whatsapp from "../../../public/whatsapp.png"
+import { Link as Navigate, NavLink, useLocation ,} from "react-router-dom";
+
 
 const Index = () => {
 
@@ -46,6 +49,11 @@ const Index = () => {
             </article>
 
             <Ubicaciones> </Ubicaciones>
+
+
+            <NavLink to={`https://wa.me/59898221815`} className="section-whatsapp" > 
+                <img src={whatsapp} alt="" />
+            </NavLink>
 
             <Footer> </Footer>
         </section>

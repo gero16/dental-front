@@ -103,6 +103,12 @@ input, textarea {
 }
 
 
+.section-whatsapp {
+    position : fixed;
+    bottom:  5%;
+    right: 2%;
+    cursor: pointer;
+}
 
 @media (min-width: 800px) {
     h2 {

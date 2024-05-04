@@ -26,14 +26,14 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
   return (
     <> 
     
-    <article className={images[currentImageIndex].imgUrl === imgBanner  ? "article-portada article-portada-banner" : "article-portada"} >
+    <article className={ images[currentImageIndex].imgUrl === imgBanner  ? "article-portada article-portada-banner" : "article-portada"} >
 
       <Slide key={slideKey} > {/* Utiliza la clave única para forzar la recreación del componente Slide */}
         
-        <img src={images[currentImageIndex].imgUrl}
-             className="portada-img display-none"
+        <img src={ images[currentImageIndex].imgUrl }
              alt="slide"
-             id={images[currentImageIndex].imgUrl === imgBanner ? "img-banner" : ""}
+             id={ images[currentImageIndex].imgUrl === imgBanner ? "img-banner" : ""}
+             className={images[currentImageIndex].className ? `${ images[currentImageIndex].className } portada-img display-none`: "portada-img display-none"}
         />
 
         {

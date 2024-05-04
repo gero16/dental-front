@@ -1,5 +1,5 @@
 import "./IndexHeader.css"
-import Portada1 from "../../../../public/dental1.jpg"
+import Portada1 from "../../../../public/108313.jpg"
 import Portada2 from "../../../../public/portada-2.jpg"
 import Portada3 from "../../../../public/portada-3.jpg"
 
@@ -22,7 +22,8 @@ const IndexHeader = () => {
       imgUrl: Portada1,
       subtitulo: "Agendate hoy con nosotros!",
       parrafo: "Bienvenido a la Clinica Odontologica Integral",
-      id: ""
+      id: "",
+      className : "img-portada-1"
     },
     {
       numero: 2,

@@ -111,7 +111,9 @@
     box-sizing: border-box;
 }
 
-
+.img-portada-1{
+    filter: brightness(95%);
+}
 
 @media (min-width: 800px) {
 

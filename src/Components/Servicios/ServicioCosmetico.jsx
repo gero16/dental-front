@@ -4,8 +4,7 @@ import { FaPhoneSquareAlt } from 'react-icons/fa';
 import Imagen from "../../../public/sonrisa-3.jpg"
 
 import Icono from "../../../public/diente-2.png"
-import Icono2 from "../../../public/diente-2.png"
-import Icono3 from "../../../public/limpieza-de-dientes.png"
+import ImagenCosmetico from "../../../public/odontologia-cosmetica.jpg"
 
 const ServicioCosmetico = () => {
     return (
@@ -44,7 +43,7 @@ const ServicioCosmetico = () => {
 
                         <h2 className="h2-servicio-general verde-principal"> Carillas sin preparación </h2>
 
-                        <h3 className="h3-servicios verde-principal"> Inconvenientes de las carillas tradicionales </h3>
+                        <h3 className="h3-servicio-general verde-principal"> Inconvenientes de las carillas tradicionales </h3>
 
                         <ul className="lista">
                             <li>  Aumento de la sensibilidad dental debido a la eliminación del esmalte sano de las encías. </li>
@@ -52,7 +51,7 @@ const ServicioCosmetico = () => {
                             <li> Alto riesgo de necesitar endodoncias en el futuro </li>
                         </ul>
 
-                        <h3 className="h3-servicios verde-principal"> Ventajas de las carillas sin preparación </h3>
+                        <h3 className="h3-servicio-general verde-principal"> Ventajas de las carillas sin preparación </h3>
 
                         <ul className="lista">
                             <li> hermosa sonrisa blanca </li>
@@ -62,7 +61,7 @@ const ServicioCosmetico = () => {
                     
                     </section>
 
-                    <img src="https://estudidentalbarcelona.com/wp-content/uploads/2016/10/indicaciones-carillas.jpg"
+                    <img src={ImagenCosmetico}
                         className="img-servicio"
                         id="imagen1-servicio-general"
                         alt="slide"

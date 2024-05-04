@@ -50,13 +50,13 @@ const ServicioAcido = () => {
 
                         <h3 className="h3-servicio-general verde-principal"> ¿Que es ? </h3>
 
-                        <p> Es un producto natural, es tolerado de manera positiva por nuestro cuerpo, hidrata la piel («esencial para luchar contra 
+                        <p className="p-servicio-texto">  Es un producto natural, es tolerado de manera positiva por nuestro cuerpo, hidrata la piel («esencial para luchar contra 
                             los signos de la edad en la piel») y llega a las capas más profundas, actuando como «andamio» y promoviendo la producción de colágeno, básico para mantener la piel joven.
                         </p>
 
                         <h3 className="h3-servicio-general verde-principal"> Ventajas </h3>
 
-                        <p> sirve, tanto para tratar arrugas medias, finas y profundas, como para reponer volúmenes perdidos y tensar los tejidos: cejas, pómulos, mentón, mandíbula, labios, ojeras, surco nasogeniano, pliegue de amargura, cuello, arrugas den el entrecejo y en la frente y patas de gallo. A la pregunta de si es doloroso, comenta que «la inyección es poco molesta y solo requiere anestesia tópica». Si hablamos de cuánto puede durar los resultados del tratamiento, comenta la doctora que puede ser hasta dos años. 
+                        <p className="p-servicio-texto"> Sirve, tanto para tratar arrugas medias, finas y profundas, como para reponer volúmenes perdidos y tensar los tejidos: cejas, pómulos, mentón, mandíbula, labios, ojeras, surco nasogeniano, pliegue de amargura, cuello, arrugas den el entrecejo y en la frente y patas de gallo. A la pregunta de si es doloroso, comenta que «la inyección es poco molesta y solo requiere anestesia tópica». Si hablamos de cuánto puede durar los resultados del tratamiento, comenta la doctora que puede ser hasta dos años. 
                             «Aunque el producto se haya reabsorbido, el efecto de corrección perdura más tiempo, debido a la regeneración del colágeno y del propio ácido hialurónico en la piel.
                         </p>
                     
@@ -64,7 +64,7 @@ const ServicioAcido = () => {
 
                     <img src={imagenAcido2}
                         className="img-servicio"
-                        id="imagen1-servicio-general"
+                        id="imagen-acido-1"
                         alt="slide"
                     />
 

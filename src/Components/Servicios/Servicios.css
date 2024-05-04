@@ -76,7 +76,12 @@
 
 .span-reservar {
     font-size: 2vw;
-    margin: 5px 0px;
+    margin: 12px 0px;
+    padding: 10px;
+    background-color: #26412F;
+    width: auto;
+  
+    border-radius: 10px;
 }
 
 .h2-portada-servicios {
@@ -106,7 +111,8 @@
 
 
 #section-portada-acido {
-    background-color: rgb(214, 176, 3)
+    background-color: rgb(214, 176, 3);
+    width: 100%;
 }
 
 #portada-acido {
@@ -141,7 +147,12 @@
         font-size: smaller
     }
     .span-reservar {
-        font-size: 1.3vw;
+
+        font-size: 1.2vw;
+        position: relative;
+        right: 100%;
+        top : 90%;
+        cursor: pointer;
     }
 
     #imagen1-servicio-general {
@@ -156,4 +167,18 @@
         height: 35vh;
         max-width: 100%;
     }
+    .span-reservar {
+        right: 125%;
+        font-size: 1vw;
+    }
+
+    .p-servicio-texto {
+        font-size: medium
+    }
+    .h3-servicio-general {
+        font-size: large;
+    }
+
+ 
+    
 }

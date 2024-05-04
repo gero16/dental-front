@@ -4,14 +4,13 @@ import Imagen2 from "../../../public/servicio-1.jpg"
 import Imagen3 from "../../../public/canino.jpg"
 import Imagen4 from "../../../public/integral.jpg"
 import Icono from "../../../public/diente-mano.png"
-
+import { Link as Navigate, NavLink, useLocation ,} from "react-router-dom";
 
 const ServicioGeneral = () => {
     return (
-        <> 
-        
-            
-        <article className={"article-portada"} >
+        <section> 
+
+            <article className={"article-portada"} >
 
             <img src={Imagen}
                 className="portada-img-servicio"
@@ -23,8 +22,10 @@ const ServicioGeneral = () => {
                 <h2 className="h2-portada-servicios white"> ODONTOLOGÍA General </h2>
 
                 <p className="width-70 p-portada-texto white"> Nuestro equipo tiene un gran conocimiento sobre las interrelaciones de su salud oral y sistémica. </p>
-
-                <span className="width-70 span-reservar white"> Reservar Hora </span>
+                
+                <NavLink to={`/reservar-hora`} > 
+                    <span className="width-70 span-reservar white"> Reservar Hora </span>
+                </NavLink>
 
                 <section className="section-icono">
                     <img src={Icono} alt="" className="imagen-icono-servicio" id="icono-servicio-general"/>
@@ -114,7 +115,7 @@ const ServicioGeneral = () => {
 
             </article>
 
-        </>
+        </section>
     )
 }
 

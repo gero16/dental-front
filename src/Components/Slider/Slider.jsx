@@ -46,7 +46,7 @@ const Slider = ({ listaImagenes, autoplayInterval = 1000 }) => {
           ? <> </>
           :  <section className="portada-texto">
           
-              <h2 className="width-70 h2-portada-texto ml-15">
+              <h2 className={`width-70 h2-portada-texto ml-15 h2-${ listaImagenes[indexActual].logo }`}>
                 {listaImagenes[indexActual].subtitulo}
               </h2>
               
@@ -75,7 +75,7 @@ const Slider = ({ listaImagenes, autoplayInterval = 1000 }) => {
                   </li>
                 </ul>
        
-                <picture className={`logo-portada`} alt="" /> 
+                <picture className={`logo-portada ${listaImagenes[indexActual].logo }`} alt="" /> 
          
           </section>
         }

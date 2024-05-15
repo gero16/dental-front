@@ -141,6 +141,9 @@ ul, ol {
   margin-bottom: 5px
 }
 
+.ml-15 {
+  margin-left: 15%;
+}
 .m-auto {
   margin:0 auto;
 }
@@ -283,6 +286,16 @@ ul, ol {
 .mostrar {
   opacity: 1;
   max-height: 200px; /* Ajusta según sea necesario */
+}
+
+.whatsapp {
+  transition: 0.2s ease-in;
+}
+
+.whatsapp:hover {
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  transform: scale(1.14);
 }
 
 @media (min-width: 1500px) {

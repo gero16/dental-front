@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaPhoneSquareAlt } from 'react-icons/fa';
 import { Slide } from 'react-awesome-reveal'; // Solo necesitamos Slide de react-awesome-reveal
 import '../Index/IndexHeader/IndexHeader.css';
+import logo from "../../../public/logo-2.png"
 
 const Slider = ({ images, autoplayInterval = 1000 }) => {
   console.log(images)
@@ -25,6 +26,7 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
 
   return (
     <> 
+
     
     <article className={ images[currentImageIndex].imgUrl === imgBanner  ? "article-portada article-portada-banner" : "article-portada"} >
 
@@ -38,35 +40,43 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
 
         {
           images[currentImageIndex].imgUrl === imgBanner 
-            ? <> </>
-            :  <section className="portada-texto">
+          ? <> </>
+          :  <section className="portada-texto">
+          
+               
+            
+             
+                <h2 className="width-70 h2-portada-texto ml-15">
+                  {images[currentImageIndex].subtitulo}
+                </h2>
+              
 
-              <h2 className="h2-portada-texto width-70">
-                {images[currentImageIndex].subtitulo}
-              </h2>
-
-              <p className="width-70 p-portada-texto">
+              <p className="width-70 p-portada-texto ml-15">
                 {images[currentImageIndex].parrafo}
               </p>
 
-              <ul className="lista-portada width-70">
+              <ul className="lista-portada width-70 ml-15">
                 <li className="flex-center-v lista-numero">
                   <FaPhoneSquareAlt size={19} />
                   <span className="span-portada-numero"> (598) 94 484 397 </span>
                 </li>
               </ul>
 
-              <ul className="lista-portada lista-portada-2 width-70 small">
-                <li className="white li-portada-texto">
-                  Martes y Jueves 13:00 - 20:00 (Las Piedras)
-                </li>
-                <li className="white li-portada-texto">
-                  Miercoles 13:00 - 20:00 (Montevideo)
-                </li>
-                <li className="white li-portada-texto">
-                  Sabados 09:00 - 14:00 (Las Piedras)
-                </li>
-              </ul>
+
+                <ul className="lista-portada lista-portada-2 width-70 small ml-15">
+                  <li className="white li-portada-texto">
+                    Martes y Jueves 13:00 - 20:00 (Las Piedras)
+                  </li>
+                  <li className="white li-portada-texto">
+                    Miercoles 13:00 - 20:00 (Montevideo)
+                  </li>
+                  <li className="white li-portada-texto">
+                    Sabados 09:00 - 14:00 (Las Piedras)
+                  </li>
+                </ul>
+       
+                <picture className={`logo-portada`} alt="" /> 
+         
           </section>
         }
        

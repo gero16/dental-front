@@ -2,15 +2,10 @@ import "./IndexHeader.css"
 import Portada1 from "../../../../public/108313.jpg"
 import Portada2 from "../../../../public/portada-2.jpg"
 import Portada3 from "../../../../public/portada-3.jpg"
-
-
-import logo2 from "../../../../public/logo-2.png"
-
 import Slider from "../../Slider/Slider"
 
 import { Fade, Slide } from "react-awesome-reveal";
 import { useState } from "react"
-
 
 
  
@@ -23,28 +18,32 @@ const IndexHeader = () => {
       subtitulo: "Agendate hoy con nosotros!",
       parrafo: "Bienvenido a la Clinica Odontologica Integral",
       id: "",
-      className : "img-portada-1"
+      className : "img-portada-1",
+      logo: "logo-portada-1"
     },
     {
       numero: 2,
       imgUrl: Portada2,
       subtitulo: "Agendate hoy con nosotros!",
       parrafo: "Un dentista llega a la raiz del problema",
-      id: ""
+      id: "",
+      logo: "logo-portada-2"
     },
     {
         numero: 3,
         imgUrl: Portada3,
         subtitulo: "Atencion Personalizada para cada sonrisa",
         parrafo: "Sonrie, deja que tus dientes respiren",
-        id: ""
+        id: "",
+        logo: "logo-portada-3"
       },
       {
         numero: 4,
         imgUrl: "https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png",
         subtitulo: "Atencion Personalizada para cada sonrisa",
         parrafo: "Sonrie, deja que tus dientes respiren",
-        id: "portada-4"
+        id: "portada-4",
+        logo: "logo-portada-4"
       },
   
     ];
@@ -115,9 +114,6 @@ const IndexHeader = () => {
          
           <Slider images={listaImagenes} fraction={0.5} autoplayInterval={100000} />  
               
-          
-         
-        
         </>
     )
 }

@@ -4,6 +4,7 @@ const IndexOpinionCliente = () => {
 
     return (
         <>
+        
           <article className="contenido-clientes container">
                 <h3> ¡Esto es lo que los pacientes tienen que decir sobre la Clínica! </h3>
                 <section className="contenido-cliente">

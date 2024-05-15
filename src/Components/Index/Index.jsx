@@ -31,6 +31,7 @@ const Index = () => {
 
             <IndexInfoConsulta> </IndexInfoConsulta>
 
+            
             <IndexOpinionCliente> </IndexOpinionCliente>
 
             <article className="article-info-consulta2 flex-column gap-20 text-center">

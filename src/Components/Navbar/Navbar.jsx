@@ -1,7 +1,7 @@
 import logo from "../../../public/logo-3.jpg"
 import logoGrande from "../../../public/logo-grande.jpg"
 import "./Navbar.css"
-import imagenMenu from "../../../public/menu.png"
+import logo2 from "../../../public/logo-2.png"
 
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -169,7 +169,7 @@ const Navbar = () => {
                            
                         </ul>
                     }
-                 
+         
                 </nav>
 
             </header>

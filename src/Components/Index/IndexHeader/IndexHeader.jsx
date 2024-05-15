@@ -15,6 +15,8 @@ const IndexHeader = () => {
     {
       numero : 1,
       imgUrl: Portada1,
+      imgMid: "",
+      imgBig: "",
       subtitulo: "Agendate hoy con nosotros!",
       parrafo: "Bienvenido a la Clinica Odontologica Integral",
       id: "",
@@ -24,6 +26,8 @@ const IndexHeader = () => {
     {
       numero: 2,
       imgUrl: Portada2,
+      imgMid: "",
+      imgBig: "",
       subtitulo: "Agendate hoy con nosotros!",
       parrafo: "Un dentista llega a la raiz del problema",
       id: "",
@@ -32,6 +36,8 @@ const IndexHeader = () => {
     {
         numero: 3,
         imgUrl: Portada3,
+        imgMid: "",
+        imgBig: "",
         subtitulo: "Atencion Personalizada para cada sonrisa",
         parrafo: "Sonrie, deja que tus dientes respiren",
         id: "",
@@ -39,7 +45,9 @@ const IndexHeader = () => {
       },
       {
         numero: 4,
-        imgUrl: "https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png",
+        imgUrl: "https://res.cloudinary.com/geronicola/image/upload/v1711325178/general-it/gtwqyvbfzlmdmt33r3tz.png",
+        imgMid: "",
+        imgBig: "",
         subtitulo: "Atencion Personalizada para cada sonrisa",
         parrafo: "Sonrie, deja que tus dientes respiren",
         id: "portada-4",
@@ -80,7 +88,6 @@ const IndexHeader = () => {
         newArray[1] = valor4
         newArray[2] = valor1 
         newArray[3] = valor2     
-        console.log(newArray)
         setListaImagenes(newArray) 
       } 
       if(numeroElegido === 3) {
@@ -88,7 +95,7 @@ const IndexHeader = () => {
         newArray[1] = valor1
         newArray[2] = valor2 
         newArray[3] = valor3     
-        console.log(newArray)
+  
         setListaImagenes(newArray) 
       } 
 
@@ -110,9 +117,8 @@ const IndexHeader = () => {
                 <a> </a>
               </li>
           </ul>
-
          
-          <Slider images={listaImagenes} fraction={0.5} autoplayInterval={100000} />  
+          <Slider listaImagenes={listaImagenes} fraction={0.5} autoplayInterval={100000} />  
               
         </>
     )

@@ -4,22 +4,22 @@ import { Slide } from 'react-awesome-reveal'; // Solo necesitamos Slide de react
 import '../Index/IndexHeader/IndexHeader.css';
 import logo from "../../../public/logo-2.png"
 
-const Slider = ({ images, autoplayInterval = 1000 }) => {
-  console.log(images)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const Slider = ({ listaImagenes, autoplayInterval = 1000 }) => {
+  console.log(listaImagenes)
+  const [indexActual, setIndexActual] = useState(0);
   const [slideKey, setSlideKey] = useState(0); // Clave única para forzar la recreación del componente Slide
  
   
   useEffect(() => {
       const intervalId = setInterval(() => {
-        setCurrentImageIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        setIndexActual((prevIndex) =>
+          prevIndex === listaImagenes.length - 1 ? 0 : prevIndex + 1
         );
         setSlideKey((prevKey) => prevKey + 1); // Actualiza la clave única para reiniciar la animación
       }, autoplayInterval);
 
       return () => clearInterval(intervalId); // Limpia el intervalo cuando el componente se desmonta
-    }, [images.length, autoplayInterval]);
+    }, [listaImagenes.length, autoplayInterval]);
 
 
     const imgBanner = "https://res.cloudinary.com/geronicola/image/upload/v1711566365/to1utgnyqwaxdl6ztfqv.png"
@@ -28,31 +28,28 @@ const Slider = ({ images, autoplayInterval = 1000 }) => {
     <> 
 
     
-    <article className={ images[currentImageIndex].imgUrl === imgBanner  ? "article-portada article-portada-banner" : "article-portada"} >
+    <article className={ listaImagenes[indexActual].id === "portada-4"  ? "article-portada article-portada-banner" : "article-portada"} >
 
       <Slide key={slideKey} > {/* Utiliza la clave única para forzar la recreación del componente Slide */}
         
-        <img src={ images[currentImageIndex].imgUrl }
+        <img src={ listaImagenes[indexActual].imgUrl }
              alt="slide"
-             id={ images[currentImageIndex].imgUrl === imgBanner ? "img-banner" : ""}
-             className={images[currentImageIndex].className ? `${ images[currentImageIndex].className } portada-img display-none`: "portada-img display-none"}
+             id={ listaImagenes[indexActual].imgUrl === imgBanner ? "img-banner" : ""}
+             className={listaImagenes[indexActual].className ? `${ listaImagenes[indexActual].className } portada-img display-none`: "portada-img display-none"}
         />
 
         {
-          images[currentImageIndex].imgUrl === imgBanner 
+          listaImagenes[indexActual].id === "portada-4" 
           ? <> </>
           :  <section className="portada-texto">
           
-               
-            
-             
-                <h2 className="width-70 h2-portada-texto ml-15">
-                  {images[currentImageIndex].subtitulo}
-                </h2>
+              <h2 className="width-70 h2-portada-texto ml-15">
+                {listaImagenes[indexActual].subtitulo}
+              </h2>
               
 
               <p className="width-70 p-portada-texto ml-15">
-                {images[currentImageIndex].parrafo}
+                {listaImagenes[indexActual].parrafo}
               </p>
 
               <ul className="lista-portada width-70 ml-15">

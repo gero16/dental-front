@@ -28,7 +28,10 @@ const Slider = ({ listaImagenes, autoplayInterval = 1000 }) => {
     <> 
 
     
-    <article className={ listaImagenes[indexActual].id === "portada-4"  ? "article-portada article-portada-banner" : "article-portada"} >
+    <article 
+      className={ listaImagenes[indexActual].id === "portada-4"  ? "article-portada article-portada-banner" : "article-portada"} 
+      id={ listaImagenes[indexActual].id === "portada-4"  ? "article-banner" : ""}
+    >
 
       <Slide key={slideKey} > {/* Utiliza la clave única para forzar la recreación del componente Slide */}
         

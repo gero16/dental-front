@@ -34,7 +34,7 @@ const Slider = ({ listaImagenes, autoplayInterval = 1000 }) => {
         
         <img src={ listaImagenes[indexActual].imgUrl }
              alt="slide"
-             id={ listaImagenes[indexActual].imgUrl === imgBanner ? "img-banner" : ""}
+             id={ listaImagenes[indexActual].id === "portada-4" ? "img-banner" : ""}
              className={listaImagenes[indexActual].className ? `${ listaImagenes[indexActual].className } portada-img display-none`: "portada-img display-none"}
         />
 

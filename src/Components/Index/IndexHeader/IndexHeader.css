@@ -92,7 +92,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    bottom: 30%;
+    bottom: 42%;
     left: -1%;
     z-index: 2;
     padding: 10px;
@@ -128,12 +128,9 @@
 
 }
 .article-portada-banner {
-    /*
-    background: var(--primario);
-    */
-
+    
     height: 35vh;
-    background: linear-gradient(to right, var(--primario),71%, var(--white), 90%, var(--white));
+    background: linear-gradient(to right, #1E5C37,71%, var(--white), 90%, var(--white));
     box-sizing: border-box;
 
 }
@@ -153,7 +150,7 @@
         height: 65vh!important;
     }
     #img-banner {
-        height: 65vh;
+        height: 100%;
         margin: 0 5%!important;
     }
     

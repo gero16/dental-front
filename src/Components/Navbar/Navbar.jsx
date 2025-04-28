@@ -6,14 +6,16 @@ import logo2 from "../../../public/logo-2.png"
 import { IoIosArrowDown } from "react-icons/io";
 
 import { Link as Navigate, NavLink, useLocation ,} from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
     
     const location = useLocation();
+    const [sesion, setSesion] = useState(false)
     let { pathname } = location;
     let url = pathname
     console.log(url)
+
     if(pathname.includes("/servicios/")) {
      pathname = "/servicios"
     }
@@ -32,7 +34,14 @@ const Navbar = () => {
      };
 
 
+     const evaluarSesion = ()=> {
+        const sesionActual = localStorage.getItem("sesion");
+        if(sesionActual) setSesion(true)
+    }
 
+    useEffect(() => {
+            evaluarSesion()
+        }, [])
 
 
     return (
@@ -121,27 +130,32 @@ const Navbar = () => {
                                         <span className="span-link "> Contacto </span>
                                     </NavLink>
                                 </li>
-                                
-                                <li className="li-servicios li-link"> 
-                                        <span className="span-link"> Servicios <IoIosArrowDown  /> </span>
+                                {
+                                    /* 
+                                    
+                                        <li className="li-servicios li-link"> 
+                                            <span className="span-link"> Servicios <IoIosArrowDown  /> </span>
 
-                                        <ul className="lista-servicios flex-column gap-10 inactive">
-                                        
-                                            <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
-                                                <NavLink to={`/servicios/servicio-general`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio General      </NavLink>
-                                            </li>
-                                            <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
-                                                <NavLink to={`/servicios/servicio-periodontal`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio Periodontal      </NavLink>
-                                            </li>
-                                            <li onClick={() => handleLinkClick('/servicio-cosmetico')} > 
-                                                <NavLink to={`/servicios/servicio-cosmetico`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio Cosmetico      </NavLink>
-                                            </li>
-                                            <li onClick={() => handleLinkClick('/acido-hialuronico')} > 
-                                                <NavLink to={`/servicios/acido-hialuronico`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >    Ácido Hialuronico      </NavLink>
-                                            </li>                            
-                                        </ul> 
+                                            <ul className="lista-servicios flex-column gap-10 inactive">
+                                            
+                                                <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
+                                                    <NavLink to={`/servicios/servicio-general`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio General      </NavLink>
+                                                </li>
+                                                <li onClick={() => handleLinkClick('/servicio-periodontal')} > 
+                                                    <NavLink to={`/servicios/servicio-periodontal`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio Periodontal      </NavLink>
+                                                </li>
+                                                <li onClick={() => handleLinkClick('/servicio-cosmetico')} > 
+                                                    <NavLink to={`/servicios/servicio-cosmetico`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >      Servicio Cosmetico      </NavLink>
+                                                </li>
+                                                <li onClick={() => handleLinkClick('/acido-hialuronico')} > 
+                                                    <NavLink to={`/servicios/acido-hialuronico`} className={selectedLink === '/servicio-general' ? 'link-activo' : ''} >    Ácido Hialuronico      </NavLink>
+                                                </li>                            
+                                            </ul> 
                             
-                                </li>
+                                    </li>
+                                    */
+                                }
+                            
                         
                                 
                                 <li className="li-link">
@@ -161,11 +175,14 @@ const Navbar = () => {
                                     </NavLink>
                                 </li>
         
+                            { sesion ?  
                                 <li className="li-link">
                                     <NavLink to={`/admin/panel`} className={selectedLink === '/admin/panel' ? 'link-activo' : ''} onClick={() => handleLinkClick('/admin/panel')} > 
                                         <span className="span-link ">  Panel </span>
                                     </NavLink>
-                                </li>
+                                </li> : <> </>
+                            }
+                               
                            
                         </ul>
                     }

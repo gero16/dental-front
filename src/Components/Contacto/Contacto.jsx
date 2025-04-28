@@ -33,7 +33,7 @@ const Contacto = () => {
 
             <section className="portada-contacto"> </section>
 
-            <section className="fondo-blanco-img flex-column-center gap-30 mt-5p">
+            <section className="fondo-blanco-img flex-column-center gap-30 mt-2p">
                 <article className="article-info-consulta2 flex-column-center gap-20 text-center">
                 <section className="flex-column-center gap-30 section-contacto-header"> 
                         <section className="sections-info-consulta2 flex-column-center br p-20"> 

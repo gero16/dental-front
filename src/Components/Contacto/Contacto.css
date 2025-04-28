@@ -12,6 +12,7 @@
     gap: 10px;
     align-items: center;
     margin-top: 6%;
+    width: 50%;
     
 }
 .p-header-contacto {
@@ -33,7 +34,6 @@
 .section-contacto-formulario {
     justify-content: space-evenly;
     align-items: center;
-
     margin: 10px 0px 50px 0px;
     background-color: rgba(245, 245, 245, 0.856);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -41,6 +41,7 @@
     border-radius: 10px;
     background-color: var(--oscuro);
     color: white;
+ 
 }
 
 .h3-contacto {
@@ -125,13 +126,13 @@ textarea {
         flex-direction: row;
     }
 
-    .formulario-contacto {
+
+    .section-contacto-formulario {
+        height: 70vh;
         width: 45%;
     }
-    .section-contacto-formulario {
-        height: 85vh;
-    }
     .img-contacto {
+    
         display: block;
         background-image: url("../../../public/local.jpg");
         background-size: 110%;
@@ -163,8 +164,8 @@ textarea {
     .img-contacto {
         background-size: 118%;
         background-position: 15% 48%;
-        height: 100%;
-        width: 45%;
+        height: 30vw;
+        width: 30%;
     }
     .p-header-contacto {
         font-size: 0.9vw;

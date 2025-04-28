@@ -77,7 +77,7 @@ h2 {
 }
 
 .h2-numero {
-    color: var(--primario);
+    color: var(--color-blog);
 }
 
 
@@ -87,7 +87,7 @@ h2 {
 
 .btn-consultar {
     padding: 10px;
-    background-color: var(--primario);
+    background-color: var(--color-blog);
 
     text-align: center;
     width: 100px;
